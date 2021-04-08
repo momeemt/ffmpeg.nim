@@ -9,6 +9,7 @@ from libavcodec_codec_par import AVFieldOrder, AVCodecParameters
 import libavutil_avutil
 import libavutil_buffer
 import libavutil_samplefmt
+from libavutil_log import AVClass
 from libavutil_rational import AVRational
 
 const
