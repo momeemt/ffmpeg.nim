@@ -5,6 +5,7 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
+from libavcodec_codec import AVCodec, AVPacket
 from libavcodec_codec_par import AVFieldOrder, AVCodecParameters
 import libavutil_avutil
 import libavutil_buffer
