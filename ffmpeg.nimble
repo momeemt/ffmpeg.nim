@@ -2,7 +2,7 @@
 
 version       = "0.1.0"
 author        = "momeemt"
-description   = "A new awesome nimble package"
+description   = "ffmpeg.nim is the Nim binding for FFMpeg(4.3.2)."
 license       = "MIT"
 srcDir        = "src"
 
