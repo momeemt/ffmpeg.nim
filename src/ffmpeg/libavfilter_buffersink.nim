@@ -5,6 +5,8 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
 
+from libavutil_avutil import AVMediaType
+
 const
   AV_BUFFERSINK_FLAG_PEEK* = 1
   AV_BUFFERSINK_FLAG_NO_REQUEST* = 2

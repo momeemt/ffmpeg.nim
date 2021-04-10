@@ -6,6 +6,8 @@ else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
 from libavcodec_codec_id import AVCodecID
+from libavutil_avutil import AVMediaType
+from libavutil_log import AVClass
 import libavutil_rational
 
 const

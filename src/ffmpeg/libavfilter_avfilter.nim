@@ -5,6 +5,8 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
 
+from libavutil_avutil import AVMediaType
+
 const
   AVFILTER_FLAG_DYNAMIC_INPUTS* = 1 shl 0
   AVFILTER_FLAG_DYNAMIC_OUTPUTS* = 1 shl 1

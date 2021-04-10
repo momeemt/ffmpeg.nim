@@ -5,6 +5,8 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
+from libavutil_avutil import AVMediaType
+
 type
   AVCodecDescriptor* = object
     id: AVCodecID
