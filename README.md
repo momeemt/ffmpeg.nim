@@ -1,4 +1,6 @@
 # ffmpeg.nim
+**This is a work in progress project!**
+
 ffmpeg.nim is the Nim binding for FFMpeg.  
 The version is `4.3.2`.  
 
