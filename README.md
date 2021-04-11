@@ -16,4 +16,22 @@ There are other Nim bindings for FFMpeg.
 nimble install ffmpeg
 ```
 
-However, you will need to install ffmpeg.
+You will need to install ffmpeg.
+
+## Why don't we use 'c2nim'?
+'c2nim' is a useful tool for developing a Nim wrapper. However, FFmpeg uses many attributes and syntaxes that cannot be analyzed by 'c2nim'.
+As a result, wrapper development using 'c2nim' lacks accuracy and speed.
+Therefore, we create the wrappers manually. If you find an incorrect type or name, please let us know in an issue and please create a pull request.
+
+## Environment
+Please help us test the execution in various environments.
+
+- ⭕️ (Available)
+- ❌ (Not Available)
+- ❓ (Untested)
+
+| | Result |
+| --- | ---- |
+| Windows | ❓ |
+| macOS | ❓ |
+| Linux | ❓ |
