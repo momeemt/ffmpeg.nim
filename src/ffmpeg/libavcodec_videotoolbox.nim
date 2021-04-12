@@ -8,6 +8,7 @@ else:
 #define Picture QuickdrawPicture
 #include <VideoToolbox/VideoToolbox.h>
 #undef Picture
+# {.header: "VideoToolbox/VideoToolbox.h".}
 
 type
   AVVideotoolboxContext* = object
