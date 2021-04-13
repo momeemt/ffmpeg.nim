@@ -8,6 +8,6 @@ else:
 when defined(FF_API_STRUCT_VAAPI_CONTEXT):
   type
     vaapi_context* {.deprecated.} = object
-      display: pointer
-      config_id: cuint
-      context_id: cuint
+      display*: pointer
+      config_id*: cuint
+      context_id*: cuint
