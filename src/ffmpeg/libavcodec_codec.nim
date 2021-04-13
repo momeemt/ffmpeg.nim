@@ -1,14 +1,14 @@
-when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
-elif defined(macosx):
-  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
-else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
-
 from libavcodec_codec_id import AVCodecID
 from libavutil_avutil import AVMediaType
+from libavutil_frame import AVFrame
+from libavutil_hwcontext import AVHWDeviceType
 from libavutil_log import AVClass
-import libavutil_rational
+from libavutil_pixfmt import AVPixelFormat
+from libavutil_rational import AVRational
+from libavutil_samplefmt import AVSampleFormat
+from undefined_symbol import AVCodecHWConfigInternal
+
+{.pragma: codec, importc, header:"<libavcodec/codec.h>".}
 
 const
   AV_CODEC_CAP_DRAW_HORIZ_BAND* = 1 shl 0
@@ -35,59 +35,66 @@ const
   AV_CODEC_HW_CONFIG_METHOD_AD_HOC* = 0x08
 
 type
-  AVProfile* = object
+  AVProfile* {.codec.} = object
     profile: cint
-    name: ptr cchar
+    name: cstring
   
-  AVCodecDefault* = object
-  AVCodecContext* = object
-  AVSubtitle* = object
-  AVPacket* = object
+  AVCodecDefault* {.codec.} = object
+  AVCodecContext* {.codec.} = object
+  AVSubtitle* {.codec.} = object
+  AVPacket* {.codec.} = object
 
   AVCodec* = object
-    name: ptr cchar
-    long_name: ptr cchar
-    `type`: AVMediaType
-    id: AVCodecID
-    capabilities: cint
-    supported_framerates: ptr AVRational
-    pix_fmts: ptr AVPixelFormat
-    supported_samplerates: ptr cint
-    sample_fmts: ptr AVSampleFormat
-    channel_layouts: ptr uint64
-    max_lowres: uint8
-    priv_class: ptr AVClass
-    profiles: ptr AVProfile
-    wrapper_name: ptr cchar
-    priv_data_size: cint
-    next: ptr AVCodec
-    update_thread_context: proc (dst, src: ptr AVCodecContext): cint
-    defaults: ptr AVCodecDefault
-    init_static_data: proc (codec: ptr AVCodec)
-    init: proc (a1: ptr AVCodecContext): cint
-    encode_sub: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
-    encode2: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
-    decode: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint
-    close: proc (a1: ptr AVCodecContext): cint
-    send_frame: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
-    receive_packet: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
-    receive_frame: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
-    flush: proc (a1: ptr AVCodecContext)
-    caps_internal: cint
-    bsfs: ptr cchar
-    hw_configs: ptr ptr AVCodecHWConfigInternal
-    codec_tags: ptr cuint
+    name*: cstring
+    long_name*: cstring
+    `type`*: AVMediaType
+    id*: AVCodecID
+    capabilities*: cint
+    supported_framerates*: ptr AVRational
+    pix_fmts*: ptr AVPixelFormat
+    supported_samplerates*: ptr cint
+    sample_fmts*: ptr AVSampleFormat
+    channel_layouts*: ptr uint64
+    max_lowres*: uint8
+    priv_class*: ptr AVClass
+    profiles*: ptr AVProfile
+    wrapper_name*: cstring
+    priv_data_size*: cint
+    next*: ptr AVCodec
+    update_thread_context*: proc (dst, src: ptr AVCodecContext): cint
+    defaults*: ptr AVCodecDefault
+    init_static_data*: proc (codec: ptr AVCodec)
+    init*: proc (a1: ptr AVCodecContext): cint
+    encode_sub*: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
+    encode2*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
+    decode*: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint
+    close*: proc (a1: ptr AVCodecContext): cint
+    send_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+    receive_packet*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
+    receive_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+    flush*: proc (a1: ptr AVCodecContext)
+    caps_internal*: cint
+    bsfs*: cstring
+    hw_configs*: ptr ptr AVCodecHWConfigInternal
+    codec_tags*: ptr cuint
   
   AVCodecHWConfig* = object
-    pix_fmt: AVPixelFormat
-    methods: cint
-    device_type: AVHWDeviceType
+    pix_fmt*: AVPixelFormat
+    methods*: cint
+    device_type*: AVHWDeviceType
+
+when defined(windows):
+  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
+elif defined(macosx):
+  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
+else:
+  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
 proc av_codec_iterate* (opaque: ptr pointer): ptr AVCodec
 proc avcodec_find_decoder* (id: AVCodecID): ptr AVCodec
-proc avcodec_find_decoder_by_name* (name: ptr cchar): ptr AVCodec
+proc avcodec_find_decoder_by_name* (name: cstring): ptr AVCodec
 proc avcodec_find_encoder* (id: AVCodecID): ptr AVCodec
-proc avcodec_find_encoder_by_name* (name: ptr cchar): ptr AVCodec
+proc avcodec_find_encoder_by_name* (name: cstring): ptr AVCodec
 proc av_codec_is_encoder* (codec: ptr AVCodec): cint
 proc av_codec_is_decoder* (codec: ptr AVCodec): cint
 proc avcodec_get_hw_config* (codec: ptr AVCodec, index: cint): ptr AVCodecHWConfig
