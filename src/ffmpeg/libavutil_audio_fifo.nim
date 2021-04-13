@@ -1,12 +1,16 @@
+from libavutil_samplefmt import AVSampleFormat
+
+{.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
+
+type
+  AVAudioFifo* {.audio_fifo.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-type
-  AVAudioFifo* = object
 
 proc av_audio_fifo_free* (af: ptr AVAudioFifo)
 proc av_audio_fifo_alloc* (sample_fmt: AVSampleFormat, channels, nb_samples: cint): ptr AVAudioFifo
