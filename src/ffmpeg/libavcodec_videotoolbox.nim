@@ -1,22 +1,29 @@
+from libavcodec_codec import AVCodecContext
+
+{.pragma: videoToolBox, importc, header: "<libavcodec/videotoolbox.h>".}
+{.pragma: videoToolBoxInclude, importc, header: "<VideoToolbox/VideoToolbox.h>".}
+
+type
+  QuickdrawPicture* {.videoToolBoxInclude.} = object
+  Picture* {.videoToolBox.} = QuickdrawPicture
+  VTDecompressionSessionRef* {.videoToolBoxInclude.} = object
+  VTDecompressionOutputCallback* {.videoToolBoxInclude.} = object
+  CMVideoFormatDescriptionRef* {.videoToolBoxInclude.} = object
+  OSType* = object
+
+  AVVideotoolboxContext* {.bycopy, videoToolBox.} = object
+    session*: VTDecompressionSessionRef
+    output_callback*: VTDecompressionOutputCallback
+    cv_pix_fmt_type*: OSType
+    cm_fmt_desc*: CMVideoFormatDescriptionRef
+    cm_codec_type*: cint
+
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
-
-#define Picture QuickdrawPicture
-#include <VideoToolbox/VideoToolbox.h>
-#undef Picture
-# {.header: "VideoToolbox/VideoToolbox.h".}
-
-type
-  AVVideotoolboxContext* = object
-    session: VTDecompressionSessionRef
-    output_callback: VTDecompressionOutputCallback
-    cv_pix_fmt_type: OSType
-    cm_fmt_desc: CMVideoFormatDescriptionRef
-    cm_codec_type: cint
 
 proc av_videotoolbox_alloc_context* (): AVVideotoolboxContext
 proc av_videotoolbox_default_init* (avctx: ptr AVCodecContext): cint
