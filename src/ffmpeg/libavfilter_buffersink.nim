@@ -1,11 +1,31 @@
+from libavfilter_avfilter import AVFilterContext
+from libavutil_avutil import AVMediaType
+from libavutil_buffer import AVBufferRef
+from libavutil_frame import AVFrame
+from libavutil_rational import AVRational
+
+when defined(FF_API_NEXT):
+  {.pragma: buffersink, importc, header: "<libavfilter/buffersink.h>".}
+  from libavutil_pixfmt import AVPixelFormat
+  from libavutil_samplefmt import AVSampleFormat
+
+  type
+    AVBufferSinkParams* {.buffersink.} = object
+      pixel_fmts*: ptr AVPixelFormat
+    
+    AVABufferSinkParams* {.buffersink.} = object
+      sample_fmts*: ptr AVSampleFormat
+      channel_layouts*: ptr int64
+      channel_counts*: ptr cint
+      all_channel_counts*: cint
+      sample_rates*: ptr cint
+
 when defined(windows):
   {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib".}
 else:
   {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
-
-from libavutil_avutil import AVMediaType
 
 const
   AV_BUFFERSINK_FLAG_PEEK* = 1
@@ -28,16 +48,5 @@ proc av_buffersink_get_frame* (ctx: ptr AVFilterContext, frame: ptr AVFrame): ci
 proc av_buffersink_get_samples* (ctx: ptr AVFilterContext, frame: ptr AVFrame, nb_samples: cint): cint
 
 when defined(FF_API_NEXT):
-  type
-    AVBufferSinkParams* = object
-      pixel_fmts: ptr AVPixelFormat
-    
-    AVABufferSinkParams* = object
-      sample_fmts: ptr AVSampleFormat
-      channel_layouts: ptr int64
-      channel_counts: ptr cint
-      all_channel_counts: cint
-      sample_rates: ptr cint
-  
   proc av_buffersink_params_alloc* (): AVBufferSinkParams {.deprecated.}
   proc av_abuffersink_params_alloc* (): AVABufferSinkParams {.deprecated.}
