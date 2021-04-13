@@ -1,14 +1,16 @@
+{.pragma: rational, importc, header: "<libavutil/rational>".}
+
+type
+  AVRational* {.rational.} = object
+    num*: cint
+    den*: cint
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-type
-  AVRational* = object
-    num: cint
-    den: cint
 
 proc av_reduce* (dst_num, dst_den: ptr cint, num, denn, max: int64): cint
 proc av_mul_q* (b, c: AVRational): AVRational
