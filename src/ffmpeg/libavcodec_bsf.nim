@@ -11,24 +11,24 @@ type
   AVBSFInternal* {.avbsf.} = object
 
   AVBSFContext* {.avbsf.} = object
-    av_class: ptr AVClass
-    filter: ptr AVBitStreamFilter
-    internal: ptr AVBSFInternal
-    priv_data: pointer
-    par_in: ptr AVCodecParameters
-    par_out: ptr AVCodecParameters
-    time_base_in: AVRational
-    time_base_out: AVRational
+    av_class*: ptr AVClass
+    filter*: ptr AVBitStreamFilter
+    internal*: ptr AVBSFInternal
+    priv_data*: pointer
+    par_in*: ptr AVCodecParameters
+    par_out*: ptr AVCodecParameters
+    time_base_in*: AVRational
+    time_base_out*: AVRational
   
   AVBitStreamFilter* {.avbsf.} = object
-    name: cstring
-    codec_ids: ptr AVCodecID
-    priv_class: ptr AVClass
-    priv_data_size: cint
-    init: proc (ctx: ptr AVBSFContext): cint
-    filter: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint
-    close: proc (ctx: AVBSFContext)
-    flush: proc (ctx: AVBSFContext)
+    name*: cstring
+    codec_ids*: ptr AVCodecID
+    priv_class*: ptr AVClass
+    priv_data_size*: cint
+    init*: proc (ctx: ptr AVBSFContext): cint
+    filter*: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint
+    close*: proc (ctx: AVBSFContext)
+    flush*: proc (ctx: AVBSFContext)
   
   AVBSFList* {.avbsf.} = object
 
