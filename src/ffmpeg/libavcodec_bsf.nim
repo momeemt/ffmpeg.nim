@@ -5,12 +5,12 @@ from libavutil_dict import AVDictionary
 from libavutil_log import AVClass
 from libavutil_rational import AVRational
 
-{.pragma: avbsf, importc, header:"<libavcodec/avbsf.h>".}
+{.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
 
 type
-  AVBSFInternal* {.avbsf.} = object
+  AVBSFInternal* {.bsf.} = object
 
-  AVBSFContext* {.avbsf.} = object
+  AVBSFContext* {.bsf.} = object
     av_class*: ptr AVClass
     filter*: ptr AVBitStreamFilter
     internal*: ptr AVBSFInternal
@@ -20,7 +20,7 @@ type
     time_base_in*: AVRational
     time_base_out*: AVRational
   
-  AVBitStreamFilter* {.avbsf.} = object
+  AVBitStreamFilter* {.bsf.} = object
     name*: cstring
     codec_ids*: ptr AVCodecID
     priv_class*: ptr AVClass
@@ -30,7 +30,7 @@ type
     close*: proc (ctx: AVBSFContext)
     flush*: proc (ctx: AVBSFContext)
   
-  AVBSFList* {.avbsf.} = object
+  AVBSFList* {.bsf.} = object
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
