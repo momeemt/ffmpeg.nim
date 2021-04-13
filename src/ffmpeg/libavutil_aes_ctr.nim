@@ -1,3 +1,8 @@
+{.pragma: aes_ctr, importc, header: "<libavutil/aes_ctr.h>".}
+
+type
+  AVAESCTR* {.aes_ctr.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -8,9 +13,6 @@ else:
 const
   AES_CTR_KEY_SIZE* = 16
   AES_CTR_IV_SIZE* = 8
-
-type
-  AVAESCTR* = object
 
 proc av_aes_ctr_alloc* (): ptr AVAESCTR
 proc av_aes_ctr_init* (a: ptr AVAESCTR, key: ptr uint8): cint
