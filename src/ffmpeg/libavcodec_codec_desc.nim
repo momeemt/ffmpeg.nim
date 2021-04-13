@@ -2,8 +2,10 @@ from libavcodec_codec import AVProfile
 from libavcodec_codec_id import AVCodecID
 from libavutil_avutil import AVMediaType
 
+{.pragma: avcodecDesc, importc, header:"<libavcodec/codec_desc.h>".}
+
 type
-  AVCodecDescriptor* = object
+  AVCodecDescriptor* {.avcodecDesc.} = object
     id*: AVCodecID
     `type`*: AVMediaType
     name*: cstring
