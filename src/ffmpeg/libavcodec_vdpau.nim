@@ -1,20 +1,31 @@
+from libavcodec_codec import AVCodecContext
+from libavutil_frame import AVFrame
+
+{.pragma: vdpauInclude, importc, header: "<vdpau/vdpau.h>".}
+{.pragma: vdpau, importc, header:"<libavcodec/vdpau.h>".}
+
+type
+  VdpPictureInfo* {.vdpauInclude.} = object
+  VdpBitStreamBuffer* {.vdpauInclude.} = object
+  VdpDevice* {.vdpauInclude.} = object
+  VdpGetProcAddress* {.vdpauInclude.} = object
+  VdpChromaType* {.vdpauInclude.} = object
+  VdpDecoder* {.importc: "struct $1", vdpau.} = object
+  VdpDecoderRender* {.importc: "struct $1", vdpau.} = object
+
+  AVVDPAU_Render2* {.vdpau.} = proc (a1: ptr AVCodecContext, a2: ptr AVFrame, a3: ptr VdpPictureInfo, a4: cuint, a5: ptr VdpBitstreamBuffer): cint
+
+  AVVDPAUContext* {.vdpau.} = object
+    decoder*: VdpDecoder
+    render*: ptr VdpDecoderRender
+    render2*: AVVDPAU_Render2
+
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
-
-type
-  AVCodecContext* = object
-  AVFrame* = object
-
-  AVVDPAU_Render2* = proc (a1: ptr AVCodecContext, a2: ptr AVFrame, a3: ptr VdpPictureInfo, a4: cuint, a5: ptr VdpBitstreamBuffer): cint
-
-  AVVDPAUContext* = object
-    decoder: VdpDecoder
-    render: ptr VdpDecoderRender
-    render2: AVVDPAU_Render2
 
 proc av_alloc_vdpaucontext* (): AVVDPAUContext
 proc av_vdpau_hwaccel_get_render2* (a1: ptr AVVDPAUContext): AVVDPAU_Render2
