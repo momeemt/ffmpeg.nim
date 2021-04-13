@@ -1,14 +1,16 @@
-when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
-elif defined(macosx):
-  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
-else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
+from libavcodec_codec_id import AVCodecID
+from libavcodec_codec_par import AVCodecParameters
+from libavcodec_packet import AVPacket
+from libavutil_dict import AVDictionary
+from libavutil_log import AVClass
+from libavutil_rational import AVRational
+
+{.pragma: avbsf, importc, header:"<libavcodec/avbsf.h>".}
 
 type
-  AVBSFInternal* = object
+  AVBSFInternal* {.avbsf.} = object
 
-  AVBSFContext* = object
+  AVBSFContext* {.avbsf.} = object
     av_class: ptr AVClass
     filter: ptr AVBitStreamFilter
     internal: ptr AVBSFInternal
@@ -18,8 +20,8 @@ type
     time_base_in: AVRational
     time_base_out: AVRational
   
-  AVBitStreamFilter* = object
-    name: ptr cchar
+  AVBitStreamFilter* {.avbsf.} = object
+    name: cstring
     codec_ids: ptr AVCodecID
     priv_class: ptr AVClass
     priv_data_size: cint
@@ -28,9 +30,16 @@ type
     close: proc (ctx: AVBSFContext)
     flush: proc (ctx: AVBSFContext)
   
-  AVBSFList* = object
+  AVBSFList* {.avbsf.} = object
 
-proc av_bsf_get_by_name* (name: ptr cchar): ptr AVBitStreamFilter
+when defined(windows):
+  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
+elif defined(macosx):
+  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
+else:
+  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
+
+proc av_bsf_get_by_name* (name: cstring): ptr AVBitStreamFilter
 proc av_bsf_iterate* (opaque: ptr pointer): ptr AVBitStreamFilter
 proc av_bsf_alloc* (filter: ptr AVBitStreamFilter, ctx: ptr ptr AVBSFContext): cint
 proc av_bsf_init* (ctx: ptr AVBSFContext): cint
@@ -42,7 +51,7 @@ proc av_bsf_get_class* (): ptr AVClass
 proc av_bsf_list_alloc* (): ptr AVBSFList
 proc av_bsf_list_free* (lst: ptr ptr AVBSFList)
 proc av_bsf_list_append* (lst: ptr AVBSFList, bsf: ptr AVBSFContext): cint
-proc av_bsf_list_append2* (lst: ptr AVBSFList, bsf_name: ptr cchar, options: ptr ptr AVDictionary): cint
+proc av_bsf_list_append2* (lst: ptr AVBSFList, bsf_name: cstring, options: ptr ptr AVDictionary): cint
 proc av_bsf_list_finalize* (lst: ptr ptr AVBSFList, bsf: ptr ptr AVBSFContext): cint
-proc av_bsf_list_parse_str* (str: ptr cchar, bsf: ptr ptr AVBSFContext): cint
+proc av_bsf_list_parse_str* (str: cstring, bsf: ptr ptr AVBSFContext): cint
 proc av_bsf_get_null_filter* (bsf: ptr ptr AVBSFContext): cint
