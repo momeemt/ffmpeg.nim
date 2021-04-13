@@ -1,17 +1,14 @@
-when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
-elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
-else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-#include <mfx/mfxvideo.h>
+{.pragma: mfxvideo, importc, header: "<mfx/mfxvideo.h>".}
+{.pragma: hwcontext_qsv, importc, header: "<libavutil/hwcontext_qsv.h>".}
 
 type
-  AVQSVDeviceContext* = object
+  mfxSession* {.mfxvideo.} = object
+  mfxFrameSurface1* {.mfxvideo.} = object
+
+  AVQSVDeviceContext* {.hwcontext_qsv.} = object
     session: mfxSession
   
-  AVQSVFramesContext* = object
+  AVQSVFramesContext* {.hwcontext_qsv.} = object
     surfaces: ptr mfxFrameSurface1
     nb_surfaces: cint
     frame_type: cint
