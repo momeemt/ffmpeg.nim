@@ -1,3 +1,13 @@
+{.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
+
+type
+  AVBuffer* {.buffer.} = object
+  AVBufferRef* {.buffer.} = object
+    buffer*: ptr AVBuffer
+    data*: ptr uint8
+    size*: int
+  AVBufferPool* {.buffer.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -7,14 +17,6 @@ else:
 
 const
   AV_BUFFER_FLAG_READONLY* = 1 shl 0
-
-type
-  AVBuffer* = object
-  AVBufferRef* = object
-    buffer: ptr AVBuffer
-    data: ptr uint8
-    size: int
-  AVBufferPool* = object
   
 proc av_buffer_alloc* (size: int): ptr AVBufferRef
 proc av_buffer_allocz* (size: int): ptr AVBufferRef
