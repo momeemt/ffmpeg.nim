@@ -1,27 +1,35 @@
+{.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
+
+type
+  FFTSample* {.avfft.} = cfloat
+
+  FFTComplex* {.avfft.} = object
+    re, im: FFTSample
+
+  FFTContext* {.avfft.} = object
+
+  RDFTransformType* {.avfft.} = enum
+    DFT_R2C
+    IDFT_C2R
+    IDFT_R2C
+    DFT_C2R
+
+  RDFTContext* {.avfft.} = object
+
+  DCTContext* {.avfft.} = object
+
+  DCTTransformType* {.avfft.} = enum
+    DCT_II = 0
+    DCT_III
+    DCT_I
+    DST_I
+
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
-
-type
-  FFTSample* = cfloat
-  FFTComplex* = object
-    re, im: FFTSample
-  FFTContext* = object
-  RDFTransformType* = enum
-    DFT_R2C
-    IDFT_C2R
-    IDFT_R2C
-    DFT_C2R
-  RDFTContext* = object
-  DCTContext* = object
-  DCTTransformType* = enum
-    DCT_II = 0
-    DCT_III
-    DCT_I
-    DST_I
 
 proc av_fft_init* (nbits, inverse: cint): ptr FFTContext
 proc av_fft_permute* (s: ptr FFTContext, z: ptr FFTComplex)
