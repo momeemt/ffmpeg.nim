@@ -1,12 +1,14 @@
+{.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
+
+type
+  AVVorbisParseContext* {.vorbis_parser.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
-
-type
-  AVVorbisParseContext* = object
 
 const
   VORBIS_FLAG_HEADER* = 0x00000001
