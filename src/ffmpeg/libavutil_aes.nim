@@ -1,3 +1,8 @@
+{.pragma: aes, importc, header: "libavutil_aes".}
+
+type
+  AVAES* {.aes.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -5,10 +10,7 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
-var av_aes_size*: cint # TODO: extern const int av_aes_size;
-
-type
-  AVAES* = object
+var av_aes_size*: cint 
 
 proc av_aes_alloc* (): ptr AVAES
 proc av_aes_init* (a: ptr AVAES, key: ptr uint8, key_bits, decrypt: cint): cint
