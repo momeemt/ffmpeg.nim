@@ -5,8 +5,10 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
+{.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
+
 type
-  AVHMACType* = enum
+  AVHMACType* {.hmac.} = enum
     AV_HMAC_MD5
     AV_HMAC_SHA1
     AV_HMAC_SHA224
@@ -14,7 +16,7 @@ type
     AV_HMAC_SHA384
     AV_HMAC_SHA512
 
-  AVHMAC* = object
+  AVHMAC* {.hmac.} = object
 
 proc av_hmac_alloc* (`type`: AVHMACType): ptr AVHMAC
 proc av_hmac_free* (ctx: ptr AVHMAC)
