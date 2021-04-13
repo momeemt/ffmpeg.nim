@@ -1,9 +1,17 @@
+from libavutil_avutil import AVPictureType
+from libavutil_buffer import AVBufferRef
+from libavutil_dict import AVDictionary
+from libavutil_rational import AVRational
+from libavutil_pixfmt import AVColorRange, AVColorSpace, AVColorPrimaries, AVColorTransferCharacteristic, AVChromaLocation
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+
+{.pragma: frame, importc, header: "<libavutil/frame.h>".}
 
 const
   AV_NUM_DATA_POINTERS* = 8
@@ -16,7 +24,7 @@ const
   AV_FRAME_CROP_UNALIGNED* = 1 shl 0
 
 type
-  AVFrameSideDataType* = enum
+  AVFrameSideDataType* {.frame.} = enum
     AV_FRAME_DATA_PANSCAN
     AV_FRAME_DATA_A53_CC
     AV_FRAME_DATA_STEREO3D
@@ -40,7 +48,7 @@ type
     AV_FRAME_DATA_QP_TABLE_PROPERTIES # if FF_API_FRAME_QP
     AV_FRAME_DATA_QP_TABLE_DATA # if FF_API_FRAME_QP
 
-  AVActiveFormatDescription* = enum
+  AVActiveFormatDescription* {.frame.} = enum
     AV_AFD_SAME = 8
     AV_AFD_4_3 = 9
     AV_AFD_16_9 = 10
@@ -49,70 +57,70 @@ type
     AV_AFD_16_9_SP_14_9 = 14
     AV_AFD_SP_4_3 = 15
   
-  AVFrameSideData* = object
-    `type`: AVFrameSideDataType
-    data: ptr uint8
-    size: cint
-    metadata: ptr AVDictionary
-    buf: ptr AVBufferRef
+  AVFrameSideData* {.frame.} = object
+    `type`*: AVFrameSideDataType
+    data*: ptr uint8
+    size*: cint
+    metadata*: ptr AVDictionary
+    buf*: ptr AVBufferRef
   
-  AVRegionOfInterest* = object
-    self_size: cuint
-    top: cint
-    bottom: cint
-    left: cint
-    right: cint
-    qoffset: AVRational
+  AVRegionOfInterest* {.frame.} = object
+    self_size*: cuint
+    top*: cint
+    bottom*: cint
+    left*: cint
+    right*: cint
+    qoffset*: AVRational
   
-  AVFrame* = object
-    data: ptr array[AV_NUM_DATA_POINTERS, uint8]
-    line: array[AV_NUM_DATA_POINTERS, cint]
-    extended_data: ptr ptr uint8
-    width: cint
-    height: cint
-    nb_samples: cint
-    format: cint
-    key_frame: cint
-    pict_type: AVPictureType
-    sample_aspect_ratio: AVRational
-    pts: int64
-    pkt_dts: int64
-    coded_picture_number: cint
-    display_picture_number: cint
-    quality: cint
-    opaque: pointer
-    repeat_pict: cint
-    interlaced_frame: cint
-    top_field_first: cint
-    palette_has_changed: cint
-    reordered_opaque: int64
-    sample_rate: cint
-    channel_layout: uint64
-    buf: ptr array[AV_NUM_DATA_POINTERS, AVBufferRef]
-    extended_buf: ptr ptr AVBufferRef
-    nb_extended_buf: cint
-    side_data: ptr ptr AVFrameSideDataType
-    nb_side_data: cint
-    flags: cint
-    color_range: AVColorRange
-    color_primaries: AVColorPrimaries
-    color_trc: AVColorTransferCharacteristic
-    colorspace: AVColorSpace
-    chroma_location: AVChromaLocation
-    best_effort_timestamp: int64
-    pkt_pos: int64
-    pkt_duration: int64
-    metadata: ptr AVDictionary
-    decode_error_flags: cint
-    channels: cint
-    pkt_size: cint
-    hw_frames_ctx: ptr AVBufferRef
-    opaque_ref: ptr AVBufferRef
-    crop_top: csize_t
-    crop_bottom: csize_t
-    crop_left: csize_t
-    crop_right: csize_t
-    private_ref: ptr AVBufferRef
+  AVFrame* {.frame.} = object
+    data*: array[AV_NUM_DATA_POINTERS, ptr uint8]
+    line*: array[AV_NUM_DATA_POINTERS, cint]
+    extended_data*: ptr ptr uint8
+    width*: cint
+    height*: cint
+    nb_samples*: cint
+    format*: cint
+    key_frame*: cint
+    pict_type*: AVPictureType
+    sample_aspect_ratio*: AVRational
+    pts*: int64
+    pkt_dts*: int64
+    coded_picture_number*: cint
+    display_picture_number*: cint
+    quality*: cint
+    opaque*: pointer
+    repeat_pict*: cint
+    interlaced_frame*: cint
+    top_field_first*: cint
+    palette_has_changed*: cint
+    reordered_opaque*: int64
+    sample_rate*: cint
+    channel_layout*: uint64
+    buf*: array[AV_NUM_DATA_POINTERS, ptr AVBufferRef]
+    extended_buf*: ptr ptr AVBufferRef
+    nb_extended_buf*: cint
+    side_data*: ptr ptr AVFrameSideDataType
+    nb_side_data*: cint
+    flags*: cint
+    color_range*: AVColorRange
+    color_primaries*: AVColorPrimaries
+    color_trc*: AVColorTransferCharacteristic
+    colorspace*: AVColorSpace
+    chroma_location*: AVChromaLocation
+    best_effort_timestamp*: int64
+    pkt_pos*: int64
+    pkt_duration*: int64
+    metadata*: ptr AVDictionary
+    decode_error_flags*: cint
+    channels*: cint
+    pkt_size*: cint
+    hw_frames_ctx*: ptr AVBufferRef
+    opaque_ref*: ptr AVBufferRef
+    crop_top*: csize_t
+    crop_bottom*: csize_t
+    crop_left*: csize_t
+    crop_right*: csize_t
+    private_ref*: ptr AVBufferRef
 
     when defined(FF_API_PKT_PTS):
       pkt_pts {.deprecated.}: int64
@@ -126,7 +134,7 @@ type
       qscale_type {.deprecated.}: cint
       qp_table_buf {.deprecated.}: ptr AVBufferRef
 
-proc av_get_colorspace_name* (val: AVColorSpace): ptr cchar
+proc av_get_colorspace_name* (val: AVColorSpace): cstring
 proc av_frame_alloc* (): ptr AVFrame
 proc av_frame_free* (frame: ptr ptr AVFrame)
 proc av_frame_ref* (dst, src: ptr AVFrame): cint
@@ -144,7 +152,7 @@ proc av_frame_new_side_data_from_buf* (frame: ptr AVFrame, `type`: AVFrameSideDa
 proc av_frame_get_side_data* (frame: ptr AVFrame, `type`: AVFrameSideDataType): ptr AVFrameSideData
 proc av_frame_remove_side_data* (frame: ptr AVFrame, `type`: AVFrameSideDataType)
 proc av_frame_apply_cropping* (frame: ptr AVFrame, flags: cint): cint
-proc av_frame_side_data_name* (`type`: AVFrameSideDataType): ptr cchar
+proc av_frame_side_data_name* (`type`: AVFrameSideDataType): cstring
 
 when defined(FF_API_FRAME_GET_SET):
   proc av_frame_get_best_effort_timestamp* (frame: ptr AVFrame): int64 {.deprecated.}
