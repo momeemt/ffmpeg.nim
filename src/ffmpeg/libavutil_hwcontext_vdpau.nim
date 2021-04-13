@@ -6,5 +6,5 @@ type
   VdpGetProcAddress* {.vdpau.} = object
 
   AVVDPAUDeviceContext* {.hwcontext_vdpau.} = object
-    device: VdpDevice
-    get_proc_address: ptr VdpGetProcAddress
+    device*: VdpDevice
+    get_proc_address*: ptr VdpGetProcAddress
