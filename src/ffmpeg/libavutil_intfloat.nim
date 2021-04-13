@@ -1,18 +1,20 @@
+{.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
+
+type
+  av_intfloat32* {.intfloat, bycopy, union.} = object
+    i*: cuint
+    f*: cfloat
+
+  av_intfloat64* {.intfloat, bycopy, union.} = object
+    i*: cuint
+    f*: cdouble
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-type
-  av_intfloat32* {.bycopy, union.} = object
-    i*: cuint
-    f*: cfloat
-
-  av_intfloat64* {.bycopy, union.} = object
-    i*: cuint
-    f*: cdouble
 
 proc av_int2float* (i: uint32): cfloat {.cdecl, inline.} =
   var v: av_intfloat32
