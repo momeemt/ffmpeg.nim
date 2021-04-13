@@ -1,3 +1,8 @@
+{.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
+
+type
+  AVCAST5* {.cast5.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -6,9 +11,6 @@ else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
 var av_cast5_size*: cint
-
-type
-  AVCAST5* = object
 
 proc av_cast5_alloc* (): ptr AVCAST5
 proc av_cast5_init* (ctx: ptr AVCAST5, key: ptr uint8, key_bits: cint): cint
