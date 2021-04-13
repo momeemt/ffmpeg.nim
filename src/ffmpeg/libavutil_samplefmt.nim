@@ -5,8 +5,10 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
+{.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
+
 type
-  AVSampleFormat* = enum
+  AVSampleFormat* {.samplefmt.} = enum
     AV_SAMPLE_FMT_NONE = -1
     AV_SAMPLE_FMT_U8
     AV_SAMPLE_FMT_S16
