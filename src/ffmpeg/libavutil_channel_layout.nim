@@ -1,3 +1,18 @@
+{.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
+
+type
+  AVMatrixEncoding* {.channel_layout.} = enum
+    AV_MATRIX_ENCODING_NONE
+    AV_MATRIX_ENCODING_DOLBY
+    AV_MATRIX_ENCODING_DPLII
+    AV_MATRIX_ENCODING_DPLIIX
+    AV_MATRIX_ENCODING_DPLIIZ
+    AV_MATRIX_ENCODING_DOLBYEX
+    AV_MATRIX_ENCODING_DOLBYHEADPHONE
+    AV_MATRIX_ENCODING_NB
+  
+  AVBPrint* {.channel_layout.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -60,19 +75,6 @@ const
   AV_CH_LAYOUT_OCTAGONAL* = AV_CH_LAYOUT_5POINT0 or AV_CH_BACK_LEFT or AV_CH_BACK_CENTER or AV_CH_BACK_RIGHT
   AV_CH_LAYOUT_HEXADECAGONAL* = AV_CH_LAYOUT_OCTAGONAL or AV_CH_WIDE_LEFT or AV_CH_WIDE_RIGHT or AV_CH_TOP_BACK_LEFT or AV_CH_TOP_BACK_RIGHT or AV_CH_TOP_BACK_CENTER or AV_CH_TOP_FRONT_CENTER or AV_CH_TOP_FRONT_LEFT or AV_CH_TOP_FRONT_RIGHT
   AV_CH_LAYOUT_STEREO_DOWNMIX* = AV_CH_STEREO_LEFT or AV_CH_STEREO_RIGHT
-
-type
-  AVMatrixEncoding* = enum
-    AV_MATRIX_ENCODING_NONE
-    AV_MATRIX_ENCODING_DOLBY
-    AV_MATRIX_ENCODING_DPLII
-    AV_MATRIX_ENCODING_DPLIIX
-    AV_MATRIX_ENCODING_DPLIIZ
-    AV_MATRIX_ENCODING_DOLBYEX
-    AV_MATRIX_ENCODING_DOLBYHEADPHONE
-    AV_MATRIX_ENCODING_NB
-  
-  AVBPrint* = object
 
 proc av_get_channel_layout* (name: ptr cchar): uint64
 proc av_get_extended_channel_layout* (name: ptr cchar, channel_layout: ptr uint64, nb_channels: ptr cint): cint
