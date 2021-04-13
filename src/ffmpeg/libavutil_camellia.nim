@@ -1,3 +1,8 @@
+{.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
+
+type
+  AVCAMELLIA* {.camellia.} = object
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -6,9 +11,6 @@ else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
 var av_camellia_size*: cint
-
-type
-  AVCAMELLIA* = object
 
 proc av_camellia_alloc* (): ptr AVCAMELLIA
 proc av_camellia_init* (ctx: ptr AVCAMELLIA, key: ptr uint8, key_bits: cint): cint
