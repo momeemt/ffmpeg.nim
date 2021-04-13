@@ -7,12 +7,17 @@ else:
 
 from libavcodec_codec import AVCodec, AVPacket
 from libavcodec_codec_id import AVCodecID
+from libavcodec_codec_desc import AVCodecDescriptor
+from libavcodec_packet import AVPacketSideData
 from libavcodec_codec_par import AVFieldOrder, AVCodecParameters
-import libavutil_avutil
-import libavutil_buffer
-import libavutil_samplefmt
+from libavutil_avutil import AVMediaType
+from libavutil_buffer import AVBufferRef
+from libavutil_dict import AVDictionary
+from libavutil_frame import AVFrame, AV_NUM_DATA_POINTERS
 from libavutil_log import AVClass
+from libavutil_pixfmt import AVPixelFormat, AVColorPrimaries, AVColorTransferCharacteristic, AVColorSpace, AVColorRange, AVChromaLocation
 from libavutil_rational import AVRational
+from libavutil_samplefmt import AVSampleFormat
 
 const
   AV_INPUT_BUFFER_PADDING_SIZE* = 64
@@ -291,266 +296,264 @@ type
     AV_AUDIO_SERVICE_TYPE_NB
   
   RcOverride* = object
-    start_frame: int
-    end_frame: int
-    qscale: int
-    quality_factor: float
+    start_frame*: cint
+    end_frame*: cint
+    qscale*: cint
+    quality_factor*: cfloat
   
   AVPanScan* = object
-    id: int
-    width: int
-    height: int
-    position: array[3, array[2, int16]]
+    id*: cint
+    width*: cint
+    height*: cint
+    position*: array[3, array[2, int16]]
 
-  # TODO: 未実装
   AVCPBProperties* = object
 
   AVProducerReferenceTime* = object
-    wallclock: int64
-    flags: int
+    wallclock*: int64
+    flags*: cint
   
-  # TODO: 未実装
   AVCodecInternal* = object
 
   AVCodecContext* = object
-    av_class: ptr AVClass
-    log_level_offset: int
-    codec_type: AVMediaType
-    codec: ptr AVCodec
-    codec_id: AVCodecID
-    codec_tag: uint
-    priv_data: pointer
-    internal: AVCodecInternal
-    opaque: pointer
-    bit_rate: int64
-    bit_rate_tolerance: int
-    global_quality: int
-    compression_level: int
-    flags: int
-    flags2: int
-    extradata: ptr uint8
-    extradata_size: int
-    time_base: AVRational
-    ticks_per_frame: int
-    delay: int
-    width: int
-    height: int
-    coded_width: int
-    coded_height: int
-    gop_size: int
-    pix_fmt: AVPixelFormat
-    draw_hotiz_band: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: array[AV_NUM_DATA_POINTERS, int], y: int, type1: int, height: int )
-    get_format: proc (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat
-    max_b_frames: int
-    b_quant_factor: float
-    b_quant_offset: float
-    has_b_frames: int
-    i_quant_factor: float
-    i_quant_offset: float
-    lumi_masking: float
-    temporal_cplx_masking: float
-    spatial_cplx_masking: float
-    p_masking: float
-    dark_masking: float
-    slice_count: int
-    slice_offset: ptr int
-    sample_aspect_ratio: AVRational
-    me_cmp: int
-    me_sub_cmp: int
-    mb_cmp: int
-    ildct_cmp: int
-    dia_size: int
-    last_predictor_count: int
-    me_pre_cmp: int
-    pre_dia_size: int
-    me_subpel_quality: int
-    me_range: int
-    slice_flags: int
-    mb_decision: int
-    intra_matrix: ptr uint16
-    inter_matrix: ptr uint16
-    intra_dc_precision: int
-    skip_top: int
-    skip_bottom: int
-    mb_lmin: int
-    mb_lmax: int
-    bidir_refine: int
-    keyint_min: int
-    refs: int
-    mv0_threshold: int
-    color_primaries: AVColorPrimaties
-    color_trc: AVColorTransferCharacteristic
-    colorspace: AVColorSpace
-    color_range: AVColorRange
-    chroma_sample_location: AVChromaLocation
-    slices: int
-    field_order: AVFieldOrder
-    sample_rate: int
-    channels: int
-    sample_fmt: AVSampleFormat
-    frame_size: int
-    frame_number: int
-    block_align: int
-    cutoff: int
-    channel_layout: uint64
-    request_channel_layout: uint64
-    audio_service_type: AVAudioServiceType
-    request_sample_fmt: AVSampleFormat
-    get_buffer2: proc (s: ptr AVCodecContext, frame: ptr AVFrame, flags: int): int
-    refcounted_frames {.deprecated.} : int
-    qcompress: float
-    qblur: float
-    qmin: int
-    qmax: int
-    max_qdiff: int
-    rc_buffer_size: int
-    rc_override_count: int
-    rc_override: ptr RcOverride
-    rc_max_rate: int64
-    rc_min_rate: int64
-    rc_max_available_vbv_use: float
-    rc_min_vbv_overflow_use: float
-    rc_initial_buffer_occupancy: int
-    trellis: int
-    stats_out: ptr char
-    stats_in: ptr char
-    workaround_bugs: int
-    strict_std_compliance: int
-    error_concealment: int
-    debug: int
-    err_recognition: int
-    reordered_opaque: int64
-    hwaccel: ptr AVHWAccel
-    hwaccel_context: pointer
-    error: array[AV_NUM_DATA_POINTERS, uint64]
-    dct_algo: int
-    idct_algo: int
-    bits_per_coded_sample: int
-    bits_per_raw_sample: int
-    thread_count: int
-    thread_type: int
-    active_thread_type: int
-    thread_safe_callbacks: int
-    execute: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer): int, arg2: pointer, ret: ptr int, count: int, size: int): int
-    execute2: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer, jobnr: int, threadnr: int): int, arg2: pointer, ret: ptr int, count: int): int
-    nsse_weight: int
-    profile: int
-    level: int
-    skip_loop_filter: AVDiscard
-    skip_idct: AVDiscard
-    skip_frame: AVDiscard
-    subtitle_header: ptr uint8
-    subtitle_header_size: int
-    initial_padding: int
-    framerate: AVRational
-    sw_pix_fmt: AVPixelFormat
-    pkt_timebase: AVRational
-    codec_descriptor: ptr AVCodecDescriptor #const
-    pts_correction_num_faulty_pts: int64
-    pts_correction_num_faulty_dts: int64
-    pts_correction_last_pts: int64
-    pts_correction_last_dts: int64
-    sub_charenc: ptr char
-    sub_charenc_mode: int
-    skip_alpha: int
-    seek_preroll: int
-    chroma_intra_matrix: ptr uint16
-    dump_separator: ptr uint8
-    codec_whitelist: ptr char
-    properties: uint32 # unsigned == uint32 ?
-    coded_side_data: ptr AVPacketSideData
-    nb_coded_side_data: int
-    hw_frames_ctx: ptr AVBufferRef
-    sub_text_format: int
-    trailing_padding: int
-    max_pixels: int64
-    hw_device_ctx: ptr AVBufferRef
-    hwaccel_flags: int
-    apply_cropping: int
-    extra_hw_frames: int
-    discard_damaged_percentage: int
-    max_samples: int64
-    export_side_data: int
+    av_class*: ptr AVClass
+    log_level_offset*: cint
+    codec_type*: AVMediaType
+    codec*: ptr AVCodec
+    codec_id*: AVCodecID
+    codec_tag*: cuint
+    priv_data*: pointer
+    internal*: AVCodecInternal
+    opaque*: pointer
+    bit_rate*: int64
+    bit_rate_tolerance*: cint
+    global_quality*: cint
+    compression_level*: cint
+    flags*: cint
+    flags2*: cint
+    extradata*: ptr uint8
+    extradata_size*: cint
+    time_base*: AVRational
+    ticks_per_frame*: cint
+    delay*: cint
+    width*: cint
+    height*: cint
+    coded_width*: cint
+    coded_height*: cint
+    gop_size*: cint
+    pix_fmt*: AVPixelFormat
+    draw_hotiz_band*: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: array[AV_NUM_DATA_POINTERS, cint], y, `type`, height: cint)
+    get_format*: proc (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat
+    max_b_frames*: cint
+    b_quant_factor*: cfloat
+    b_quant_offset*: cfloat
+    has_b_frames*: cint
+    i_quant_factor*: cfloat
+    i_quant_offset*: cfloat
+    lumi_masking*: cfloat
+    temporal_cplx_masking*: cfloat
+    spatial_cplx_masking*: cfloat
+    p_masking*: cfloat
+    dark_masking*: cfloat
+    slice_count*: cint
+    slice_offset*: ptr cint
+    sample_aspect_ratio*: AVRational
+    me_cmp*: cint
+    me_sub_cmp*: cint
+    mb_cmp*: cint
+    ildct_cmp*: cint
+    dia_size*: cint
+    last_predictor_count*: cint
+    me_pre_cmp*: cint
+    pre_dia_size*: cint
+    me_subpel_quality*: cint
+    me_range*: cint
+    slice_flags*: cint
+    mb_decision*: cint
+    intra_matrix*: ptr uint16
+    inter_matrix*: ptr uint16
+    intra_dc_precision*: cint
+    skip_top*: cint
+    skip_bottom*: cint
+    mb_lmin*: cint
+    mb_lmax*: cint
+    bidir_refine*: cint
+    keyint_min*: cint
+    refs*: cint
+    mv0_threshold*: cint
+    color_primaries*: AVColorPrimaries
+    color_trc*: AVColorTransferCharacteristic
+    colorspace*: AVColorSpace
+    color_range*: AVColorRange
+    chroma_sample_location*: AVChromaLocation
+    slices*: cint
+    field_order*: AVFieldOrder
+    sample_rate*: cint
+    channels*: cint
+    sample_fmt*: AVSampleFormat
+    frame_size*: cint
+    frame_number*: cint
+    block_align*: cint
+    cutoff*: cint
+    channel_layout*: uint64
+    request_channel_layout*: uint64
+    audio_service_type*: AVAudioServiceType
+    request_sample_fmt*: AVSampleFormat
+    get_buffer2*: proc (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint
+    refcounted_frames* {.deprecated.}: cint
+    qcompress*: cfloat
+    qblur*: cfloat
+    qmin*: cint
+    qmax*: cint
+    max_qdiff*: cint
+    rc_buffer_size*: cint
+    rc_override_count*: cint
+    rc_override*: ptr RcOverride
+    rc_max_rate*: int64
+    rc_min_rate*: int64
+    rc_max_available_vbv_use*: cfloat
+    rc_min_vbv_overflow_use*: cfloat
+    rc_initial_buffer_occupancy*: cint
+    trellis*: cint
+    stats_out*: ptr cchar
+    stats_in*: ptr cchar
+    workaround_bugs*: cint
+    strict_std_compliance*: cint
+    error_concealment*: cint
+    debug*: cint
+    err_recognition*: cint
+    reordered_opaque*: int64
+    hwaccel*: ptr AVHWAccel
+    hwaccel_context*: pointer
+    error*: array[AV_NUM_DATA_POINTERS, uint64]
+    dct_algo*: cint
+    idct_algo*: cint
+    bits_per_coded_sample*: cint
+    bits_per_raw_sample*: cint
+    thread_count*: cint
+    thread_type*: cint
+    active_thread_type*: cint
+    thread_safe_callbacks*: cint
+    execute*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer): cint, arg2: pointer, ret: ptr cint, count: cint, size: cint): cint
+    execute2*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer, jobnr: cint, threadnr: cint): cint, arg2: pointer, ret: ptr cint, count: cint): cint
+    nsse_weight*: cint
+    profile*: cint
+    level*: cint
+    skip_loop_filter*: AVDiscard
+    skip_idct*: AVDiscard
+    skip_frame*: AVDiscard
+    subtitle_header*: ptr uint8
+    subtitle_header_size*: cint
+    initial_padding*: cint
+    framerate*: AVRational
+    sw_pix_fmt*: AVPixelFormat
+    pkt_timebase*: AVRational
+    codec_descriptor*: ptr AVCodecDescriptor
+    pts_correction_num_faulty_pts*: int64
+    pts_correction_num_faulty_dts*: int64
+    pts_correction_last_pts*: int64
+    pts_correction_last_dts*: int64
+    sub_charenc*: ptr cchar
+    sub_charenc_mode*: cint
+    skip_alpha*: cint
+    seek_preroll*: cint
+    chroma_intra_matrix*: ptr uint16
+    dump_separator*: ptr uint8
+    codec_whitelist*: ptr cchar
+    properties*: uint32 # unsigned == uint32 ?
+    coded_side_data*: ptr AVPacketSideData
+    nb_coded_side_data*: cint
+    hw_frames_ctx*: ptr AVBufferRef
+    sub_text_format*: cint
+    trailing_padding*: cint
+    max_pixels*: int64
+    hw_device_ctx*: ptr AVBufferRef
+    hwaccel_flags*: cint
+    apply_cropping*: cint
+    extra_hw_frames*: cint
+    discard_damaged_percentage*: cint
+    max_samples*: int64
+    export_side_data*: cint
 
     when defined(FF_API_PRIVATE_OPT):
-      b_frame_strategy {.deprecated.}: cint
-      mpeg_quant {.deprecated.}: cint
-      prediction_method {.deprecated.}: cint # 謎の定数も定義されてる
-      pre_me {.deprecated.}: cint
-      scenechange_threshold {.deprecated.}: cint
-      noise_reduction {.deprecated.}: cint
-      me_penalty_compensation {.deprecated.}: cint
-      brd_scale {.deprecated.}: cint
-      chromaoffset {.deprecated.}: cint
-      b_sensitivity {.deprecated.}: cint
-      coder_type {.deprecated.}: cint
-      context_model {.deprecated.}: cint
-      frame_skip_threshold {.deprecated.}: cint
-      frame_skip_factor {.deprecated.}: cint
-      frame_skip_exp {.deprecated.}: cint
-      frame_skip_cmp {.deprecated.}: cint
-      min_prediction_order {.deprecated.}: cint
-      max_prediction_order {.deprecated.}: cint
-      timecode_frame_start {.deprecated.}: clonglong # int64
-      rtp_payload_size {.deprecated.}: cint
+      b_frame_strategy* {.deprecated.}: cint
+      mpeg_quant* {.deprecated.}: cint
+      prediction_method* {.deprecated.}: cint
+      pre_me* {.deprecated.}: cint
+      scenechange_threshold* {.deprecated.}: cint
+      noise_reduction* {.deprecated.}: cint
+      me_penalty_compensation* {.deprecated.}: cint
+      brd_scale* {.deprecated.}: cint
+      chromaoffset* {.deprecated.}: cint
+      b_sensitivity* {.deprecated.}: cint
+      coder_type* {.deprecated.}: cint
+      context_model* {.deprecated.}: cint
+      frame_skip_threshold* {.deprecated.}: cint
+      frame_skip_factor* {.deprecated.}: cint
+      frame_skip_exp* {.deprecated.}: cint
+      frame_skip_cmp* {.deprecated.}: cint
+      min_prediction_order* {.deprecated.}: cint
+      max_prediction_order* {.deprecated.}: cint
+      timecode_frame_start* {.deprecated.}: clonglong
+      rtp_payload_size* {.deprecated.}: cint
 
     when defined(FF_API_RTP_CALLBACK):
-      rtp_callback {.deprecated.}: proc (avctx: ptr AVCodecContext, data: pointer, size: int, mb_nb: int)
+      rtp_callback* {.deprecated.}: proc (avctx: ptr AVCodecContext, data: pointer, size: cint, mb_nb: cint)
 
     when defined(FF_API_STAT_BITS):
-      mv_bits {.deprecated.}: cint
-      header_bits {.deprecated.}: cint
-      i_tex_bits {.deprecated.}: cint
-      p_text_bits {.deprecated.}: cint
-      i_count {.deprecated.}: cint
-      p_count {.deprecated.}: cint
-      skip_count {.deprecated.}: cint
-      misc_bits {.deprecated.}: cint
-      frame_bits {.deprecated.}: cint
+      mv_bits* {.deprecated.}: cint
+      header_bits* {.deprecated.}: cint
+      i_tex_bits* {.deprecated.}: cint
+      p_text_bits* {.deprecated.}: cint
+      i_count* {.deprecated.}: cint
+      p_count* {.deprecated.}: cint
+      skip_count* {.deprecated.}: cint
+      misc_bits* {.deprecated.}: cint
+      frame_bits* {.deprecated.}: cint
 
     # if: FF_API_DEBUG_MV & else
-    debug_mv: int
+    debug_mv*: cint
 
     # if: FF_API_LOWRES & else
-    lowres: int
+    lowres*: cint
 
     when defined(FF_API_CODED_FRAME):
-      coded_frame {.deprecated.}: ptr AVFrame
+      coded_frame* {.deprecated.}: ptr AVFrame
 
     when defined(FF_API_VBV_DELAY):
-      vbv_delay {.deprecated.}: uint64
+      vbv_delay* {.deprecated.}: uint64
 
     when defined(FF_API_SIDEDATA_ONLY_PKT):
-      side_data_only_packets: int
+      side_data_only_packets*: cint
 
   AVSubtitle* = object
-    format: uint16
-    start_display_time: uint32
-    end_display_time: uint32
-    num_rects: uint32 # unsigned
-    rects: ptr ptr AVSubtitleRect
-    pts: int64
+    format*: uint16
+    start_display_time*: uint32
+    end_display_time*: uint32
+    num_rects*: uint32
+    rects*: ptr ptr AVSubtitleRect
+    pts*: int64
 
   MpegEncContext* = object
 
   AVHWAccel* = object
-    name: ptr char
-    `type`: AVMediaType
-    id: AVCodecID
-    pix_fmt: AVPixelFormat
-    capabilities: int
-    alloc_frame: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): int
-    start_frame: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): int
-    decode_params: proc (avctx: ptr AVCodecContext, typ: int, buf: ptr uint8, buf_size: uint32): int
-    decode_slice: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): int
-    end_frame: proc (avctx: ptr AVCodecContext): int
-    frame_priv_data_size: int
-    decode_mb: proc (s: ptr MpegEncContext) # 怪しい
-    init: proc (avctx: ptr AVCodecContext): int
-    uninit: proc (avctx: ptr AVCodecContext): int
-    priv_data_size: int
-    caps_internal: int
-    frame_params: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): int
+    name*: ptr cchar
+    `type`*: AVMediaType
+    id*: AVCodecID
+    pix_fmt*: AVPixelFormat
+    capabilities*: cint
+    alloc_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+    start_frame*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
+    decode_params*: proc (avctx: ptr AVCodecContext, typ: int, buf: ptr uint8, buf_size: uint32): cint
+    decode_slice*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
+    end_frame*: proc (avctx: ptr AVCodecContext): cint
+    frame_priv_data_size*: cint
+    decode_mb*: proc (s: ptr MpegEncContext) # 怪しい
+    init*: proc (avctx: ptr AVCodecContext): cint
+    uninit*: proc (avctx: ptr AVCodecContext): cint
+    priv_data_size*: cint
+    caps_internal*: cint
+    frame_params*: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): cint
   
   AVSubtitleType* = enum
     SUBTITLE_NONE
@@ -559,19 +562,19 @@ type
     SUBTITLE_ASS
   
   AVSubtitleRect* = object
-    x: int
-    y: int
-    w: int
-    h: int
-    nb_colors: int
-    data: array[4, ptr uint8]
-    linesize: array[4, int]
-    `type`: AVSubtitleType
-    text: ptr char
-    ass: ptr char
-    flags: int
+    x*: cint
+    y*: cint
+    w*: cint
+    h*: cint
+    nb_colors*: cint
+    data*: array[4, ptr uint8]
+    linesize*: array[4, int]
+    `type`*: AVSubtitleType
+    text*: ptr cchar
+    ass*: ptr cchar
+    flags*: cint
     when defined(FF_API_AVPICTURE):
-      pict {.deprecated.}: AVPicture
+      pict* {.deprecated.}: AVPicture
   
   AVPictureStructure* = enum
     AV_PICTURE_STRUCTURE_UNKNOWN
