@@ -5,11 +5,13 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
+{.pragma: hash, importc, header: "<libavutil/hash.h>".}
+
 const
   AV_HASH_MAX_SIZE* = 64
 
 type
-  AVHashContext* = object
+  AVHashContext* {.hash.} = object
 
 proc av_hash_alloc* (ctx: ptr ptr AVHashContext, name: ptr cchar): cint
 proc av_hash_names* (i: cint): ptr cchar
