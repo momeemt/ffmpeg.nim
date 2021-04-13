@@ -9,3 +9,5 @@ type
   DXVA2_ConfigPictureDecode* = object
   LPDIRECT3DSURFACE9* = object
   AVMediaCodecBuffer* = object
+  mfxSession* = object
+  mfxExtBuffer* = object
