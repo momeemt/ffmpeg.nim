@@ -5,7 +5,8 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
-#include <va/va.h>
+{.pragma: va, importc, header: "<va/va.h>".}
+{.pragma: hwcontext_vaapi, importc, header: "<libavutil/hwcontext_vaapi.h>".}
 
 const
   AV_VAAPI_DRIVER_QUIRK_USER_SET* = 1 shl 0
@@ -14,15 +15,20 @@ const
   AV_VAAPI_DRIVER_QUIRK_SURFACE_ATTRIBUTES* = 1 shl 3
 
 type
-  AVVAAPIDeviceContext* = object
-    display: VADisplay
-    driver_quirks: cuint
+  VADisplay* {.va.} = object
+  VASurfaceAttrib* {.va.} = object
+  VASurfaceID* {.va.} = object
+  VAConfigID* {.va.} = object
+
+  AVVAAPIDeviceContext* {.hwcontext_vaapi.} = object
+    display*: VADisplay
+    driver_quirks*: cuint
   
-  AVVAAPIFramesContext* = object
-    attributes: ptr VASurfaceAttrib
-    nb_attributes: cint
-    surface_ids: ptr VASurfaceID
-    nb_surfaces: cint
+  AVVAAPIFramesContext* {.hwcontext_vaapi.} = object
+    attributes*: ptr VASurfaceAttrib
+    nb_attributes*: cint
+    surface_ids*: ptr VASurfaceID
+    nb_surfaces*: cint
   
-  AVVAAPIHWConfig* = object
-    config_id: VAConfigID
+  AVVAAPIHWConfig* {.hwcontext_vaapi.} = object
+    config_id*: VAConfigID
