@@ -25,7 +25,8 @@ proc av_make_q* (num: cint, den: cint): AVRational {.inline.} =
   result = AVRational(num: num, den: den)
 
 proc av_cmp_q* (a, b: AVRational): cint {.inline.} =
-  let tmp = a.num * b.den.int64 - b.num * a.den.int64
+  discard
+  # let tmp = a.num * b.den.int64 - b.num * a.den.int64
   # if(tmp) return (int)((tmp ^ a.den ^ b.den)>>63)|1;
   #   else if(b.den && a.den) return 0;
   #   else if(a.num && b.num) return (a.num>>31) - (b.num>>31);
