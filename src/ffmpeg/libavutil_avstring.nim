@@ -1,3 +1,11 @@
+{.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
+
+type
+  AVEscapeMode* {.avstring.} = enum
+    AV_ESCAPE_MODE_AUTO
+    AV_ESCAPE_MODE_BACKSLASH
+    AV_ESCAPE_MODE_QUOTE
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
@@ -14,36 +22,30 @@ const
   AV_UTF8_FLAG_EXCLUDE_XML_INVALID_CONTROL_CODES* = 8
   AV_UTF8_FLAG_ACCEPT_ALL* = AV_UTF8_FLAG_ACCEPT_INVALID_BIG_CODES or AV_UTF8_FLAG_ACCEPT_NON_CHARACTERS or AV_UTF8_FLAG_ACCEPT_SURROGATES
 
-type
-  AVEscapeMode* = enum
-    AV_ESCAPE_MODE_AUTO
-    AV_ESCAPE_MODE_BACKSLASH
-    AV_ESCAPE_MODE_QUOTE
-
-proc av_strstart* (str, pfx: ptr cchar, `ptr`: ptr ptr cchar): cint
-proc av_stristart* (str, pfx: ptr cchar, `ptr`: ptr ptr cchar): cint
-proc av_stristr* (haystack, needle: ptr cchar): ptr cchar
-proc av_strnstr* (haystack, needle: ptr cchar, hay_length: csize_t): ptr cchar
-proc av_strlcpy* (dst, src: ptr cchar, size: csize_t): csize_t
-proc av_strlcat* (dst, src: ptr cchar, size: csize_t): csize_t
-proc av_strlcatf* (dst: ptr cchar, size: csize_t, fmt: ptr cchar): csize_t {.varargs.} #132
-proc av_asprintf* (fmt: ptr cchar): ptr cchar #156
-proc av_d2str* (d: cdouble): ptr cchar
-proc av_get_token* (buf: ptr ptr cchar, term: ptr cchar): ptr cchar
-proc av_strtok* (s, delim: ptr cchar, saveptr: ptr ptr cchar): ptr cchar
-proc av_strcasecmp* (a, b: ptr cchar): cint
-proc av_strncasecmp* (a, b: ptr cchar, n: csize_t): cint
-proc av_strireplace* (str, `from`, to: ptr cchar): ptr cchar
-proc av_basename* (path: ptr cchar): ptr cchar
-proc av_dirname* (path: ptr cchar): ptr cchar
-proc av_match_name* (name, names: ptr cchar): cint
-proc av_append_path_component* (path, component: ptr cchar): cchar
-proc av_escape* (dst: ptr ptr cchar, src, special_chars: ptr cchar, mode: AVEscapeMode, flags: cint): cint # warning
+proc av_strstart* (str, pfx: cstring, `ptr`: cstringArray): cint
+proc av_stristart* (str, pfx: cstring, `ptr`: cstringArray): cint
+proc av_stristr* (haystack, needle: cstring): cstring
+proc av_strnstr* (haystack, needle: cstring, hay_length: csize_t): cstring
+proc av_strlcpy* (dst, src: cstring, size: csize_t): csize_t
+proc av_strlcat* (dst, src: cstring, size: csize_t): csize_t
+proc av_strlcatf* (dst: cstring, size: csize_t, fmt: cstring): csize_t {.varargs.} #132
+proc av_asprintf* (fmt: cstring): cstring #156
+proc av_d2str* (d: cdouble): cstring
+proc av_get_token* (buf: cstringArray, term: cstring): cstring
+proc av_strtok* (s, delim: cstring, saveptr: cstringArray): cstring
+proc av_strcasecmp* (a, b: cstring): cint
+proc av_strncasecmp* (a, b: cstring, n: csize_t): cint
+proc av_strireplace* (str, `from`, to: cstring): cstring
+proc av_basename* (path: cstring): cstring
+proc av_dirname* (path: cstring): cstring
+proc av_match_name* (name, names: cstring): cint
+proc av_append_path_component* (path, component: cstring): cstring
+proc av_escape* (dst: cstringArray, src, special_chars: cstring, mode: AVEscapeMode, flags: cint): cint # warning
 proc av_utf8_decode* (codep: ptr int32, bufp: ptr ptr uint8, buf_end: ptr uint8, flags: cuint): cint # warning
-proc av_match_list* (name, list: ptr cchar, separator: cchar): cint
-proc av_sscanf* (`string`: ptr cchar, format: ptr cchar) {.varargs.}
+proc av_match_list* (name, list: cstring, separator: cstring): cint
+proc av_sscanf* (`string`: cstring, format: cstring) {.varargs.}
 
-proc av_strnlen* (s: ptr cchar, len: csize_t): csize_t {.inline.} =
+proc av_strnlen* (s: cstring, len: csize_t): csize_t {.inline.} =
   var i: csize_t = 0
   # while i < len and s[i]:
   #   i += 1
