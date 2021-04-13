@@ -5,12 +5,14 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
+{.pragma: pixfmt, importc, header: "<libavutil/pixfmt.h>".}
+
 const
   AVPALETTE_SIZE* = 1024
   AVPALETTE_COUNT* = 256
 
 type
-  AVPixelFormat* = enum
+  AVPixelFormat* {.pixfmt.} = enum
     AV_PIX_FMT_NONE = -1
     AV_PIX_FMT_YUV420P
     AV_PIX_FMT_YUYV422
@@ -213,7 +215,7 @@ type
     AV_PIX_FMT_Y210LE
     AV_PIX_FMT_NB
 
-  AVColorPrimaries* = enum
+  AVColorPrimaries* {.pixfmt.} = enum
     AVCOL_PRI_RESERVED0   = 0
     AVCOL_PRI_BT709       = 1
     AVCOL_PRI_UNSPECIFIED = 2
@@ -232,7 +234,7 @@ type
     AVCOL_PRI_JEDEC_P22   # = AVCOL_PRI_EBU3213
     AVCOL_PRI_NB
   
-  AVColorTransferCharacteristic* = enum
+  AVColorTransferCharacteristic* {.pixfmt.} = enum
     AVCOL_TRC_RESERVED0    = 0
     AVCOL_TRC_BT709        = 1
     AVCOL_TRC_UNSPECIFIED  = 2
@@ -256,7 +258,7 @@ type
     AVCOL_TRC_SMPTEST428_1 #= AVCOL_TRC_SMPTE428,
     AVCOL_TRC_NB
 
-  AVColorSpace* = enum
+  AVColorSpace* {.pixfmt.} = enum
     AVCOL_SPC_RGB         = 0
     AVCOL_SPC_BT709       = 1
     AVCOL_SPC_UNSPECIFIED = 2
@@ -275,13 +277,13 @@ type
     AVCOL_SPC_YCOCG       #= AVCOL_SPC_YCGCO,
     AVCOL_SPC_NB
   
-  AVColorRange* = enum
+  AVColorRange* {.pixfmt.} = enum
     AVCOL_RANGE_UNSPECIFIED = 0
     AVCOL_RANGE_MPEG        = 1
     AVCOL_RANGE_JPEG        = 2
     AVCOL_RANGE_NB
   
-  AVChromaLocation* = enum
+  AVChromaLocation* {.pixfmt.} = enum
     AVCHROMA_LOC_UNSPECIFIED = 0
     AVCHROMA_LOC_LEFT        = 1
     AVCHROMA_LOC_CENTER      = 2
