@@ -1,43 +1,5 @@
 from libavutil_bprint import va_list
-from libavutil_opt import AVOption
-
-{.pragma: log, importc, header: "<libavutil/log.h>".}
-
-type
-  AVClassCategory* {.log.} = enum
-    AV_CLASS_CATEGORY_NA = 0
-    AV_CLASS_CATEGORY_INPUT
-    AV_CLASS_CATEGORY_OUTPUT
-    AV_CLASS_CATEGORY_MUXER
-    AV_CLASS_CATEGORY_DEMUXER
-    AV_CLASS_CATEGORY_ENCODER
-    AV_CLASS_CATEGORY_DECODER
-    AV_CLASS_CATEGORY_FILTER
-    AV_CLASS_CATEGORY_BITSTREAM_FILTER
-    AV_CLASS_CATEGORY_SWSCALER
-    AV_CLASS_CATEGORY_SWRESAMPLER
-    AV_CLASS_CATEGORY_DEVICE_VIDEO_OUTPUT = 40
-    AV_CLASS_CATEGORY_DEVICE_VIDEO_INPUT
-    AV_CLASS_CATEGORY_DEVICE_AUDIO_OUTPUT
-    AV_CLASS_CATEGORY_DEVICE_AUDIO_INPUT
-    AV_CLASS_CATEGORY_DEVICE_OUTPUT
-    AV_CLASS_CATEGORY_DEVICE_INPUT
-    AV_CLASS_CATEGORY_NB
-
-  AVOptionRanges* {.log.} = object
-
-  AVClass* = object
-    class_name*: cstring
-    item_name*: proc (ctx: pointer): cstring
-    option*: ptr AVOption
-    version*: cint
-    log_level_offset_offset*: cint
-    parent_log_context_offset*: cint
-    child_next*: proc (obj, prev: pointer): pointer
-    child_class_next*: proc (prev: ptr AVClass): ptr AVClass
-    category*: AVClassCategory
-    get_category*: proc (ctx: pointer): AVClassCategory
-    query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint
+from libavutil_opt import AVOption, AVClassCategory
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
