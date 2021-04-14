@@ -2,7 +2,7 @@ from libavutil_avutil import AVMediaType
 from libavutil_buffer import AVBufferRef
 from libavutil_dict import AVDictionary
 from libavutil_frame import AVFrame
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_rational import AVRational
 
 {.pragma: avfilter, importc, header: "<libavfilter/avfilter.h>".}

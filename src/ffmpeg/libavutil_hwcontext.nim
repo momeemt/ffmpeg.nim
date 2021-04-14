@@ -1,7 +1,7 @@
 from libavutil_buffer import AVBufferRef, AVBufferPool
 from libavutil_dict import AVDictionary
 from libavutil_frame import AVFrame
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_pixfmt import AVPixelFormat
 
 when defined(windows):

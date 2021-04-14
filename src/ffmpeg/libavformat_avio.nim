@@ -1,5 +1,5 @@
 from libavutil_dict import AVDictionary
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 
 {.pragma: avio, importc, header: "<libavformat/avio.h>".}
 

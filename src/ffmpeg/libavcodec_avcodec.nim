@@ -14,7 +14,7 @@ from libavutil_avutil import AVMediaType
 from libavutil_buffer import AVBufferRef
 from libavutil_dict import AVDictionary
 from libavutil_frame import AVFrame, AV_NUM_DATA_POINTERS
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_pixfmt import AVPixelFormat, AVColorPrimaries, AVColorTransferCharacteristic, AVColorSpace, AVColorRange, AVChromaLocation
 from libavutil_rational import AVRational
 from libavutil_samplefmt import AVSampleFormat

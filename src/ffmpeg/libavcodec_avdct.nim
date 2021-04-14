@@ -1,4 +1,4 @@
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 
 {.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
 

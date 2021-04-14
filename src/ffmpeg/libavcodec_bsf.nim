@@ -2,7 +2,7 @@ from libavcodec_codec_id import AVCodecID
 from libavcodec_codec_par import AVCodecParameters
 from libavcodec_packet import AVPacket
 from libavutil_dict import AVDictionary
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_rational import AVRational
 
 {.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}

@@ -7,7 +7,7 @@ from libavformat_avio import AVIOContext, AVIOInterruptCB
 from libavutil_avutil import AVMediaType
 from libavutil_dict import AVDictionary
 from libavutil_frame import AVFrame
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_rational import AVRational
 
 when defined(windows):

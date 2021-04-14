@@ -2,7 +2,7 @@ from libavcodec_codec_id import AVCodecID
 from libavutil_avutil import AVMediaType
 from libavutil_frame import AVFrame
 from libavutil_hwcontext import AVHWDeviceType
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_pixfmt import AVPixelFormat
 from libavutil_rational import AVRational
 from libavutil_samplefmt import AVSampleFormat

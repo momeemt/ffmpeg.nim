@@ -2,7 +2,7 @@ from libavcodec_codec_id import AVCodecID
 from libavformat_avformat import AVFormatContext, AVInputFormat, AVOutputFormat
 from libavutil_common import MKBETAG
 from libavutil_dict import AVDictionary
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 from libavutil_pixfmt import AVPixelFormat
 from libavutil_rational import AVRational
 from libavutil_samplefmt import AVSampleFormat

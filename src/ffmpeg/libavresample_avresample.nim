@@ -1,6 +1,6 @@
 from libavutil_channel_layout import AVMatrixEncoding
 from libavutil_frame import AVFrame
-from libavutil_log import AVClass
+from libavutil_opt import AVClass
 
 {.pragma: avresample, importc, header: "<libavresample/avresample.h>".}
 
