@@ -1,4 +1,4 @@
-from libavcodec_codec import AVCodecContext
+from libavcodec_avcodec import AVCodecContext
 
 {.pragma: videoToolBox, importc, header: "<libavcodec/videotoolbox.h>".}
 {.pragma: videoToolBoxInclude, importc, header: "<VideoToolbox/VideoToolbox.h>".}

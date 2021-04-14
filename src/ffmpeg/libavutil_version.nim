@@ -9,7 +9,7 @@ template AV_VERSION_INT* (a, b, c: untyped): untyped =
   (a shl 16) or (b shl 8) or c
 
 template AV_VERSION_DOT* (a, b, c: untyped): untyped =
-  `a . b . c`
+  a.repr & "." & b.repr & "." & c.repr
 
 template AV_VERSION* (a, b, c: untyped): untyped =
   AV_VERSION_DOT(a, b, c)

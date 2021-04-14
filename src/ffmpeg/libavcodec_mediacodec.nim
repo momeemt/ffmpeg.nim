@@ -1,4 +1,4 @@
-from libavcodec_codec import AVCodecContext
+from libavcodec_avcodec import AVCodecContext
 from undefined_symbol import AVMediaCodecBuffer
 
 {.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
