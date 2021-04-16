@@ -23,6 +23,7 @@
 {.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
 {.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
 {.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
+{.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1826,3 +1827,22 @@ type
   AVBlowfish* {.blowfish.} = object
     p*: array[AV_BF_ROUNDS + 2, uint32]
     s*: array[4, array[256, uint32]]
+  
+  ff_pad_helper_AVBPrint* = object
+    str*: cstring
+    len*: cuint
+    size*: cuint
+    size_max*: cuint
+    reserved_internal_buffer*: array[1, cstring]
+
+  AVBPrint* {.bprint.} = object
+    str*: cstring
+    len*: cuint
+    size*: cuint
+    size_max*: cuint
+    reserved_internal_buffer*: array[1, cstring]
+    reserved_padding*: array[1024 - sizeof(ff_pad_helper_AVBPrint), cstring]
+  
+  tm* {.bprint.} = object
+
+  va_list* {.importc, header: "<stdarg.h>".} = object
