@@ -77,6 +77,7 @@ else:
 {.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
 {.pragma: stereo3d, importc, header: "<libavutil/stereo3d.h>".}
 {.pragma: tea, importc, header: "<libavutil/tea.h>".}
+{.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2791,3 +2792,8 @@ type
     view*: AVStereo3DView
   
   AVTEA* {.tea.} = object
+
+  AVThreadMessageQueue* {.threadmessage.} = object
+
+  AVThreadMessageFlags* {.threadmessage.} = enum
+    AV_THREAD_MESSAGE_NONBLOCK = 1

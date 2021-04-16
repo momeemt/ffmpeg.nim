@@ -1,10 +1,4 @@
-{.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
-
-type
-  AVThreadMessageQueue* {.threadmessage.} = object
-
-  AVThreadMessageFlags* {.threadmessage.} = enum
-    AV_THREAD_MESSAGE_NONBLOCK = 1
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
