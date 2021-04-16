@@ -1,26 +1,4 @@
-from libavutil_rational import AVRational
-
-{.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
-
-type
-  AVMediaType* {.avutil.} = enum
-    AVMEDIA_TYPE_UNKNOWN = -1
-    AVMEDIA_TYPE_VIDEO
-    AVMEDIA_TYPE_AUDIO
-    AVMEDIA_TYPE_DATA
-    AVMEDIA_TYPE_SUBTITLE
-    AVMEDIA_TYPE_ATTACHMENT
-    AVMEDIA_TYPE_NB
-  
-  AVPictureType* {.avutil.} = enum
-    AV_PICTURE_TYPE_NONE = 0
-    AV_PICTURE_TYPE_I
-    AV_PICTURE_TYPE_P
-    AV_PICTURE_TYPE_B
-    AV_PICTURE_TYPE_S
-    AV_PICTURE_TYPE_SI
-    AV_PICTURE_TYPE_SP
-    AV_PICTURE_TYPE_BI
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

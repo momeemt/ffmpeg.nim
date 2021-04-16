@@ -21,6 +21,7 @@
 {.pragma: aes, importc, header: "libavutil_aes".}
 {.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
 {.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
+{.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1801,3 +1802,22 @@ type
     AV_ESCAPE_MODE_AUTO
     AV_ESCAPE_MODE_BACKSLASH
     AV_ESCAPE_MODE_QUOTE
+  
+  AVMediaType* {.avutil.} = enum
+    AVMEDIA_TYPE_UNKNOWN = -1
+    AVMEDIA_TYPE_VIDEO
+    AVMEDIA_TYPE_AUDIO
+    AVMEDIA_TYPE_DATA
+    AVMEDIA_TYPE_SUBTITLE
+    AVMEDIA_TYPE_ATTACHMENT
+    AVMEDIA_TYPE_NB
+  
+  AVPictureType* {.avutil.} = enum
+    AV_PICTURE_TYPE_NONE = 0
+    AV_PICTURE_TYPE_I
+    AV_PICTURE_TYPE_P
+    AV_PICTURE_TYPE_B
+    AV_PICTURE_TYPE_S
+    AV_PICTURE_TYPE_SI
+    AV_PICTURE_TYPE_SP
+    AV_PICTURE_TYPE_BI
