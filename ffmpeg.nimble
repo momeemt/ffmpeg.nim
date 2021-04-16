@@ -3,9 +3,10 @@
 version       = "0.3.2"
 author        = "momeemt"
 description   = "ffmpeg.nim is the Nim binding for FFMpeg(4.3.2)."
-license       = "MIT"
+license       = "GPL-3.0-or-later"
 srcDir        = "src"
-
+installDirs   = @["cinclude", "ffmpeg"]
+installFiles  = @["ffmpeg.nim"]
 
 # Dependencies
 
