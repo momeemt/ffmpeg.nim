@@ -24,6 +24,7 @@
 {.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
 {.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
 {.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
+{.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1846,3 +1847,11 @@ type
   tm* {.bprint.} = object
 
   va_list* {.importc, header: "<stdarg.h>".} = object
+
+  AVBuffer* {.buffer.} = object
+  AVBufferRef* {.buffer.} = object
+    buffer*: ptr AVBuffer
+    data*: ptr uint8
+    size*: int
+  
+  AVBufferPool* {.buffer.} = object
