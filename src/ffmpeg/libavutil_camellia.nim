@@ -1,7 +1,4 @@
-{.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
-
-type
-  AVCAMELLIA* {.camellia.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

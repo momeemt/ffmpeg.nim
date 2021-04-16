@@ -25,6 +25,7 @@
 {.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
 {.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
 {.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
+{.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1855,3 +1856,5 @@ type
     size*: int
   
   AVBufferPool* {.buffer.} = object
+
+  AVCAMELLIA* {.camellia.} = object
