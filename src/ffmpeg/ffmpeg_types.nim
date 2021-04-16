@@ -20,6 +20,7 @@
 {.pragma: aes_ctr, importc, header: "<libavutil/aes_ctr.h>".}
 {.pragma: aes, importc, header: "libavutil_aes".}
 {.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
+{.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1795,3 +1796,8 @@ type
   AVAES* {.aes.} = object
 
   AVAudioFifo* {.audio_fifo.} = object
+
+  AVEscapeMode* {.avstring.} = enum
+    AV_ESCAPE_MODE_AUTO
+    AV_ESCAPE_MODE_BACKSLASH
+    AV_ESCAPE_MODE_QUOTE
