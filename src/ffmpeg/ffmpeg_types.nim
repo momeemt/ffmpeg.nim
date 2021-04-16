@@ -16,6 +16,7 @@
 {.pragma: buffersrc, importc, header: "<libavfilter/buffersrc.h>".}
 {.pragma: avformat, importc, header: "<libavformat_avformat.h>".}
 {.pragma: avio, importc, header: "<libavformat/avio.h>".}
+{.pragma: avresample, importc, header: "<libavresample/avresample.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1764,3 +1765,24 @@ type
     min_packet_size*: cint
   
   AVBPrint* {.avio.} = object
+
+  AVAudioResampleContext* {.avresample.} = object
+
+  AVMixCoeffType* {.deprecated, avresample.} = enum
+    AV_MIX_COEFF_TYPE_Q8
+    AV_MIX_COEFF_TYPE_Q15
+    AV_MIX_COEFF_TYPE_FLT
+    AV_MIX_COEFF_TYPE_NB
+  
+  AVResampleFilterType* {.deprecated, avresample.} = enum
+    AV_RESAMPLE_FILTER_TYPE_CUBIC
+    AV_RESAMPLE_FILTER_TYPE_BLACKMAN_NUTTALL
+    AV_RESAMPLE_FILTER_TYPE_KAISER
+  
+  AVResampleDitherMethod* {.deprecated, avresample.} = enum
+    AV_RESAMPLE_DITHER_NONE
+    AV_RESAMPLE_DITHER_RECTANGULAR
+    AV_RESAMPLE_DITHER_TRIANGULAR
+    AV_RESAMPLE_DITHER_TRIANGULAR_HP
+    AV_RESAMPLE_DITHER_TRIANGULAR_NS
+    AV_RESAMPLE_DITHER_NB
