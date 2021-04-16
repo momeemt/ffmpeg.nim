@@ -12,6 +12,7 @@
 {.pragma: packet, importc, header:"<libavcodec/packet.h>".}
 {.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
 {.pragma: avdevice, importc, header: "<libavdevice/avdevice.h>".}
+{.pragma: avfilter, importc, header: "<libavfilter/avfilter.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1251,3 +1252,132 @@ type
     devices*: ptr ptr AVDeviceInfo
     nb_devices*: cint
     default_device*: cint
+  
+  AVFilterInternal* {.avfilter.} = object
+  AVFilterPad* {.avfilter.} = object
+  AVFilterFormats* {.avfilter.} = object
+  AVFilterGraphInternal* {.avfilter.} = object
+  AVFilterChannelLayouts* {.importc: "struct $1", header: "<libavfilter/avfilter.h>".} = object
+  AVFilterCommand* {.importc: "struct $1", header: "<libavfilter/avfilter.h>".} = object
+
+  AVFilterContext* {.avfilter.} = object
+    av_class*: ptr AVClass
+    filter*: ptr AVFilter
+    name*: cstring
+    input_pads*: ptr AVFilterPad
+    inputs*: ptr ptr AVFilterLink
+    nb_inputs*: cuint
+    output_pads*: ptr AVFilterPad
+    outputs*: ptr ptr AVFilterLink
+    nb_outputs*: cuint
+    priv*: pointer
+    graph*: ptr AVFilterGraph
+    thread_type*: cint
+    internal*: ptr AVFilterInternal
+    command_queue*: ptr AVFilterCommand
+    enable_str*: cstring
+    enable*: pointer
+    var_values*: ptr cdouble
+    is_disabled*: cint
+    hw_device_ctx*: ptr AVBufferRef
+    nb_threads*: cint
+    ready*: cuint
+    extra_hw_frames*: cint
+
+  AVFilterLink* {.avfilter.} = object
+    src*: ptr AVFilterContext
+    srcpad*: ptr AVFilterPad
+    dst*: ptr AVFilterContext
+    dstpad*: ptr AVFilterPad
+    `type`*: AVMediaType
+    w*: cint
+    h*: cint
+    sample_aspect_ratio*: AVRational
+    channel_layout*: uint64
+    sample_rate*: cint
+    format*: cint
+    time_base*: AVRational
+    in_formats*: ptr AVFilterFormats
+    out_formats*: ptr AVFilterFormats
+    in_samplerates*: ptr AVFilterFormats
+    out_samplerates*: ptr AVFilterFormats
+    in_channel_layouts*: ptr AVFilterChannelLayouts
+    out_channel_layouts*: ptr AVFilterChannelLayouts
+    request_samples*: cint
+    init_state*: AVFilterLinkInitState
+    graph*: ptr AVFilterGraph
+    current_pts*: int64
+    current_pts_us*: int64
+    age_index*: cint
+    frame_rate*: AVRational
+    partial_buf*: ptr AVFrame
+    partial_buf_size*: cint
+    min_samples*: cint
+    max_samples*: cint
+    channels*: cint
+    flags*: cuint
+    frame_count_in*: int64
+    frame_count_out*: int64
+    frame_pool*: pointer
+    frame_wanted_out*: cint
+    hw_frames_ctx*: ptr AVBufferRef
+
+    when not defined(FF_INTERNAL_FIELDS):
+      reserved*: array[0xF000, cstring]
+    else:
+      fifo*: FFFrameQueue
+      frame_blocked_in*: cint
+      status_in*: cint
+      status_in_pts*: int64
+      status_out*: cint
+  
+  AVFilterLinkInitState* {.avfilter.} = enum
+    AVLINK_UNINIT = 0
+    AVLINK_STARTINIT
+    AVLINK_INIT
+
+  AVFilter* {.avfilter.} = object
+    name*: cstring
+    description*: cstring
+    inputs*: ptr AVFilterPad
+    outputs*: ptr AVFilterPad
+    priv_class*: ptr AVClass
+    flags*: cint
+    preinit*: proc (ctx: ptr AVFilterContext): cint
+    init*: proc (ctx: ptr AVFilterContext): cint
+    init_dict*: proc (ctx: ptr AVFilterContext, options: ptr ptr AVDictionary): cint
+    uninit*: proc (ctx: ptr AVFilterContext)
+    query_formats*: proc (a1: ptr AVFilterContext): cint
+    priv_size*: cint
+    flags_internal*: cint
+    next*: ptr AVFilter
+    process_command*: proc (a1: ptr AVFilterContext, cmd, arg, res: cstring, res_len, flags: cint): cint
+    init_opaque*: proc (ctx: ptr AVFilterContext, opaque: pointer): cint
+    activate*: proc (ctx: ptr AVFilterContext): cint
+
+  avfilter_action_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, arg: pointer, jobnr, nb_jobs: cint): cint
+  avfilter_execute_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, `func`: ptr avfilter_action_func, arg: pointer, ret: ptr cint, nb_jobs: cint): cint
+
+  AVFilterGraph* {.avfilter.} = object
+    av_class*: ptr AVClass
+    filters*: ptr ptr AVFilterContext
+    nb_filters*: cuint
+    scale_sws_opts*: cstring
+    thread_type*: cint
+    nb_threads*: cint
+    internal*: ptr AVFilterGraphInternal
+    opaque*: pointer
+    execute*: ptr avfilter_execute_func
+    aresample_swr_opts*: cstring
+    sink_links*: ptr ptr AVFilterLink
+    sink_links_count*: cint
+    disable_auto_convert*: cuint
+
+    when defined(FF_API_LAVR_OPTS):
+      resample_lavr_opts {.deprecated.} : cstring
+  
+  AVFilterInOut* {.avfilter.} = object
+    name*: cstring
+    filter_ctx*: ptr AVFilterContext
+    pad_idx*: cint
+    next*: ptr AVFilterInOut
