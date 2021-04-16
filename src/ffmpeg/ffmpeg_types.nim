@@ -2,6 +2,7 @@
 {.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
 {.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
 {.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
+{.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -417,3 +418,12 @@ type
     flush*: proc (ctx: AVBSFContext)
   
   AVBSFList* {.bsf.} = object
+
+  AVCodecDescriptor* {.codecDesc.} = object
+    id*: AVCodecID
+    `type`*: AVMediaType
+    name*: cstring
+    long_name*: cstring
+    props*: cint
+    mime_types*: cstringArray
+    profiles*: ptr AVProfile

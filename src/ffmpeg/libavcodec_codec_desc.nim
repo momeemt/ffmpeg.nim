@@ -1,18 +1,4 @@
-from libavcodec_codec import AVProfile
-from libavcodec_codec_id import AVCodecID
-from libavutil_avutil import AVMediaType
-
-{.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
-
-type
-  AVCodecDescriptor* {.codecDesc.} = object
-    id*: AVCodecID
-    `type`*: AVMediaType
-    name*: cstring
-    long_name*: cstring
-    props*: cint
-    mime_types*: cstringArray
-    profiles*: ptr AVProfile
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
