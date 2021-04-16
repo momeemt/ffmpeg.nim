@@ -33,6 +33,7 @@
 {.pragma: dict, importc, header: "<libavutil/dict.h>".}
 {.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
 {.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
+{.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1923,3 +1924,28 @@ type
     surround_mix_level*: cdouble
     surround_mix_level_ltrt*: cdouble
     lfe_mix_level*: cdouble
+  
+  AVSubsampleEncryptionInfo* {.encryption_info.} = object
+    bytes_of_clear_data*: cuint
+    bytes_of_protected_data*: cuint
+  
+  AVEncryptionInfo* {.encryption_info.} = object
+    scheme*: cuint
+    crypt_byte_block*: cuint
+    skip_byte_block*: cuint
+    key_id*: ptr uint8
+    key_id_size*: cuint
+    iv*: ptr uint8
+    iv_size*: cuint
+    subsamples*: ptr AVSubsampleEncryptionInfo
+    subsample_count*: cuint
+
+  AVEncryptionInitInfo* {.encryption_info.} = object
+    system_id*: ptr uint8
+    system_id_size*: cuint
+    key_ids*: ptr ptr uint8
+    num_key_ids*: cuint
+    key_id_size*: cuint
+    data*: ptr uint8
+    data_size*: cuint
+    next*: ptr AVEncryptionInitInfo
