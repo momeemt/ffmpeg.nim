@@ -22,6 +22,7 @@
 {.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
 {.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
 {.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
+{.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1821,3 +1822,7 @@ type
     AV_PICTURE_TYPE_SI
     AV_PICTURE_TYPE_SP
     AV_PICTURE_TYPE_BI
+  
+  AVBlowfish* {.blowfish.} = object
+    p*: array[AV_BF_ROUNDS + 2, uint32]
+    s*: array[4, array[256, uint32]]
