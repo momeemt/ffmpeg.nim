@@ -9,6 +9,7 @@
 {.pragma: dirac, importc, header:"<libavcodec/dirac.h>".}
 {.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
 {.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
+{.pragma: packet, importc, header:"<libavcodec/packet.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1071,3 +1072,121 @@ type
     surface: pointer
   
   MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
+
+  AVPacketSideDataType* {.packet.} = enum
+    AV_PKT_DATA_PALETTE
+    AV_PKT_DATA_NEW_EXTRADATA
+    AV_PKT_DATA_PARAM_CHANGE
+    AV_PKT_DATA_H263_MB_INFO
+    AV_PKT_DATA_REPLAYGAIN
+    AV_PKT_DATA_DISPLAYMATRIX
+    AV_PKT_DATA_STEREO3D
+    AV_PKT_DATA_AUDIO_SERVICE_TYPE
+    AV_PKT_DATA_QUALITY_STATS
+    AV_PKT_DATA_FALLBACK_TRACK
+    AV_PKT_DATA_CPB_PROPERTIES
+    AV_PKT_DATA_SKIP_SAMPLES
+    AV_PKT_DATA_JP_DUALMONO
+    AV_PKT_DATA_STRINGS_METADATA
+    AV_PKT_DATA_SUBTITLE_POSITION
+    AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL
+    AV_PKT_DATA_WEBVTT_IDENTIFIER
+    AV_PKT_DATA_WEBVTT_SETTINGS
+    AV_PKT_DATA_METADATA_UPDATE
+    AV_PKT_DATA_MPEGTS_STREAM_ID
+    AV_PKT_DATA_MASTERING_DISPLAY_METADATA
+    AV_PKT_DATA_SPHERICAL
+    AV_PKT_DATA_CONTENT_LIGHT_LEVEL
+    AV_PKT_DATA_A53_CC
+    AV_PKT_DATA_ENCRYPTION_INIT_INFO
+    AV_PKT_DATA_ENCRYPTION_INFO
+    AV_PKT_DATA_AFD
+    AV_PKT_DATA_PRFT
+    AV_PKT_DATA_ICC_PROFILE
+    AV_PKT_DATA_DOVI_CONF
+    AV_PKT_DATA_NB
+  
+  AVPacketSideData* {.packet.} = object
+    data*: ptr uint8
+    size*: cint
+    `type`*: AVPacketSideDataType
+  
+  AVPacket* {.packet.} = object
+    buf*: ptr AVBufferRef
+    pts*: int64
+    dts*: int64
+    data*: ptr uint8
+    size*: cint
+    stream_index*: cint
+    flags*: cint
+    side_data*: ptr AVPacketSideDataType
+    side_data_elems*: cint
+    duration*: int64
+    pos*: int64
+
+    when defined(FF_API_CONVERGENCE_DURATION):
+      convergence_duration {.deprecated.} : int64
+  
+  AVSideDataParamChangeFlags* {.packet.} = enum
+    AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT  = 0x0001
+    AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT = 0x0002
+    AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE    = 0x0004
+    AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS     = 0x0008AVPacketSideDataType* {.packet.} = enum
+    AV_PKT_DATA_PALETTE
+    AV_PKT_DATA_NEW_EXTRADATA
+    AV_PKT_DATA_PARAM_CHANGE
+    AV_PKT_DATA_H263_MB_INFO
+    AV_PKT_DATA_REPLAYGAIN
+    AV_PKT_DATA_DISPLAYMATRIX
+    AV_PKT_DATA_STEREO3D
+    AV_PKT_DATA_AUDIO_SERVICE_TYPE
+    AV_PKT_DATA_QUALITY_STATS
+    AV_PKT_DATA_FALLBACK_TRACK
+    AV_PKT_DATA_CPB_PROPERTIES
+    AV_PKT_DATA_SKIP_SAMPLES
+    AV_PKT_DATA_JP_DUALMONO
+    AV_PKT_DATA_STRINGS_METADATA
+    AV_PKT_DATA_SUBTITLE_POSITION
+    AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL
+    AV_PKT_DATA_WEBVTT_IDENTIFIER
+    AV_PKT_DATA_WEBVTT_SETTINGS
+    AV_PKT_DATA_METADATA_UPDATE
+    AV_PKT_DATA_MPEGTS_STREAM_ID
+    AV_PKT_DATA_MASTERING_DISPLAY_METADATA
+    AV_PKT_DATA_SPHERICAL
+    AV_PKT_DATA_CONTENT_LIGHT_LEVEL
+    AV_PKT_DATA_A53_CC
+    AV_PKT_DATA_ENCRYPTION_INIT_INFO
+    AV_PKT_DATA_ENCRYPTION_INFO
+    AV_PKT_DATA_AFD
+    AV_PKT_DATA_PRFT
+    AV_PKT_DATA_ICC_PROFILE
+    AV_PKT_DATA_DOVI_CONF
+    AV_PKT_DATA_NB
+  
+  AVPacketSideData* {.packet.} = object
+    data*: ptr uint8
+    size*: cint
+    `type`*: AVPacketSideDataType
+  
+  AVPacket* {.packet.} = object
+    buf*: ptr AVBufferRef
+    pts*: int64
+    dts*: int64
+    data*: ptr uint8
+    size*: cint
+    stream_index*: cint
+    flags*: cint
+    side_data*: ptr AVPacketSideDataType
+    side_data_elems*: cint
+    duration*: int64
+    pos*: int64
+
+    when defined(FF_API_CONVERGENCE_DURATION):
+      convergence_duration {.deprecated.} : int64
+  
+  AVSideDataParamChangeFlags* {.packet.} = enum
+    AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT  = 0x0001
+    AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT = 0x0002
+    AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE    = 0x0004
+    AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS     = 0x0008
