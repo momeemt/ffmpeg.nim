@@ -1,7 +1,4 @@
-{.pragma: sha512, importc, header: "<libavutil/sha512.h>".}
-
-type
-  AVSHA512* {.sha512.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

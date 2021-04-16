@@ -73,6 +73,7 @@ else:
 {.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
 {.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
 {.pragma: sha, importc, header: "<libavutil/sha.h>".}
+{.pragma: sha512, importc, header: "<libavutil/sha512.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2747,3 +2748,5 @@ type
     AV_SAMPLE_FMT_NB
   
   AVSHA* {.sha.} = object
+
+  AVSHA512* {.sha512.} = object
