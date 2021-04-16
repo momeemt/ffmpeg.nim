@@ -76,6 +76,7 @@ else:
 {.pragma: sha512, importc, header: "<libavutil/sha512.h>".}
 {.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
 {.pragma: stereo3d, importc, header: "<libavutil/stereo3d.h>".}
+{.pragma: tea, importc, header: "<libavutil/tea.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2788,3 +2789,5 @@ type
     `type`*: AVStereo3DType
     flags*: cint
     view*: AVStereo3DView
+  
+  AVTEA* {.tea.} = object
