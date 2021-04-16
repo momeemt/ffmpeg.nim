@@ -1,4 +1,5 @@
 {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
+{.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -310,49 +311,60 @@ type
     AV_PICTURE_STRUCTURE_FRAME
   
   AVCodecParserContext* {.avcodec.} = object
-    priv_data: pointer
-    parser: ptr AVCodecParser
-    frame_offset: int64
-    cur_offset: int64
-    next_frame_offset: int64
-    pict_type: int
-    repeat_pict: int
-    pts: int64
-    dts: int64
-    last_pts: int64
-    last_dts: int64
-    fetch_timestamp: int
-    cur_frame_start_index: int
-    cur_frame_offset: array[AV_PARSER_PTS_NB, int64]
-    cur_frame_pts: array[AV_PARSER_PTS_NB, int64]
-    cur_frame_dts: array[AV_PARSER_PTS_NB, int64]
-    flags: int
-    offset: int64
-    cur_frame_end: array[AV_PARSER_PTS_NB, int64]
-    key_frame: int
-    dts_sync_point: int
-    dts_ref_dts_delta: int
-    pts_dts_delta: int
-    cur_frame_pos: array[AV_PARSER_PTS_NB, int64]
-    pos: int64
-    last_pos: int64
-    duration: int
-    field_order: AVFieldOrder
-    picture_structure: AVPictureStructure
-    output_picture_number: int
-    width: int
-    height: int
-    coded_width: int
-    coded_height: int
-    format: int
+    priv_data*: pointer
+    parser*: ptr AVCodecParser
+    frame_offset*: int64
+    cur_offset*: int64
+    next_frame_offset*: int64
+    pict_type*: int
+    repeat_pict*: int
+    pts*: int64
+    dts*: int64
+    last_pts*: int64
+    last_dts*: int64
+    fetch_timestamp*: int
+    cur_frame_start_index*: int
+    cur_frame_offset*: array[AV_PARSER_PTS_NB, int64]
+    cur_frame_pts*: array[AV_PARSER_PTS_NB, int64]
+    cur_frame_dts*: array[AV_PARSER_PTS_NB, int64]
+    flags*: int
+    offset*: int64
+    cur_frame_end*: array[AV_PARSER_PTS_NB, int64]
+    key_frame*: int
+    dts_sync_point*: int
+    dts_ref_dts_delta*: int
+    pts_dts_delta*: int
+    cur_frame_pos*: array[AV_PARSER_PTS_NB, int64]
+    pos*: int64
+    last_pos*: int64
+    duration*: int
+    field_order*: AVFieldOrder
+    picture_structure*: AVPictureStructure
+    output_picture_number*: int
+    width*: int
+    height*: int
+    coded_width*: int
+    coded_height*: int
+    format*: int
     when defined(FF_API_CONVERGENCE_DURATION):
-      convergence_duration {.deprecated.}: int64
+      convergence_duration* {.deprecated.}: int64
   
   AVCodecParser* {.avcodec.} = object
-    codec_ids: array[5, int]
-    priv_data_size: int
-    parser_init: proc (s: ptr AVCodecParserContext): int
-    parser_parse: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr int, buf: ptr uint8, buf_size: int): int
-    parser_close: proc (s: ptr AVCodecParserContext)
-    split: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: int): int
-    next: ptr AVCodecParser
+    codec_ids*: array[5, int]
+    priv_data_size*: int
+    parser_init*: proc (s: ptr AVCodecParserContext): int
+    parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr int, buf: ptr uint8, buf_size: int): int
+    parser_close*: proc (s: ptr AVCodecParserContext)
+    split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: int): int
+    next*: ptr AVCodecParser
+  
+  AVDCT* {.avdct.} = object
+    av_class*: ptr AVClass
+    idct*: proc (`block`: ptr int16)
+    idct_permutation*: array[64, uint8]
+    fdct*: proc (`block`: ptr int16)
+    dct_algo*: cint
+    idct_algo*: cint
+    get_pixels*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
+    bits_per_sample*: cint
+    get_pixels_unaligned*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
