@@ -27,6 +27,7 @@
 {.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
 {.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
 {.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
+{.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1773,8 +1774,6 @@ type
     written*: int64
     buf_ptr_max*: ptr cuchar
     min_packet_size*: cint
-  
-  AVBPrint* {.avio.} = object
 
   AVAudioResampleContext* {.avresample.} = object
 
@@ -1861,3 +1860,13 @@ type
   AVCAMELLIA* {.camellia.} = object
 
   AVCAST5* {.cast5.} = object
+
+  AVMatrixEncoding* {.channel_layout.} = enum
+    AV_MATRIX_ENCODING_NONE
+    AV_MATRIX_ENCODING_DOLBY
+    AV_MATRIX_ENCODING_DPLII
+    AV_MATRIX_ENCODING_DPLIIX
+    AV_MATRIX_ENCODING_DPLIIZ
+    AV_MATRIX_ENCODING_DOLBYEX
+    AV_MATRIX_ENCODING_DOLBYHEADPHONE
+    AV_MATRIX_ENCODING_NB
