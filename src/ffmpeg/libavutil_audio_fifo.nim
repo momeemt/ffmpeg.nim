@@ -1,9 +1,4 @@
-from libavutil_samplefmt import AVSampleFormat
-
-{.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
-
-type
-  AVAudioFifo* {.audio_fifo.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
