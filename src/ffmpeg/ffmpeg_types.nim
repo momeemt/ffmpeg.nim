@@ -70,6 +70,7 @@ else:
 {.pragma: rational, importc, header: "<libavutil/rational>".}
 {.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
 {.pragma: replaygain, importc, header: "<libavutil/replaygain.h>".}
+{.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2724,3 +2725,5 @@ type
     track_peak*: uint32
     album_gain*: int32
     album_peak*: uint32
+  
+  AVRIPEMD* {.ripemd.} = object

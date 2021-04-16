@@ -1,7 +1,4 @@
-{.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
-
-type
-  AVRIPEMD* {.ripemd.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
