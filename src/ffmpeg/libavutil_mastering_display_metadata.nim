@@ -1,20 +1,4 @@
-from libavutil_frame import AVFrame
-from libavutil_rational import AVRational
-
-{.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
-
-type
-  AVMasteringDisplayMetadata* {.mastering_display_metadata.} = object
-    display_primaries*: array[3, array[2, AVRational]]
-    white_point*: array[2, AVRational]
-    min_luminance*: AVRational
-    max_luminance*: AVRational
-    has_primaries*: cint
-    has_luminance*: cint
-  
-  AVContentLightMetadata* {.mastering_display_metadata.} = object
-    MaxCLL*: cuint
-    MaxFALL*: cuint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

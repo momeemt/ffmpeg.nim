@@ -57,6 +57,7 @@ else:
 {.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
 {.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
 {.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
+{.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2339,3 +2340,15 @@ type
   AVLFG* {.lfg.} = object
     state*: array[64, cuint]
     index*: cint
+  
+  AVMasteringDisplayMetadata* {.mastering_display_metadata.} = object
+    display_primaries*: array[3, array[2, AVRational]]
+    white_point*: array[2, AVRational]
+    min_luminance*: AVRational
+    max_luminance*: AVRational
+    has_primaries*: cint
+    has_luminance*: cint
+  
+  AVContentLightMetadata* {.mastering_display_metadata.} = object
+    MaxCLL*: cuint
+    MaxFALL*: cuint
