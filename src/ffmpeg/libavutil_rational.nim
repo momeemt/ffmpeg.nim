@@ -1,9 +1,4 @@
-{.pragma: rational, importc, header: "<libavutil/rational>".}
-
-type
-  AVRational* {.rational.} = object
-    num*: cint
-    den*: cint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
