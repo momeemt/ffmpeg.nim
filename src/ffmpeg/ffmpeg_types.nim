@@ -56,6 +56,7 @@ else:
 {.pragma: hwcontext, importc, header: "<libavutil/hwcontext.h>".}
 {.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
 {.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
+{.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2334,3 +2335,7 @@ type
   av_alias16* {.intreadwrite, union.} = object
     u16*: uint16
     u8*: array[2, uint8]
+  
+  AVLFG* {.lfg.} = object
+    state*: array[64, cuint]
+    index*: cint
