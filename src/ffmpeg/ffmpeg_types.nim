@@ -1,5 +1,6 @@
 {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
 {.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
+{.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -368,3 +369,26 @@ type
     get_pixels*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
     bits_per_sample*: cint
     get_pixels_unaligned*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
+  
+  FFTSample* {.avfft.} = cfloat
+
+  FFTComplex* {.avfft.} = object
+    re, im: FFTSample
+
+  FFTContext* {.avfft.} = object
+
+  RDFTransformType* {.avfft.} = enum
+    DFT_R2C
+    IDFT_C2R
+    IDFT_R2C
+    DFT_C2R
+
+  RDFTContext* {.avfft.} = object
+
+  DCTContext* {.avfft.} = object
+
+  DCTTransformType* {.avfft.} = enum
+    DCT_II = 0
+    DCT_III
+    DCT_I
+    DST_I
