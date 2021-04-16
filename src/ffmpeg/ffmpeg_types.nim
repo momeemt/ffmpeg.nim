@@ -62,6 +62,8 @@ else:
 {.pragma: md5, importc, header: "<libavutil/md5.h>".}
 {.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
 {.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
+{.pragma: opt, importc, header: "<libavutil/opt.h>".}
+{.pragma: log, importc, header: "<libavutil/log.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2377,3 +2379,84 @@ type
     motion_scale*: uint16
   
   AVMurMur3* {.murmur3.} = object
+
+  AVClassCategory* {.log.} = enum
+    AV_CLASS_CATEGORY_NA = 0
+    AV_CLASS_CATEGORY_INPUT
+    AV_CLASS_CATEGORY_OUTPUT
+    AV_CLASS_CATEGORY_MUXER
+    AV_CLASS_CATEGORY_DEMUXER
+    AV_CLASS_CATEGORY_ENCODER
+    AV_CLASS_CATEGORY_DECODER
+    AV_CLASS_CATEGORY_FILTER
+    AV_CLASS_CATEGORY_BITSTREAM_FILTER
+    AV_CLASS_CATEGORY_SWSCALER
+    AV_CLASS_CATEGORY_SWRESAMPLER
+    AV_CLASS_CATEGORY_DEVICE_VIDEO_OUTPUT = 40
+    AV_CLASS_CATEGORY_DEVICE_VIDEO_INPUT
+    AV_CLASS_CATEGORY_DEVICE_AUDIO_OUTPUT
+    AV_CLASS_CATEGORY_DEVICE_AUDIO_INPUT
+    AV_CLASS_CATEGORY_DEVICE_OUTPUT
+    AV_CLASS_CATEGORY_DEVICE_INPUT
+    AV_CLASS_CATEGORY_NB
+
+  AVClass* {.log.} = object
+    class_name*: cstring
+    item_name*: proc (ctx: pointer): cstring
+    option*: ptr AVOption
+    version*: cint
+    log_level_offset_offset*: cint
+    parent_log_context_offset*: cint
+    child_next*: proc (obj, prev: pointer): pointer
+    child_class_next*: proc (prev: ptr AVClass): ptr AVClass
+    category*: AVClassCategory
+    get_category*: proc (ctx: pointer): AVClassCategory
+    query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint
+
+  AVOptionType* {.opt.} = enum
+    AV_OPT_TYPE_FLAGS
+    AV_OPT_TYPE_INT
+    AV_OPT_TYPE_INT64
+    AV_OPT_TYPE_DOUBLE
+    AV_OPT_TYPE_FLOAT
+    AV_OPT_TYPE_STRING
+    AV_OPT_TYPE_RATIONAL
+    AV_OPT_TYPE_BINARY
+    AV_OPT_TYPE_DICT
+    AV_OPT_TYPE_UINT64
+    AV_OPT_TYPE_CONST
+    AV_OPT_TYPE_IMAGE_SIZE
+    AV_OPT_TYPE_PIXEL_FMT
+    AV_OPT_TYPE_SAMPLE_FMT
+    AV_OPT_TYPE_VIDEO_RATE
+    AV_OPT_TYPE_DURATION
+    AV_OPT_TYPE_COLOR
+    AV_OPT_TYPE_CHANNEL_LAYOUT
+    AV_OPT_TYPE_BOOL
+  
+  AVOption* {.opt.} = object
+    name*: cstring
+    help*: cstring
+    offset*: cint
+    `type`*: AVOptionType
+    default_val*: AVOptionUnion
+    min*, max*: cdouble
+    flags*: cint
+    unit*: cstring
+  
+  AVOptionUnion* {.union, opt.} = object
+    i64*: int64
+    dbl*: cdouble
+    str*: cstring
+    q*: AVRational
+  
+  AVOptionRange* {.opt.} = object
+    str*: cstring
+    value_min*, value_max*: cdouble
+    component_min*, component_max*: cdouble
+    is_range*: cint
+  
+  AVOptionRanges* {.opt.} = object
+    `range`*: ptr ptr AVOptionRange
+    nb_ranges*: cint
+    nb_components*: cint
