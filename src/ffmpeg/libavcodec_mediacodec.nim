@@ -1,5 +1,4 @@
 import ffmpeg_types
-from undefined_symbol import AVMediaCodecBuffer
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}

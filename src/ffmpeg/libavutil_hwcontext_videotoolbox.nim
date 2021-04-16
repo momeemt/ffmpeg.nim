@@ -1,4 +1,4 @@
-from libavutil_pixfmt import AVPixelFormat
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

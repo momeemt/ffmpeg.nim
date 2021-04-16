@@ -87,6 +87,32 @@ else:
 {.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
 {.pragma: swscale, importc, header: "<libswscale/swscale.h>".}
 
+template MKBETAG (a, b, c, d: untyped): untyped =
+  (d.int or (c.int shl 8) or (b.int shl 16) or (a.int shl 24))
+
+const
+  AV_NUM_DATA_POINTERS = 8
+  AV_PARSER_PTS_NB = 4
+  MAX_REORDER_DELAY= 16
+  MAX_STD_TIMEBASES = 30 * 12 + 30 + 3 + 6
+  AV_BF_ROUNDS = 16
+  AV_DRM_MAX_PLANES = 4
+
+# undefined symbol
+type
+  AVCodecHWConfigInternal* = object
+  ID3D11VideoDecoder* = object
+  ID3D11VideoContext* = object
+  D3D11_VIDEO_DECODER_CONFIG* = object
+  ID3D11VideoDecoderOutputView* = object
+  HANDLE* = object
+  IDirectXVideoDecoder* = object
+  DXVA2_ConfigPictureDecode* = object
+  LPDIRECT3DSURFACE9* = object
+  AVMediaCodecBuffer* = object
+  mfxSession* = object
+  mfxExtBuffer* = object
+
 type
   AVDiscard* {.avcodec.} = enum
     AVDISCARD_NONE = -16

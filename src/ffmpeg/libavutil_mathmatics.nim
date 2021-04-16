@@ -1,4 +1,5 @@
 import ffmpeg_types
+from libavutil_intfloat import av_int2float
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

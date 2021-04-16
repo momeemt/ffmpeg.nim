@@ -11,6 +11,7 @@ const includepath = "-I" & (source / "cinclude")
 {.passC: includepath.}
 
 import ffmpeg/[
+  ffmpeg_types,
   libavcodec_ac3_parser,
   libavcodec_adts_parser,
   libavcodec_avcodec,
@@ -140,6 +141,7 @@ when defined(macosx):
     libavutil_hwcontext_videotoolbox
   ]
 
+export ffmpeg_types
 export libavcodec_ac3_parser
 export libavcodec_adts_parser
 export libavcodec_avcodec

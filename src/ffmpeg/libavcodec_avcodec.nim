@@ -6,6 +6,7 @@ else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
 import ffmpeg_types
+from libavutil_frame import AV_NUM_DATA_POINTERS
 
 const
   AV_INPUT_BUFFER_PADDING_SIZE* = 64
