@@ -36,6 +36,7 @@
 {.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
 {.pragma: eval, importc, header: "<libavutil/eval.h>".}
 {.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
+{.pragma: frame, importc, header: "<libavutil/frame.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1961,3 +1962,113 @@ type
     `end`*: ptr uint8
     rndx*: uint32
     wndx*: uint32
+  
+  AVFrameSideDataType* {.frame.} = enum
+    AV_FRAME_DATA_PANSCAN
+    AV_FRAME_DATA_A53_CC
+    AV_FRAME_DATA_STEREO3D
+    AV_FRAME_DATA_MATRIXENCODING
+    AV_FRAME_DATA_DOWNMIX_INFO
+    AV_FRAME_DATA_REPLAYGAIN
+    AV_FRAME_DATA_DISPLAYMATRIX
+    AV_FRAME_DATA_AFD
+    AV_FRAME_DATA_MOTION_VECTORS
+    AV_FRAME_DATA_SKIP_SAMPLES
+    AV_FRAME_DATA_AUDIO_SERVICE_TYPE
+    AV_FRAME_DATA_MASTERING_DISPLAY_METADATA
+    AV_FRAME_DATA_GOP_TIMECODE
+    AV_FRAME_DATA_SPHERICAL
+    AV_FRAME_DATA_CONTENT_LIGHT_LEVEL
+    AV_FRAME_DATA_ICC_PROFILE
+    AV_FRAME_DATA_S12M_TIMECODE
+    AV_FRAME_DATA_DYNAMIC_HDR_PLUS
+    AV_FRAME_DATA_REGIONS_OF_INTEREST
+    AV_FRAME_DATA_VIDEO_ENC_PARAMS
+    AV_FRAME_DATA_QP_TABLE_PROPERTIES # if FF_API_FRAME_QP
+    AV_FRAME_DATA_QP_TABLE_DATA # if FF_API_FRAME_QP
+
+  AVActiveFormatDescription* {.frame.} = enum
+    AV_AFD_SAME = 8
+    AV_AFD_4_3 = 9
+    AV_AFD_16_9 = 10
+    AV_AFD_14_9 = 11
+    AV_AFD_4_3_SP_14_9 = 13
+    AV_AFD_16_9_SP_14_9 = 14
+    AV_AFD_SP_4_3 = 15
+  
+  AVFrameSideData* {.frame.} = object
+    `type`*: AVFrameSideDataType
+    data*: ptr uint8
+    size*: cint
+    metadata*: ptr AVDictionary
+    buf*: ptr AVBufferRef
+  
+  AVRegionOfInterest* {.frame.} = object
+    self_size*: cuint
+    top*: cint
+    bottom*: cint
+    left*: cint
+    right*: cint
+    qoffset*: AVRational
+  
+  AVFrame* {.frame.} = object
+    data*: array[AV_NUM_DATA_POINTERS, ptr uint8]
+    line*: array[AV_NUM_DATA_POINTERS, cint]
+    extended_data*: ptr ptr uint8
+    width*: cint
+    height*: cint
+    nb_samples*: cint
+    format*: cint
+    key_frame*: cint
+    pict_type*: AVPictureType
+    sample_aspect_ratio*: AVRational
+    pts*: int64
+    pkt_dts*: int64
+    coded_picture_number*: cint
+    display_picture_number*: cint
+    quality*: cint
+    opaque*: pointer
+    repeat_pict*: cint
+    interlaced_frame*: cint
+    top_field_first*: cint
+    palette_has_changed*: cint
+    reordered_opaque*: int64
+    sample_rate*: cint
+    channel_layout*: uint64
+    buf*: array[AV_NUM_DATA_POINTERS, ptr AVBufferRef]
+    extended_buf*: ptr ptr AVBufferRef
+    nb_extended_buf*: cint
+    side_data*: ptr ptr AVFrameSideDataType
+    nb_side_data*: cint
+    flags*: cint
+    color_range*: AVColorRange
+    color_primaries*: AVColorPrimaries
+    color_trc*: AVColorTransferCharacteristic
+    colorspace*: AVColorSpace
+    chroma_location*: AVChromaLocation
+    best_effort_timestamp*: int64
+    pkt_pos*: int64
+    pkt_duration*: int64
+    metadata*: ptr AVDictionary
+    decode_error_flags*: cint
+    channels*: cint
+    pkt_size*: cint
+    hw_frames_ctx*: ptr AVBufferRef
+    opaque_ref*: ptr AVBufferRef
+    crop_top*: csize_t
+    crop_bottom*: csize_t
+    crop_left*: csize_t
+    crop_right*: csize_t
+    private_ref*: ptr AVBufferRef
+
+    when defined(FF_API_PKT_PTS):
+      pkt_pts {.deprecated.}: int64
+
+    when defined(FF_API_ERROR_FRAME):
+      error {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint64]
+
+    when defined(FF_API_FRAME_QP):
+      qscale_table {.deprecated.}: ptr int8
+      qstride {.deprecated.}: cint
+      qscale_type {.deprecated.}: cint
+      qp_table_buf {.deprecated.}: ptr AVBufferRef
