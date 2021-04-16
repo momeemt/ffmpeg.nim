@@ -61,6 +61,7 @@ else:
 {.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
 {.pragma: md5, importc, header: "<libavutil/md5.h>".}
 {.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
+{.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2374,3 +2375,5 @@ type
     flags*: uint64
     motion_x*, motion_y*: int32
     motion_scale*: uint16
+  
+  AVMurMur3* {.murmur3.} = object

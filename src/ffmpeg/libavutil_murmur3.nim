@@ -1,7 +1,4 @@
-{.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
-
-type
-  AVMurMur3* {.murmur3.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
