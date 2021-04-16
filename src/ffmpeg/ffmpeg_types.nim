@@ -11,6 +11,7 @@
 {.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
 {.pragma: packet, importc, header:"<libavcodec/packet.h>".}
 {.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
+{.pragma: avdevice, importc, header: "<libavdevice/avdevice.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1193,3 +1194,60 @@ type
     AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS     = 0x0008
   
   AVVorbisParseContext* {.vorbis_parser.} = object
+
+  AVDeviceRect* {.bycopy, avdevice.} = object
+    x*: cint
+    y*: cint
+    width*: cint
+    height*: cint
+  
+  AVAppToDevMessageType* {.avdevice.} = enum
+    AV_APP_TO_DEV_MUTE = MKBETAG(' ', 'M', 'U', 'T')
+    AV_APP_TO_DEV_WINDOW_SIZE = MKBETAG('G','E','O','M')
+    AV_APP_TO_DEV_GET_MUTE = MKBETAG('G', 'M', 'U', 'T')
+    AV_APP_TO_DEV_GET_VOLUME = MKBETAG('G', 'V', 'O', 'L')
+    AV_APP_TO_DEV_NONE = MKBETAG('N','O','N','E')
+    AV_APP_TO_DEV_PAUSE = MKBETAG('P', 'A', 'U', ' ')
+    AV_APP_TO_DEV_TOGGLE_PAUSE = MKBETAG('P', 'A', 'U', 'T')
+    AV_APP_TO_DEV_PLAY = MKBETAG('P', 'L', 'A', 'Y')
+    AV_APP_TO_DEV_WINDOW_REPAINT = MKBETAG('R','E','P','A')
+    AV_APP_TO_DEV_SET_VOLUME = MKBETAG('S', 'V', 'O', 'L')
+    AV_APP_TO_DEV_TOGGLE_MUTE = MKBETAG('T', 'M', 'U', 'T')
+    AV_APP_TO_DEV_UNMUTE = MKBETAG('U', 'M', 'U', 'T')
+  
+  AVDevToAppMessageType* {.avdevice.} = enum
+    AV_DEV_TO_APP_CREATE_WINDOW_BUFFER = MKBETAG('B','C','R','E')
+    AV_DEV_TO_APP_DESTROY_WINDOW_BUFFER = MKBETAG('B','D','E','S')
+    AV_DEV_TO_APP_DISPLAY_WINDOW_BUFFER = MKBETAG('B','D','I','S')
+    AV_DEV_TO_APP_BUFFER_OVERFLOW = MKBETAG('B','O','F','L')
+    AV_DEV_TO_APP_PREPARE_WINDOW_BUFFER = MKBETAG('B','P','R','E')
+    AV_DEV_TO_APP_BUFFER_READABLE = MKBETAG('B','R','D',' ')
+    AV_DEV_TO_APP_BUFFER_UNDERFLOW = MKBETAG('B','U','F','L')
+    AV_DEV_TO_APP_BUFFER_WRITABLE = MKBETAG('B','W','R',' ')
+    AV_DEV_TO_APP_MUTE_STATE_CHANGED = MKBETAG('C','M','U','T')
+    AV_DEV_TO_APP_VOLUME_LEVEL_CHANGED = MKBETAG('C','V','O','L')
+    AV_DEV_TO_APP_NONE = MKBETAG('N','O','N','E')
+  
+  AVDeviceCapabilitiesQuery* {.avdevice.} = object
+    av_class*: ptr AVClass
+    device_context*: ptr AVFormatContext
+    codec*: AVCodecID
+    sample_format*: AVSampleFormat
+    pixel_format*: AVPixelFormat
+    sample_rate*: cint
+    channels*: cint
+    channel_layout*: int64
+    window_width*: cint
+    window_height*: cint
+    frame_width*: cint
+    frame_height*: cint
+    fps*: AVRational
+  
+  AVDeviceInfo* {.avdevice.} = object
+    device_name*: cstring
+    device_description*: cstring
+  
+  AVDeviceInfoList* {.avdevice.} = object
+    devices*: ptr ptr AVDeviceInfo
+    nb_devices*: cint
+    default_device*: cint
