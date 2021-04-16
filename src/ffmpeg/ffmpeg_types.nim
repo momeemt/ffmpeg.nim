@@ -5,6 +5,7 @@
 {.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
 {.pragma: codecId, importc, header:"<libavcodec/codec_id.h>".}
 {.pragma: codecPar, importc, header:"<libavcodec/codec_par.h>".}
+{.pragma: codec, importc, header:"<libavcodec/codec.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -921,7 +922,7 @@ type
     AV_FIELD_TB
     AV_FIELD_BT
   
-  AVCodecParameters* = object
+  AVCodecParameters* {.codecPar.} = object
     codec_type*: AVMediaType
     codec_id*: AVCodecID
     codec_tag*: cuint
@@ -951,3 +952,48 @@ type
     initial_padding*: cint
     trailing_padding*: cint
     seek_preroll*: cint
+  
+  AVProfile* {.codec.} = object
+    profile: cint
+    name: cstring
+  
+  AVCodecDefault* {.codec.} = object
+
+  AVCodec* {.codec.} = object
+    name*: cstring
+    long_name*: cstring
+    `type`*: AVMediaType
+    id*: AVCodecID
+    capabilities*: cint
+    supported_framerates*: ptr AVRational
+    pix_fmts*: ptr AVPixelFormat
+    supported_samplerates*: ptr cint
+    sample_fmts*: ptr AVSampleFormat
+    channel_layouts*: ptr uint64
+    max_lowres*: uint8
+    priv_class*: ptr AVClass
+    profiles*: ptr AVProfile
+    wrapper_name*: cstring
+    priv_data_size*: cint
+    next*: ptr AVCodec
+    update_thread_context*: proc (dst, src: ptr AVCodecContext): cint
+    defaults*: ptr AVCodecDefault
+    init_static_data*: proc (codec: ptr AVCodec)
+    init*: proc (a1: ptr AVCodecContext): cint
+    encode_sub*: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
+    encode2*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
+    decode*: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint
+    close*: proc (a1: ptr AVCodecContext): cint
+    send_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+    receive_packet*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
+    receive_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+    flush*: proc (a1: ptr AVCodecContext)
+    caps_internal*: cint
+    bsfs*: cstring
+    hw_configs*: ptr ptr AVCodecHWConfigInternal
+    codec_tags*: ptr cuint
+  
+  AVCodecHWConfig* {.codec.} = object
+    pix_fmt*: AVPixelFormat
+    methods*: cint
+    device_type*: AVHWDeviceType
