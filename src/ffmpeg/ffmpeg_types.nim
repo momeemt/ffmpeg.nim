@@ -68,6 +68,7 @@ else:
 {.pragma: pixelutils, importc, header: "<libavutil/pixelutils.h>".}
 {.pragma: pixfmt, importc, header: "<libavutil/pixfmt.h>".}
 {.pragma: rational, importc, header: "<libavutil/rational>".}
+{.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2712,3 +2713,7 @@ type
   AVRational* {.rational.} = object
     num*: cint
     den*: cint
+  
+  AVRC4* {.rc4.} = object
+    state*: array[256, uint8]
+    x*, y*: cint
