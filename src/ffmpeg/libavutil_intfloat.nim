@@ -1,13 +1,4 @@
-{.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
-
-type
-  av_intfloat32* {.intfloat, bycopy, union.} = object
-    i*: cuint
-    f*: cfloat
-
-  av_intfloat64* {.intfloat, bycopy, union.} = object
-    i*: cuint
-    f*: cdouble
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

@@ -54,6 +54,7 @@ else:
 {.pragma: vulkan, importc, header: "<vulkan/vulkan.h>".}
 {.pragma: hwcontext_vulkan, importc, header: "<libavutil/hwcontext_vulkan.h>".}
 {.pragma: hwcontext, importc, header: "<libavutil/hwcontext.h>".}
+{.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2306,3 +2307,11 @@ type
     min_height*: cint
     max_width*: cint
     max_height*: cint
+  
+  av_intfloat32* {.intfloat, bycopy, union.} = object
+    i*: cuint
+    f*: cfloat
+
+  av_intfloat64* {.intfloat, bycopy, union.} = object
+    i*: cuint
+    f*: cdouble
