@@ -83,6 +83,7 @@ else:
 {.pragma: twofish, importc, header: "<libavutil/twofish.h>".}
 {.pragma: tx, importc, header: "<libavutil/tx.h>".}
 {.pragma: video_enc_params, importc, header: "<libavutil/video_enc_params.h>".}
+{.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2856,3 +2857,6 @@ type
     src_x*, src_y*: cint
     w*, h*: cint
     delta_qp*: int32
+  
+  pp_context* {.postprocess.} = object
+  pp_mode* {.postprocess.} = object
