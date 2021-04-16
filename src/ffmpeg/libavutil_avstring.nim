@@ -1,10 +1,4 @@
-{.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
-
-type
-  AVEscapeMode* {.avstring.} = enum
-    AV_ESCAPE_MODE_AUTO
-    AV_ESCAPE_MODE_BACKSLASH
-    AV_ESCAPE_MODE_QUOTE
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

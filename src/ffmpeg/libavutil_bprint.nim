@@ -1,4 +1,4 @@
-from libavutil_avstring import AVEscapeMode
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
@@ -7,32 +7,10 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
 
-{.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
-
 const
   AV_BPRINT_SIZE_UNLIMITED* = 1 # FIXME: (unsigned)-1
   AV_BPRINT_SIZE_AUTOMATIC* = 1
   AV_BPRINT_SIZE_COUNT_ONLY* = 0
-
-type
-  ff_pad_helper_AVBPrint* = object
-    str*: cstring
-    len*: cuint
-    size*: cuint
-    size_max*: cuint
-    reserved_internal_buffer*: array[1, cstring]
-
-  AVBPrint* {.bprint.} = object
-    str*: cstring
-    len*: cuint
-    size*: cuint
-    size_max*: cuint
-    reserved_internal_buffer*: array[1, cstring]
-    reserved_padding*: array[1024 - sizeof(ff_pad_helper_AVBPrint), cstring]
-  
-  tm* {.bprint.} = object
-
-  va_list* {.importc, header: "<stdarg.h>".} = object
   
 proc av_bprint_init* (buf: ptr AVBPrint, size_init, size_max: cuint)
 proc av_bprint_init_for_buffer* (buf: ptr AVBPrint, buffer: cstring, size: cuint)

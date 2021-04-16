@@ -1,7 +1,4 @@
-{.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
-
-type
-  AVVorbisParseContext* {.vorbis_parser.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}

@@ -1,18 +1,4 @@
-from libavutil_opt import AVClass
-
-{.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
-
-type
-  AVDCT* {.avdct.} = object
-    av_class: ptr AVClass
-    idct: proc (`block`: ptr int16)
-    idct_permutation: array[64, uint8]
-    fdct: proc (`block`: ptr int16)
-    dct_algo: cint
-    idct_algo: cint
-    get_pixels: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
-    bits_per_sample: cint
-    get_pixels_unaligned: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}

@@ -1,9 +1,4 @@
-{.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
-
-type
-  AVLFG* {.lfg.} = object
-    state*: array[64, cuint]
-    index*: cint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

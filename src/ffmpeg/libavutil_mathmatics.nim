@@ -1,15 +1,5 @@
+import ffmpeg_types
 from libavutil_intfloat import av_int2float
-from libavutil_rational import AVRational
-
-{.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
-
-type AVRounding* {.mathmatics.} = enum
-  AV_ROUND_ZERO     = 0
-  AV_ROUND_INF      = 1
-  AV_ROUND_DOWN     = 2
-  AV_ROUND_UP       = 3
-  AV_ROUND_NEAR_INF = 5
-  AV_ROUND_PASS_MINMAX = 8192
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

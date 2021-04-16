@@ -1,17 +1,4 @@
-{.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
-
-type
-  AVMatrixEncoding* {.channel_layout.} = enum
-    AV_MATRIX_ENCODING_NONE
-    AV_MATRIX_ENCODING_DOLBY
-    AV_MATRIX_ENCODING_DPLII
-    AV_MATRIX_ENCODING_DPLIIX
-    AV_MATRIX_ENCODING_DPLIIZ
-    AV_MATRIX_ENCODING_DOLBYEX
-    AV_MATRIX_ENCODING_DOLBYHEADPHONE
-    AV_MATRIX_ENCODING_NB
-  
-  AVBPrint* {.channel_layout.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

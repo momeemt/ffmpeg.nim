@@ -1,7 +1,4 @@
-{.pragma: tea, importc, header: "<libavutil/tea.h>".}
-
-type
-  AVTEA* {.tea.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

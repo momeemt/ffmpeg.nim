@@ -1,8 +1,4 @@
-{.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
-
-type
-  pp_context* {.postprocess.} = object
-  pp_mode* {.postprocess.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "postproc(|-53|-54|-55|-56|-57).dll".}

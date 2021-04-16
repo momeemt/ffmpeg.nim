@@ -1,13 +1,4 @@
-from libavcodec_avcodec import AVCodecContext
-from undefined_symbol import AVMediaCodecBuffer
-
-{.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
-
-type
-  AVMediaCodecContext* {.mediacodec.} = object
-    surface: pointer
-  
-  MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}

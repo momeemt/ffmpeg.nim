@@ -1,6 +1,5 @@
 import std/time_t
-from libavutil_bprint import tm
-from libavutil_rational import AVRational
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

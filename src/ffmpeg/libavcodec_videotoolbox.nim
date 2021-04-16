@@ -1,4 +1,4 @@
-from libavcodec_avcodec import AVCodecContext
+import ffmpeg_types
 
 {.pragma: videoToolBox, importc, header: "<libavcodec/videotoolbox.h>".}
 {.pragma: videoToolBoxInclude, importc, header: "<VideoToolbox/VideoToolbox.h>".}

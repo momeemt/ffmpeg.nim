@@ -1,12 +1,4 @@
-{.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
-
-type
-  AVBuffer* {.buffer.} = object
-  AVBufferRef* {.buffer.} = object
-    buffer*: ptr AVBuffer
-    data*: ptr uint8
-    size*: int
-  AVBufferPool* {.buffer.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

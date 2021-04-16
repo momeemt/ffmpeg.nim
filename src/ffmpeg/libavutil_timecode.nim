@@ -1,18 +1,4 @@
-from libavutil_rational import AVRational
-
-{.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
-
-type
-  AVTimecodeFlag* {.timecode.} = enum
-    AV_TIMECODE_FLAG_DROPFRAME = 1 shl 0
-    AV_TIMECODE_FLAG_24HOURSMAX = 1 shl 1
-    AV_TIMECODE_FLAG_ALLOWNEGATIVE = 1 shl 2
-  
-  AVTimecode* {.timecode.} = object
-    start: cint
-    flags: uint32
-    rate: AVRational
-    fps: cuint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

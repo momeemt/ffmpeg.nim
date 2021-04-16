@@ -1,21 +1,4 @@
-from libavfilter_avfilter import AVFilterContext
-from libavutil_buffer import AVBufferRef
-from libavutil_frame import AVFrame
-from libavutil_rational import AVRational
-
-{.pragma: buffersrc, importc, header: "<libavfilter/buffersrc.h>".}
-
-type
-  AVBufferSrcParameters* {.buffersrc.} = object
-    format*: cint
-    time_base*: AVRational
-    width*: cint
-    height*: cint
-    sample_aspect_ratio*: AVRational
-    frame_rate*: AVRational
-    hw_frames_ctx*: ptr AVBufferRef
-    sample_rate*: cint
-    channel_layout*: uint64
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll".}

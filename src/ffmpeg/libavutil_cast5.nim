@@ -1,7 +1,4 @@
-{.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
-
-type
-  AVCAST5* {.cast5.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

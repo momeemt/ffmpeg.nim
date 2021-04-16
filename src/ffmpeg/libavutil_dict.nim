@@ -1,3 +1,5 @@
+import ffmpeg_types
+
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
 elif defined(macosx):
@@ -13,13 +15,6 @@ const
   AV_DICT_DONT_OVERWRITE* = 16
   AV_DICT_APPEND* = 32
   AV_DICT_MULTIKEY* = 64
-
-type
-  AVDictionaryEntry* = object
-    key: ptr cchar
-    value: ptr cchar
-  
-  AVDictionary* = object
 
 proc av_dict_get* (m: ptr AVDictionary, key: ptr cchar, prev: ptr AVDictionaryEntry, flags: cint): ptr AVDictionaryEntry
 proc av_dict_count* (m: ptr AVDictionary): cint

@@ -1,7 +1,4 @@
-{.pragma: aes_ctr, importc, header: "<libavutil/aes_ctr.h>".}
-
-type
-  AVAESCTR* {.aes_ctr.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

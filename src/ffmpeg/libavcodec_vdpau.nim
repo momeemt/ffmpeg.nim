@@ -1,5 +1,4 @@
-from libavcodec_avcodec import AVCodecContext
-from libavutil_frame import AVFrame
+import ffmpeg_types
 
 {.pragma: vdpauInclude, importc, header: "<vdpau/vdpau.h>".}
 {.pragma: vdpau, importc, header:"<libavcodec/vdpau.h>".}

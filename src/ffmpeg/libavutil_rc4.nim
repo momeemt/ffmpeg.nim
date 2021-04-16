@@ -1,9 +1,4 @@
-{.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
-
-type
-  AVRC4* {.rc4.} = object
-    state*: array[256, uint8]
-    x*, y*: cint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

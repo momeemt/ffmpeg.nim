@@ -1,22 +1,11 @@
+import ffmpeg_types
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-{.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
-
-type
-  AVHMACType* {.hmac.} = enum
-    AV_HMAC_MD5
-    AV_HMAC_SHA1
-    AV_HMAC_SHA224
-    AV_HMAC_SHA256
-    AV_HMAC_SHA384
-    AV_HMAC_SHA512
-
-  AVHMAC* {.hmac.} = object
 
 proc av_hmac_alloc* (`type`: AVHMACType): ptr AVHMAC
 proc av_hmac_free* (ctx: ptr AVHMAC)

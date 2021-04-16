@@ -1,30 +1,4 @@
-from libavutil_channel_layout import AVMatrixEncoding
-from libavutil_frame import AVFrame
-from libavutil_opt import AVClass
-
-{.pragma: avresample, importc, header: "<libavresample/avresample.h>".}
-
-type
-  AVAudioResampleContext* {.avresample.} = object
-
-  AVMixCoeffType* {.deprecated, avresample.} = enum
-    AV_MIX_COEFF_TYPE_Q8
-    AV_MIX_COEFF_TYPE_Q15
-    AV_MIX_COEFF_TYPE_FLT
-    AV_MIX_COEFF_TYPE_NB
-  
-  AVResampleFilterType* {.deprecated, avresample.} = enum
-    AV_RESAMPLE_FILTER_TYPE_CUBIC
-    AV_RESAMPLE_FILTER_TYPE_BLACKMAN_NUTTALL
-    AV_RESAMPLE_FILTER_TYPE_KAISER
-  
-  AVResampleDitherMethod* {.deprecated, avresample.} = enum
-    AV_RESAMPLE_DITHER_NONE
-    AV_RESAMPLE_DITHER_RECTANGULAR
-    AV_RESAMPLE_DITHER_TRIANGULAR
-    AV_RESAMPLE_DITHER_TRIANGULAR_HP
-    AV_RESAMPLE_DITHER_TRIANGULAR_NS
-    AV_RESAMPLE_DITHER_NB
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avresample(|-0|-1|-2|-3|-4|).dll".}
