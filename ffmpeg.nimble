@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.3.4"
+version       = "0.3.5"
 author        = "momeemt"
 description   = "ffmpeg.nim is the Nim binding for FFMpeg(4.3.2)."
 license       = "GPL-3.0-or-later"
