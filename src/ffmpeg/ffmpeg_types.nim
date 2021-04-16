@@ -28,6 +28,7 @@
 {.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
 {.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
 {.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
+{.pragma: crc, importc, header: "<libavutil/crc.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1870,3 +1871,16 @@ type
     AV_MATRIX_ENCODING_DOLBYEX
     AV_MATRIX_ENCODING_DOLBYHEADPHONE
     AV_MATRIX_ENCODING_NB
+  
+  AVCRC* {.crc.} = uint32
+
+  AVCRCId* {.crc.} = enum
+    AV_CRC_8_ATM
+    AV_CRC_16_ANSI
+    AV_CRC_16_CCITT
+    AV_CRC_32_IEEE
+    AV_CRC_32_IEEE_LE
+    AV_CRC_16_ANSI_LE
+    AV_CRC_24_IEEE
+    AV_CRC_8_EBU
+    AV_CRC_MAX
