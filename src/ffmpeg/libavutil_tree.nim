@@ -1,7 +1,4 @@
-{.pragma: tree, importc, header: "<libavutil/tree.h>".}
-
-type
-  AVTreeNode* {.tree.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

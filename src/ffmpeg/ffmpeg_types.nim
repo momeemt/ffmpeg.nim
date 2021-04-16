@@ -79,6 +79,7 @@ else:
 {.pragma: tea, importc, header: "<libavutil/tea.h>".}
 {.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
 {.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
+{.pragma: tree, importc, header: "<libavutil/tree.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2809,3 +2810,5 @@ type
     flags: uint32
     rate: AVRational
     fps: cuint
+  
+  AVTreeNode* {.tree.} = object
