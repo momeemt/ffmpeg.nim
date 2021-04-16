@@ -7,6 +7,7 @@
 {.pragma: codecPar, importc, header:"<libavcodec/codec_par.h>".}
 {.pragma: codec, importc, header:"<libavcodec/codec.h>".}
 {.pragma: dirac, importc, header:"<libavcodec/dirac.h>".}
+{.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1045,3 +1046,22 @@ type
     colorspace*: AVColorSpace
     version*: DiracVersionInfo
     bit_depth*: cint
+  
+  AVDVProfile* {.dv_profile.} = object
+    dsf*: cint
+    video_stype*: cint
+    frame_size*: cint
+    difseg_size*: cint
+    n_difchan*: cint
+    time_base*: AVRational
+    ltc_divisor*: cint
+    height*: cint
+    width*: cint
+    sar*: array[2, AVRational]
+    pix_fmt*: AVPixelFormat
+    bpm*: cint
+    block_sizes*: ptr uint8
+    audio_stride*: cint
+    audio_min_samples*: array[3, cint]
+    audio_samples_dist*: array[5, cint]
+    audio_shuffle*: array[9, ptr uint8]

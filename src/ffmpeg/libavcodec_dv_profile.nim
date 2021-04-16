@@ -1,30 +1,7 @@
-from libavutil_pixfmt import AVPixelFormat
-from libavutil_rational import AVRational
-
-{.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
+import ffmpeg_types
 
 const
   DV_PROFILE_BYTES* = 6 * 80
-
-type
-  AVDVProfile* = object
-    dsf*: cint
-    video_stype*: cint
-    frame_size*: cint
-    difseg_size*: cint
-    n_difchan*: cint
-    time_base*: AVRational
-    ltc_divisor*: cint
-    height*: cint
-    width*: cint
-    sar*: array[2, AVRational]
-    pix_fmt*: AVPixelFormat
-    bpm*: cint
-    block_sizes*: ptr uint8
-    audio_stride*: cint
-    audio_min_samples*: array[3, cint]
-    audio_samples_dist*: array[5, cint]
-    audio_shuffle*: array[9, ptr uint8]
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
