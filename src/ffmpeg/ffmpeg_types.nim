@@ -29,6 +29,7 @@
 {.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
 {.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
 {.pragma: crc, importc, header: "<libavutil/crc.h>".}
+{.pragma: des, importc, header: "<libavutil/des.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1884,3 +1885,7 @@ type
     AV_CRC_24_IEEE
     AV_CRC_8_EBU
     AV_CRC_MAX
+  
+  AVDES* {.des.} = object
+    round_keys*: array[3, array[16, uint64]]
+    triple_des*: cint
