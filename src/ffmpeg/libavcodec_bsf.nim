@@ -1,36 +1,4 @@
-from libavcodec_codec_id import AVCodecID
-from libavcodec_codec_par import AVCodecParameters
-from libavcodec_packet import AVPacket
-from libavutil_dict import AVDictionary
-from libavutil_opt import AVClass
-from libavutil_rational import AVRational
-
-{.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
-
-type
-  AVBSFInternal* {.bsf.} = object
-
-  AVBSFContext* {.bsf.} = object
-    av_class*: ptr AVClass
-    filter*: ptr AVBitStreamFilter
-    internal*: ptr AVBSFInternal
-    priv_data*: pointer
-    par_in*: ptr AVCodecParameters
-    par_out*: ptr AVCodecParameters
-    time_base_in*: AVRational
-    time_base_out*: AVRational
-  
-  AVBitStreamFilter* {.bsf.} = object
-    name*: cstring
-    codec_ids*: ptr AVCodecID
-    priv_class*: ptr AVClass
-    priv_data_size*: cint
-    init*: proc (ctx: ptr AVBSFContext): cint
-    filter*: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint
-    close*: proc (ctx: AVBSFContext)
-    flush*: proc (ctx: AVBSFContext)
-  
-  AVBSFList* {.bsf.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}

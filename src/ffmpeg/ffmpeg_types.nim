@@ -1,6 +1,7 @@
 {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
 {.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
 {.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
+{.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -392,3 +393,27 @@ type
     DCT_III
     DCT_I
     DST_I
+  
+  AVBSFInternal* {.bsf.} = object
+
+  AVBSFContext* {.bsf.} = object
+    av_class*: ptr AVClass
+    filter*: ptr AVBitStreamFilter
+    internal*: ptr AVBSFInternal
+    priv_data*: pointer
+    par_in*: ptr AVCodecParameters
+    par_out*: ptr AVCodecParameters
+    time_base_in*: AVRational
+    time_base_out*: AVRational
+  
+  AVBitStreamFilter* {.bsf.} = object
+    name*: cstring
+    codec_ids*: ptr AVCodecID
+    priv_class*: ptr AVClass
+    priv_data_size*: cint
+    init*: proc (ctx: ptr AVBSFContext): cint
+    filter*: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint
+    close*: proc (ctx: AVBSFContext)
+    flush*: proc (ctx: AVBSFContext)
+  
+  AVBSFList* {.bsf.} = object
