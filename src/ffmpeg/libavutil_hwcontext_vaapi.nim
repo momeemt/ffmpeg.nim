@@ -20,11 +20,11 @@ type
   VASurfaceID* {.va.} = object
   VAConfigID* {.va.} = object
 
-  AVVAAPIDeviceContext* {.hwcontext_vaapi.} = object
+  AVVAAPIDeviceContext* {.hwcontext_vaapi, bycopy.} = object
     display*: VADisplay
     driver_quirks*: cuint
   
-  AVVAAPIFramesContext* {.hwcontext_vaapi.} = object
+  AVVAAPIFramesContext* {.hwcontext_vaapi, bycopy.} = object
     attributes*: ptr VASurfaceAttrib
     nb_attributes*: cint
     surface_ids*: ptr VASurfaceID

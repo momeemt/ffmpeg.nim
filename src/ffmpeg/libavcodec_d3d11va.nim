@@ -12,7 +12,7 @@ const
 #endif
 
 type
-  AVD3D11VAContext* = object
+  AVD3D11VAContext* {.bycopy.} = object
     decoder*: ptr ID3D11VideoDecoder
     video_context: ptr ID3D11VideoContext
     cfg: ptr D3D11_VIDEO_DECODER_CONFIG

@@ -1,8 +1,7 @@
-from libavutil_buffer import AVBufferRef
-from undefined_symbol import mfxSession, mfxExtBuffer
+import ffmpeg_types
 
 type
-  AVQSVContext* = object
+  AVQSVContext* {.bycopy.} = object
     session*: mfxSession
     iopattern*: cint
     ext_buffers*: ptr ptr mfxExtBuffer

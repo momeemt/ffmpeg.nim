@@ -5,7 +5,7 @@ type
   XvMCMacroBlock* {.xvmcInclude.} = object
   XvMCSurface* {.xvmcInclude.} = object
 
-  xvmc_pix_fmt* {.xvmc, deprecated.} = object
+  xvmc_pix_fmt* {.xvmc, deprecated, bycopy.} = object
     xvmc_id*: cint
     data_blocks*: ptr cshort
     mv_blocks*: ptr XvMCMacroBlock

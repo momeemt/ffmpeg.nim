@@ -9,10 +9,10 @@ type
   IDirect3DSurface9* {.dxva2Include.} = object
   IDirectXVideoDecoder* {.dxva2Include.} = object
 
-  AVDXVA2DeviceContext* {.hwcontext_dxva2.} = object
+  AVDXVA2DeviceContext* {.hwcontext_dxva2, bycopy.} = object
     devmgr*: ptr IDirect3DDeviceManager9
   
-  AVDXVA2FramesContext* {.hwcontext_dxva2.} = object
+  AVDXVA2FramesContext* {.hwcontext_dxva2, bycopy.} = object
     surface_type*: DWORD
     surfaces*: ptr ptr IDirect3DSurface9
     nb_surfaces*: cint

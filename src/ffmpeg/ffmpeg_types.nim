@@ -155,7 +155,7 @@ type
   
   AVCodecInternal* {.avcodec.} = object
 
-  AVCodecContext* {.avcodec.} = object
+  AVCodecContext* {.avcodec, bycopy.} = object
     av_class*: ptr AVClass
     log_level_offset*: cint
     codec_type*: AVMediaType
@@ -374,9 +374,9 @@ type
     rects*: ptr ptr AVSubtitleRect
     pts*: int64
 
-  MpegEncContext* {.avcodec.} = object
+  MpegEncContext* {.avcodec, bycopy.} = object
 
-  AVHWAccel* {.avcodec.} = object
+  AVHWAccel* {.avcodec, bycopy.} = object
     name*: ptr cchar
     `type`*: AVMediaType
     id*: AVCodecID
@@ -470,7 +470,7 @@ type
     split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint): cint
     next*: ptr AVCodecParser
   
-  AVDCT* {.avdct.} = object
+  AVDCT* {.avdct, bycopy.} = object
     av_class*: ptr AVClass
     idct*: proc (`block`: ptr int16)
     idct_permutation*: array[64, uint8]
@@ -483,7 +483,7 @@ type
   
   FFTSample* {.avfft.} = cfloat
 
-  FFTComplex* {.avfft.} = object
+  FFTComplex* {.avfft, bycopy.} = object
     re, im: FFTSample
 
   FFTContext* {.avfft.} = object
@@ -1059,7 +1059,7 @@ type
     trailing_padding*: cint
     seek_preroll*: cint
   
-  AVProfile* {.codec.} = object
+  AVProfile* {.codec, bycopy.} = object
     profile: cint
     name: cstring
   
@@ -1122,10 +1122,10 @@ type
     DIRAC_PCODE_PICTURE_HQ      = 0xE8
     DIRAC_PCODE_MAGIC           = 0x42424344
   
-  DiracVersionInfo* {.dirac.} = object
+  DiracVersionInfo* {.dirac, bycopy.} = object
     major*, minor*: cint
 
-  AVDiracSeqHeader* {.dirac.} = object
+  AVDiracSeqHeader* {.dirac, bycopy.} = object
     width*: cuint
     height*: cuint
     chroma_format*: uint8
@@ -1151,7 +1151,7 @@ type
     version*: DiracVersionInfo
     bit_depth*: cint
   
-  AVDVProfile* {.dv_profile.} = object
+  AVDVProfile* {.dv_profile, bycopy.} = object
     dsf*: cint
     video_stype*: cint
     frame_size*: cint
@@ -1170,7 +1170,7 @@ type
     audio_samples_dist*: array[5, cint]
     audio_shuffle*: array[9, ptr uint8]
   
-  AVMediaCodecContext* {.mediacodec.} = object
+  AVMediaCodecContext* {.mediacodec, bycopy.} = object
     surface: pointer
   
   MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
@@ -1584,7 +1584,7 @@ type
     AVSTREAM_PARSE_FULL_ONCE
     AVSTREAM_PARSE_FULL_RAW
   
-  AVIndexEntry* {.avformat.} = object
+  AVIndexEntry* {.avformat, bycopy.} = object
     pos*: int64
     timestamp*: int64
     flags* {.bitsize: 2.}: cint
@@ -1719,7 +1719,7 @@ type
     AVFMT_TBCF_DEMUXER
     AVFMT_TBCF_R_FRAMERATE # when defined(FF_API_R_FRAME_RATE)
   
-  AVIOInterruptCB* {.avio.} = object
+  AVIOInterruptCB* {.avio, bycopy.} = object
     callback*: proc (a1: pointer): cint
     opaque*: pointer
   
@@ -1736,7 +1736,7 @@ type
     AVIO_ENTRY_SHARE
     AVIO_ENTRY_WORKGROUP
 
-  AVIODirEntry* {.avio.} = object
+  AVIODirEntry* {.avio, bycopy.} = object
     name*: cstring
     `type`*: cint
     uft8*: cint
@@ -1820,9 +1820,9 @@ type
     AV_RESAMPLE_DITHER_TRIANGULAR_NS
     AV_RESAMPLE_DITHER_NB
   
-  AVAESCTR* {.aes_ctr.} = object
+  AVAESCTR* {.aes_ctr, bycopy.} = object
 
-  AVAES* {.aes.} = object
+  AVAES* {.aes, bycopy.} = object
 
   AVAudioFifo* {.audio_fifo.} = object
 
@@ -1850,7 +1850,7 @@ type
     AV_PICTURE_TYPE_SP
     AV_PICTURE_TYPE_BI
   
-  AVBlowfish* {.blowfish.} = object
+  AVBlowfish* {.blowfish, bycopy.} = object
     p*: array[AV_BF_ROUNDS + 2, uint32]
     s*: array[4, array[256, uint32]]
   
@@ -1861,7 +1861,7 @@ type
     size_max*: cuint
     reserved_internal_buffer*: array[1, cstring]
 
-  AVBPrint* {.bprint.} = object
+  AVBPrint* {.bprint, bycopy.} = object
     str*: cstring
     len*: cuint
     size*: cuint
@@ -1874,16 +1874,16 @@ type
   va_list* {.importc, header: "<stdarg.h>".} = object
 
   AVBuffer* {.buffer.} = object
-  AVBufferRef* {.buffer.} = object
+  AVBufferRef* {.buffer, bycopy.} = object
     buffer*: ptr AVBuffer
     data*: ptr uint8
     size*: cint
   
   AVBufferPool* {.buffer.} = object
 
-  AVCAMELLIA* {.camellia.} = object
+  AVCAMELLIA* {.camellia, bycopy.} = object
 
-  AVCAST5* {.cast5.} = object
+  AVCAST5* {.cast5, bycopy.} = object
 
   AVMatrixEncoding* {.channel_layout.} = enum
     AV_MATRIX_ENCODING_NONE
@@ -1908,11 +1908,11 @@ type
     AV_CRC_8_EBU
     AV_CRC_MAX
   
-  AVDES* {.des.} = object
+  AVDES* {.des, bycopy.} = object
     round_keys*: array[3, array[16, uint64]]
     triple_des*: cint
   
-  AVDictionaryEntry* {.dict.} = object
+  AVDictionaryEntry* {.dict, bycopy.} = object
     key*: ptr cchar
     value*: ptr cchar
   
@@ -1935,7 +1935,7 @@ type
     AV_DOWNMIX_TYPE_DPLII
     AV_DOWNMIX_TYPE_NB
 
-  AVDownmixInfo* {.downmin_info.} = object
+  AVDownmixInfo* {.downmin_info, bycopy.} = object
     preferred_downmix_type*: AVDownmixType
     center_mix_level*: cdouble
     center_mix_level_ltrt*: cdouble
@@ -1970,7 +1970,7 @@ type
   
   AVExpr* {.eval.} = object
 
-  AVFifoBuffer* {.fifo.} = object
+  AVFifoBuffer* {.fifo, bycopy.} = object
     buffer*: ptr uint8
     rptr*: ptr uint8
     wptr*: ptr uint8
@@ -2011,7 +2011,7 @@ type
     AV_AFD_16_9_SP_14_9 = 14
     AV_AFD_SP_4_3 = 15
   
-  AVFrameSideData* {.frame.} = object
+  AVFrameSideData* {.frame, bycopy.} = object
     `type`*: AVFrameSideDataType
     data*: ptr uint8
     size*: cint
@@ -2026,7 +2026,7 @@ type
     right*: cint
     qoffset*: AVRational
   
-  AVFrame* {.frame.} = object
+  AVFrame* {.frame, bycopy.} = object
     data*: array[AV_NUM_DATA_POINTERS, ptr uint8]
     line*: array[AV_NUM_DATA_POINTERS, cint]
     extended_data*: ptr ptr uint8
@@ -2088,7 +2088,7 @@ type
       qscale_type {.deprecated.}: cint
       qp_table_buf {.deprecated.}: ptr AVBufferRef
   
-  AVHashContext* {.hash.} = object
+  AVHashContext* {.hash, bycopy.} = object
 
   AVHDRPlusOverlapProcessOption* {.hdr_dynamic_metadata.} = enum
     AV_HDR_PLUS_OVERLAP_PROCESS_WEIGHTED_AVERAGING = 0
@@ -2152,7 +2152,7 @@ type
   CUstream* {.cuda.} = object
   AVCUDADeviceContextInternal* {.hwcontext_cuda.} = object
 
-  AVCUDADeviceContext* {.hwcontext_cuda.} = object
+  AVCUDADeviceContext* {.hwcontext_cuda, bycopy.} = object
     cuda_ctx*: CUcontext
     stream*: CUstream
     internal*: ptr AVCUDADeviceContextInternal
@@ -2268,7 +2268,7 @@ type
   
   AVHWDeviceInternal* {.hwcontext.} = object
 
-  AVHWDeviceContext* {.hwcontext.} = object
+  AVHWDeviceContext* {.hwcontext, bycopy.} = object
     av_class*: ptr AVClass
     internal*: ptr AVHWDeviceInternal
     `type`*: AVHWDeviceType
@@ -2278,7 +2278,7 @@ type
   
   AVHWFramesInternal* {.hwcontext.} = object
 
-  AVHWFramesContext* {.hwcontext.} = object
+  AVHWFramesContext* {.hwcontext, bycopy.} = object
     av_class*: AVClass
     internal*: AVHWFramesInternal
     device_ref*: ptr AVBufferRef
@@ -2331,11 +2331,11 @@ type
     u16*: uint16
     u8*: array[2, uint8]
   
-  AVLFG* {.lfg.} = object
+  AVLFG* {.lfg, bycopy.} = object
     state*: array[64, cuint]
     index*: cint
   
-  AVMasteringDisplayMetadata* {.mastering_display_metadata.} = object
+  AVMasteringDisplayMetadata* {.mastering_display_metadata, bycopy.} = object
     display_primaries*: array[3, array[2, AVRational]]
     white_point*: array[2, AVRational]
     min_luminance*: AVRational
@@ -2355,9 +2355,9 @@ type
     AV_ROUND_NEAR_INF = 5
     AV_ROUND_PASS_MINMAX = 8192
   
-  AVMD5* {.md5.} = object
+  AVMD5* {.md5, bycopy.} = object
 
-  AVMotionVector* {.motion_vector.} = object
+  AVMotionVector* {.motion_vector, bycopy.} = object
     source*: int32
     w*, h*: uint8
     src_x*, src_y*: int16
@@ -2388,7 +2388,7 @@ type
     AV_CLASS_CATEGORY_DEVICE_INPUT
     AV_CLASS_CATEGORY_NB
 
-  AVClass* {.log.} = object
+  AVClass* {.log, bycopy.} = object
     class_name*: cstring
     item_name*: proc (ctx: pointer): cstring
     option*: ptr AVOption
@@ -2422,7 +2422,7 @@ type
     AV_OPT_TYPE_CHANNEL_LAYOUT
     AV_OPT_TYPE_BOOL
   
-  AVOption* {.opt.} = object
+  AVOption* {.opt, bycopy.} = object
     name*: cstring
     help*: cstring
     offset*: cint
@@ -2444,12 +2444,12 @@ type
     component_min*, component_max*: cdouble
     is_range*: cint
   
-  AVOptionRanges* {.opt.} = object
+  AVOptionRanges* {.opt, bycopy.} = object
     `range`*: ptr ptr AVOptionRange
     nb_ranges*: cint
     nb_components*: cint
   
-  AVComponentDescriptor* {.pixdesc.} = object
+  AVComponentDescriptor* {.pixdesc, bycopy.} = object
     plane*: cint
     step*: cint
     offset*: cint
@@ -2461,7 +2461,7 @@ type
       depth_minus1* {.deprecated.}: cint
       offset_plus1* {.deprecated.}: cint
   
-  AVPixFmtDescriptor* {.pixdesc.} = object
+  AVPixFmtDescriptor* {.pixdesc, bycopy.} = object
     name*: cstring
     nb_components*: uint8
     log2_chroma_w*: uint8
@@ -2753,21 +2753,21 @@ type
     AVCHROMA_LOC_BOTTOM      = 6
     AVCHROMA_LOC_NB
   
-  AVRational* {.rational.} = object
+  AVRational* {.rational, bycopy.} = object
     num*: cint
     den*: cint
   
-  AVRC4* {.rc4.} = object
+  AVRC4* {.rc4, bycopy.} = object
     state*: array[256, uint8]
     x*, y*: cint
   
-  AVReplayGain* {.replaygain.} = object
+  AVReplayGain* {.replaygain, bycopy.} = object
     track_gain*: int32
     track_peak*: uint32
     album_gain*: int32
     album_peak*: uint32
   
-  AVRIPEMD* {.ripemd.} = object
+  AVRIPEMD* {.ripemd, bycopy.} = object
 
   AVSampleFormat* {.samplefmt.} = enum
     AV_SAMPLE_FMT_NONE = -1
@@ -2785,16 +2785,16 @@ type
     AV_SAMPLE_FMT_S64P
     AV_SAMPLE_FMT_NB
   
-  AVSHA* {.sha.} = object
+  AVSHA* {.sha, bycopy.} = object
 
-  AVSHA512* {.sha512.} = object
+  AVSHA512* {.sha512, bycopy.} = object
 
   AVSphericalProjection* {.spherical.} = enum
     AV_SPHERICAL_EQUIRECTANGULAR
     AV_SPHERICAL_CUBEMAP
     AV_SPHERICAL_EQUIRECTANGULAR_TILE
   
-  AVSphericalMapping* {.spherical.} = object
+  AVSphericalMapping* {.spherical, bycopy.} = object
     projection*: AVSphericalProjection
     yaw*: int32
     pitch*: int32
@@ -2820,12 +2820,12 @@ type
     AV_STEREO3D_VIEW_LEFT
     AV_STEREO3D_VIEW_RIGHT
   
-  AVStereo3D* {.stereo3d.} = object
+  AVStereo3D* {.stereo3d, bycopy.} = object
     `type`*: AVStereo3DType
     flags*: cint
     view*: AVStereo3DView
   
-  AVTEA* {.tea.} = object
+  AVTEA* {.tea, bycopy.} = object
 
   AVThreadMessageQueue* {.threadmessage.} = object
 
@@ -2837,15 +2837,15 @@ type
     AV_TIMECODE_FLAG_24HOURSMAX = 1 shl 1
     AV_TIMECODE_FLAG_ALLOWNEGATIVE = 1 shl 2
   
-  AVTimecode* {.timecode.} = object
+  AVTimecode* {.timecode, bycopy.} = object
     start: cint
     flags: uint32
     rate: AVRational
     fps: cuint
   
-  AVTreeNode* {.tree.} = object
+  AVTreeNode* {.tree, bycopy.} = object
 
-  AVTWOFISH* {.twofish.} = object
+  AVTWOFISH* {.twofish, bycopy.} = object
 
   AVTXContext* {.tx.} = object
 
@@ -2916,11 +2916,11 @@ type
 
   SwrContext* {.swresample.} = object
 
-  SwsVector* {.swscale.} = object
+  SwsVector* {.swscale, bycopy.} = object
     coeff*: ptr cdouble
     length*: cint
   
-  SwsFilter* {.swscale.} = object
+  SwsFilter* {.swscale, bycopy.} = object
     lumH*: ptr SwsVector
     lumV*: ptr SwsVector
     chrH*: ptr SwsVector

@@ -1,7 +1,7 @@
 {.pragma: xtea, importc, header: "<libavutil/xtea.h>".}
 
 type
-  AVXTEA* = object
+  AVXTEA* {.xtea, bycopy.} = object
     key: array[16, uint32]
 
 when defined(windows):

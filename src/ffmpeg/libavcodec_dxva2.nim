@@ -10,7 +10,7 @@ const
   FF_DXVA2_WORKAROUND_INTEL_CLEARVIDEO* = 2
 
 type
-  dxva_context* = object
+  dxva_context* {.bycopy.} = object
     decoder*: ptr IDirectXVideoDecoder
     cfg*: ptr DXVA2_ConfigPictureDecode
     surface_count*: cuint
