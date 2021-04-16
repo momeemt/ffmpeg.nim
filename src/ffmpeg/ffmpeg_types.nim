@@ -64,6 +64,7 @@ else:
 {.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
 {.pragma: opt, importc, header: "<libavutil/opt.h>".}
 {.pragma: log, importc, header: "<libavutil/log.h>".}
+{.pragma: pixdesc, importc, header: "<libavutil/pixdesc.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2460,3 +2461,24 @@ type
     `range`*: ptr ptr AVOptionRange
     nb_ranges*: cint
     nb_components*: cint
+  
+  AVComponentDescriptor* {.pixdesc.} = object
+    plane*: cint
+    step*: cint
+    offset*: cint
+    shift*: cint
+    depth*: cint
+
+    when defined(FF_API_PLUS1_MINUS1):
+      step_minus1* {.deprecated.}: cint
+      depth_minus1* {.deprecated.}: cint
+      offset_plus1* {.deprecated.}: cint
+  
+  AVPixFmtDescriptor* {.pixdesc.} = object
+    name*: cstring
+    nb_components*: uint8
+    log2_chroma_w*: uint8
+    log2_chroma_h*: uint8
+    flags*: uint64
+    comp*: array[4, AVComponentDescriptor]
+    alias*: cstring
