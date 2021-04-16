@@ -5,10 +5,12 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
 
-from libavcodec_codec import AVCodec, AVPacket
+{.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
+
+from libavcodec_codec import AVCodec
 from libavcodec_codec_id import AVCodecID
 from libavcodec_codec_desc import AVCodecDescriptor
-from libavcodec_packet import AVPacketSideData
+from libavcodec_packet import AVPacketSideData, AVPacket
 from libavcodec_codec_par import AVFieldOrder, AVCodecParameters
 from libavutil_avutil import AVMediaType
 from libavutil_buffer import AVBufferRef
@@ -274,7 +276,7 @@ const
   PARSER_FLAG_USE_CODEC_TS* = 0x1000
 
 type
-  AVDiscard* = enum
+  AVDiscard* {.avcodec.} = enum
     AVDISCARD_NONE = -16
     AVDISCARD_DEFAULT = 0
     AVDISCARD_NONREF = 8
@@ -283,7 +285,7 @@ type
     AVDISCARD_NONKEY = 32
     AVDISCARD_ALL = 48
 
-  AVAudioServiceType* = enum
+  AVAudioServiceType* {.avcodec.} = enum
     AV_AUDIO_SERVICE_TYPE_MAIN = 0
     AV_AUDIO_SERVICE_TYPE_EFFECTS = 1
     AV_AUDIO_SERVICE_TYPE_VISUALLY_IMPAIRED = 2
@@ -295,27 +297,27 @@ type
     AV_AUDIO_SERVICE_TYPE_KARAOKE = 8
     AV_AUDIO_SERVICE_TYPE_NB
   
-  RcOverride* = object
+  RcOverride* {.avcodec.} = object
     start_frame*: cint
     end_frame*: cint
     qscale*: cint
     quality_factor*: cfloat
   
-  AVPanScan* = object
+  AVPanScan* {.avcodec.} = object
     id*: cint
     width*: cint
     height*: cint
     position*: array[3, array[2, int16]]
 
-  AVCPBProperties* = object
+  AVCPBProperties* {.avcodec.} = object
 
-  AVProducerReferenceTime* = object
+  AVProducerReferenceTime* {.avcodec.} = object
     wallclock*: int64
     flags*: cint
   
-  AVCodecInternal* = object
+  AVCodecInternal* {.avcodec.} = object
 
-  AVCodecContext* = object
+  AVCodecContext* {.avcodec.} = object
     av_class*: ptr AVClass
     log_level_offset*: cint
     codec_type*: AVMediaType
@@ -526,7 +528,7 @@ type
     when defined(FF_API_SIDEDATA_ONLY_PKT):
       side_data_only_packets*: cint
 
-  AVSubtitle* = object
+  AVSubtitle* {.avcodec.} = object
     format*: uint16
     start_display_time*: uint32
     end_display_time*: uint32
@@ -534,9 +536,9 @@ type
     rects*: ptr ptr AVSubtitleRect
     pts*: int64
 
-  MpegEncContext* = object
+  MpegEncContext* {.avcodec.} = object
 
-  AVHWAccel* = object
+  AVHWAccel* {.avcodec.} = object
     name*: ptr cchar
     `type`*: AVMediaType
     id*: AVCodecID
@@ -555,13 +557,13 @@ type
     caps_internal*: cint
     frame_params*: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): cint
   
-  AVSubtitleType* = enum
+  AVSubtitleType* {.avcodec.} = enum
     SUBTITLE_NONE
     SUBTITLE_BITMAP
     SUBTITLE_TEXT
     SUBTITLE_ASS
   
-  AVSubtitleRect* = object
+  AVSubtitleRect* {.avcodec.} = object
     x*: cint
     y*: cint
     w*: cint
@@ -576,13 +578,13 @@ type
     when defined(FF_API_AVPICTURE):
       pict* {.deprecated.}: AVPicture
   
-  AVPictureStructure* = enum
+  AVPictureStructure* {.avcodec.} = enum
     AV_PICTURE_STRUCTURE_UNKNOWN
     AV_PICTURE_STRUCTURE_TOP_FIELD
     AV_PICTURE_STRUCTURE_BOTTOM_FIELD
     AV_PICTURE_STRUCTURE_FRAME
   
-  AVCodecParserContext* = object
+  AVCodecParserContext* {.avcodec.} = object
     priv_data: pointer
     parser: ptr AVCodecParser
     frame_offset: int64
@@ -621,7 +623,7 @@ type
     when defined(FF_API_CONVERGENCE_DURATION):
       convergence_duration {.deprecated.}: int64
   
-  AVCodecParser* = object
+  AVCodecParser* {.avcodec.} = object
     codec_ids: array[5, int]
     priv_data_size: int
     parser_init: proc (s: ptr AVCodecParserContext): int

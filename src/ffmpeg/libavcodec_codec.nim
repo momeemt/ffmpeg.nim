@@ -1,4 +1,6 @@
+from libavcodec_avcodec import AVCodecContext
 from libavcodec_codec_id import AVCodecID
+from libavcodec_packet import AVPacket
 from libavutil_avutil import AVMediaType
 from libavutil_frame import AVFrame
 from libavutil_hwcontext import AVHWDeviceType
@@ -40,9 +42,7 @@ type
     name: cstring
   
   AVCodecDefault* {.codec.} = object
-  AVCodecContext* {.codec.} = object
   AVSubtitle* {.codec.} = object
-  AVPacket* {.codec.} = object
 
   AVCodec* = object
     name*: cstring
