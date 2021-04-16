@@ -71,6 +71,7 @@ else:
 {.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
 {.pragma: replaygain, importc, header: "<libavutil/replaygain.h>".}
 {.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
+{.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2727,3 +2728,19 @@ type
     album_peak*: uint32
   
   AVRIPEMD* {.ripemd.} = object
+
+  AVSampleFormat* {.samplefmt.} = enum
+    AV_SAMPLE_FMT_NONE = -1
+    AV_SAMPLE_FMT_U8
+    AV_SAMPLE_FMT_S16
+    AV_SAMPLE_FMT_S32
+    AV_SAMPLE_FMT_FLT
+    AV_SAMPLE_FMT_DBL
+    AV_SAMPLE_FMT_U8P
+    AV_SAMPLE_FMT_S16P
+    AV_SAMPLE_FMT_S32P
+    AV_SAMPLE_FMT_FLTP
+    AV_SAMPLE_FMT_DBLP
+    AV_SAMPLE_FMT_S64
+    AV_SAMPLE_FMT_S64P
+    AV_SAMPLE_FMT_NB
