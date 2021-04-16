@@ -1,8 +1,4 @@
-from libavfilter_avfilter import AVFilterContext
-from libavutil_avutil import AVMediaType
-from libavutil_buffer import AVBufferRef
-from libavutil_frame import AVFrame
-from libavutil_rational import AVRational
+import ffmpeg_types
 
 when defined(FF_API_NEXT):
   {.pragma: buffersink, importc, header: "<libavfilter/buffersink.h>".}
