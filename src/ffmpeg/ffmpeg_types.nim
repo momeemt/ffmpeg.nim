@@ -35,6 +35,7 @@
 {.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
 {.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
 {.pragma: eval, importc, header: "<libavutil/eval.h>".}
+{.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1952,3 +1953,11 @@ type
     next*: ptr AVEncryptionInitInfo
   
   AVExpr* {.eval.} = object
+
+  AVFifoBuffer* {.fifo.} = object
+    buffer*: ptr uint8
+    rptr*: ptr uint8
+    wptr*: ptr uint8
+    `end`*: ptr uint8
+    rndx*: uint32
+    wndx*: uint32

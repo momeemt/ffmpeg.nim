@@ -1,20 +1,11 @@
+import ffmpeg_types
+
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
 elif defined(macosx):
   {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
 else:
   {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
-
-{.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
-
-type
-  AVFifoBuffer* {.fifo.} = object
-    buffer*: ptr uint8
-    rptr*: ptr uint8
-    wptr*: ptr uint8
-    `end`*: ptr uint8
-    rndx*: uint32
-    wndx*: uint32
 
 proc av_fifo_alloc* (size: cuint): ptr AVFifoBuffer
 proc av_fifo_alloc_array* (nmemb, size: csize_t): ptr AVFifoBuffer
