@@ -1,21 +1,4 @@
-{.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
-
-type
-  AVSphericalProjection* = enum
-    AV_SPHERICAL_EQUIRECTANGULAR
-    AV_SPHERICAL_CUBEMAP
-    AV_SPHERICAL_EQUIRECTANGULAR_TILE
-  
-  AVSphericalMapping* = object
-    projection*: AVSphericalProjection
-    yaw*: int32
-    pitch*: int32
-    roll*: int32
-    bound_left*: uint32
-    bound_top*: uint32
-    bound_right*: uint32
-    bound_bottom*: uint32
-    padding*: uint32
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

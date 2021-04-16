@@ -74,6 +74,7 @@ else:
 {.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
 {.pragma: sha, importc, header: "<libavutil/sha.h>".}
 {.pragma: sha512, importc, header: "<libavutil/sha512.h>".}
+{.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2750,3 +2751,19 @@ type
   AVSHA* {.sha.} = object
 
   AVSHA512* {.sha512.} = object
+
+  AVSphericalProjection* {.spherical.} = enum
+    AV_SPHERICAL_EQUIRECTANGULAR
+    AV_SPHERICAL_CUBEMAP
+    AV_SPHERICAL_EQUIRECTANGULAR_TILE
+  
+  AVSphericalMapping* {.spherical.} = object
+    projection*: AVSphericalProjection
+    yaw*: int32
+    pitch*: int32
+    roll*: int32
+    bound_left*: uint32
+    bound_top*: uint32
+    bound_right*: uint32
+    bound_bottom*: uint32
+    padding*: uint32
