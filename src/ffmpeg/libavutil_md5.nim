@@ -1,7 +1,4 @@
-{.pragma: md5, importc, header: "<libavutil/md5.h>".}
-
-type
-  AVMD5* {.md5.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

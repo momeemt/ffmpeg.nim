@@ -59,6 +59,7 @@ else:
 {.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
 {.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
 {.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
+{.pragma: md5, importc, header: "<libavutil/md5.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2361,3 +2362,5 @@ type
     AV_ROUND_UP       = 3
     AV_ROUND_NEAR_INF = 5
     AV_ROUND_PASS_MINMAX = 8192
+  
+  AVMD5* {.md5.} = object
