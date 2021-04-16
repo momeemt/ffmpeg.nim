@@ -78,6 +78,7 @@ else:
 {.pragma: stereo3d, importc, header: "<libavutil/stereo3d.h>".}
 {.pragma: tea, importc, header: "<libavutil/tea.h>".}
 {.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
+{.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2797,3 +2798,14 @@ type
 
   AVThreadMessageFlags* {.threadmessage.} = enum
     AV_THREAD_MESSAGE_NONBLOCK = 1
+  
+  AVTimecodeFlag* {.timecode.} = enum
+    AV_TIMECODE_FLAG_DROPFRAME = 1 shl 0
+    AV_TIMECODE_FLAG_24HOURSMAX = 1 shl 1
+    AV_TIMECODE_FLAG_ALLOWNEGATIVE = 1 shl 2
+  
+  AVTimecode* {.timecode.} = object
+    start: cint
+    flags: uint32
+    rate: AVRational
+    fps: cuint
