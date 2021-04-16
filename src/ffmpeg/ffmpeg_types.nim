@@ -4,6 +4,7 @@
 {.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
 {.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
 {.pragma: codecId, importc, header:"<libavcodec/codec_id.h>".}
+{.pragma: codecPar, importc, header:"<libavcodec/codec_par.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -911,3 +912,42 @@ type
     AV_CODEC_ID_MPEG4SYSTEMS = 0x20001
     AV_CODEC_ID_FFMETADATA = 0x21000
     AV_CODEC_ID_WRAPPED_AVFRAME = 0x21001
+  
+  AVFieldOrder* {.codecPar.} = enum
+    AV_FIELD_UNKNOWN
+    AV_FIELD_PROGRESSIVE
+    AV_FIELD_TT
+    AV_FIELD_BB
+    AV_FIELD_TB
+    AV_FIELD_BT
+  
+  AVCodecParameters* = object
+    codec_type*: AVMediaType
+    codec_id*: AVCodecID
+    codec_tag*: cuint
+    extradata*: ptr uint8
+    extradata_size*: cint
+    format*: cint
+    bit_rate*: int64
+    bits_per_coded_sample*: cint
+    bits_per_raw_sample*: cint
+    profile*: cint
+    level*: cint
+    width*: cint
+    height*: cint
+    sample_aspect_ratio*: AVRational
+    field_order*: AVFieldOrder
+    color_range*: AVColorRange
+    color_primaries*: AVColorPrimaries
+    color_trc*: AVColorTransferCharacteristic
+    color_space*: AVColorSpace
+    chroma_location*: AVChromaLocation
+    video_delay*: cint
+    channel_layout*: uint64
+    channels*: cint
+    sample_rate*: cint
+    block_align*: cint
+    frame_size*: cint
+    initial_padding*: cint
+    trailing_padding*: cint
+    seek_preroll*: cint
