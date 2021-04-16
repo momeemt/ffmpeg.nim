@@ -10,6 +10,7 @@
 {.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
 {.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
 {.pragma: packet, importc, header:"<libavcodec/packet.h>".}
+{.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1190,3 +1191,5 @@ type
     AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT = 0x0002
     AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE    = 0x0004
     AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS     = 0x0008
+  
+  AVVorbisParseContext* {.vorbis_parser.} = object
