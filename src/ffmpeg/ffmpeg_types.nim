@@ -80,6 +80,7 @@ else:
 {.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
 {.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
 {.pragma: tree, importc, header: "<libavutil/tree.h>".}
+{.pragma: twofish, importc, header: "<libavutil/twofish.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2812,3 +2813,5 @@ type
     fps: cuint
   
   AVTreeNode* {.tree.} = object
+
+  AVTWOFISH* {.twofish.} = object
