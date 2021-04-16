@@ -40,6 +40,8 @@
 {.pragma: hash, importc, header: "<libavutil/hash.h>".}
 {.pragma: hdr_dynamic_metadata, importc, header: "<libavutil/hdr_dynamic_metadata.h>".}
 {.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
+{.pragma: cuda, importc, header: "<cuda.h>".}
+{.pragma: hwcontext_cuda, importc, header: "<libavutil/hwcontext_cuda.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2135,3 +2137,12 @@ type
     AV_HMAC_SHA512
 
   AVHMAC* {.hmac.} = object
+
+  CUcontext* {.cuda.} = object
+  CUstream* {.cuda.} = object
+  AVCUDADeviceContextInternal* {.hwcontext_cuda.} = object
+
+  AVCUDADeviceContext* {.hwcontext_cuda.} = object
+    cuda_ctx*: CUcontext
+    stream*: CUstream
+    internal*: ptr AVCUDADeviceContextInternal
