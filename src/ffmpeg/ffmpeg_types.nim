@@ -60,6 +60,7 @@ else:
 {.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
 {.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
 {.pragma: md5, importc, header: "<libavutil/md5.h>".}
+{.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2364,3 +2365,12 @@ type
     AV_ROUND_PASS_MINMAX = 8192
   
   AVMD5* {.md5.} = object
+
+  AVMotionVector* {.motion_vector.} = object
+    source*: int32
+    w*, h*: uint8
+    src_x*, src_y*: int16
+    dst_x*, dst_y*: int16
+    flags*: uint64
+    motion_x*, motion_y*: int32
+    motion_scale*: uint16
