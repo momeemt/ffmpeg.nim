@@ -30,6 +30,7 @@
 {.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
 {.pragma: crc, importc, header: "<libavutil/crc.h>".}
 {.pragma: des, importc, header: "<libavutil/des.h>".}
+{.pragma: dict, importc, header: "<libavutil/dict.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1889,3 +1890,9 @@ type
   AVDES* {.des.} = object
     round_keys*: array[3, array[16, uint64]]
     triple_des*: cint
+  
+  AVDictionaryEntry* {.dict.} = object
+    key: ptr cchar
+    value: ptr cchar
+  
+  AVDictionary* {.dict.} = object
