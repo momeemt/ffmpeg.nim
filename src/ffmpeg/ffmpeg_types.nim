@@ -85,6 +85,7 @@ else:
 {.pragma: video_enc_params, importc, header: "<libavutil/video_enc_params.h>".}
 {.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
 {.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
+{.pragma: swscale, importc, header: "<libswscale/swscale.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2888,3 +2889,15 @@ type
     SWR_FILTER_TYPE_KAISER
 
   SwrContext* {.swresample.} = object
+
+  SwsVector* {.swscale.} = object
+    coeff*: ptr cdouble
+    length*: cint
+  
+  SwsFilter* {.swscale.} = object
+    lumH*: ptr SwsVector
+    lumV*: ptr SwsVector
+    chrH*: ptr SwsVector
+    chrV*: ptr SwsVector
+  
+  SwsContext* {.swscale.} = object

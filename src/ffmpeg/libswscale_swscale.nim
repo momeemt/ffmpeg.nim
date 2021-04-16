@@ -1,5 +1,4 @@
-from libavutil_opt import AVClass
-from libavutil_pixfmt import AVPixelFormat
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "swscale(|-4|-5|-6).dll".}
@@ -7,21 +6,6 @@ elif defined(macosx):
   {.push importc, dynlib: "swscale(|.4|.5|.6).dylib".}
 else:
   {.push importc, dynlib: "libswscale.so(|.4|.5|.6)".}
-
-{.pragma: swscale, importc, header: "<libswscale/swscale.h>".}
-
-type
-  SwsVector* {.swscale.} = object
-    coeff*: ptr cdouble
-    length*: cint
-  
-  SwsFilter* {.swscale.} = object
-    lumH*: ptr SwsVector
-    lumV*: ptr SwsVector
-    chrH*: ptr SwsVector
-    chrV*: ptr SwsVector
-  
-  SwsContext* {.swscale.} = object
 
 const
   SWS_FAST_BILINEAR* = 1
