@@ -13,6 +13,7 @@
 {.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
 {.pragma: avdevice, importc, header: "<libavdevice/avdevice.h>".}
 {.pragma: avfilter, importc, header: "<libavfilter/avfilter.h>".}
+{.pragma: buffersrc, importc, header: "<libavfilter/buffersrc.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1381,3 +1382,14 @@ type
     filter_ctx*: ptr AVFilterContext
     pad_idx*: cint
     next*: ptr AVFilterInOut
+  
+  AVBufferSrcParameters* {.buffersrc.} = object
+    format*: cint
+    time_base*: AVRational
+    width*: cint
+    height*: cint
+    sample_aspect_ratio*: AVRational
+    frame_rate*: AVRational
+    hw_frames_ctx*: ptr AVBufferRef
+    sample_rate*: cint
+    channel_layout*: uint64
