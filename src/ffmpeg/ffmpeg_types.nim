@@ -26,6 +26,7 @@
 {.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
 {.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
 {.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
+{.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1858,3 +1859,5 @@ type
   AVBufferPool* {.buffer.} = object
 
   AVCAMELLIA* {.camellia.} = object
+
+  AVCAST5* {.cast5.} = object
