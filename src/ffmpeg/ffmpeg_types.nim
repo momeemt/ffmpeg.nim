@@ -34,6 +34,7 @@
 {.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
 {.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
 {.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
+{.pragma: eval, importc, header: "<libavutil/eval.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1949,3 +1950,5 @@ type
     data*: ptr uint8
     data_size*: cuint
     next*: ptr AVEncryptionInitInfo
+  
+  AVExpr* {.eval.} = object
