@@ -1,7 +1,4 @@
-{.pragma: aes, importc, header: "libavutil_aes".}
-
-type
-  AVAES* {.aes.} = object
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

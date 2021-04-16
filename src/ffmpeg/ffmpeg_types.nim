@@ -18,6 +18,7 @@
 {.pragma: avio, importc, header: "<libavformat/avio.h>".}
 {.pragma: avresample, importc, header: "<libavresample/avresample.h>".}
 {.pragma: aes_ctr, importc, header: "<libavutil/aes_ctr.h>".}
+{.pragma: aes, importc, header: "libavutil_aes".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1789,3 +1790,5 @@ type
     AV_RESAMPLE_DITHER_NB
   
   AVAESCTR* {.aes_ctr.} = object
+
+  AVAES* {.aes.} = object
