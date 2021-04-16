@@ -1,40 +1,7 @@
-from libavutil_channel_layout import AVMatrixEncoding
-from libavutil_frame import AVFrame
-from libavutil_opt import AVClass
-from libavutil_samplefmt import AVSampleFormat
+import ffmpeg_types
 
 const
   SWR_FLAG_RESAMPLE* = 1
-
-{.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
-
-type
-  SwrDitherType* {.swresample.} = enum
-    SWR_DITHER_NONE = 0
-    SWR_DITHER_RECTANGULAR
-    SWR_DITHER_TRIANGULAR
-    SWR_DITHER_TRIANGULAR_HIGHPASS
-    SWR_DITHER_NS = 64
-    SWR_DITHER_NS_LIPSHITZ
-    SWR_DITHER_NS_F_WEIGHTED
-    SWR_DITHER_NS_MODIFIED_E_WEIGHTED
-    SWR_DITHER_NS_IMPROVED_E_WEIGHTED
-    SWR_DITHER_NS_SHIBATA
-    SWR_DITHER_NS_LOW_SHIBATA
-    SWR_DITHER_NS_HIGH_SHIBATA
-    SWR_DITHER_NB
-  
-  SwrEngine* {.swresample.} = enum
-    SWR_ENGINE_SWR
-    SWR_ENGINE_SOXR
-    SWR_ENGINE_NB
-  
-  SwrFilterType* {.swresample.} = enum
-    SWR_FILTER_TYPE_CUBIC
-    SWR_FILTER_TYPE_BLACKMAN_NUTTALL
-    SWR_FILTER_TYPE_KAISER
-
-  SwrContext* {.swresample.} = object
 
 when defined(windows):
   {.push importc, dynlib: "swresample(|-2|-3|-4).dll".}

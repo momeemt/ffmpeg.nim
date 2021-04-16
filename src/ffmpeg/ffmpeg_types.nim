@@ -84,6 +84,7 @@ else:
 {.pragma: tx, importc, header: "<libavutil/tx.h>".}
 {.pragma: video_enc_params, importc, header: "<libavutil/video_enc_params.h>".}
 {.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
+{.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2860,3 +2861,30 @@ type
   
   pp_context* {.postprocess.} = object
   pp_mode* {.postprocess.} = object
+
+  SwrDitherType* {.swresample.} = enum
+    SWR_DITHER_NONE = 0
+    SWR_DITHER_RECTANGULAR
+    SWR_DITHER_TRIANGULAR
+    SWR_DITHER_TRIANGULAR_HIGHPASS
+    SWR_DITHER_NS = 64
+    SWR_DITHER_NS_LIPSHITZ
+    SWR_DITHER_NS_F_WEIGHTED
+    SWR_DITHER_NS_MODIFIED_E_WEIGHTED
+    SWR_DITHER_NS_IMPROVED_E_WEIGHTED
+    SWR_DITHER_NS_SHIBATA
+    SWR_DITHER_NS_LOW_SHIBATA
+    SWR_DITHER_NS_HIGH_SHIBATA
+    SWR_DITHER_NB
+  
+  SwrEngine* {.swresample.} = enum
+    SWR_ENGINE_SWR
+    SWR_ENGINE_SOXR
+    SWR_ENGINE_NB
+  
+  SwrFilterType* {.swresample.} = enum
+    SWR_FILTER_TYPE_CUBIC
+    SWR_FILTER_TYPE_BLACKMAN_NUTTALL
+    SWR_FILTER_TYPE_KAISER
+
+  SwrContext* {.swresample.} = object
