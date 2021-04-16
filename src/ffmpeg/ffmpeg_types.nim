@@ -37,6 +37,7 @@
 {.pragma: eval, importc, header: "<libavutil/eval.h>".}
 {.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
 {.pragma: frame, importc, header: "<libavutil/frame.h>".}
+{.pragma: hash, importc, header: "<libavutil/hash.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2072,3 +2073,5 @@ type
       qstride {.deprecated.}: cint
       qscale_type {.deprecated.}: cint
       qp_table_buf {.deprecated.}: ptr AVBufferRef
+  
+  AVHashContext* {.hash.} = object
