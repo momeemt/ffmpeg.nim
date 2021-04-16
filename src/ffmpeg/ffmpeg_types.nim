@@ -31,6 +31,7 @@
 {.pragma: crc, importc, header: "<libavutil/crc.h>".}
 {.pragma: des, importc, header: "<libavutil/des.h>".}
 {.pragma: dict, importc, header: "<libavutil/dict.h>".}
+{.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1896,3 +1897,13 @@ type
     value: ptr cchar
   
   AVDictionary* {.dict.} = object
+
+  AVDOVIDecoderConfigurationRecord* {.dovi_meta.} = object
+    dv_version_major*: uint8
+    dv_version_minor*: uint8
+    dv_profile*: uint8
+    dv_level*: uint8
+    rpu_present_flag*: uint8
+    el_present_flag*: uint8
+    bl_present_flag*: uint8
+    dv_bl_signal_compatibility_id*: uint8
