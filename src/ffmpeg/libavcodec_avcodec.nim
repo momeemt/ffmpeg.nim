@@ -269,55 +269,55 @@ proc avcodec_alloc_context3* (codec: ptr AVCodec): ptr AVCodecContext
 proc avcodec_free_context* (avctx: ptr ptr AVCodecContext)
 proc avcodec_get_class* (): ptr AVClass
 proc avcodec_parameters_from_context* (par: ptr AVCodecParameters, codec: ptr AVCodecContext): cint
-proc avcodec_parameters_to_context* (codec: ptr AVCodecContext, par: ptr AVCodecParameters): int
-proc avcodec_open2* (avctx: ptr AVCodecContext, codec: ptr AVCodec, options: ptr ptr AVDictionary): int
-proc avcodec_close* (avctx: ptr AVCodecContext): int
+proc avcodec_parameters_to_context* (codec: ptr AVCodecContext, par: ptr AVCodecParameters): cint
+proc avcodec_open2* (avctx: ptr AVCodecContext, codec: ptr AVCodec, options: ptr ptr AVDictionary): cint
+proc avcodec_close* (avctx: ptr AVCodecContext): cint
 proc avsubtitle_free* (sub: ptr AVSubtitle)
-proc avcodec_default_get_buffer2* (s: ptr AVCodecContext, frame: ptr AVFrame, flags: int): int
-proc avcodec_align_dimensions* (s: ptr AVCodecContext, width: ptr int, height: ptr int)
-proc avcodec_align_dimensions2* (s: ptr AVCodecContext, width: ptr int, height: ptr int, linesize_align: array[AV_NUM_DATA_POINTERS, int])
-proc avcodec_enum_to_chroma_pos* (xpos: ptr int, ypos: ptr int, pos: AVChromaLocation): int
-proc avcodec_chroma_pos_to_enum* (xpos: int, ypos: int): AVChromaLocation
-proc avcodec_decode_audio4* (avctx: ptr AVCodecContext, frame: ptr AVFrame, got_frame_ptr: ptr int, avpkt: ptr AVPacket): int {.deprecated.}
-proc avcodec_decode_video2* (avctx: ptr AVCodecContext, picture: ptr AVFrame, got_picture_ptr: ptr int, avpkt: ptr AVPacket): int {.deprecated.}
-proc avcodec_decode_subtitle2* (avctx: ptr AVCodecContext, sub: ptr AVSubtitle, got_sub_ptr: ptr int, avpkt: ptr AVPacket): int
-proc avcodec_send_packet* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): int
-proc avcodec_receive_frame* (avctx: ptr AVCodecContext, frame: ptr AVFrame): int
-proc avcodec_send_frame* (avctx: ptr AVCodecContext, frame: ptr AVFrame): int
-proc avcodec_receive_packet* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): int
-proc avcodec_get_hw_frames_parameters* (avctx: ptr AVCodecContext, device_ref: ptr AVBufferRef, hw_pix_fmt: AVPixelFormat, out_frames_ref: ptr ptr AVBufferRef): int
+proc avcodec_default_get_buffer2* (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint
+proc avcodec_align_dimensions* (s: ptr AVCodecContext, width: ptr cint, height: ptr cint)
+proc avcodec_align_dimensions2* (s: ptr AVCodecContext, width: ptr cint, height: ptr cint, linesize_align: array[AV_NUM_DATA_POINTERS, cint])
+proc avcodec_enum_to_chroma_pos* (xpos: ptr cint, ypos: ptr cint, pos: AVChromaLocation): cint
+proc avcodec_chroma_pos_to_enum* (xpos: cint, ypos: cint): AVChromaLocation
+proc avcodec_decode_audio4* (avctx: ptr AVCodecContext, frame: ptr AVFrame, got_frame_ptr: ptr cint, avpkt: ptr AVPacket): cint {.deprecated.}
+proc avcodec_decode_video2* (avctx: ptr AVCodecContext, picture: ptr AVFrame, got_picture_ptr: ptr cint, avpkt: ptr AVPacket): cint {.deprecated.}
+proc avcodec_decode_subtitle2* (avctx: ptr AVCodecContext, sub: ptr AVSubtitle, got_sub_ptr: ptr cint, avpkt: ptr AVPacket): cint
+proc avcodec_send_packet* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
+proc avcodec_receive_frame* (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+proc avcodec_send_frame* (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
+proc avcodec_receive_packet* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
+proc avcodec_get_hw_frames_parameters* (avctx: ptr AVCodecContext, device_ref: ptr AVBufferRef, hw_pix_fmt: AVPixelFormat, out_frames_ref: ptr ptr AVBufferRef): cint
 proc av_parser_iterate* (opaque: ptr pointer): ptr AVCodecParser
 proc av_parser_next* (c: ptr AVCodecParser): ptr AVCodecParser {.deprecated.}
 proc av_register_codec_parser* (parser: ptr AVCodecParser) {.deprecated.}
-proc av_parser_init* (codec_id: int): ptr AVCodecParserContext
-proc av_parser_parse2* (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr int, buf: ptr uint8, buf_size: int, pts: int64, dts: int64, pos: int64): int
-proc av_parser_change* (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr int, buf: ptr uint8, buf_size: int, keyframe: int): int
+proc av_parser_init* (codec_id: cint): ptr AVCodecParserContext
+proc av_parser_parse2* (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint, pts: int64, dts: int64, pos: int64): cint
+proc av_parser_change* (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint, keyframe: cint): cint
 proc av_parser_close* (s: ptr AVCodecParserContext)
-proc avcodec_encode_audio2* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr int): int
-proc avcodec_encode_video2* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr int): int
-proc avcodec_encode_subtitle* (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: int, sub: ptr AVSubtitle): int
+proc avcodec_encode_audio2* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
+proc avcodec_encode_video2* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
+proc avcodec_encode_subtitle* (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
 proc avcodec_pix_fmt_to_codec_tag* (pix_fmt: AVPixelFormat): uint
-proc avcodec_get_pix_fmt_loss* (dst_pix_fmt: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: int): int {.deprecated.}
-proc avcodec_find_best_pix_fmt_of_list* (pix_fmt_list: ptr AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: int, loss_ptr: ptr int): AVPixelFormat
-proc avcodec_find_best_pix_fmt_of_2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: int, loss_ptr: ptr int): AVPixelFormat {.deprecated.}
-proc avcodec_find_best_pix_fmt2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: int, loss_ptr: ptr int): AVPixelFormat {.deprecated.}
+proc avcodec_get_pix_fmt_loss* (dst_pix_fmt: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint): cint {.deprecated.}
+proc avcodec_find_best_pix_fmt_of_list* (pix_fmt_list: ptr AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat
+proc avcodec_find_best_pix_fmt_of_2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat {.deprecated.}
+proc avcodec_find_best_pix_fmt2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat {.deprecated.}
 proc avcodec_default_get_format* (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat
-proc avcodec_string* (buf: ptr char, buf_size: int, enc: ptr AVCodecContext, encode: int)
-proc av_get_profile_name* (codec: ptr AVCodec, profile: int): ptr char
-proc avcodec_profile_name* (codec_id: AVCodecID, profile: int): ptr char
-proc avcodec_default_execute* (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg2: pointer): int, arg: pointer, ret: ptr int, count: int, size: int): int
-proc avcodec_default_execute2* (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg2: pointer, a3: int, a4: int): int, arg: pointer, ret: ptr int, count: ptr int): int
-proc avcodec_fill_audio_frame* (frame: ptr AVFrame, nb_channels: int, sample_fmt: AVSampleFormat, buf: ptr uint8, buf_size: int, align: int): int
+proc avcodec_string* (buf: ptr char, buf_size: cint, enc: ptr AVCodecContext, encode: cint)
+proc av_get_profile_name* (codec: ptr AVCodec, profile: cint): ptr char
+proc avcodec_profile_name* (codec_id: AVCodecID, profile: cint): ptr char
+proc avcodec_default_execute* (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg2: pointer): cint, arg: pointer, ret: ptr cint, count: cint, size: cint): cint
+proc avcodec_default_execute2* (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg2: pointer, a3: cint, a4: cint): cint, arg: pointer, ret: ptr cint, count: ptr cint): cint
+proc avcodec_fill_audio_frame* (frame: ptr AVFrame, nb_channels: cint, sample_fmt: AVSampleFormat, buf: ptr uint8, buf_size: cint, align: cint): cint
 proc avcodec_flush_buffers* (avctx: ptr AVCodecContext)
-proc av_get_bits_per_sample* (codec_id: AVCodecID): int
-proc av_get_pcm_codec* (fmt: AVSampleFormat, be: int): AVCodecID
-proc av_get_exact_bits_per_sample* (codec_id: AVCodecID): int
-proc av_get_audio_frame_duration* (avvctx: ptr AVCodecContext, frame_bytes: int): int
-proc av_get_audio_frame_duration2* (par: ptr AVCodecParameters, frame_bytes: int): int
+proc av_get_bits_per_sample* (codec_id: AVCodecID): cint
+proc av_get_pcm_codec* (fmt: AVSampleFormat, be: cint): AVCodecID
+proc av_get_exact_bits_per_sample* (codec_id: AVCodecID): cint
+proc av_get_audio_frame_duration* (avvctx: ptr AVCodecContext, frame_bytes: cint): cint
+proc av_get_audio_frame_duration2* (par: ptr AVCodecParameters, frame_bytes: cint): cint
 proc av_fast_padded_malloc* (`ptr`: pointer, size: ptr uint, min_size: uint)
 proc av_fast_padded_mallocz* (`ptr`: pointer, size: ptr uint, min_size: uint)
 proc av_xiphlacing* (s: ptr char, v: uint): uint
-proc avcodec_is_open* (s: ptr AVCodecContext): int
+proc avcodec_is_open* (s: ptr AVCodecContext): cint
 proc av_cpb_properties_alloc* (size: csize_t): ptr AVCPBProperties
 
 when defined(FF_API_CODEC_GET_SET):
@@ -328,29 +328,29 @@ when defined(FF_API_CODEC_GET_SET):
   proc av_codec_get_codec_properties* (avctx: ptr AVCodecContext): uint32
 
   when defined(FF_API_LOWRES):
-    proc av_codec_get_lowres* (avctx: ptr AVCodecContext): int {.deprecated.}
-    proc av_codec_set_lowres* (avctx: ptr AVCodecContext, val: int) {.deprecated.}
+    proc av_codec_get_lowres* (avctx: ptr AVCodecContext): cint {.deprecated.}
+    proc av_codec_set_lowres* (avctx: ptr AVCodecContext, val: cint) {.deprecated.}
   
-  proc av_codec_get_seek_preroll* (avctx: ptr AVCodecContext): int {.deprecated.}
-  proc av_codec_set_seek_preroll* (avctx: ptr AVCodecContext, val: int) {.deprecated.}
+  proc av_codec_get_seek_preroll* (avctx: ptr AVCodecContext): cint {.deprecated.}
+  proc av_codec_set_seek_preroll* (avctx: ptr AVCodecContext, val: cint) {.deprecated.}
   # uint16_t *av_codec_get_chroma_intra_matrix(const AVCodecContext *avctx);
   proc av_codec_set_chroma_intra_matrix* (avctx: ptr AVCodecContext, val: ptr uint16) {.deprecated.}
-  proc av_codec_get_max_lowres* (codec: ptr AVCodec): int {.deprecated.}
+  proc av_codec_get_max_lowres* (codec: ptr AVCodec): cint {.deprecated.}
 
 when defined(FF_API_AVPICTURE):
   type
     AVPicture* {.deprecated.} = object
       data {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint8]
-      linesize {.deprecated.}: array[AV_NUM_DATA_POINTERS, int]
+      linesize {.deprecated.}: array[AV_NUM_DATA_POINTERS, cint]
   
-  proc avpicture_alloc* (picture: ptr AVPicture, pix_fmt: AVPixelFormat, width: int, height: int): int {.deprecated.}
+  proc avpicture_alloc* (picture: ptr AVPicture, pix_fmt: AVPixelFormat, width: cint, height: cint): cint {.deprecated.}
   proc avpicture_free* (picture: ptr AVPicture) {.deprecated.}
-  proc avpicture_fill* (picture: ptr AVPicture, `ptr`: ptr uint8, pix_fmt: AVPixelFormat, width: int, height: int): int {.deprecated.}
-  proc avpicture_layout* (src: ptr AVPicture, pix_fmt: AVPixelFormat, width: int, height: int, dest: ptr char, dest_size: int): int {.deprecated.}
-  proc avpicture_get_size* (pix_fmt: AVPixelFormat, width: int, height: int): int {.deprecated.}
-  proc av_picture_copy* (dst: ptr AVPicture, src: ptr AVPicture, pix_fmt: AVPixelFormat, width: int, height: int) {.deprecated.}
-  proc av_picture_crop* (dst: ptr AVPicture, src: ptr AVPicture, pix_fmt: AVPixelFormat, top_band: int, left_band: int): int {.deprecated.}
-  proc av_picture_pad* (dst: ptr AVPicture, src: ptr AVPicture, height: int, width: innt, pix_fmt: AVPixelFormat, padtop: int, padbottom: int, padleft: int, padright: int, color: ptr int): int {.deprecated.}
+  proc avpicture_fill* (picture: ptr AVPicture, `ptr`: ptr uint8, pix_fmt: AVPixelFormat, width: cint, height: cint): cint {.deprecated.}
+  proc avpicture_layout* (src: ptr AVPicture, pix_fmt: AVPixelFormat, width: cint, height: cint, dest: ptr char, dest_size: cint): cint {.deprecated.}
+  proc avpicture_get_size* (pix_fmt: AVPixelFormat, width: cint, height: cint): cint {.deprecated.}
+  proc av_picture_copy* (dst: ptr AVPicture, src: ptr AVPicture, pix_fmt: AVPixelFormat, width: cint, height: cint) {.deprecated.}
+  proc av_picture_crop* (dst: ptr AVPicture, src: ptr AVPicture, pix_fmt: AVPixelFormat, top_band: cint, left_band: cint): cint {.deprecated.}
+  proc av_picture_pad* (dst: ptr AVPicture, src: ptr AVPicture, height: cint, width: innt, pix_fmt: AVPixelFormat, padtop: cint, padbottom: cint, padleft: cint, padright: cint, color: ptr cint): cint {.deprecated.}
 
 when defined(FF_API_NEXT):
   # AVCodec *av_codec_next(const AVCodec *c); deprecated
@@ -359,15 +359,15 @@ when defined(FF_API_NEXT):
   # const AVBitStreamFilter *av_bsf_next(void **opaque); deprecated
 
 when defined(FF_API_GET_CONTEXT_DEFAULTS):
-  proc avcodec_get_context_defaults3* (s: ptr AVCodecContext, codec: ptr AVCodec): int
+  proc avcodec_get_context_defaults3* (s: ptr AVCodecContext, codec: ptr AVCodec): cint
 
 when defined(FF_API_COPY_CONTEXT):
   # const AVClass *avcodec_get_frame_class(void);
   # const AVClass *avcodec_get_subtitle_rect_class(void);
-  proc avcodec_copy_context* (dest: ptr AVCodecContext, src: ptr AVCodecContext): int {.deprecated.}
+  proc avcodec_copy_context* (dest: ptr AVCodecContext, src: ptr AVCodecContext): cint {.deprecated.}
 
 when defined(FF_API_GETCHROMA):
-  proc avcodec_get_chroma_sub_sample(pix_fmt: AVPixelFormat, h_shift: ptr int, v_shift: ptr int) {.deprecated.}
+  proc avcodec_get_chroma_sub_sample(pix_fmt: AVPixelFormat, h_shift: ptr cint, v_shift: ptr cint) {.deprecated.}
 
 when defined(FF_API_TAG_STRING):
   proc av_get_codec_tag_string* (buf: ptr char, buf_size: uint #[size_t]#, codec_tag: uint): uint #[size_t]# {.deprecated.}
@@ -383,7 +383,7 @@ when defined(FF_API_OLD_BSF):
   
   proc av_register_bitstream_filter* (bsf: ptr AVBitStreamFilter) {.deprecated.}
   # AVBitStreamFilterContext *av_bitstream_filter_init(const char *name);
-  proc av_bitstream_filter_filter* (bsfc: ptr AVBitStreamFilterContext, avctx: ptr AVCodecContext, args: ptr char, poutbuf: ptr ptr uint8, poutbuf_size: int, buf: ptr uint8, buf_size: int, keyframe: int): int {.deprecated.}
+  proc av_bitstream_filter_filter* (bsfc: ptr AVBitStreamFilterContext, avctx: ptr AVCodecContext, args: ptr char, poutbuf: ptr ptr uint8, poutbuf_size: cint, buf: ptr uint8, buf_size: cint, keyframe: cint): cint {.deprecated.}
   proc av_bitstream_filter_close* (bsf: ptr AVBitStreamFilterContext) {.deprecated.}
   # const AVBitStreamFilter *av_bitstream_filter_next(const AVBitStreamFilter *f);
 
@@ -399,7 +399,7 @@ when defined(FF_API_LOCKMGR):
       AV_LOCK_RELEASE
       AV_LOCK_DESTROY
   
-  proc av_lockmgr_register* (cb: proc (mutex: ptr ptr void, op: AVLockOp)): int
+  proc av_lockmgr_register* (cb: proc (mutex: ptr ptr void, op: AVLockOp)): cint
 
 when defined(FF_API_DEBUG_MV):
   const

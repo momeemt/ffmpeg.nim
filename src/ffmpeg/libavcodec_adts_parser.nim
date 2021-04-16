@@ -8,4 +8,4 @@ else:
 const
   AV_AAC_ADTS_HEADER_SIZE* = 7
 
-proc av_adts_header_parse* (buf: ptr uint8, samples: ptr uint32, frames: ptr uint8): int
+proc av_adts_header_parse* (buf: ptr uint8, samples: ptr uint32, frames: ptr uint8): cint
