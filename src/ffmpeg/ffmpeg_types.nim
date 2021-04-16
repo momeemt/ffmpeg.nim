@@ -58,6 +58,7 @@ else:
 {.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
 {.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
 {.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
+{.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2352,3 +2353,11 @@ type
   AVContentLightMetadata* {.mastering_display_metadata.} = object
     MaxCLL*: cuint
     MaxFALL*: cuint
+  
+  AVRounding* {.mathmatics.} = enum
+    AV_ROUND_ZERO     = 0
+    AV_ROUND_INF      = 1
+    AV_ROUND_DOWN     = 2
+    AV_ROUND_UP       = 3
+    AV_ROUND_NEAR_INF = 5
+    AV_ROUND_PASS_MINMAX = 8192
