@@ -384,7 +384,7 @@ type
     capabilities*: cint
     alloc_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
     start_frame*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
-    decode_params*: proc (avctx: ptr AVCodecContext, typ: int, buf: ptr uint8, buf_size: uint32): cint
+    decode_params*: proc (avctx: ptr AVCodecContext, typ: cint, buf: ptr uint8, buf_size: uint32): cint
     decode_slice*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
     end_frame*: proc (avctx: ptr AVCodecContext): cint
     frame_priv_data_size*: cint
@@ -408,7 +408,7 @@ type
     h*: cint
     nb_colors*: cint
     data*: array[4, ptr uint8]
-    linesize*: array[4, int]
+    linesize*: array[4, cint]
     `type`*: AVSubtitleType
     text*: ptr cchar
     ass*: ptr cchar
@@ -428,46 +428,46 @@ type
     frame_offset*: int64
     cur_offset*: int64
     next_frame_offset*: int64
-    pict_type*: int
-    repeat_pict*: int
+    pict_type*: cint
+    repeat_pict*: cint
     pts*: int64
     dts*: int64
     last_pts*: int64
     last_dts*: int64
-    fetch_timestamp*: int
-    cur_frame_start_index*: int
+    fetch_timestamp*: cint
+    cur_frame_start_index*: cint
     cur_frame_offset*: array[AV_PARSER_PTS_NB, int64]
     cur_frame_pts*: array[AV_PARSER_PTS_NB, int64]
     cur_frame_dts*: array[AV_PARSER_PTS_NB, int64]
-    flags*: int
+    flags*: cint
     offset*: int64
     cur_frame_end*: array[AV_PARSER_PTS_NB, int64]
-    key_frame*: int
-    dts_sync_point*: int
-    dts_ref_dts_delta*: int
-    pts_dts_delta*: int
+    key_frame*: cint
+    dts_sync_point*: cint
+    dts_ref_dts_delta*: cint
+    pts_dts_delta*: cint
     cur_frame_pos*: array[AV_PARSER_PTS_NB, int64]
     pos*: int64
     last_pos*: int64
-    duration*: int
+    duration*: cint
     field_order*: AVFieldOrder
     picture_structure*: AVPictureStructure
-    output_picture_number*: int
-    width*: int
-    height*: int
-    coded_width*: int
-    coded_height*: int
-    format*: int
+    output_picture_number*: cint
+    width*: cint
+    height*: cint
+    coded_width*: cint
+    coded_height*: cint
+    format*: cint
     when defined(FF_API_CONVERGENCE_DURATION):
       convergence_duration* {.deprecated.}: int64
   
   AVCodecParser* {.avcodec.} = object
-    codec_ids*: array[5, int]
-    priv_data_size*: int
-    parser_init*: proc (s: ptr AVCodecParserContext): int
-    parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr int, buf: ptr uint8, buf_size: int): int
+    codec_ids*: array[5, cint]
+    priv_data_size*: cint
+    parser_init*: proc (s: ptr AVCodecParserContext): cint
+    parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint): cint
     parser_close*: proc (s: ptr AVCodecParserContext)
-    split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: int): int
+    split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint): cint
     next*: ptr AVCodecParser
   
   AVDCT* {.avdct.} = object
@@ -1877,7 +1877,7 @@ type
   AVBufferRef* {.buffer.} = object
     buffer*: ptr AVBuffer
     data*: ptr uint8
-    size*: int
+    size*: cint
   
   AVBufferPool* {.buffer.} = object
 
