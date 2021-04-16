@@ -32,6 +32,7 @@
 {.pragma: des, importc, header: "<libavutil/des.h>".}
 {.pragma: dict, importc, header: "<libavutil/dict.h>".}
 {.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
+{.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1893,8 +1894,8 @@ type
     triple_des*: cint
   
   AVDictionaryEntry* {.dict.} = object
-    key: ptr cchar
-    value: ptr cchar
+    key*: ptr cchar
+    value*: ptr cchar
   
   AVDictionary* {.dict.} = object
 
@@ -1907,3 +1908,18 @@ type
     el_present_flag*: uint8
     bl_present_flag*: uint8
     dv_bl_signal_compatibility_id*: uint8
+  
+  AVDownmixType* {.downmin_info.} = enum
+    AV_DOWNMIX_TYPE_UNKNOWN
+    AV_DOWNMIX_TYPE_LORO
+    AV_DOWNMIX_TYPE_LTRT
+    AV_DOWNMIX_TYPE_DPLII
+    AV_DOWNMIX_TYPE_NB
+
+  AVDownmixInfo* {.downmin_info.} = object
+    preferred_downmix_type*: AVDownmixType
+    center_mix_level*: cdouble
+    center_mix_level_ltrt*: cdouble
+    surround_mix_level*: cdouble
+    surround_mix_level_ltrt*: cdouble
+    lfe_mix_level*: cdouble
