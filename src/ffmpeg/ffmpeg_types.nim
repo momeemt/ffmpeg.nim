@@ -43,6 +43,7 @@
 {.pragma: cuda, importc, header: "<cuda.h>".}
 {.pragma: hwcontext_cuda, importc, header: "<libavutil/hwcontext_cuda.h>".}
 {.pragma: hwcontext_drm, importc, header: "<libavutil/hwcontext_drm.h>".}
+{.pragma: hwcontext_mediacodec, importc, header: "libavutil/hwcontext_mediacodec.h".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2171,3 +2172,6 @@ type
   
   AVDRMDeviceContext* {.hwcontext_drm.} = object
     fd*: cint
+  
+  AVMediaCodecDeviceContext* {.hwcontext_mediacodec.} = object
+    surface*: pointer
