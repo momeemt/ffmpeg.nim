@@ -1,7 +1,4 @@
-{.pragma: pixelutils, importc, header: "<libavutil/pixelutils.h>".}
-
-type
-  av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}

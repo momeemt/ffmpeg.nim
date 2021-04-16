@@ -65,6 +65,7 @@ else:
 {.pragma: opt, importc, header: "<libavutil/opt.h>".}
 {.pragma: log, importc, header: "<libavutil/log.h>".}
 {.pragma: pixdesc, importc, header: "<libavutil/pixdesc.h>".}
+{.pragma: pixelutils, importc, header: "<libavutil/pixelutils.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2482,3 +2483,5 @@ type
     flags*: uint64
     comp*: array[4, AVComponentDescriptor]
     alias*: cstring
+  
+  av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint
