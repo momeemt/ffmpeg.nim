@@ -39,6 +39,7 @@
 {.pragma: frame, importc, header: "<libavutil/frame.h>".}
 {.pragma: hash, importc, header: "<libavutil/hash.h>".}
 {.pragma: hdr_dynamic_metadata, importc, header: "<libavutil/hdr_dynamic_metadata.h>".}
+{.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2124,3 +2125,13 @@ type
     num_rows_mastering_display_actual_peak_luminance*: uint8
     num_cols_mastering_display_actual_peak_luminance*: uint8
     mastering_display_actual_peak_luminance*: array[25, array[25, AVRational]]
+  
+  AVHMACType* {.hmac.} = enum
+    AV_HMAC_MD5
+    AV_HMAC_SHA1
+    AV_HMAC_SHA224
+    AV_HMAC_SHA256
+    AV_HMAC_SHA384
+    AV_HMAC_SHA512
+
+  AVHMAC* {.hmac.} = object
