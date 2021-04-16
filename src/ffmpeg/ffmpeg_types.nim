@@ -8,6 +8,7 @@
 {.pragma: codec, importc, header:"<libavcodec/codec.h>".}
 {.pragma: dirac, importc, header:"<libavcodec/dirac.h>".}
 {.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
+{.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -1065,3 +1066,8 @@ type
     audio_min_samples*: array[3, cint]
     audio_samples_dist*: array[5, cint]
     audio_shuffle*: array[9, ptr uint8]
+  
+  AVMediaCodecContext* {.mediacodec.} = object
+    surface: pointer
+  
+  MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
