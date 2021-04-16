@@ -1,6 +1,4 @@
-from libavutil_pixdesc import AVPixFmtDescriptor
-from libavutil_pixfmt import AVPixelFormat, AVColorRange
-from libavutil_rational import AVRational
+import ffmpeg_types
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll".}
