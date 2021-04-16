@@ -488,7 +488,7 @@ type
 
   FFTContext* {.avfft.} = object
 
-  RDFTransformType* {.avfft.} = enum
+  RDFTransformType* {.avfft, size: sizeof(cint).} = enum
     DFT_R2C
     IDFT_C2R
     IDFT_R2C
@@ -498,7 +498,7 @@ type
 
   DCTContext* {.avfft.} = object
 
-  DCTTransformType* {.avfft.} = enum
+  DCTTransformType* {.avfft, size: sizeof(cint).} = enum
     DCT_II = 0
     DCT_III
     DCT_I
@@ -537,7 +537,7 @@ type
     mime_types*: cstringArray
     profiles*: ptr AVProfile
 
-  AVCodecID* {.codecId.} = enum
+  AVCodecID* {.codecId, size: sizeof(cint).} = enum
     AV_CODEC_ID_NONE
     AV_CODEC_ID_MPEG1VIDEO
     AV_CODEC_ID_MPEG2VIDEO
@@ -1104,7 +1104,7 @@ type
     methods*: cint
     device_type*: AVHWDeviceType
   
-  DiracParseCodes* {.dirac.} = enum
+  DiracParseCodes* {.dirac, size: sizeof(cint).} = enum
     DIRAC_PCODE_SEQ_HEADER      = 0x00
     DIRAC_PCODE_PICTURE_CODED   = 0x08
     DIRAC_PCODE_INTER_NOREF_CO2 = 0x09
@@ -1175,7 +1175,7 @@ type
   
   MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
 
-  AVPacketSideDataType* {.packet.} = enum
+  AVPacketSideDataType* {.packet, size: sizeof(cint).} = enum
     AV_PKT_DATA_PALETTE
     AV_PKT_DATA_NEW_EXTRADATA
     AV_PKT_DATA_PARAM_CHANGE
@@ -1576,7 +1576,7 @@ type
     create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
     free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
   
-  AVStreamParseType* {.avformat.} = enum
+  AVStreamParseType* {.avformat, size: sizeof(cint).} = enum
     AVSTREAM_PARSE_NONE
     AVSTREAM_PARSE_FULL
     AVSTREAM_PARSE_HEADERS
@@ -1702,7 +1702,7 @@ type
 
   AVOpenCallback* {.avformat.} = proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint
 
-  AVDurationEstimationMethod* {.avformat.} = enum
+  AVDurationEstimationMethod* {.avformat, size: sizeof(cint).} = enum
     AVFMT_DURATION_FROM_PTS
     AVFMT_DURATION_FROM_STREAM
     AVFMT_DURATION_FROM_BITRATE
@@ -1723,7 +1723,7 @@ type
     callback*: proc (a1: pointer): cint
     opaque*: pointer
   
-  AVIODirEntryType* {.avio.} = enum
+  AVIODirEntryType* {.avio, size: sizeof(cint).} = enum
     AVIO_ENTRY_UNKNOWN
     AVIO_ENTRY_BLOCK_DEVICE
     AVIO_ENTRY_CHARACTER_DEVICE
@@ -1750,10 +1750,10 @@ type
   
   URLContext* {.avio.} = object
 
-  AVIODirContext* = object
+  AVIODirContext* {.avio, bycopy.} = object
     url_context*: ptr URLContext
   
-  AVIODataMarkerType* = enum
+  AVIODataMarkerType* {.avio, size: sizeof(cint).} = enum
     AVIO_DATA_MARKER_HEADER
     AVIO_DATA_MARKER_SYNC_POINT
     AVIO_DATA_MARKER_BOUNDARY_POINT
@@ -1831,7 +1831,7 @@ type
     AV_ESCAPE_MODE_BACKSLASH
     AV_ESCAPE_MODE_QUOTE
   
-  AVMediaType* {.avutil.} = enum
+  AVMediaType* {.avutil, size: sizeof(cint).} = enum
     AVMEDIA_TYPE_UNKNOWN = -1
     AVMEDIA_TYPE_VIDEO
     AVMEDIA_TYPE_AUDIO
@@ -1840,7 +1840,7 @@ type
     AVMEDIA_TYPE_ATTACHMENT
     AVMEDIA_TYPE_NB
   
-  AVPictureType* {.avutil.} = enum
+  AVPictureType* {.avutil, size: sizeof(cint).} = enum
     AV_PICTURE_TYPE_NONE = 0
     AV_PICTURE_TYPE_I
     AV_PICTURE_TYPE_P
@@ -1885,7 +1885,7 @@ type
 
   AVCAST5* {.cast5, bycopy.} = object
 
-  AVMatrixEncoding* {.channel_layout.} = enum
+  AVMatrixEncoding* {.channel_layout, size: sizeof(cint).} = enum
     AV_MATRIX_ENCODING_NONE
     AV_MATRIX_ENCODING_DOLBY
     AV_MATRIX_ENCODING_DPLII
@@ -1897,7 +1897,7 @@ type
   
   AVCRC* {.crc.} = uint32
 
-  AVCRCId* {.crc.} = enum
+  AVCRCId* {.crc, size: sizeof(cint).} = enum
     AV_CRC_8_ATM
     AV_CRC_16_ANSI
     AV_CRC_16_CCITT
@@ -1928,7 +1928,7 @@ type
     bl_present_flag*: uint8
     dv_bl_signal_compatibility_id*: uint8
   
-  AVDownmixType* {.downmin_info.} = enum
+  AVDownmixType* {.downmin_info, size: sizeof(cint).} = enum
     AV_DOWNMIX_TYPE_UNKNOWN
     AV_DOWNMIX_TYPE_LORO
     AV_DOWNMIX_TYPE_LTRT
@@ -1978,7 +1978,7 @@ type
     rndx*: uint32
     wndx*: uint32
   
-  AVFrameSideDataType* {.frame.} = enum
+  AVFrameSideDataType* {.frame, size: sizeof(cint).} = enum
     AV_FRAME_DATA_PANSCAN
     AV_FRAME_DATA_A53_CC
     AV_FRAME_DATA_STEREO3D
@@ -2002,7 +2002,7 @@ type
     AV_FRAME_DATA_QP_TABLE_PROPERTIES # if FF_API_FRAME_QP
     AV_FRAME_DATA_QP_TABLE_DATA # if FF_API_FRAME_QP
 
-  AVActiveFormatDescription* {.frame.} = enum
+  AVActiveFormatDescription* {.frame, size: sizeof(cint).} = enum
     AV_AFD_SAME = 8
     AV_AFD_4_3 = 9
     AV_AFD_16_9 = 10
@@ -2138,7 +2138,7 @@ type
     num_cols_mastering_display_actual_peak_luminance*: uint8
     mastering_display_actual_peak_luminance*: array[25, array[25, AVRational]]
   
-  AVHMACType* {.hmac.} = enum
+  AVHMACType* {.hmac, size: sizeof(cint).} = enum
     AV_HMAC_MD5
     AV_HMAC_SHA1
     AV_HMAC_SHA224
@@ -2252,7 +2252,7 @@ type
     sem*: array[AV_NUM_DATA_POINTERS, VkSemaphore]
     internal*: ptr AVVkFrameInternal
   
-  AVHWDeviceType* {.hwcontext.} = enum
+  AVHWDeviceType* {.hwcontext, size: sizeof(cint).} = enum
     AV_HWDEVICE_TYPE_NONE
     AV_HWDEVICE_TYPE_VDPAU
     AV_HWDEVICE_TYPE_CUDA
@@ -2293,7 +2293,7 @@ type
     width*: cint
     height*: cint
   
-  AVHWFrameTransferDirection* {.hwcontext.} = enum
+  AVHWFrameTransferDirection* {.hwcontext, size: sizeof(cint).} = enum
     AV_HWFRAME_TRANSFER_DIRECTION_FROM
     AV_HWFRAME_TRANSFER_DIRECTION_TO
   
@@ -2401,7 +2401,7 @@ type
     get_category*: proc (ctx: pointer): AVClassCategory
     query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint
 
-  AVOptionType* {.opt.} = enum
+  AVOptionType* {.opt, size: sizeof(cint).} = enum
     AV_OPT_TYPE_FLAGS
     AV_OPT_TYPE_INT
     AV_OPT_TYPE_INT64
@@ -2472,7 +2472,7 @@ type
   
   av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint
 
-  AVPixelFormat* {.pixfmt.} = enum
+  AVPixelFormat* {.pixfmt, size: sizeof(cint).} = enum
     AV_PIX_FMT_NONE = -1
     AV_PIX_FMT_YUV420P
     AV_PIX_FMT_YUYV422
@@ -2675,7 +2675,7 @@ type
     AV_PIX_FMT_Y210LE
     AV_PIX_FMT_NB
 
-  AVColorPrimaries* {.pixfmt.} = enum
+  AVColorPrimaries* {.pixfmt, size: sizeof(cint).} = enum
     AVCOL_PRI_RESERVED0   = 0
     AVCOL_PRI_BT709       = 1
     AVCOL_PRI_UNSPECIFIED = 2
@@ -2769,7 +2769,7 @@ type
   
   AVRIPEMD* {.ripemd, bycopy.} = object
 
-  AVSampleFormat* {.samplefmt.} = enum
+  AVSampleFormat* {.samplefmt, size: sizeof(cint).} = enum
     AV_SAMPLE_FMT_NONE = -1
     AV_SAMPLE_FMT_U8
     AV_SAMPLE_FMT_S16
@@ -2789,7 +2789,7 @@ type
 
   AVSHA512* {.sha512, bycopy.} = object
 
-  AVSphericalProjection* {.spherical.} = enum
+  AVSphericalProjection* {.spherical, size: sizeof(cint).} = enum
     AV_SPHERICAL_EQUIRECTANGULAR
     AV_SPHERICAL_CUBEMAP
     AV_SPHERICAL_EQUIRECTANGULAR_TILE
@@ -2805,7 +2805,7 @@ type
     bound_bottom*: uint32
     padding*: uint32
   
-  AVStereo3DType* {.stereo3d.} = enum
+  AVStereo3DType* {.stereo3d, size: sizeof(cint).} = enum
     AV_STEREO3D_2D
     AV_STEREO3D_SIDEBYSIDE
     AV_STEREO3D_TOPBOTTOM
@@ -2829,10 +2829,10 @@ type
 
   AVThreadMessageQueue* {.threadmessage.} = object
 
-  AVThreadMessageFlags* {.threadmessage.} = enum
+  AVThreadMessageFlags* {.threadmessage, size: sizeof(cint).} = enum
     AV_THREAD_MESSAGE_NONBLOCK = 1
   
-  AVTimecodeFlag* {.timecode.} = enum
+  AVTimecodeFlag* {.timecode, size: sizeof(cint).} = enum
     AV_TIMECODE_FLAG_DROPFRAME = 1 shl 0
     AV_TIMECODE_FLAG_24HOURSMAX = 1 shl 1
     AV_TIMECODE_FLAG_ALLOWNEGATIVE = 1 shl 2
