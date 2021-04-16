@@ -69,6 +69,7 @@ else:
 {.pragma: pixfmt, importc, header: "<libavutil/pixfmt.h>".}
 {.pragma: rational, importc, header: "<libavutil/rational>".}
 {.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
+{.pragma: replaygain, importc, header: "<libavutil/replaygain.h>".}
 
 type
   AVDiscard* {.avcodec.} = enum
@@ -2717,3 +2718,9 @@ type
   AVRC4* {.rc4.} = object
     state*: array[256, uint8]
     x*, y*: cint
+  
+  AVReplayGain* {.replaygain.} = object
+    track_gain*: int32
+    track_peak*: uint32
+    album_gain*: int32
+    album_peak*: uint32
