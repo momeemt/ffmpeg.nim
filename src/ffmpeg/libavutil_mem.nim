@@ -3,11 +3,11 @@
 # from libavutil_error import AVERROR
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 proc av_malloc* (size: csize_t): pointer
 proc av_mallocz* (size: csize_t): pointer

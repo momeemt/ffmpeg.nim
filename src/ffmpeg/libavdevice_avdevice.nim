@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avdevice(|-55|-56|-57|-58).dll".}
+  {.push importc, dynlib: "avdevice(|-55|-56|-57|-58).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avdevice(|.55|.56|.57|.58).dylib".}
+  {.push importc, dynlib: "avdevice(|.55|.56|.57|.58).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavdevice.so(|.55|.56|.57|.58)".}
+  {.push importc, dynlib: "libavdevice.so(|.55|.56|.57|.58)", cdecl.}
 
 var av_device_capabilities*: seq[AVOption]
 

@@ -1,9 +1,9 @@
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 #if defined(__cplusplus) && !defined(__STDC_CONSTANT_MACROS) && !defined(UINT64_C)
 #error missing -D__STDC_CONSTANT_MACROS / #define __STDC_CONSTANT_MACROS

@@ -1,9 +1,9 @@
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 {.pragma: d3d11va, importc, header: "<d3d11.h>".}
 {.pragma: hwcontext_d3d11va, importc, header: "<libavutil/hwcontext/d3d11va.h>".}

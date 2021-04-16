@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 proc av_thread_message_queue_alloc* (mq: ptr ptr AVThreadMessageQueue, nelem, elsize: cuint): cint
 proc av_thread_message_queue_free* (mq: ptr ptr AVThreadMessageQueue)

@@ -1,11 +1,11 @@
 from libavutil_version import AV_VERSION_INT, AV_VERSION
 
 when defined(windows):
-  {.push importc, dynlib: "swresample(|-2|-3|-4).dll".}
+  {.push importc, dynlib: "swresample(|-2|-3|-4).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "swresample(|.2|.3|.4).dylib".}
+  {.push importc, dynlib: "swresample(|.2|.3|.4).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libswresample.so(|.2|.3|.4)".}
+  {.push importc, dynlib: "libswresample.so(|.2|.3|.4)", cdecl.}
 
 const
   LIBSWRESAMPLE_VERSION_MAJOR* = 3

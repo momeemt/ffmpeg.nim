@@ -182,9 +182,9 @@ type
     coded_height*: cint
     gop_size*: cint
     pix_fmt*: AVPixelFormat
-    draw_hotiz_band*: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: array[AV_NUM_DATA_POINTERS, cint], y, `type`, height: cint)
-    get_format*: proc (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat
-    max_b_frames*: cint
+    draw_hotiz_band*: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: array[AV_NUM_DATA_POINTERS, cint], y, `type`, height: cint) {.cdecl.}
+    get_format*: proc (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat {.cdecl.}
+    max_b_frames*: cint 
     b_quant_factor*: cfloat
     b_quant_offset*: cfloat
     has_b_frames*: cint
@@ -239,7 +239,7 @@ type
     request_channel_layout*: uint64
     audio_service_type*: AVAudioServiceType
     request_sample_fmt*: AVSampleFormat
-    get_buffer2*: proc (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint
+    get_buffer2*: proc (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint {.cdecl.}
     refcounted_frames* {.deprecated.}: cint
     qcompress*: cfloat
     qblur*: cfloat
@@ -274,8 +274,8 @@ type
     thread_type*: cint
     active_thread_type*: cint
     thread_safe_callbacks*: cint
-    execute*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer): cint, arg2: pointer, ret: ptr cint, count: cint, size: cint): cint
-    execute2*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer, jobnr: cint, threadnr: cint): cint, arg2: pointer, ret: ptr cint, count: cint): cint
+    execute*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer): cint, arg2: pointer, ret: ptr cint, count: cint, size: cint): cint {.cdecl.}
+    execute2*: proc (c: ptr AVCodecContext, `func`: proc (c2: ptr AVCodecContext, arg: pointer, jobnr: cint, threadnr: cint): cint, arg2: pointer, ret: ptr cint, count: cint): cint {.cdecl.}
     nsse_weight*: cint
     profile*: cint
     level*: cint
@@ -338,7 +338,7 @@ type
       rtp_payload_size* {.deprecated.}: cint
 
     when defined(FF_API_RTP_CALLBACK):
-      rtp_callback* {.deprecated.}: proc (avctx: ptr AVCodecContext, data: pointer, size: cint, mb_nb: cint)
+      rtp_callback* {.deprecated.}: proc (avctx: ptr AVCodecContext, data: pointer, size: cint, mb_nb: cint) {.cdecl.}
 
     when defined(FF_API_STAT_BITS):
       mv_bits* {.deprecated.}: cint
@@ -382,18 +382,18 @@ type
     id*: AVCodecID
     pix_fmt*: AVPixelFormat
     capabilities*: cint
-    alloc_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
-    start_frame*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
-    decode_params*: proc (avctx: ptr AVCodecContext, typ: cint, buf: ptr uint8, buf_size: uint32): cint
-    decode_slice*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint
-    end_frame*: proc (avctx: ptr AVCodecContext): cint
+    alloc_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint {.cdecl.}
+    start_frame*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint {.cdecl.}
+    decode_params*: proc (avctx: ptr AVCodecContext, typ: cint, buf: ptr uint8, buf_size: uint32): cint {.cdecl.}
+    decode_slice*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: uint32): cint {.cdecl.}
+    end_frame*: proc (avctx: ptr AVCodecContext): cint {.cdecl.}
     frame_priv_data_size*: cint
-    decode_mb*: proc (s: ptr MpegEncContext) # 怪しい
-    init*: proc (avctx: ptr AVCodecContext): cint
-    uninit*: proc (avctx: ptr AVCodecContext): cint
+    decode_mb*: proc (s: ptr MpegEncContext) {.cdecl.} # 怪しい
+    init*: proc (avctx: ptr AVCodecContext): cint {.cdecl.}
+    uninit*: proc (avctx: ptr AVCodecContext): cint {.cdecl.}
     priv_data_size*: cint
     caps_internal*: cint
-    frame_params*: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): cint
+    frame_params*: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): cint {.cdecl.}
   
   AVSubtitleType* {.avcodec.} = enum
     SUBTITLE_NONE
@@ -464,22 +464,22 @@ type
   AVCodecParser* {.avcodec.} = object
     codec_ids*: array[5, cint]
     priv_data_size*: cint
-    parser_init*: proc (s: ptr AVCodecParserContext): cint
-    parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint): cint
-    parser_close*: proc (s: ptr AVCodecParserContext)
-    split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint): cint
+    parser_init*: proc (s: ptr AVCodecParserContext): cint {.cdecl.}
+    parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
+    parser_close*: proc (s: ptr AVCodecParserContext) {.cdecl.}
+    split*: proc (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
     next*: ptr AVCodecParser
   
   AVDCT* {.avdct, bycopy.} = object
     av_class*: ptr AVClass
-    idct*: proc (`block`: ptr int16)
+    idct*: proc (`block`: ptr int16) {.cdecl.}
     idct_permutation*: array[64, uint8]
-    fdct*: proc (`block`: ptr int16)
+    fdct*: proc (`block`: ptr int16) {.cdecl.}
     dct_algo*: cint
     idct_algo*: cint
-    get_pixels*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
+    get_pixels*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t) {.cdecl.}
     bits_per_sample*: cint
-    get_pixels_unaligned*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t)
+    get_pixels_unaligned*: proc (`block`: ptr int16, pixels: ptr uint8, line_size: csize_t) {.cdecl.}
   
   FFTSample* {.avfft.} = cfloat
 
@@ -521,10 +521,10 @@ type
     codec_ids*: ptr AVCodecID
     priv_class*: ptr AVClass
     priv_data_size*: cint
-    init*: proc (ctx: ptr AVBSFContext): cint
-    filter*: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint
-    close*: proc (ctx: AVBSFContext)
-    flush*: proc (ctx: AVBSFContext)
+    init*: proc (ctx: ptr AVBSFContext): cint {.cdecl.}
+    filter*: proc (ctx: ptr AVBSFContext, pkt: ptr AVPacket): cint {.cdecl.}
+    close*: proc (ctx: AVBSFContext) {.cdecl.}
+    flush*: proc (ctx: AVBSFContext) {.cdecl.}
   
   AVBSFList* {.bsf.} = object
 
@@ -1082,18 +1082,18 @@ type
     wrapper_name*: cstring
     priv_data_size*: cint
     next*: ptr AVCodec
-    update_thread_context*: proc (dst, src: ptr AVCodecContext): cint
+    update_thread_context*: proc (dst, src: ptr AVCodecContext): cint {.cdecl.}
     defaults*: ptr AVCodecDefault
-    init_static_data*: proc (codec: ptr AVCodec)
-    init*: proc (a1: ptr AVCodecContext): cint
-    encode_sub*: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
-    encode2*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint
-    decode*: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint
-    close*: proc (a1: ptr AVCodecContext): cint
-    send_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
-    receive_packet*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint
-    receive_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint
-    flush*: proc (a1: ptr AVCodecContext)
+    init_static_data*: proc (codec: ptr AVCodec) {.cdecl.}
+    init*: proc (a1: ptr AVCodecContext): cint {.cdecl.}
+    encode_sub*: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint {.cdecl.}
+    encode2*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint {.cdecl.}
+    decode*: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint {.cdecl.}
+    close*: proc (a1: ptr AVCodecContext): cint {.cdecl.}
+    send_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint {.cdecl.}
+    receive_packet*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint {.cdecl.}
+    receive_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint {.cdecl.}
+    flush*: proc (a1: ptr AVCodecContext) {.cdecl.}
     caps_internal*: cint
     bsfs*: cstring
     hw_configs*: ptr ptr AVCodecHWConfigInternal
@@ -1384,20 +1384,20 @@ type
     outputs*: ptr AVFilterPad
     priv_class*: ptr AVClass
     flags*: cint
-    preinit*: proc (ctx: ptr AVFilterContext): cint
-    init*: proc (ctx: ptr AVFilterContext): cint
-    init_dict*: proc (ctx: ptr AVFilterContext, options: ptr ptr AVDictionary): cint
-    uninit*: proc (ctx: ptr AVFilterContext)
-    query_formats*: proc (a1: ptr AVFilterContext): cint
+    preinit*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
+    init*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
+    init_dict*: proc (ctx: ptr AVFilterContext, options: ptr ptr AVDictionary): cint {.cdecl.}
+    uninit*: proc (ctx: ptr AVFilterContext) {.cdecl.}
+    query_formats*: proc (a1: ptr AVFilterContext): cint {.cdecl.}
     priv_size*: cint
     flags_internal*: cint
     next*: ptr AVFilter
-    process_command*: proc (a1: ptr AVFilterContext, cmd, arg, res: cstring, res_len, flags: cint): cint
-    init_opaque*: proc (ctx: ptr AVFilterContext, opaque: pointer): cint
-    activate*: proc (ctx: ptr AVFilterContext): cint
+    process_command*: proc (a1: ptr AVFilterContext, cmd, arg, res: cstring, res_len, flags: cint): cint {.cdecl.}
+    init_opaque*: proc (ctx: ptr AVFilterContext, opaque: pointer): cint {.cdecl.}
+    activate*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
 
-  avfilter_action_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, arg: pointer, jobnr, nb_jobs: cint): cint
-  avfilter_execute_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, `func`: ptr avfilter_action_func, arg: pointer, ret: ptr cint, nb_jobs: cint): cint
+  avfilter_action_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, arg: pointer, jobnr, nb_jobs: cint): cint {.cdecl.}
+  avfilter_execute_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, `func`: ptr avfilter_action_func, arg: pointer, ret: ptr cint, nb_jobs: cint): cint {.cdecl.}
 
   AVFilterGraph* {.avfilter.} = object
     av_class*: ptr AVClass
@@ -1502,8 +1502,8 @@ type
     dump_separator*: ptr uint8
     data_codec_id*: AVCodecID
     protocol_whitelist*: cstring
-    io_open*: proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, options: ptr ptr AVDictionary): cint
-    io_close*: proc (s: ptr AVFormatContext, pb: ptr AVIOContext)
+    io_open*: proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, options: ptr ptr AVDictionary): cint {.cdecl.}
+    io_close*: proc (s: ptr AVFormatContext, pb: ptr AVIOContext) {.cdecl.}
     protocol_blacklist*: cstring
     max_streams*: cint
     skip_estimate_duration_from_pts*: cint
@@ -1513,7 +1513,7 @@ type
       filename {.deprecated.}: array[1024, cstring]
     
     when defined(FF_API_OLD_OPEN_CALLBACKS):
-      open_cb {.deprecated.}: proc (s: ptr AVFormatContext, p: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint
+      open_cb {.deprecated.}: proc (s: ptr AVFormatContext, p: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
 
   AVCodecTag* {.avformat.} = object
 
@@ -1536,21 +1536,21 @@ type
     priv_class*: AVClass
     next*: ptr AVOutputFormat
     priv_data_size*: cint
-    write_header*: proc (a1: ptr AVFormatContext): cint
-    write_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint
-    write_trailer*: proc (a1: ptr AVFormatContext): cint
-    interleave_packet*: proc (a1: ptr AVFormatContext, `out`, `in`: ptr AVPacket, flush: cint): cint
-    query_codec*: proc (id: AVCodecID, std_compliance: cint): cint
-    get_output_timestamp*: proc (s: ptr AVFormatContext, stream: cint, dts, wall: ptr int64)
-    control_message*: proc (s: ptr AVFormatContext, `type`: cint, data: pointer, data_size: csize_t): cint
-    write_uncoded_frame*: proc (a1: ptr AVFormatContext, stream_index: cint, frame: ptr ptr AVFrame, flags: cuint): cint
-    get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint
-    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
-    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
+    write_header*: proc (a1: ptr AVFormatContext): cint {.cdecl.} 
+    write_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
+    write_trailer*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
+    interleave_packet*: proc (a1: ptr AVFormatContext, `out`, `in`: ptr AVPacket, flush: cint): cint {.cdecl.}
+    query_codec*: proc (id: AVCodecID, std_compliance: cint): cint {.cdecl.}
+    get_output_timestamp*: proc (s: ptr AVFormatContext, stream: cint, dts, wall: ptr int64) {.cdecl.}
+    control_message*: proc (s: ptr AVFormatContext, `type`: cint, data: pointer, data_size: csize_t): cint {.cdecl.}
+    write_uncoded_frame*: proc (a1: ptr AVFormatContext, stream_index: cint, frame: ptr ptr AVFrame, flags: cuint): cint {.cdecl.}
+    get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint 
+    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
+    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
     data_codec*: AVCodecID
-    init*: proc (a1: ptr AVFormatContext): cint
-    deinit*: proc (a1: ptr AVFormatContext)
-    check_bitstream*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint
+    init*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
+    deinit*: proc (a1: ptr AVFormatContext) {.cdecl.}
+    check_bitstream*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
   
   AVInputFormat* {.avformat.} = object
     name*: cstring
@@ -1563,18 +1563,18 @@ type
     next*: ptr AVInputFormat
     raw_codec_id*: cint
     priv_data_size*: cint
-    read_probe*: proc (a1: ptr AVProbeData): cint
-    read_header*: proc (a1: ptr AVFormatContext): cint
-    read_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint
-    read_close*: proc (a1: ptr AVFormatContext): cint
-    read_seek*: proc (a1: ptr AVFormatContext, stream_index: cint, timestamp: int64, flags: cint): cint
-    read_timestamp*: proc (s: ptr AVFormatContext, stream_index: cint, pos: ptr int64, pos_limit: int64): int64
-    read_play*: proc (a1: ptr AVFormatContext): cint
-    read_pause*: proc (a1: ptr AVFormatContext): cint
-    read_seek2*: proc (s: ptr AVFormatContext, stream_index: cint, min_ts, ts, max_ts: int64, flags: cint): cint
-    get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint
-    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
-    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint
+    read_probe*: proc (a1: ptr AVProbeData): cint {.cdecl.}
+    read_header*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
+    read_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
+    read_close*: proc (a1: ptr AVFormatContext): cint {.cdecl.} 
+    read_seek*: proc (a1: ptr AVFormatContext, stream_index: cint, timestamp: int64, flags: cint): cint {.cdecl.}
+    read_timestamp*: proc (s: ptr AVFormatContext, stream_index: cint, pos: ptr int64, pos_limit: int64): int64 {.cdecl.}
+    read_play*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
+    read_pause*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
+    read_seek2*: proc (s: ptr AVFormatContext, stream_index: cint, min_ts, ts, max_ts: int64, flags: cint): cint {.cdecl.}
+    get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint {.cdecl.}
+    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
+    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
   
   AVStreamParseType* {.avformat, size: sizeof(cint).} = enum
     AVSTREAM_PARSE_NONE
@@ -1698,9 +1698,9 @@ type
     `end`*: int64
     metadata*: ptr AVDictionary
   
-  av_format_control_message* {.avformat.} = proc (s: ptr AVFormatContext, `type`: cint, data: pointer, data_size: csize_t): cint
+  av_format_control_message* {.avformat.} = proc (s: ptr AVFormatContext, `type`: cint, data: pointer, data_size: csize_t): cint {.cdecl.}
 
-  AVOpenCallback* {.avformat.} = proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint
+  AVOpenCallback* {.avformat.} = proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
 
   AVDurationEstimationMethod* {.avformat, size: sizeof(cint).} = enum
     AVFMT_DURATION_FROM_PTS
@@ -1720,7 +1720,7 @@ type
     AVFMT_TBCF_R_FRAMERATE # when defined(FF_API_R_FRAME_RATE)
   
   AVIOInterruptCB* {.avio, bycopy.} = object
-    callback*: proc (a1: pointer): cint
+    callback*: proc (a1: pointer): cint {.cdecl.}
     opaque*: pointer
   
   AVIODirEntryType* {.avio, size: sizeof(cint).} = enum
@@ -1767,19 +1767,19 @@ type
     buf_ptr*: ptr cuchar
     buf_end*: ptr cuchar
     opaque*: pointer
-    read_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint
-    write_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint
-    seek*: proc (opaque: pointer, offset: int64, whence: cint): int64
+    read_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
+    write_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
+    seek*: proc (opaque: pointer, offset: int64, whence: cint): int64 {.cdecl.}
     pos*: int64
     eof_reached*: cint
     write_flag*: cint
     max_packet_size*: cint
     checksum*: culong
     checksum_ptr*: ptr cuchar
-    update_checksum*: proc (checksum: culong, buf: ptr uint8, size: cuint): culong
+    update_checksum*: proc (checksum: culong, buf: ptr uint8, size: cuint): culong {.cdecl.}
     error*: cint
-    read_pause*: proc (opaque: pointer, pause: cint): cint
-    read_seek*: proc (opaque: pointer, stream_index: cint, timestamp: int64, flags: cint): int64
+    read_pause*: proc (opaque: pointer, pause: cint): cint {.cdecl.}
+    read_seek*: proc (opaque: pointer, stream_index: cint, timestamp: int64, flags: cint): int64 {.cdecl.}
     seekable*: cint
     maxsize*: int64
     direct*: cint
@@ -1790,11 +1790,11 @@ type
     short_seek_threshold*: cint
     protocol_whitelist*: cstring
     protocol_blacklist*: cstring
-    write_data_type*: proc (opaque: pointer, buf: uint8, buf_size: cint, `type`: AVIODataMarkerType, time: int64): cint
+    write_data_type*: proc (opaque: pointer, buf: uint8, buf_size: cint, `type`: AVIODataMarkerType, time: int64): cint {.cdecl.}
     ignore_boundary_point*: cint
     current_type*: AVIODataMarkerType
     last_time*: int64
-    short_seek_get*: proc (opaque: pointer): cint
+    short_seek_get*: proc (opaque: pointer): cint {.cdecl.}
     written*: int64
     buf_ptr_max*: ptr cuchar
     min_packet_size*: cint
@@ -2273,7 +2273,7 @@ type
     internal*: ptr AVHWDeviceInternal
     `type`*: AVHWDeviceType
     hwctx*: pointer
-    free*: proc (ctx: ptr AVHWDeviceContext)
+    free*: proc (ctx: ptr AVHWDeviceContext) {.cdecl.}
     user_opaque*: pointer
   
   AVHWFramesInternal* {.hwcontext.} = object
@@ -2284,7 +2284,7 @@ type
     device_ref*: ptr AVBufferRef
     device_ctx*: ptr AVHWDeviceContext
     hwctx*: pointer
-    free*: proc (ctx: ptr AVHWFramesContext)
+    free*: proc (ctx: ptr AVHWFramesContext) {.cdecl.}
     user_opaque*: pointer
     pool*: ptr AVBufferPool
     initial_pool_size*: cint
@@ -2390,16 +2390,16 @@ type
 
   AVClass* {.log, bycopy.} = object
     class_name*: cstring
-    item_name*: proc (ctx: pointer): cstring
+    item_name*: proc (ctx: pointer): cstring {.cdecl.}
     option*: ptr AVOption
     version*: cint
     log_level_offset_offset*: cint
     parent_log_context_offset*: cint
-    child_next*: proc (obj, prev: pointer): pointer
-    child_class_next*: proc (prev: ptr AVClass): ptr AVClass
+    child_next*: proc (obj, prev: pointer): pointer {.cdecl.}
+    child_class_next*: proc (prev: ptr AVClass): ptr AVClass {.cdecl.}
     category*: AVClassCategory
-    get_category*: proc (ctx: pointer): AVClassCategory
-    query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint
+    get_category*: proc (ctx: pointer): AVClassCategory {.cdecl.}
+    query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint {.cdecl.}
 
   AVOptionType* {.opt, size: sizeof(cint).} = enum
     AV_OPT_TYPE_FLAGS
@@ -2470,7 +2470,7 @@ type
     comp*: array[4, AVComponentDescriptor]
     alias*: cstring
   
-  av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint
+  av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint {.cdecl.}
 
   AVPixelFormat* {.pixfmt, size: sizeof(cint).} = enum
     AV_PIX_FMT_NONE = -1
@@ -2866,7 +2866,7 @@ type
     AV_TX_INT32_FFT = 4
     AV_TX_INT32_MDCT = 5
   
-  av_tx_fn* {.tx.} = proc (s: ptr AVTXContext, `out`, `in`: pointer, stride: ByteAddress)
+  av_tx_fn* {.tx.} = proc (s: ptr AVTXContext, `out`, `in`: pointer, stride: ByteAddress) {.cdecl.}
 
   AVVideoEncParamsType* {.video_enc_params.} = enum
     AV_VIDEO_ENC_PARAMS_NONE = -1

@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 proc av_image_fill_max_pixsteps* (max_pixsteps, max_pixstep_comps: array[4, cint], pixdesc: ptr AVPixFmtDescriptor)
 proc av_image_get_linesize* (pix_fmt: AVPixelFormat, width, plane: cint): cint

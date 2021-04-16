@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avresample(|-0|-1|-2|-3|-4|).dll".}
+  {.push importc, dynlib: "avresample(|-0|-1|-2|-3|-4|).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avresample(|.0|.1|.2|.3|.4|).dylib".}
+  {.push importc, dynlib: "avresample(|.0|.1|.2|.3|.4|).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libresample.so(|.0|.1|.2|.3|.4|)".}
+  {.push importc, dynlib: "libresample.so(|.0|.1|.2|.3|.4|)", cdecl.}
 
 const
   AVRESAMPLE_MAX_CHANNELS* = 32

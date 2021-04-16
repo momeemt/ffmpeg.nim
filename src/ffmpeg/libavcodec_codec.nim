@@ -25,11 +25,11 @@ const
   AV_CODEC_HW_CONFIG_METHOD_AD_HOC* = 0x08
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
+  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
+  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
+  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
 
 proc av_codec_iterate* (opaque: ptr pointer): ptr AVCodec
 proc avcodec_find_decoder* (id: AVCodecID): ptr AVCodec

@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll".}
+  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib".}
+  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
+  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
 
 const
   AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT* = 1

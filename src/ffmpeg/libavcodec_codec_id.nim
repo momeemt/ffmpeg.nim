@@ -5,11 +5,11 @@ const
   AV_CODEC_ID_H265* = AVCodecID.AV_CODEC_ID_HEVC
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
+  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
+  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
+  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
 
 proc avcodec_get_type* (codec_id: AVCodecID): AVMediaType
 proc avcodec_get_name* (id: AVCodecID): cstring

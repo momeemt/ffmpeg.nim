@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avformat(|-55|-56|-57|-58).dll".}
+  {.push importc, dynlib: "avformat(|-55|-56|-57|-58).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avformat(|.55|.56|.57|.58).dylib".}
+  {.push importc, dynlib: "avformat(|.55|.56|.57|.58).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavformat.so(|.55|.56|.57|.58)".}
+  {.push importc, dynlib: "libavformat.so(|.55|.56|.57|.58)", cdecl.}
 
 const
   AVPROBE_SCORE_EXTENSION* = 50

@@ -20,11 +20,11 @@ type
     render2*: AVVDPAU_Render2
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll".}
+  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib".}
+  {.push importc, dynlib: "avcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)".}
+  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
 
 proc av_alloc_vdpaucontext* (): AVVDPAUContext
 proc av_vdpau_hwaccel_get_render2* (a1: ptr AVVDPAUContext): AVVDPAU_Render2

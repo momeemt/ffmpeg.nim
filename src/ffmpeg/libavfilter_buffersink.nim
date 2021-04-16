@@ -17,11 +17,11 @@ when defined(FF_API_NEXT):
       sample_rates*: ptr cint
 
 when defined(windows):
-  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll".}
+  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib".}
+  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
+  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
 
 const
   AV_BUFFERSINK_FLAG_PEEK* = 1

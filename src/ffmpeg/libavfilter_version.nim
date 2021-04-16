@@ -1,9 +1,11 @@
+from libavutil_version import AV_VERSION_INT, AV_VERSION
+
 when defined(windows):
-  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll".}
+  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib".}
+  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)".}
+  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
 
 const
   LIBAVFILTER_VERSION_MAJOR* = 7

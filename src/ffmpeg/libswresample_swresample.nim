@@ -4,11 +4,11 @@ const
   SWR_FLAG_RESAMPLE* = 1
 
 when defined(windows):
-  {.push importc, dynlib: "swresample(|-2|-3|-4).dll".}
+  {.push importc, dynlib: "swresample(|-2|-3|-4).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "swresample(|.2|.3|.4).dylib".}
+  {.push importc, dynlib: "swresample(|.2|.3|.4).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libswresample.so(|.2|.3|.4)".}
+  {.push importc, dynlib: "libswresample.so(|.2|.3|.4)", cdecl.}
 
 proc swr_get_class* (): ptr AVClass
 proc swr_alloc* (): ptr SwrContext

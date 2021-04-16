@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "swscale(|-4|-5|-6).dll".}
+  {.push importc, dynlib: "swscale(|-4|-5|-6).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "swscale(|.4|.5|.6).dylib".}
+  {.push importc, dynlib: "swscale(|.4|.5|.6).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libswscale.so(|.4|.5|.6)".}
+  {.push importc, dynlib: "libswscale.so(|.4|.5|.6)", cdecl.}
 
 const
   SWS_FAST_BILINEAR* = 1

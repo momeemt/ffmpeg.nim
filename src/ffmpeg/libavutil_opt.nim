@@ -1,11 +1,11 @@
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 const
   AV_OPT_FLAG_ENCODING_PARAM* = 1
@@ -28,7 +28,7 @@ const
   AV_OPT_SERIALIZE_SKIP_DEFAULTS* = 0x00000001
   AV_OPT_SERIALIZE_OPT_FLAGS_EXACT* = 0x00000002
 
-proc av_opt_show2* (obj, av_log_obj: pointer, req_flags, rej_flags: cint): cint
+proc av_opt_show2* (obj, av_log_obj: pointer, req_flags, rej_flags: cint): cint {.cdecl.}
 proc av_opt_set_defaults* (s: pointer)
 proc av_opt_set_defaults2* (s: pointer, mask, flags: cint)
 proc av_set_options_string* (ctx: pointer, opts, key_val_sep, pairs_sep: cstring): cint

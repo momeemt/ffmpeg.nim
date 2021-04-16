@@ -2,11 +2,11 @@ import std/time_t
 import ffmpeg_types
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll".}
+  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib".}
+  {.push importc, dynlib: "avutil(|.55|.56|.57).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)".}
+  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
 
 proc av_parse_ratio* (q: ptr AVRational, str: cstring, max, log_offset: cint, log_ctx: pointer): cint
 proc av_parse_video_size* (width_ptr, height_ptr: ptr cint, str: cstring): cint
