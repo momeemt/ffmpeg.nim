@@ -1,91 +1,127 @@
-{.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
-{.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
-{.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
-{.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
-{.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
-{.pragma: codecId, importc, header:"<libavcodec/codec_id.h>".}
-{.pragma: codecPar, importc, header:"<libavcodec/codec_par.h>".}
-{.pragma: codec, importc, header:"<libavcodec/codec.h>".}
-{.pragma: dirac, importc, header:"<libavcodec/dirac.h>".}
-{.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
-{.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
-{.pragma: packet, importc, header:"<libavcodec/packet.h>".}
-{.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
-{.pragma: avdevice, importc, header: "<libavdevice/avdevice.h>".}
-{.pragma: avfilter, importc, header: "<libavfilter/avfilter.h>".}
-{.pragma: buffersrc, importc, header: "<libavfilter/buffersrc.h>".}
-{.pragma: avformat, importc, header: "<libavformat/avformat.h>".}
-{.pragma: avio, importc, header: "<libavformat/avio.h>".}
-{.pragma: avresample, importc, header: "<libavresample/avresample.h>".}
-{.pragma: aes_ctr, importc, header: "<libavutil/aes_ctr.h>".}
-{.pragma: aes, importc, header: "<libavutil/aes.h>".}
-{.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
-{.pragma: avstring, importc, header: "<libavutil/avstring.h>".}
-{.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
-{.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
-{.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
-{.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
-{.pragma: camellia, importc, header: "<libavutil/camellia.h>".}
-{.pragma: cast5, importc, header: "<libavutil/cast5.h>".}
-{.pragma: channel_layout, importc, header: "<libavutil/channel_layout.h>".}
-{.pragma: crc, importc, header: "<libavutil/crc.h>".}
-{.pragma: des, importc, header: "<libavutil/des.h>".}
-{.pragma: dict, importc, header: "<libavutil/dict.h>".}
-{.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
-{.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
-{.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
-{.pragma: eval, importc, header: "<libavutil/eval.h>".}
-{.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
-{.pragma: frame, importc, header: "<libavutil/frame.h>".}
-{.pragma: hash, importc, header: "<libavutil/hash.h>".}
-{.pragma: hdr_dynamic_metadata, importc, header: "<libavutil/hdr_dynamic_metadata.h>".}
-{.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
-{.pragma: cuda, importc, header: "<cuda.h>".}
-{.pragma: hwcontext_cuda, importc, header: "<libavutil/hwcontext_cuda.h>".}
-{.pragma: hwcontext_drm, importc, header: "<libavutil/hwcontext_drm.h>".}
-{.pragma: hwcontext_mediacodec, importc, header: "libavutil/hwcontext_mediacodec.h".}
+block:
+  {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
+  {.pragma: avcodecEnum, importc: "enum $1", header: "<libavcodec/avcodec.h>".}
+  {.pragma: avcodecStruct, importc: "struct $1", header: "<libavcodec/avcodec.h>".}
+  {.pragma: avdct, importc, header:"<libavcodec/avdct.h>".}
+  {.pragma: avfft, importc, header:"<libavcodec/avfft.h>".}
+  {.pragma: avfftEnum, importc: "enum $1", header:"<libavcodec/avfft.h>".}
+  {.pragma: bsf, importc, header:"<libavcodec/avbsf.h>".}
+  {.pragma: codecDesc, importc, header:"<libavcodec/codec_desc.h>".}
+  {.pragma: codecIdEnum, importc: "enum $1", header:"<libavcodec/codec_id.h>".}
+  {.pragma: codecPar, importc, header:"<libavcodec/codec_par.h>".}
+  {.pragma: codecParEnum, importc: "enum $1", header:"<libavcodec/codec_par.h>".}
+  {.pragma: codec, importc, header:"<libavcodec/codec.h>".}
+  {.pragma: dirac, importc, header:"<libavcodec/dirac.h>".}
+  {.pragma: diracEnum, importc, header:"<libavcodec/dirac.h>".}
+  {.pragma: dv_profile, importc, header:"<libavcodec/dv_profile.h>".}
+  {.pragma: mediacodec, importc, header:"<libavcodec/mediacodec.h>".}
+  {.pragma: packet, importc, header:"<libavcodec/packet.h>".}
+  {.pragma: packetEnum, importc, header:"<libavcodec/packet.h>".}
+  {.pragma: vorbis_parser, importc, header: "<libavcodec/vorbis_parser.h>".}
+  {.pragma: avdevice, importc, header: "<libavdevice/avdevice.h>".}
+  {.pragma: avdeviceEnum, importc, header: "<libavdevice/avdevice.h>".}
+  {.pragma: avfilter, importc, header: "<libavfilter/avfilter.h>".}
+  {.pragma: avfilterStruct, importc, header: "<libavfilter/avfilter.h>".}
+  {.pragma: buffersrc, importc, header: "<libavfilter/buffersrc.h>".}
+  {.pragma: avformat, importc, header: "<libavformat/avformat.h>".}
+  {.pragma: avformatStruct, importc: "struct $1", header: "<libavformat/avformat.h>".}
+  {.pragma: avformatEnum, importc: "enum $1", header: "<libavformat/avformat.h>".}
+  {.pragma: avio, importc, header: "<libavformat/avio.h>".}
+  {.pragma: avioEnum, importc, header: "<libavformat/avio.h>".}
+  {.pragma: avioStruct, importc, header: "<libavformat/avio.h>".}
+  {.pragma: avresampleStruct, importc: "struct $1", header: "<libavresample/avresample.h>".}
+  {.pragma: avresampleEnum, importc: "enum $1", header: "<libavresample/avresample.h>".}
+  {.pragma: aes_ctrStruct, importc: "struct $1", header: "<libavutil/aes_ctr.h>".}
+  {.pragma: aesStruct, importc: "struct $1", header: "<libavutil/aes.h>".}
+  {.pragma: audio_fifo, importc, header: "<libavutil/audio_fifo.h>".}
+  {.pragma: avstringEnum, importc: "enum $1", header: "<libavutil/avstring.h>".}
+  {.pragma: avutil, importc, header: "<libavutil/avutil.h>".}
+  {.pragma: avutilEnum, importc: "enum $1", header: "<libavutil/avutil.h>".}
+  {.pragma: avutilStruct, importc: "struct $1", header: "<libavutil/avutil.h>".}
+  {.pragma: blowfish, importc, header: "<libavutil/blowfish.h>".}
+  {.pragma: bprint, importc, header: "<libavutil/bprint.h>".}
+  {.pragma: bprintStruct, importc: "struct $1", header: "<libavutil/bprint.h>".}
+  {.pragma: buffer, importc, header: "<libavutil/buffer.h>".}
+  {.pragma: camelliaStruct, importc: "struct $1", header: "<libavutil/camellia.h>".}
+  {.pragma: cast5Struct, importc: "strct $1", header: "<libavutil/cast5.h>".}
+  {.pragma: channel_layoutEnum, importc: "enum $1", header: "<libavutil/channel_layout.h>".}
+  {.pragma: crc, importc, header: "<libavutil/crc.h>".}
+  {.pragma: des, importc, header: "<libavutil/des.h>".}
+  {.pragma: dict, importc, header: "<libavutil/dict.h>".}
+  {.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
+  {.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
+  {.pragma: downmin_infoEnum, importc: "enum $1", header: "<libavutil/downmin_info.h>".}
+  {.pragma: encryption_info, importc, header: "<libavutil/encryption_info.h>".}
+  {.pragma: eval, importc, header: "<libavutil/eval.h>".}
+  {.pragma: fifo, importc, header: "<libavutil/fifo.h>".}
+  {.pragma: frame, importc, header: "<libavutil/frame.h>".}
+  {.pragma: frameEnum, importc: "enum $1", header: "<libavutil/frame.h>".}
+  {.pragma: hashStruct, importc: "struct $1", header: "<libavutil/hash.h>".}
+  {.pragma: hdr_dynamic_metadata, importc, header: "<libavutil/hdr_dynamic_metadata.h>".}
+  {.pragma: hdr_dynamic_metadataEnum, importc: "enum $1", header: "<libavutil/hdr_dynamic_metadata.h>".}
+  {.pragma: hmac, importc, header: "<libavutil/hmac.h>".}
+  {.pragma: hmacEnum, importc: "enum $1", header: "<libavutil/hmac.h>".}
+  {.pragma: cuda, importc, header: "<cuda.h>".}
+  {.pragma: hwcontext_cuda, importc, header: "<libavutil/hwcontext_cuda.h>".}
+  {.pragma: hwcontext_drm, importc, header: "<libavutil/hwcontext_drm.h>".}
+  {.pragma: hwcontext_mediacodec, importc, header: "libavutil/hwcontext_mediacodec.h".}
 
-when defined(macosx):
-  {.pragma: hwcontext_opencl_include, importc, header: "<OpenCL/cl.h>".}
-else:
-  {.pragma: hwcontext_opencl_include, importc, header: "<CL/cl.h>".}
+  when defined(macosx):
+    {.pragma: hwcontext_opencl_include, importc, header: "<OpenCL/cl.h>".}
+  else:
+    {.pragma: hwcontext_opencl_include, importc, header: "<CL/cl.h>".}
 
-{.pragma: hwcontext_opencl, importc, header: "<libavutil/hwcontext_opencl.h>".}
-{.pragma: vulkan, importc, header: "<vulkan/vulkan.h>".}
-{.pragma: hwcontext_vulkan, importc, header: "<libavutil/hwcontext_vulkan.h>".}
-{.pragma: hwcontext, importc, header: "<libavutil/hwcontext.h>".}
-{.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
-{.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
-{.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
-{.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
-{.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
-{.pragma: md5, importc, header: "<libavutil/md5.h>".}
-{.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
-{.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
-{.pragma: opt, importc, header: "<libavutil/opt.h>".}
-{.pragma: log, importc, header: "<libavutil/log.h>".}
-{.pragma: pixdesc, importc, header: "<libavutil/pixdesc.h>".}
-{.pragma: pixelutils, importc, header: "<libavutil/pixelutils.h>".}
-{.pragma: pixfmt, importc, header: "<libavutil/pixfmt.h>".}
-{.pragma: rational, importc, header: "<libavutil/rational.h>".}
-{.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
-{.pragma: replaygain, importc, header: "<libavutil/replaygain.h>".}
-{.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
-{.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
-{.pragma: sha, importc, header: "<libavutil/sha.h>".}
-{.pragma: sha512, importc, header: "<libavutil/sha512.h>".}
-{.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
-{.pragma: stereo3d, importc, header: "<libavutil/stereo3d.h>".}
-{.pragma: tea, importc, header: "<libavutil/tea.h>".}
-{.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
-{.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
-{.pragma: tree, importc, header: "<libavutil/tree.h>".}
-{.pragma: twofish, importc, header: "<libavutil/twofish.h>".}
-{.pragma: tx, importc, header: "<libavutil/tx.h>".}
-{.pragma: video_enc_params, importc, header: "<libavutil/video_enc_params.h>".}
-{.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
-{.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
-{.pragma: swscale, importc, header: "<libswscale/swscale.h>".}
+  {.pragma: hwcontext_opencl, importc, header: "<libavutil/hwcontext_opencl.h>".}
+  {.pragma: vulkan, importc, header: "<vulkan/vulkan.h>".}
+  {.pragma: hwcontext_vulkan, importc, header: "<libavutil/hwcontext_vulkan.h>".}
+  {.pragma: hwcontext_vulkanStruct, importc: "struct $1", header: "<libavutil/hwcontext_vulkan.h>".}
+  {.pragma: hwcontext, importc, header: "<libavutil/hwcontext.h>".}
+  {.pragma: hwcontextEnum, importc: "enum $1", header: "<libavutil/hwcontext.h>".}
+  {.pragma: intfloat, importc, header: "<libavutil/intfloat.h>".}
+  {.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
+  {.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
+  {.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
+  {.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
+  {.pragma: mathmaticsEnum, importc: "enum $1", header: "<libavutil/mathmatics.h>".}
+  {.pragma: md5, importc, header: "<libavutil/md5.h>".}
+  {.pragma: md5Struct, importc: "struct $1", header: "<libavutil/md5.h>".}
+  {.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
+  {.pragma: murmur3, importc, header: "<libavutil/murmur3.h>".}
+  {.pragma: opt, importc, header: "<libavutil/opt.h>".}
+  {.pragma: optEnum, importc: "enum $1", header: "<libavutil/opt.h>".}
+  {.pragma: log, importc, header: "<libavutil/log.h>".}
+  {.pragma: pixdesc, importc, header: "<libavutil/pixdesc.h>".}
+  {.pragma: pixelutils, importc, header: "<libavutil/pixelutils.h>".}
+  {.pragma: pixfmt, importc, header: "<libavutil/pixfmt.h>".}
+  {.pragma: pixfmtEnum, importc: "enum $1", header: "<libavutil/pixfmt.h>".}
+  {.pragma: rational, importc, header: "<libavutil/rational.h>".}
+  {.pragma: rc4, importc, header: "<libavutil/rc4.h>".}
+  {.pragma: replaygain, importc, header: "<libavutil/replaygain.h>".}
+  {.pragma: ripemd, importc, header: "<libavutil/ripemd.h>".}
+  {.pragma: ripemdStruct, importc: "struct $1", header: "<libavutil/ripemd.h>".}
+  {.pragma: samplefmt, importc, header: "<libavutil/samplefmt.h>".}
+  {.pragma: samplefmtEnum, importc: "enum $1", header: "<libavutil/samplefmt.h>".}
+  {.pragma: shaStruct, importc: "struct $1", header: "<libavutil/sha.h>".}
+  {.pragma: sha512Struct, importc: "struct $1", header: "<libavutil/sha512.h>".}
+  {.pragma: spherical, importc, header: "<libavutil/spherical.h>".}
+  {.pragma: sphericalEnum, importc: "enum $1", header: "<libavutil/spherical.h>".}
+  {.pragma: stereo3d, importc, header: "<libavutil/stereo3d.h>".}
+  {.pragma: stereo3dEnum, importc: "enum $1", header: "<libavutil/stereo3d.h>".}
+  {.pragma: teaStruct, importc: "struct $1", header: "<libavutil/tea.h>".}
+  {.pragma: threadmessage, importc, header: "<libavutil/threadmessage.h>".}
+  {.pragma: timecode, importc, header: "<libavutil/timecode.h>".}
+  {.pragma: timecodeEnum, importc: "enum $1", header: "<libavutil/timecode.h>".}
+  {.pragma: treeStruct, importc: "struct $1", header: "<libavutil/tree.h>".}
+  {.pragma: twofishStruct, importc: "struct $1", header: "<libavutil/twofish.h>".}
+  {.pragma: tx, importc, header: "<libavutil/tx.h>".}
+  {.pragma: txEnum, importc: "enum $1", header: "<libavutil/tx.h>".}
+  {.pragma: video_enc_params, importc, header: "<libavutil/video_enc_params.h>".}
+  {.pragma: video_enc_paramsEnum, importc: "enum $1", header: "<libavutil/video_enc_params.h>".}
+  {.pragma: postprocess, importc, header: "<libpostproc/postprocess.h>".}
+  {.pragma: swresample, importc, header: "<libswresample/swresample.h>".}
+  {.pragma: swresampleEnum, importc: "enum $1", header: "<libswresample/swresample.h>".}
+  {.pragma: swscale, importc, header: "<libswscale/swscale.h>".}
+  {.pragma: swscaleStruct, importc: "struct $1", header: "<libswscale/swscale.h>".}
 
 template MKBETAG (a, b, c, d: untyped): untyped =
   (d.int or (c.int shl 8) or (b.int shl 16) or (a.int shl 24))
@@ -114,7 +150,7 @@ type
   mfxExtBuffer* = object
 
 type
-  AVDiscard* {.avcodec.} = enum
+  AVDiscard* {.avcodecEnum.} = enum
     AVDISCARD_NONE = -16
     AVDISCARD_DEFAULT = 0
     AVDISCARD_NONREF = 8
@@ -123,7 +159,7 @@ type
     AVDISCARD_NONKEY = 32
     AVDISCARD_ALL = 48
 
-  AVAudioServiceType* {.avcodec.} = enum
+  AVAudioServiceType* {.avcodecEnum.} = enum
     AV_AUDIO_SERVICE_TYPE_MAIN = 0
     AV_AUDIO_SERVICE_TYPE_EFFECTS = 1
     AV_AUDIO_SERVICE_TYPE_VISUALLY_IMPAIRED = 2
@@ -153,7 +189,7 @@ type
     wallclock*: int64
     flags*: cint
   
-  AVCodecInternal* {.avcodec.} = object
+  AVCodecInternal* {.avcodecStruct.} = object
 
   AVCodecContext* {.avcodec, bycopy.} = object
     av_class*: ptr AVClass
@@ -374,7 +410,7 @@ type
     rects*: ptr ptr AVSubtitleRect
     pts*: int64
 
-  MpegEncContext* {.avcodec, bycopy.} = object
+  MpegEncContext* {.avcodecStruct, bycopy.} = object
 
   AVHWAccel* {.avcodec, bycopy.} = object
     name*: ptr cchar
@@ -395,7 +431,7 @@ type
     caps_internal*: cint
     frame_params*: proc (avctx: ptr AVCodecContext, hw_frames_ctx: ptr AVBufferRef): cint {.cdecl.}
   
-  AVSubtitleType* {.avcodec.} = enum
+  AVSubtitleType* {.avcodecEnum.} = enum
     SUBTITLE_NONE
     SUBTITLE_BITMAP
     SUBTITLE_TEXT
@@ -416,7 +452,7 @@ type
     when defined(FF_API_AVPICTURE):
       pict* {.deprecated.}: AVPicture
   
-  AVPictureStructure* {.avcodec.} = enum
+  AVPictureStructure* {.avcodecEnum.} = enum
     AV_PICTURE_STRUCTURE_UNKNOWN
     AV_PICTURE_STRUCTURE_TOP_FIELD
     AV_PICTURE_STRUCTURE_BOTTOM_FIELD
@@ -488,7 +524,7 @@ type
 
   FFTContext* {.avfft.} = object
 
-  RDFTransformType* {.avfft, size: sizeof(cint).} = enum
+  RDFTransformType* {.avfftEnum, size: sizeof(cint).} = enum
     DFT_R2C
     IDFT_C2R
     IDFT_R2C
@@ -498,7 +534,7 @@ type
 
   DCTContext* {.avfft.} = object
 
-  DCTTransformType* {.avfft, size: sizeof(cint).} = enum
+  DCTTransformType* {.avfftEnum, size: sizeof(cint).} = enum
     DCT_II = 0
     DCT_III
     DCT_I
@@ -537,7 +573,7 @@ type
     mime_types*: cstringArray
     profiles*: ptr AVProfile
 
-  AVCodecID* {.codecId, size: sizeof(cint).} = enum
+  AVCodecID* {.codecIdEnum, size: sizeof(cint).} = enum
     AV_CODEC_ID_NONE
     AV_CODEC_ID_MPEG1VIDEO
     AV_CODEC_ID_MPEG2VIDEO
@@ -1020,7 +1056,7 @@ type
     AV_CODEC_ID_FFMETADATA = 0x21000
     AV_CODEC_ID_WRAPPED_AVFRAME = 0x21001
   
-  AVFieldOrder* {.codecPar.} = enum
+  AVFieldOrder* {.codecParEnum.} = enum
     AV_FIELD_UNKNOWN
     AV_FIELD_PROGRESSIVE
     AV_FIELD_TT
@@ -1104,7 +1140,7 @@ type
     methods*: cint
     device_type*: AVHWDeviceType
   
-  DiracParseCodes* {.dirac, size: sizeof(cint).} = enum
+  DiracParseCodes* {.diracEnum, size: sizeof(cint).} = enum
     DIRAC_PCODE_SEQ_HEADER      = 0x00
     DIRAC_PCODE_PICTURE_CODED   = 0x08
     DIRAC_PCODE_INTER_NOREF_CO2 = 0x09
@@ -1175,7 +1211,7 @@ type
   
   MediaCodecBuffer* {.mediacodec.} = AVMediaCodecBuffer
 
-  AVPacketSideDataType* {.packet, size: sizeof(cint).} = enum
+  AVPacketSideDataType* {.packetEnum, size: sizeof(cint).} = enum
     AV_PKT_DATA_PALETTE
     AV_PKT_DATA_NEW_EXTRADATA
     AV_PKT_DATA_PARAM_CHANGE
@@ -1229,7 +1265,7 @@ type
     when defined(FF_API_CONVERGENCE_DURATION):
       convergence_duration {.deprecated.} : int64
   
-  AVSideDataParamChangeFlags* {.packet.} = enum
+  AVSideDataParamChangeFlags* {.packetEnum.} = enum
     AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT  = 0x0001
     AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT = 0x0002
     AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE    = 0x0004
@@ -1243,7 +1279,7 @@ type
     width*: cint
     height*: cint
   
-  AVAppToDevMessageType* {.avdevice.} = enum
+  AVAppToDevMessageType* {.avdeviceEnum.} = enum
     AV_APP_TO_DEV_MUTE = MKBETAG(' ', 'M', 'U', 'T')
     AV_APP_TO_DEV_WINDOW_SIZE = MKBETAG('G','E','O','M')
     AV_APP_TO_DEV_GET_MUTE = MKBETAG('G', 'M', 'U', 'T')
@@ -1257,7 +1293,7 @@ type
     AV_APP_TO_DEV_TOGGLE_MUTE = MKBETAG('T', 'M', 'U', 'T')
     AV_APP_TO_DEV_UNMUTE = MKBETAG('U', 'M', 'U', 'T')
   
-  AVDevToAppMessageType* {.avdevice.} = enum
+  AVDevToAppMessageType* {.avdeviceEnum.} = enum
     AV_DEV_TO_APP_CREATE_WINDOW_BUFFER = MKBETAG('B','C','R','E')
     AV_DEV_TO_APP_DESTROY_WINDOW_BUFFER = MKBETAG('B','D','E','S')
     AV_DEV_TO_APP_DISPLAY_WINDOW_BUFFER = MKBETAG('B','D','I','S')
@@ -1298,8 +1334,8 @@ type
   AVFilterPad* {.avfilter.} = object
   AVFilterFormats* {.avfilter.} = object
   AVFilterGraphInternal* {.avfilter.} = object
-  AVFilterChannelLayouts* {.importc: "struct $1", header: "<libavfilter/avfilter.h>".} = object
-  AVFilterCommand* {.importc: "struct $1", header: "<libavfilter/avfilter.h>".} = object
+  AVFilterChannelLayouts* {.avfilterStruct.} = object
+  AVFilterCommand* {.avfilterStruct.} = object
 
   AVFilterContext* {.avfilter.} = object
     av_class*: ptr AVClass
@@ -1372,7 +1408,7 @@ type
       status_in_pts*: int64
       status_out*: cint
   
-  AVFilterLinkInitState* {.avfilter.} = enum
+  AVFilterLinkInitState* = enum
     AVLINK_UNINIT = 0
     AVLINK_STARTINIT
     AVLINK_INIT
@@ -1515,7 +1551,7 @@ type
     when defined(FF_API_OLD_OPEN_CALLBACKS):
       open_cb {.deprecated.}: proc (s: ptr AVFormatContext, p: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
 
-  AVCodecTag* {.avformat.} = object
+  AVCodecTag* {.avformatStruct.} = object
 
   AVProbeData* {.avformat.} = object
     filename*: cstring
@@ -1576,7 +1612,7 @@ type
     create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
     free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
   
-  AVStreamParseType* {.avformat, size: sizeof(cint).} = enum
+  AVStreamParseType* {.avformatEnum, size: sizeof(cint).} = enum
     AVSTREAM_PARSE_NONE
     AVSTREAM_PARSE_FULL
     AVSTREAM_PARSE_HEADERS
@@ -1659,7 +1695,7 @@ type
     when defined(FF_API_LAVF_FFSERVER):
       recommended_encoder_configuration* {.deprecated.}: cstring
   
-  AVStreamInfo* {.avformat.} = object
+  AVStreamInfo* = object
     last_dts*: int64
     duration_gcd*: int64
     duration_count*: cint
@@ -1702,7 +1738,7 @@ type
 
   AVOpenCallback* {.avformat.} = proc (s: ptr AVFormatContext, pb: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
 
-  AVDurationEstimationMethod* {.avformat, size: sizeof(cint).} = enum
+  AVDurationEstimationMethod* {.avformatEnum, size: sizeof(cint).} = enum
     AVFMT_DURATION_FROM_PTS
     AVFMT_DURATION_FROM_STREAM
     AVFMT_DURATION_FROM_BITRATE
@@ -1713,7 +1749,7 @@ type
     pkt*: AVPacket
     next*: ptr AVPacketList
   
-  AVTimebaseSource* {.avformat.} = enum
+  AVTimebaseSource* {.avformatEnum.} = enum
     AVFMT_TBCF_AUTO = -1
     AVFMT_TBCF_DECODER
     AVFMT_TBCF_DEMUXER
@@ -1723,7 +1759,7 @@ type
     callback*: proc (a1: pointer): cint {.cdecl.}
     opaque*: pointer
   
-  AVIODirEntryType* {.avio, size: sizeof(cint).} = enum
+  AVIODirEntryType* {.avioEnum, size: sizeof(cint).} = enum
     AVIO_ENTRY_UNKNOWN
     AVIO_ENTRY_BLOCK_DEVICE
     AVIO_ENTRY_CHARACTER_DEVICE
@@ -1748,12 +1784,12 @@ type
     group_id*: int64
     filemode*: int64
   
-  URLContext* {.avio.} = object
+  URLContext* {.avioStruct.} = object
 
   AVIODirContext* {.avio, bycopy.} = object
     url_context*: ptr URLContext
   
-  AVIODataMarkerType* {.avio, size: sizeof(cint).} = enum
+  AVIODataMarkerType* {.avioEnum, size: sizeof(cint).} = enum
     AVIO_DATA_MARKER_HEADER
     AVIO_DATA_MARKER_SYNC_POINT
     AVIO_DATA_MARKER_BOUNDARY_POINT
@@ -1799,20 +1835,20 @@ type
     buf_ptr_max*: ptr cuchar
     min_packet_size*: cint
 
-  AVAudioResampleContext* {.avresample.} = object
+  AVAudioResampleContext* {.avresampleStruct.} = object
 
-  AVMixCoeffType* {.deprecated, avresample.} = enum
+  AVMixCoeffType* {.deprecated, avresampleEnum.} = enum
     AV_MIX_COEFF_TYPE_Q8
     AV_MIX_COEFF_TYPE_Q15
     AV_MIX_COEFF_TYPE_FLT
     AV_MIX_COEFF_TYPE_NB
   
-  AVResampleFilterType* {.deprecated, avresample.} = enum
+  AVResampleFilterType* {.deprecated, avresampleEnum.} = enum
     AV_RESAMPLE_FILTER_TYPE_CUBIC
     AV_RESAMPLE_FILTER_TYPE_BLACKMAN_NUTTALL
     AV_RESAMPLE_FILTER_TYPE_KAISER
   
-  AVResampleDitherMethod* {.deprecated, avresample.} = enum
+  AVResampleDitherMethod* {.deprecated, avresampleEnum.} = enum
     AV_RESAMPLE_DITHER_NONE
     AV_RESAMPLE_DITHER_RECTANGULAR
     AV_RESAMPLE_DITHER_TRIANGULAR
@@ -1820,18 +1856,18 @@ type
     AV_RESAMPLE_DITHER_TRIANGULAR_NS
     AV_RESAMPLE_DITHER_NB
   
-  AVAESCTR* {.aes_ctr, bycopy.} = object
+  AVAESCTR* {.aes_ctrStruct, bycopy.} = object
 
-  AVAES* {.aes, bycopy.} = object
+  AVAES* {.aesStruct, bycopy.} = object
 
   AVAudioFifo* {.audio_fifo.} = object
 
-  AVEscapeMode* {.avstring.} = enum
+  AVEscapeMode* {.avstringEnum.} = enum
     AV_ESCAPE_MODE_AUTO
     AV_ESCAPE_MODE_BACKSLASH
     AV_ESCAPE_MODE_QUOTE
   
-  AVMediaType* {.avutil, size: sizeof(cint).} = enum
+  AVMediaType* {.avutilEnum, size: sizeof(cint).} = enum
     AVMEDIA_TYPE_UNKNOWN = -1
     AVMEDIA_TYPE_VIDEO
     AVMEDIA_TYPE_AUDIO
@@ -1840,7 +1876,7 @@ type
     AVMEDIA_TYPE_ATTACHMENT
     AVMEDIA_TYPE_NB
   
-  AVPictureType* {.avutil, size: sizeof(cint).} = enum
+  AVPictureType* {.avutilEnum, size: sizeof(cint).} = enum
     AV_PICTURE_TYPE_NONE = 0
     AV_PICTURE_TYPE_I
     AV_PICTURE_TYPE_P
@@ -1861,7 +1897,7 @@ type
     size_max*: cuint
     reserved_internal_buffer*: array[1, cstring]
 
-  AVBPrint* {.bprint, bycopy.} = object
+  AVBPrint* {.bprint, bycopy.} = object # FIXME: 複数ファイルに存在するっぽい
     str*: cstring
     len*: cuint
     size*: cuint
@@ -1869,7 +1905,7 @@ type
     reserved_internal_buffer*: array[1, cstring]
     reserved_padding*: array[1024 - sizeof(ff_pad_helper_AVBPrint), cstring]
   
-  tm* {.bprint.} = object
+  tm* {.bprintStruct.} = object
 
   va_list* {.importc, header: "<stdarg.h>".} = object
 
@@ -1881,11 +1917,11 @@ type
   
   AVBufferPool* {.buffer.} = object
 
-  AVCAMELLIA* {.camellia, bycopy.} = object
+  AVCAMELLIA* {.camelliaStruct, bycopy.} = object
 
-  AVCAST5* {.cast5, bycopy.} = object
+  AVCAST5* {.cast5Struct, bycopy.} = object
 
-  AVMatrixEncoding* {.channel_layout, size: sizeof(cint).} = enum
+  AVMatrixEncoding* {.channel_layoutEnum, size: sizeof(cint).} = enum
     AV_MATRIX_ENCODING_NONE
     AV_MATRIX_ENCODING_DOLBY
     AV_MATRIX_ENCODING_DPLII
@@ -1928,7 +1964,7 @@ type
     bl_present_flag*: uint8
     dv_bl_signal_compatibility_id*: uint8
   
-  AVDownmixType* {.downmin_info, size: sizeof(cint).} = enum
+  AVDownmixType* {.downmin_infoEnum, size: sizeof(cint).} = enum
     AV_DOWNMIX_TYPE_UNKNOWN
     AV_DOWNMIX_TYPE_LORO
     AV_DOWNMIX_TYPE_LTRT
@@ -1978,7 +2014,7 @@ type
     rndx*: uint32
     wndx*: uint32
   
-  AVFrameSideDataType* {.frame, size: sizeof(cint).} = enum
+  AVFrameSideDataType* {.frameEnum, size: sizeof(cint).} = enum
     AV_FRAME_DATA_PANSCAN
     AV_FRAME_DATA_A53_CC
     AV_FRAME_DATA_STEREO3D
@@ -2002,7 +2038,7 @@ type
     AV_FRAME_DATA_QP_TABLE_PROPERTIES # if FF_API_FRAME_QP
     AV_FRAME_DATA_QP_TABLE_DATA # if FF_API_FRAME_QP
 
-  AVActiveFormatDescription* {.frame, size: sizeof(cint).} = enum
+  AVActiveFormatDescription* {.frameEnum, size: sizeof(cint).} = enum
     AV_AFD_SAME = 8
     AV_AFD_4_3 = 9
     AV_AFD_16_9 = 10
@@ -2088,9 +2124,9 @@ type
       qscale_type {.deprecated.}: cint
       qp_table_buf {.deprecated.}: ptr AVBufferRef
   
-  AVHashContext* {.hash, bycopy.} = object
+  AVHashContext* {.hashStruct, bycopy.} = object
 
-  AVHDRPlusOverlapProcessOption* {.hdr_dynamic_metadata.} = enum
+  AVHDRPlusOverlapProcessOption* {.hdr_dynamic_metadataEnum.} = enum
     AV_HDR_PLUS_OVERLAP_PROCESS_WEIGHTED_AVERAGING = 0
     AV_HDR_PLUS_OVERLAP_PROCESS_LAYERING = 1
   
@@ -2138,7 +2174,7 @@ type
     num_cols_mastering_display_actual_peak_luminance*: uint8
     mastering_display_actual_peak_luminance*: array[25, array[25, AVRational]]
   
-  AVHMACType* {.hmac, size: sizeof(cint).} = enum
+  AVHMACType* {.hmacEnum, size: sizeof(cint).} = enum
     AV_HMAC_MD5
     AV_HMAC_SHA1
     AV_HMAC_SHA224
@@ -2216,7 +2252,7 @@ type
   VkSemaphore* {.vulkan.} = object
   VkFormat* {.vulkan.} = object
   
-  AVVkFrameInternal* {.hwcontext_vulkan.} = object
+  AVVkFrameInternal* {.hwcontext_vulkanStruct.} = object
 
   AVVulkanDeviceContext* {.hwcontext_vulkan.} = object
     alloc*: ptr VkAllocationCallbacks
@@ -2252,7 +2288,7 @@ type
     sem*: array[AV_NUM_DATA_POINTERS, VkSemaphore]
     internal*: ptr AVVkFrameInternal
   
-  AVHWDeviceType* {.hwcontext, size: sizeof(cint).} = enum
+  AVHWDeviceType* {.hwcontextEnum, size: sizeof(cint).} = enum
     AV_HWDEVICE_TYPE_NONE
     AV_HWDEVICE_TYPE_VDPAU
     AV_HWDEVICE_TYPE_CUDA
@@ -2293,7 +2329,7 @@ type
     width*: cint
     height*: cint
   
-  AVHWFrameTransferDirection* {.hwcontext, size: sizeof(cint).} = enum
+  AVHWFrameTransferDirection* {.hwcontextEnum, size: sizeof(cint).} = enum
     AV_HWFRAME_TRANSFER_DIRECTION_FROM
     AV_HWFRAME_TRANSFER_DIRECTION_TO
   
@@ -2347,7 +2383,7 @@ type
     MaxCLL*: cuint
     MaxFALL*: cuint
   
-  AVRounding* {.mathmatics.} = enum
+  AVRounding* {.mathmaticsEnum.} = enum
     AV_ROUND_ZERO     = 0
     AV_ROUND_INF      = 1
     AV_ROUND_DOWN     = 2
@@ -2355,7 +2391,7 @@ type
     AV_ROUND_NEAR_INF = 5
     AV_ROUND_PASS_MINMAX = 8192
   
-  AVMD5* {.md5, bycopy.} = object
+  AVMD5* {.md5Struct, bycopy.} = object
 
   AVMotionVector* {.motion_vector, bycopy.} = object
     source*: int32
@@ -2401,7 +2437,7 @@ type
     get_category*: proc (ctx: pointer): AVClassCategory {.cdecl.}
     query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint {.cdecl.}
 
-  AVOptionType* {.opt, size: sizeof(cint).} = enum
+  AVOptionType* {.optEnum, size: sizeof(cint).} = enum
     AV_OPT_TYPE_FLAGS
     AV_OPT_TYPE_INT
     AV_OPT_TYPE_INT64
@@ -2432,7 +2468,7 @@ type
     flags*: cint
     unit*: cstring
   
-  AVOptionUnion* {.union, opt.} = object
+  AVOptionUnion* {.union.} = object
     i64*: int64
     dbl*: cdouble
     str*: cstring
@@ -2472,7 +2508,7 @@ type
   
   av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint {.cdecl.}
 
-  AVPixelFormat* {.pixfmt, size: sizeof(cint).} = enum
+  AVPixelFormat* {.pixfmtEnum, size: sizeof(cint).} = enum
     AV_PIX_FMT_NONE = -1
     AV_PIX_FMT_YUV420P
     AV_PIX_FMT_YUYV422
@@ -2675,7 +2711,7 @@ type
     AV_PIX_FMT_Y210LE
     AV_PIX_FMT_NB
 
-  AVColorPrimaries* {.pixfmt, size: sizeof(cint).} = enum
+  AVColorPrimaries* {.pixfmtEnum, size: sizeof(cint).} = enum
     AVCOL_PRI_RESERVED0   = 0
     AVCOL_PRI_BT709       = 1
     AVCOL_PRI_UNSPECIFIED = 2
@@ -2694,7 +2730,7 @@ type
     AVCOL_PRI_JEDEC_P22   # = AVCOL_PRI_EBU3213
     AVCOL_PRI_NB
   
-  AVColorTransferCharacteristic* {.pixfmt.} = enum
+  AVColorTransferCharacteristic* {.pixfmtEnum.} = enum
     AVCOL_TRC_RESERVED0    = 0
     AVCOL_TRC_BT709        = 1
     AVCOL_TRC_UNSPECIFIED  = 2
@@ -2718,7 +2754,7 @@ type
     AVCOL_TRC_SMPTEST428_1 #= AVCOL_TRC_SMPTE428,
     AVCOL_TRC_NB
 
-  AVColorSpace* {.pixfmt.} = enum
+  AVColorSpace* {.pixfmtEnum.} = enum
     AVCOL_SPC_RGB         = 0
     AVCOL_SPC_BT709       = 1
     AVCOL_SPC_UNSPECIFIED = 2
@@ -2737,13 +2773,13 @@ type
     AVCOL_SPC_YCOCG       #= AVCOL_SPC_YCGCO,
     AVCOL_SPC_NB
   
-  AVColorRange* {.pixfmt.} = enum
+  AVColorRange* {.pixfmtEnum.} = enum
     AVCOL_RANGE_UNSPECIFIED = 0
     AVCOL_RANGE_MPEG        = 1
     AVCOL_RANGE_JPEG        = 2
     AVCOL_RANGE_NB
   
-  AVChromaLocation* {.pixfmt.} = enum
+  AVChromaLocation* {.pixfmtEnum.} = enum
     AVCHROMA_LOC_UNSPECIFIED = 0
     AVCHROMA_LOC_LEFT        = 1
     AVCHROMA_LOC_CENTER      = 2
@@ -2767,9 +2803,9 @@ type
     album_gain*: int32
     album_peak*: uint32
   
-  AVRIPEMD* {.ripemd, bycopy.} = object
+  AVRIPEMD* {.ripemdStruct, bycopy.} = object
 
-  AVSampleFormat* {.samplefmt, size: sizeof(cint).} = enum
+  AVSampleFormat* {.samplefmtEnum, size: sizeof(cint).} = enum
     AV_SAMPLE_FMT_NONE = -1
     AV_SAMPLE_FMT_U8
     AV_SAMPLE_FMT_S16
@@ -2785,11 +2821,11 @@ type
     AV_SAMPLE_FMT_S64P
     AV_SAMPLE_FMT_NB
   
-  AVSHA* {.sha, bycopy.} = object
+  AVSHA* {.shaStruct, bycopy.} = object
 
-  AVSHA512* {.sha512, bycopy.} = object
+  AVSHA512* {.sha512Struct, bycopy.} = object
 
-  AVSphericalProjection* {.spherical, size: sizeof(cint).} = enum
+  AVSphericalProjection* {.sphericalEnum, size: sizeof(cint).} = enum
     AV_SPHERICAL_EQUIRECTANGULAR
     AV_SPHERICAL_CUBEMAP
     AV_SPHERICAL_EQUIRECTANGULAR_TILE
@@ -2805,7 +2841,7 @@ type
     bound_bottom*: uint32
     padding*: uint32
   
-  AVStereo3DType* {.stereo3d, size: sizeof(cint).} = enum
+  AVStereo3DType* {.stereo3dEnum, size: sizeof(cint).} = enum
     AV_STEREO3D_2D
     AV_STEREO3D_SIDEBYSIDE
     AV_STEREO3D_TOPBOTTOM
@@ -2815,7 +2851,7 @@ type
     AV_STEREO3D_LINES
     AV_STEREO3D_COLUMNS
   
-  AVStereo3DView* {.stereo3d.} = enum
+  AVStereo3DView* {.stereo3dEnum.} = enum
     AV_STEREO3D_VIEW_PACKED
     AV_STEREO3D_VIEW_LEFT
     AV_STEREO3D_VIEW_RIGHT
@@ -2825,14 +2861,14 @@ type
     flags*: cint
     view*: AVStereo3DView
   
-  AVTEA* {.tea, bycopy.} = object
+  AVTEA* {.teaStruct, bycopy.} = object
 
   AVThreadMessageQueue* {.threadmessage.} = object
 
   AVThreadMessageFlags* {.threadmessage, size: sizeof(cint).} = enum
     AV_THREAD_MESSAGE_NONBLOCK = 1
   
-  AVTimecodeFlag* {.timecode, size: sizeof(cint).} = enum
+  AVTimecodeFlag* {.timecodeEnum, size: sizeof(cint).} = enum
     AV_TIMECODE_FLAG_DROPFRAME = 1 shl 0
     AV_TIMECODE_FLAG_24HOURSMAX = 1 shl 1
     AV_TIMECODE_FLAG_ALLOWNEGATIVE = 1 shl 2
@@ -2843,9 +2879,9 @@ type
     rate: AVRational
     fps: cuint
   
-  AVTreeNode* {.tree, bycopy.} = object
+  AVTreeNode* {.treeStruct, bycopy.} = object
 
-  AVTWOFISH* {.twofish, bycopy.} = object
+  AVTWOFISH* {.twofishStruct, bycopy.} = object
 
   AVTXContext* {.tx.} = object
 
@@ -2858,7 +2894,7 @@ type
   AVComplexInt32* {.tx.} = object
     re*, im*: int32
   
-  AVTXType* {.tx.} = enum
+  AVTXType* {.txEnum.} = enum
     AV_TX_FLOAT_FFT = 0
     AV_TX_FLOAT_MDCT = 1
     AV_TX_DOUBLE_FFT = 2
@@ -2868,7 +2904,7 @@ type
   
   av_tx_fn* {.tx.} = proc (s: ptr AVTXContext, `out`, `in`: pointer, stride: ByteAddress) {.cdecl.}
 
-  AVVideoEncParamsType* {.video_enc_params.} = enum
+  AVVideoEncParamsType* {.video_enc_paramsEnum.} = enum
     AV_VIDEO_ENC_PARAMS_NONE = -1
     AV_VIDEO_ENC_PARAMS_VP9
     AV_VIDEO_ENC_PARAMS_H264
@@ -2889,7 +2925,7 @@ type
   pp_context* {.postprocess.} = object
   pp_mode* {.postprocess.} = object
 
-  SwrDitherType* {.swresample.} = enum
+  SwrDitherType* {.swresampleEnum.} = enum
     SWR_DITHER_NONE = 0
     SWR_DITHER_RECTANGULAR
     SWR_DITHER_TRIANGULAR
@@ -2904,12 +2940,12 @@ type
     SWR_DITHER_NS_HIGH_SHIBATA
     SWR_DITHER_NB
   
-  SwrEngine* {.swresample.} = enum
+  SwrEngine* {.swresampleEnum.} = enum
     SWR_ENGINE_SWR
     SWR_ENGINE_SOXR
     SWR_ENGINE_NB
   
-  SwrFilterType* {.swresample.} = enum
+  SwrFilterType* {.swresampleEnum.} = enum
     SWR_FILTER_TYPE_CUBIC
     SWR_FILTER_TYPE_BLACKMAN_NUTTALL
     SWR_FILTER_TYPE_KAISER
@@ -2926,4 +2962,4 @@ type
     chrH*: ptr SwsVector
     chrV*: ptr SwsVector
   
-  SwsContext* {.swscale.} = object
+  SwsContext* {.swscaleStruct.} = object

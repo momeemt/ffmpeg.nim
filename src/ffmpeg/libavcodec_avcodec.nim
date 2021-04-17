@@ -298,10 +298,10 @@ proc avcodec_encode_video2* (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, fra
 proc avcodec_encode_subtitle* (avctx: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint
 proc avcodec_pix_fmt_to_codec_tag* (pix_fmt: AVPixelFormat): uint
 proc avcodec_get_pix_fmt_loss* (dst_pix_fmt: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint): cint {.deprecated.}
-proc avcodec_find_best_pix_fmt_of_list* (pix_fmt_list: ptr AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat
+proc avcodec_find_best_pix_fmt_of_list* (pix_fmt_list: UncheckedArray[AVPixelFormat], src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat
 proc avcodec_find_best_pix_fmt_of_2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat {.deprecated.}
 proc avcodec_find_best_pix_fmt2* (dst_pix_fmt1: AVPixelFormat, dst_pix_fmt2: AVPixelFormat, src_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat {.deprecated.}
-proc avcodec_default_get_format* (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat
+proc avcodec_default_get_format* (s: ptr AVCodecContext, fmt: UncheckedArray[AVPixelFormat]): AVPixelFormat
 proc avcodec_string* (buf: ptr char, buf_size: cint, enc: ptr AVCodecContext, encode: cint)
 proc av_get_profile_name* (codec: ptr AVCodec, profile: cint): ptr char
 proc avcodec_profile_name* (codec_id: AVCodecID, profile: cint): ptr char
