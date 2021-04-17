@@ -3,7 +3,7 @@ import ffmpeg_types
 when defined(windows):
   {.push importc, dynlib: "postproc(|-53|-54|-55|-56|-57).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "postproc(|.53|.54|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libpostproc(|.53|.54|.55|.56|.57).dylib", cdecl.}
 else:
   {.push importc, dynlib: "libpostproc.so(|.53|.54|.55|.56|.57)", cdecl.}
 

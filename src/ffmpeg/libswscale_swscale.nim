@@ -3,7 +3,7 @@ import ffmpeg_types
 when defined(windows):
   {.push importc, dynlib: "swscale(|-4|-5|-6).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "swscale(|.4|.5|.6).dylib", cdecl.}
+  {.push importc, dynlib: "libswscale(|.4|.5|.6).dylib", cdecl.}
 else:
   {.push importc, dynlib: "libswscale.so(|.4|.5|.6)", cdecl.}
 

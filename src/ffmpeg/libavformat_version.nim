@@ -3,7 +3,7 @@ from libavutil_version import AV_VERSION_INT, AV_VERSION
 when defined(windows):
   {.push importc, dynlib: "avformat(|-55|-56|-57|-58).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avformat(|.55|.56|.57|.58).dylib", cdecl.}
+  {.push importc, dynlib: "libavformat(|.55|.56|.57|.58).dylib", cdecl.}
 else:
   {.push importc, dynlib: "libavformat.so(|.55|.56|.57|.58)", cdecl.}
 

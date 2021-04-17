@@ -19,7 +19,7 @@ when defined(FF_API_NEXT):
 when defined(windows):
   {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "avfilter(|.5|.6|.7|.8).dylib", cdecl.}
+  {.push importc, dynlib: "libavfilter(|.5|.6|.7|.8).dylib", cdecl.}
 else:
   {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
 
