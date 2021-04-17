@@ -27,7 +27,7 @@ block:
   {.pragma: avformatStruct, importc: "struct $1", header: "<libavformat/avformat.h>".}
   {.pragma: avformatEnum, importc: "enum $1", header: "<libavformat/avformat.h>".}
   {.pragma: avio, importc, header: "<libavformat/avio.h>".}
-  {.pragma: avioEnum, importc, header: "<libavformat/avio.h>".}
+  {.pragma: avioEnum, importc: "enum $1", header: "<libavformat/avio.h>".}
   {.pragma: avioStruct, importc, header: "<libavformat/avio.h>".}
   {.pragma: avresampleStruct, importc: "struct $1", header: "<libavresample/avresample.h>".}
   {.pragma: avresampleEnum, importc: "enum $1", header: "<libavresample/avresample.h>".}
