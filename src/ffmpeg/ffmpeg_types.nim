@@ -2064,7 +2064,7 @@ type
   
   AVFrame* {.frame, bycopy.} = object
     data*: array[AV_NUM_DATA_POINTERS, ptr uint8]
-    line*: array[AV_NUM_DATA_POINTERS, cint]
+    linesize*: array[AV_NUM_DATA_POINTERS, cint]
     extended_data*: ptr ptr uint8
     width*: cint
     height*: cint
