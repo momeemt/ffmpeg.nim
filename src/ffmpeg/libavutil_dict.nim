@@ -1,4 +1,11 @@
-import ffmpeg_types
+{.pragma: dict, importc, header: "<libavutil/dict.h>".}
+
+type
+  AVDictionaryEntry* {.dict, bycopy.} = object
+    key*: cstring
+    value*: cstring
+  
+  AVDictionary* {.dict.} = object
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}

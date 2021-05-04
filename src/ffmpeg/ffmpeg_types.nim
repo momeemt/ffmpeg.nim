@@ -1,3 +1,5 @@
+import libavutil_dict
+
 block:
   {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
   {.pragma: avcodecEnum, importc: "enum $1", header: "<libavcodec/avcodec.h>".}
@@ -47,7 +49,6 @@ block:
   {.pragma: channel_layoutEnum, importc: "enum $1", header: "<libavutil/channel_layout.h>".}
   {.pragma: crc, importc, header: "<libavutil/crc.h>".}
   {.pragma: des, importc, header: "<libavutil/des.h>".}
-  {.pragma: dict, importc, header: "<libavutil/dict.h>".}
   {.pragma: dovi_meta, header: "<libavutil/dovi_meta.h>".}
   {.pragma: downmin_info, importc, header: "<libavutil/downmin_info.h>".}
   {.pragma: downmin_infoEnum, importc: "enum $1", header: "<libavutil/downmin_info.h>".}
@@ -1947,12 +1948,6 @@ type
   AVDES* {.des, bycopy.} = object
     round_keys*: array[3, array[16, uint64]]
     triple_des*: cint
-  
-  AVDictionaryEntry* {.dict, bycopy.} = object
-    key*: cstring
-    value*: cstring
-  
-  AVDictionary* {.dict.} = object
 
   AVDOVIDecoderConfigurationRecord* {.dovi_meta.} = object
     dv_version_major*: uint8

@@ -7,6 +7,7 @@ else:
 
 import ffmpeg_types
 from libavutil_frame import AV_NUM_DATA_POINTERS
+from libavutil_dict import AVDictionary
 
 const
   AV_INPUT_BUFFER_PADDING_SIZE* = 64
