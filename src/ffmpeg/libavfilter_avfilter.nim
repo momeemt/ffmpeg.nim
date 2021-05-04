@@ -1,4 +1,5 @@
 import ffmpeg_types
+from libavutil_dict import AVDictionary
 
 when defined(windows):
   {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}

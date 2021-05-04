@@ -1,4 +1,5 @@
 import ffmpeg_types
+from libavutil_dict import AVDictionary
 
 const
   AV_PKT_DATA_QUALITY_FACTOR* {.deprecated.} = AV_PKT_DATA_QUALITY_STATS
