@@ -19,15 +19,15 @@ const
   AV_FOURCC_MAX_STRING_SIZE* = 32
 
 proc avutil_version* (): cuint
-proc av_version_info* (): ptr cchar
-proc avutil_configuration* (): ptr cchar
-proc avutil_license* (): ptr cchar
-proc av_get_media_type_string* (media_type: AVMediaType): ptr cchar
+proc av_version_info* (): cstring
+proc avutil_configuration* (): cstring
+proc avutil_license* (): cstring
+proc av_get_media_type_string* (media_type: AVMediaType): cstring
 proc av_get_picture_type_char* (pict_type: AVPictureType): cchar
 proc av_int_list_length_for_size* (elsize: cuint, list: pointer, term: uint64): cuint
-proc av_fopen_utf8* (path: ptr char, mode: ptr char): ptr File
+proc av_fopen_utf8* (path, mode: cstring): ptr File
 proc av_get_time_base_q* (): AVRational
-proc av_fourcc_make_string* (buf: ptr cchar, fourcc: uint32): ptr cchar
+proc av_fourcc_make_string* (buf: cstring, fourcc: uint32): cstring
 
 proc av_x_if_null* (p, x: pointer): pointer {.inline.} =
   if p.isNil: x

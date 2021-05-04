@@ -10,9 +10,9 @@ else:
 const
   AV_HASH_MAX_SIZE* = 64
 
-proc av_hash_alloc* (ctx: ptr ptr AVHashContext, name: ptr cchar): cint
-proc av_hash_names* (i: cint): ptr cchar
-proc av_hash_get_name* (ctx: ptr AVHashContext): ptr cchar
+proc av_hash_alloc* (ctx: ptr ptr AVHashContext, name: cstring): cint
+proc av_hash_names* (i: cint): cstring
+proc av_hash_get_name* (ctx: ptr AVHashContext): cstring
 proc av_hash_get_size* (ctx: ptr AVHashContext): cint
 proc av_hash_init* (ctx: ptr AVHashContext)
 proc av_hash_final* (ctx: ptr AVHashContext, dst: ptr uint8)

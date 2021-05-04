@@ -63,14 +63,14 @@ const
   AV_CH_LAYOUT_HEXADECAGONAL* = AV_CH_LAYOUT_OCTAGONAL or AV_CH_WIDE_LEFT or AV_CH_WIDE_RIGHT or AV_CH_TOP_BACK_LEFT or AV_CH_TOP_BACK_RIGHT or AV_CH_TOP_BACK_CENTER or AV_CH_TOP_FRONT_CENTER or AV_CH_TOP_FRONT_LEFT or AV_CH_TOP_FRONT_RIGHT
   AV_CH_LAYOUT_STEREO_DOWNMIX* = AV_CH_STEREO_LEFT or AV_CH_STEREO_RIGHT
 
-proc av_get_channel_layout* (name: ptr cchar): uint64
-proc av_get_extended_channel_layout* (name: ptr cchar, channel_layout: ptr uint64, nb_channels: ptr cint): cint
-proc av_get_channel_layout_string* (buf: ptr cchar, buf_size: cint, nb_channels: cint, channel_layout: uint64)
+proc av_get_channel_layout* (name: cstring): uint64
+proc av_get_extended_channel_layout* (name: cstring, channel_layout: ptr uint64, nb_channels: ptr cint): cint
+proc av_get_channel_layout_string* (buf: cstring, buf_size: cint, nb_channels: cint, channel_layout: uint64)
 proc av_bprint_channel_layout* (bp: ptr AVBPrint, nb_channels: cint, channel_layout: uint64)
 proc av_get_channel_layout_nb_channels* (channel_layout: uint64): cint
 proc av_get_default_channel_layout* (nb_channels: cint): int64
 proc av_get_channel_layout_channel_index* (channel_layout: uint64, channel: uint64): cint
 proc av_channel_layout_extract_channel* (channel_layout: uint64, index: cint): uint64
-proc av_get_channel_name* (channel: uint64): ptr cchar
-proc av_get_channel_description* (channel: uint64): ptr cchar
-proc av_get_standard_channel_layout* (index: cuint, layout: ptr uint64, name: ptr ptr cchar): cint
+proc av_get_channel_name* (channel: uint64): cstring
+proc av_get_channel_description* (channel: uint64): cstring
+proc av_get_standard_channel_layout* (index: cuint, layout: ptr uint64, name: cstringArray): cint

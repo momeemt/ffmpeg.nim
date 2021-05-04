@@ -21,7 +21,7 @@ proc av_bprint_append_data* (buf: ptr AVBPrint, data: cstring, size: cuint)
 proc av_bprint_strftime* (buf: ptr AVBPrint, fmt: cstring, `tm`: ptr tm)
 proc av_bprint_get_buffer* (buf: ptr AVBPrint, size: cuint, mem: ptr ptr cuchar, actual_size: ptr cuint)
 proc av_bprint_clear* (buf: ptr AVBPrint)
-proc av_bprint_finalize* (buf: ptr AVBPrint, ret_str: ptr cstring): cint
+proc av_bprint_finalize* (buf: ptr AVBPrint, ret_str: cstringArray): cint
 proc av_bprint_escape* (dstbuf: ptr AVBPrint, src, special_chars: cstring, mode: AVEscapeMode, flags: cint)
 
 # FIXME: 185

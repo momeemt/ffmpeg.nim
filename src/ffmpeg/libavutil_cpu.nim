@@ -48,7 +48,7 @@ const
 proc av_get_cpu_flags* (): cint
 proc av_force_cpu_flags* (flags: cint)
 proc av_set_cpu_flags_mask* (mask: cint) {.deprecated.}
-proc av_parse_cpu_flags* (s: ptr cchar): cint {.deprecated.}
-proc av_parse_cpu_caps* (flags: ptr cuint, s: ptr cchar): cint
+proc av_parse_cpu_flags* (s: cstring): cint {.deprecated.}
+proc av_parse_cpu_caps* (flags: ptr cuint, s: cstring): cint
 proc av_cpu_count* (): cint
 proc av_cpu_max_align* (): csize_t

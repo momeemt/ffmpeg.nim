@@ -291,8 +291,8 @@ type
     rc_min_vbv_overflow_use*: cfloat
     rc_initial_buffer_occupancy*: cint
     trellis*: cint
-    stats_out*: ptr cchar
-    stats_in*: ptr cchar
+    stats_out*: cstring
+    stats_in*: cstring
     workaround_bugs*: cint
     strict_std_compliance*: cint
     error_concealment*: cint
@@ -329,13 +329,13 @@ type
     pts_correction_num_faulty_dts*: int64
     pts_correction_last_pts*: int64
     pts_correction_last_dts*: int64
-    sub_charenc*: ptr cchar
+    sub_charenc*: cstring
     sub_charenc_mode*: cint
     skip_alpha*: cint
     seek_preroll*: cint
     chroma_intra_matrix*: ptr uint16
     dump_separator*: ptr uint8
-    codec_whitelist*: ptr cchar
+    codec_whitelist*: cstring
     properties*: uint32 # unsigned == uint32 ?
     coded_side_data*: ptr AVPacketSideData
     nb_coded_side_data*: cint
@@ -413,7 +413,7 @@ type
   MpegEncContext* {.avcodecStruct, bycopy.} = object
 
   AVHWAccel* {.avcodec, bycopy.} = object
-    name*: ptr cchar
+    name*: cstring
     `type`*: AVMediaType
     id*: AVCodecID
     pix_fmt*: AVPixelFormat
@@ -446,8 +446,8 @@ type
     data*: array[4, ptr uint8]
     linesize*: array[4, cint]
     `type`*: AVSubtitleType
-    text*: ptr cchar
-    ass*: ptr cchar
+    text*: cstring
+    ass*: cstring
     flags*: cint
     when defined(FF_API_AVPICTURE):
       pict* {.deprecated.}: AVPicture
@@ -1949,8 +1949,8 @@ type
     triple_des*: cint
   
   AVDictionaryEntry* {.dict, bycopy.} = object
-    key*: ptr cchar
-    value*: ptr cchar
+    key*: cstring
+    value*: cstring
   
   AVDictionary* {.dict.} = object
 

@@ -71,7 +71,7 @@ proc av_opt_get_channel_layout* (obj: pointer, name: cstring, search_flags: cint
 proc av_opt_get_dict_val* (obj: pointer, name: cstring, search_flags: cint, out_val: ptr ptr AVDictionary): cint
 proc av_opt_ptr* (avclass: ptr AVClass, obj: pointer, name: cstring): pointer
 proc av_opt_freep_ranges* (ranges: ptr ptr AVOptionRanges)
-proc av_opt_query_ranges* (a1: ptr ptr AVOptionRanges, obj: pointer, key: ptr ptr cchar, flags: cint): cint
+proc av_opt_query_ranges* (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstringArray, flags: cint): cint
 proc av_opt_copy* (dest, src: pointer): cint
 proc av_opt_query_ranges_default* (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint
 proc av_opt_is_set_to_default* (obj: pointer, o: ptr AVOption): cint

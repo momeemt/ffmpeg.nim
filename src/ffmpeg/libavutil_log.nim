@@ -38,16 +38,16 @@ template AV_IS_OUTPUT_DEVICE* (category: untyped): untyped =
 template AV_LOG_C* (x: untyped): untyped =
   x shl 8
 
-proc av_log* (avcl: pointer, level: cint, fmt: ptr cchar) {.varargs.}
-proc av_log_once* (avcl: pointer, initial_level, subsequent_level: cint, state: ptr cint, fmt: ptr cchar) {.varargs.}
-proc av_vlog* (avcl: pointer, level: cint, fmt: ptr cchar, vl: va_list)
+proc av_log* (avcl: pointer, level: cint, fmt: cstring) {.varargs.}
+proc av_log_once* (avcl: pointer, initial_level, subsequent_level: cint, state: ptr cint, fmt: cstring) {.varargs.}
+proc av_vlog* (avcl: pointer, level: cint, fmt: cstring, vl: va_list)
 proc av_log_get_level* (): cint
 proc av_log_set_level* (level: cint)
-proc av_log_set_callback* (callback: proc (a1: pointer, a2: cint, a3: ptr cchar, a4: va_list))
+proc av_log_set_callback* (callback: proc (a1: pointer, a2: cint, a3: cstring, a4: va_list))
 proc av_log_default_callback* (avcl: pointer, level: cint, fmt: cchar, vl: va_list)
-proc av_default_item_name* (ctx: pointer): ptr cchar
+proc av_default_item_name* (ctx: pointer): cstring
 proc av_default_get_category* (`ptr`: pointer): AVClassCategory
-proc av_log_format_line* (`ptr`: pointer, level: cint, fmt: ptr cchar, vl: va_list, line: ptr cchar, line_size: cint, print_prefix: ptr cint)
-proc av_log_format_line2* (`ptr`: pointer, level: cint, fmt: ptr cchar, vl: va_list, line: ptr cchar, line_size: cint, print_prefix: ptr cint): cint
+proc av_log_format_line* (`ptr`: pointer, level: cint, fmt: cstring, vl: va_list, line: cstring, line_size: cint, print_prefix: ptr cint)
+proc av_log_format_line2* (`ptr`: pointer, level: cint, fmt: cstring, vl: va_list, line: cstring, line_size: cint, print_prefix: ptr cint): cint
 proc av_log_set_flags* (arg: cint)
 proc av_log_get_flags* (): cint

@@ -48,7 +48,7 @@ proc avio_skip* (s: ptr AVIOContext, offset: int64): int64
 proc avio_size* (s: ptr AVIOContext): int64
 proc avio_feof* (s: ptr AVIOContext): cint
 proc avio_printf* (s: ptr AVIOContext, fmt: cstring): cint {.varargs.} # TODO: 578
-proc avio_print_string_array* (s: ptr AVIOContext, strings: ptr cstring)
+proc avio_print_string_array* (s: ptr AVIOContext, strings: cstringArray)
 proc avio_flush* (s: ptr AVIOContext)
 proc avio_read* (s: ptr AVIOContext, buf: ptr cuchar, size: cint): cint
 proc avio_read_partial* (s: ptr AVIOContext, buf: ptr cuchar, size: cint): cint

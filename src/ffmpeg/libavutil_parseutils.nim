@@ -14,7 +14,7 @@ proc av_parse_video_rate* (rate: ptr AVRational, str: cstring): cint
 proc av_parse_color* (rgba_color: ptr uint8, color_string: cstring, slen: cint, log_ctx: pointer): cint
 proc av_get_known_color_name* (color_idx: cint, rgb: ptr ptr uint8): cstring
 proc av_parse_time* (timeval: ptr int64, timestr: cstring, duration: cint): cint
-proc av_find_info_tag* (arg: cstring, arg_size: cint, tag1, info: ptr cstring): cint
+proc av_find_info_tag* (arg: cstring, arg_size: cint, tag1, info: cstringArray): cint
 proc av_small_strptime* (p, fmt: cstring, dt: ptr tm)
 proc av_timegm* (`tm`: ptr tm): Time
 

@@ -55,8 +55,8 @@ template AVERROR_HTTP_SERVER_ERROR* (): untyped = FFERRTAG(0xF8,'5','X','X')
 template av_err2str* (errnum: untyped): untyped =
   av_make_error_string((char[AV_ERROR_MAX_STRING_SIZE]){0}, AV_ERROR_MAX_STRING_SIZE, errnum)
 
-proc av_strerror* (errnum: cint, errbuf: ptr cchar, errbuf_size: csize_t): cint
+proc av_strerror* (errnum: cint, errbuf: cstring, errbuf_size: csize_t): cint
 
-proc av_make_error_string* (errbuf: ptr cchar, errbuf_size: csize_t, errnum: cint): ptr cchar {.inline.} =
+proc av_make_error_string* (errbuf: cstring, errbuf_size: csize_t, errnum: cint): cstring {.inline.} =
   discard av_strerror(errnum, errbuf, errbuf_size)
   result = errbuf
