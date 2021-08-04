@@ -48,7 +48,7 @@ proc sws_alloc_context* (): ptr SwsContext
 proc sws_init_context* (sws_context: ptr SwsContext, srcFilter, dstFilter: ptr SwsFilter): cint # warning
 proc sws_freeContext* (swsContext: ptr SwsContext)
 proc sws_getContext* (srcW, srcH: cint, srcFormat: AVPixelFormat, dstW, dstH: cint, dstFormat: AVPixelFormat, flags: cint, srcFilter, dstFilter: ptr SwsFilter, param: ptr cdouble): ptr SwsContext
-proc sws_scale* (c: ptr SwsContext, srcSlice: seq[ptr uint8], srcStride: seq[cint], srcSliceY, srcSliceH: cint, dst: seq[ptr uint8], dstStride: seq[cint]): cint
+proc sws_scale* (c: ptr SwsContext, srcSlice: openArray[ptr uint8], srcStride: openArray[cint], srcSliceY, srcSliceH: cint, dst: openArray[ptr uint8], dstStride: openArray[cint]): cint
 proc sws_setColorspaceDetails* (c: ptr SwsContext, inv_table: array[4, cint], srcRange: cint, table: array[4, cint], dstRange, brightness, contrast, saturation: cint): cint
 proc sws_getColorspaceDetails* (c: ptr SwsContext, inv_table: ptr ptr cint, srcRange: ptr cint, table: ptr ptr cint, dstRange, brightness, contrast, saturation: ptr cint): cint
 proc sws_allocVec* (length: cint): ptr SwsVector
