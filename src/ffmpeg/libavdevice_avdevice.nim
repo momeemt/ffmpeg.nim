@@ -8,7 +8,7 @@ elif defined(macosx):
 else:
   {.push importc, dynlib: "libavdevice.so(|.55|.56|.57|.58)", cdecl.}
 
-var av_device_capabilities*: seq[AVOption]
+var av_device_capabilities*: ptr AVOption
 
 proc avdevice_version* (): cuint
 proc avdevice_configuration* (): cstring

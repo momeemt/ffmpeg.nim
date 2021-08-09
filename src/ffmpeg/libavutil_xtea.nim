@@ -2,7 +2,7 @@
 
 type
   AVXTEA* {.xtea, bycopy.} = object
-    key: array[16, uint32]
+    key: ptr uint32
 
 when defined(windows):
   {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}

@@ -341,8 +341,8 @@ when defined(FF_API_CODEC_GET_SET):
 when defined(FF_API_AVPICTURE):
   type
     AVPicture* {.deprecated.} = object
-      data {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint8]
-      linesize {.deprecated.}: array[AV_NUM_DATA_POINTERS, cint]
+      data {.deprecated.}: ptr uint8
+      linesize {.deprecated.}: ptr cint
   
   proc avpicture_alloc* (picture: ptr AVPicture, pix_fmt: AVPixelFormat, width: cint, height: cint): cint {.deprecated.}
   proc avpicture_free* (picture: ptr AVPicture) {.deprecated.}
