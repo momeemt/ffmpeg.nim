@@ -2346,7 +2346,7 @@ type
   
   av_alias64* {.intreadwrite, union.} = object
     u64*: uint64
-    u32*: ptr uint32uint32
+    u32*: ptr uint32
     u16*: ptr uint16
     u8*: ptr uint8
     f64*: cdouble
