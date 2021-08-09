@@ -182,7 +182,7 @@ type
     id*: cint
     width*: cint
     height*: cint
-    position*: array[3, array[2, int16]]
+    position*: ptr ptr int16 # Array[3, Array[2, int16]]
 
   AVCPBProperties* {.avcodec.} = object
 
@@ -219,7 +219,7 @@ type
     coded_height*: cint
     gop_size*: cint
     pix_fmt*: AVPixelFormat
-    draw_hotiz_band*: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: array[AV_NUM_DATA_POINTERS, cint], y, `type`, height: cint) {.cdecl.}
+    draw_hotiz_band*: proc (s: ptr AVCodecContext, src: ptr AVFrame, offset: ptr cint, y, `type`, height: cint) {.cdecl.}
     get_format*: proc (s: ptr AVCodecContext, fmt: ptr AVPixelFormat): AVPixelFormat {.cdecl.}
     max_b_frames*: cint 
     b_quant_factor*: cfloat
@@ -302,7 +302,7 @@ type
     reordered_opaque*: int64
     hwaccel*: ptr AVHWAccel
     hwaccel_context*: pointer
-    error*: array[AV_NUM_DATA_POINTERS, uint64]
+    error*: ptr uint64
     dct_algo*: cint
     idct_algo*: cint
     bits_per_coded_sample*: cint
@@ -444,8 +444,8 @@ type
     w*: cint
     h*: cint
     nb_colors*: cint
-    data*: array[4, ptr uint8]
-    linesize*: array[4, cint]
+    data*: ptr ptr uint8
+    linesize*: ptr cint
     `type`*: AVSubtitleType
     text*: cstring
     ass*: cstring
@@ -473,17 +473,17 @@ type
     last_dts*: int64
     fetch_timestamp*: cint
     cur_frame_start_index*: cint
-    cur_frame_offset*: array[AV_PARSER_PTS_NB, int64]
-    cur_frame_pts*: array[AV_PARSER_PTS_NB, int64]
-    cur_frame_dts*: array[AV_PARSER_PTS_NB, int64]
+    cur_frame_offset*: ptr int64
+    cur_frame_pts*: ptr int64
+    cur_frame_dts*: ptr int64
     flags*: cint
     offset*: int64
-    cur_frame_end*: array[AV_PARSER_PTS_NB, int64]
+    cur_frame_end*: ptr int64
     key_frame*: cint
     dts_sync_point*: cint
     dts_ref_dts_delta*: cint
     pts_dts_delta*: cint
-    cur_frame_pos*: array[AV_PARSER_PTS_NB, int64]
+    cur_frame_pos*: ptr int64
     pos*: int64
     last_pos*: int64
     duration*: cint
@@ -499,7 +499,7 @@ type
       convergence_duration* {.deprecated.}: int64
   
   AVCodecParser* {.avcodec.} = object
-    codec_ids*: array[5, cint]
+    codec_ids*: ptr cint
     priv_data_size*: cint
     parser_init*: proc (s: ptr AVCodecParserContext): cint {.cdecl.}
     parser_parse*: proc (s: ptr AVCodecParserContext, avctx: ptr AVCodecContext, poutbuf: ptr ptr uint8, poutbuf_size: ptr cint, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
@@ -510,7 +510,7 @@ type
   AVDCT* {.avdct, bycopy.} = object
     av_class*: ptr AVClass
     idct*: proc (`block`: ptr int16) {.cdecl.}
-    idct_permutation*: array[64, uint8]
+    idct_permutation*: ptr uint8
     fdct*: proc (`block`: ptr int16) {.cdecl.}
     dct_algo*: cint
     idct_algo*: cint
@@ -1198,14 +1198,14 @@ type
     ltc_divisor*: cint
     height*: cint
     width*: cint
-    sar*: array[2, AVRational]
+    sar*: ptr AVRational
     pix_fmt*: AVPixelFormat
     bpm*: cint
     block_sizes*: ptr uint8
     audio_stride*: cint
-    audio_min_samples*: array[3, cint]
-    audio_samples_dist*: array[5, cint]
-    audio_shuffle*: array[9, ptr uint8]
+    audio_min_samples*: ptr cint
+    audio_samples_dist*: ptr cint
+    audio_shuffle*: ptr ptr uint8
   
   AVMediaCodecContext* {.mediacodec, bycopy.} = object
     surface: pointer
@@ -1401,7 +1401,7 @@ type
     hw_frames_ctx*: ptr AVBufferRef
 
     when not defined(FF_INTERNAL_FIELDS):
-      reserved*: array[0xF000, cstring]
+      reserved*: ptr cstring
     else:
       fifo*: FFFrameQueue
       frame_blocked_in*: cint
@@ -1547,7 +1547,7 @@ type
     max_probe_packets*: cint
 
     when defined(FF_API_FORMAT_FILENAME):
-      filename {.deprecated.}: array[1024, cstring]
+      filename {.deprecated.}: ptr cstring
     
     when defined(FF_API_OLD_OPEN_CALLBACKS):
       open_cb {.deprecated.}: proc (s: ptr AVFormatContext, p: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
@@ -1660,7 +1660,7 @@ type
     need_parsing*: AVStreamParseType
     parser*: ptr AVCodecParserContext
     last_in_packet_buffer*: ptr AVPacketList
-    pts_buffer*: array[MAX_REORDER_DELAY+1, int64]
+    pts_buffer*: ptr int64
     index_entries*: ptr AVIndexEntry
     nb_index_entries*: cint
     index_entries_allocated_size*: cuint
@@ -1681,8 +1681,8 @@ type
     pts_wrap_reference*: int64
     pts_wrap_behavior*: cint
     update_initial_durations_done*: cint
-    pts_reorder_error*: array[MAX_REORDER_DELAY+1, int64]
-    pts_reorder_error_count*: array[MAX_REORDER_DELAY+1, uint8]
+    pts_reorder_error*: ptr int64
+    pts_reorder_error_count*: ptr uint8
     last_dts_for_order_check*: int64
     dts_ordered*: uint8
     dts_misordered*: uint8
@@ -1701,7 +1701,7 @@ type
     duration_gcd*: int64
     duration_count*: cint
     rfps_duration_sum*: int64
-    duration_error*: ptr array[2, array[MAX_STD_TIMEBASES, cdouble]]
+    duration_error*: ptr ptr ptr cdouble # ptr Array[2, Array[MAX_STD_TIMEBASES, cdouble]]
     codec_info_duration*: int64
     codec_info_duration_fields*: int64
     frame_delay_evidence: cint
@@ -1888,23 +1888,23 @@ type
     AV_PICTURE_TYPE_BI
   
   AVBlowfish* {.blowfish, bycopy.} = object
-    p*: array[AV_BF_ROUNDS + 2, uint32]
-    s*: array[4, array[256, uint32]]
+    p*: ptr uint32
+    s*: ptr ptr uint32 # Array[4, Array[256, uint32]]
   
   ff_pad_helper_AVBPrint* = object
     str*: cstring
     len*: cuint
     size*: cuint
     size_max*: cuint
-    reserved_internal_buffer*: array[1, cstring]
+    reserved_internal_buffer*: ptr cstring
 
   AVBPrint* {.bprint, bycopy.} = object # FIXME: 複数ファイルに存在するっぽい
     str*: cstring
     len*: cuint
     size*: cuint
     size_max*: cuint
-    reserved_internal_buffer*: array[1, cstring]
-    reserved_padding*: array[1024 - sizeof(ff_pad_helper_AVBPrint), cstring]
+    reserved_internal_buffer*: ptr cstring
+    reserved_padding*: ptr cstring
   
   tm* {.bprintStruct.} = object
 
@@ -1946,7 +1946,7 @@ type
     AV_CRC_MAX
   
   AVDES* {.des, bycopy.} = object
-    round_keys*: array[3, array[16, uint64]]
+    round_keys*: ptr ptr uint64 # Array[3, Array[16, uint64]]
     triple_des*: cint
 
   AVDOVIDecoderConfigurationRecord* {.dovi_meta.} = object
@@ -2058,8 +2058,8 @@ type
     qoffset*: AVRational
   
   AVFrame* {.frame, bycopy.} = object
-    data*: array[AV_NUM_DATA_POINTERS, ptr uint8]
-    linesize*: array[AV_NUM_DATA_POINTERS, cint]
+    data*: ptr ptr uint8
+    linesize*: ptr cint
     extended_data*: ptr ptr uint8
     width*: cint
     height*: cint
@@ -2081,7 +2081,7 @@ type
     reordered_opaque*: int64
     sample_rate*: cint
     channel_layout*: uint64
-    buf*: array[AV_NUM_DATA_POINTERS, ptr AVBufferRef]
+    buf*: ptr ptr AVBufferRef
     extended_buf*: ptr ptr AVBufferRef
     nb_extended_buf*: cint
     side_data*: ptr ptr AVFrameSideDataType
@@ -2111,7 +2111,7 @@ type
       pkt_pts {.deprecated.}: int64
 
     when defined(FF_API_ERROR_FRAME):
-      error {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint64]
+      error {.deprecated.}: ptr uint64
 
     when defined(FF_API_FRAME_QP):
       qscale_table {.deprecated.}: ptr int8
@@ -2141,16 +2141,16 @@ type
     semimajor_axis_external_ellipse*: uint16
     semiminor_axis_external_ellipse*: uint16
     overlap_process_option*: AVHDRPlusOverlapProcessOption
-    maxscl*: array[3, AVRational]
+    maxscl*: ptr AVRational
     average_maxrgb*: AVRational
     num_distribution_maxrgb_percentiles*: uint8
-    distribution_maxrgb*: array[15, AVHDRPlusPercentile]
+    distribution_maxrgb*: ptr AVHDRPlusPercentile
     fraction_bright_pixels*: AVRational
     tone_mapping_flag*: uint8
     knee_point_x*: AVRational
     knee_point_y*: AVRational
     num_bezier_curve_anchors*: uint8
-    bezier_curve_anchors*: array[15, AVRational]
+    bezier_curve_anchors*: ptr AVRational
     color_saturation_mapping_flag*: uint8
     color_saturation_weight*: AVRational
   
@@ -2158,16 +2158,16 @@ type
     itu_t_t35_country_code*: uint8
     application_version*: uint8
     num_windows*: uint8
-    params*: array[3, AVHDRPlusColorTransformParams]
+    params*: ptr AVHDRPlusColorTransformParams
     targeted_system_display_maximum_luminance*: AVRational
     targeted_system_display_actual_peak_luminance_flag*: uint8
     num_rows_targeted_system_display_actual_peak_luminance*: uint8
     num_cols_targeted_system_display_actual_peak_luminance*: uint8
-    targeted_system_display_actual_peak_luminance*: array[25, array[25, AVRational]]
+    targeted_system_display_actual_peak_luminance*: ptr ptr AVRational # Array[25, Array[25, AVRational]]
     mastering_display_actual_peak_luminance_flag*: uint8
     num_rows_mastering_display_actual_peak_luminance*: uint8
     num_cols_mastering_display_actual_peak_luminance*: uint8
-    mastering_display_actual_peak_luminance*: array[25, array[25, AVRational]]
+    mastering_display_actual_peak_luminance*: ptr ptr AVRational # Array[25, Array[25, AVRational]]
   
   AVHMACType* {.hmacEnum, size: sizeof(cint).} = enum
     AV_HMAC_MD5
@@ -2201,13 +2201,13 @@ type
   AVDRMLayerDescriptor* {.hwcontext_drm.} = object
     format*: cuint
     nb_planes*: cint
-    planes*: array[AV_DRM_MAX_PLANES, AVDRMPlaneDescriptor]
+    planes*: ptr AVDRMPlaneDescriptor
   
   AVDRMFrameDescriptor* {.hwcontext_drm.} = object
     nb_objects*: cint
-    objects*: array[AV_DRM_MAX_PLANES, AVDRMObjectDescriptor]
+    objects*: ptr AVDRMObjectDescriptor
     nb_layers*: cint
-    layers*: array[AV_DRM_MAX_PLANES, AVDRMLayerDescriptor]
+    layers*: ptr AVDRMLayerDescriptor
   
   AVDRMDeviceContext* {.hwcontext_drm.} = object
     fd*: cint
@@ -2222,7 +2222,7 @@ type
 
   AVOpenCLFrameDescriptor* {.hwcontext_opencl.} = object
     nb_planes*: cint
-    planes*: array[AV_NUM_DATA_POINTERS, cl_mem]
+    planes*: ptr cl_mem
   
   AVOpenCLDeviceContext* {.hwcontext_opencl.} = object
     device_id*: cl_device_id
@@ -2270,17 +2270,17 @@ type
     tiling*: VkImageTiling
     usage*: VkImageUsageFlagBits
     create_pnext*: pointer
-    alloc_pnext*: array[AV_NUM_DATA_POINTERS, pointer]
+    alloc_pnext*: ptr pointer
   
   AVVkFrame* {.hwcontext_vulkan.} = object
-    img*: array[AV_NUM_DATA_POINTERS, VkImage]
+    img*: ptr VkImage
     tiling*: VkImageTiling
-    mem*: array[AV_NUM_DATA_POINTERS, VkDeviceMemory]
-    size*: array[AV_NUM_DATA_POINTERS, csize_t]
+    mem*: ptr VkDeviceMemory
+    size*: ptr csize_t
     flags*: VkMemoryPropertyFlagBits
-    access*: array[AV_NUM_DATA_POINTERS, VkAccessFlagBits]
-    layout*: array[AV_NUM_DATA_POINTERS, VkImageLayout]
-    sem*: array[AV_NUM_DATA_POINTERS, VkSemaphore]
+    access*: ptr VkAccessFlagBits
+    layout*: ptr VkImageLayout
+    sem*: ptr VkSemaphore
     internal*: ptr AVVkFrameInternal
   
   AVHWDeviceType* {.hwcontextEnum, size: sizeof(cint).} = enum
@@ -2346,29 +2346,29 @@ type
   
   av_alias64* {.intreadwrite, union.} = object
     u64*: uint64
-    u32*: array[2, uint32]
-    u16*: array[4, uint16]
-    u8*: array[8, uint8]
+    u32*: ptr uint32uint32
+    u16*: ptr uint16
+    u8*: ptr uint8
     f64*: cdouble
-    f32*: array[2, cfloat]
+    f32*: ptr cfloat
   
   av_alias32* {.intreadwrite, union.} = object
     u32*: uint32
-    u16*: array[2, uint16]
-    u8*: array[4, uint8]
+    u16*: ptr uint16
+    u8*: ptr uint8
     f32*: cfloat
   
   av_alias16* {.intreadwrite, union.} = object
     u16*: uint16
-    u8*: array[2, uint8]
+    u8*: ptr uint8
   
   AVLFG* {.lfg, bycopy.} = object
-    state*: array[64, cuint]
+    state*: ptr cuint
     index*: cint
   
   AVMasteringDisplayMetadata* {.mastering_display_metadata, bycopy.} = object
-    display_primaries*: array[3, array[2, AVRational]]
-    white_point*: array[2, AVRational]
+    display_primaries*: ptr ptr AVRational # Array[3, Array[2, AVRational]]
+    white_point*: ptr AVRational
     min_luminance*: AVRational
     max_luminance*: AVRational
     has_primaries*: cint
@@ -2498,7 +2498,7 @@ type
     log2_chroma_w*: uint8
     log2_chroma_h*: uint8
     flags*: uint64
-    comp*: array[4, AVComponentDescriptor]
+    comp*: ptr AVComponentDescriptor
     alias*: cstring
   
   av_pixelutils_sad_fn* {.pixelutils.} = proc (src1: ptr uint8, stride1: ByteAddress, src2: ptr uint8, stride2: ByteAddress): cint {.cdecl.}
@@ -2789,7 +2789,7 @@ type
     den*: cint
   
   AVRC4* {.rc4, bycopy.} = object
-    state*: array[256, uint8]
+    state*: ptr uint8
     x*, y*: cint
   
   AVReplayGain* {.replaygain, bycopy.} = object
@@ -2910,7 +2910,7 @@ type
     block_size*: csize_t
     `type`*: AVVideoEncParamsType
     qp*: int32
-    delta_qp*: array[4, array[2, int32]]
+    delta_qp*: ptr ptr int32 # Array[4, Array[2, int32]]
   
   AVVideoBlockParams* {.video_enc_params.} = object
     src_x*, src_y*: cint

@@ -11,7 +11,7 @@ var av_tree_node_size*: cint
 
 proc av_tree_node_alloc* (): ptr AVTreeNode
 proc av_tree_find* (root: ptr AVTreeNode
-, key: pointer, cmp: proc (key, b: pointer): cint, next: array[2, pointer]): pointer
+, key: pointer, cmp: proc (key, b: pointer): cint, next: ptr pointer): pointer
 proc av_tree_insert* (rootp: ptr ptr AVTreeNode, key: pointer, cmp: proc (key, b: pointer): cint, next: ptr ptr AVTreeNode): pointer
 proc av_tree_destroy* (t: ptr AVTreeNode)
 proc av_tree_enumerate* (t: ptr AVTreeNode, opaque: pointer, cmp: proc (opaque, elem: pointer), enu: proc (opaque, elem: pointer))

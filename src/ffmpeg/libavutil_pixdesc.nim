@@ -45,10 +45,10 @@ proc av_chroma_location_from_name* (name: cstring): cint
 proc av_get_pix_fmt* (name: cstring): AVPixelFormat
 proc av_get_pix_fmt_name* (pix_fmt: AVPixelFormat): cstring
 proc av_get_pix_fmt_string* (buf: cstring, buf_size: cint, pix_fmt: AVPixelFormat): cstring
-proc av_read_image_line2* (dst: pointer, data: array[4, ptr uint8], linesize: array[4, cint], desc: ptr AVPixFmtDescriptor, x, y, c, w, read_pal_component, dst_element_size: cint)
-proc av_read_image_line* (dst: ptr uint16, data: array[4, ptr uint8], linesize: array[4, cint], desc: ptr AVPixFmtDescriptor, x, y, c, w, read_pal_componnent: cint)
-proc av_write_image_line2* (src: pointer, data: array[4, ptr uint8], linesize: array[4, cint], desc: ptr AVPixFmtDescriptor, x, y, c, w: cint)
-proc av_write_image_line* (src: ptr uint16, data: array[4, ptr uint8], linesize: array[4, cint], desc: ptr AVPixFmtDescriptor, x, y, c, w: cint)
+proc av_read_image_line2* (dst: pointer, data: ptr ptr uint8, linesize: ptr cint, desc: ptr AVPixFmtDescriptor, x, y, c, w, read_pal_component, dst_element_size: cint)
+proc av_read_image_line* (dst: ptr uint16, data: ptr ptr uint8, linesize: ptr cint, desc: ptr AVPixFmtDescriptor, x, y, c, w, read_pal_componnent: cint)
+proc av_write_image_line2* (src: pointer, data: ptr ptr uint8, linesize: ptr cint, desc: ptr AVPixFmtDescriptor, x, y, c, w: cint)
+proc av_write_image_line* (src: ptr uint16, data: ptr ptr uint8, linesize: ptr cint, desc: ptr AVPixFmtDescriptor, x, y, c, w: cint)
 proc av_pix_fmt_swap_endianness* (pix_fmt: AVPixelFormat): AVPixelFormat
 proc av_get_pix_fmt_loss* (dst_pix_fmt, src_pix_fmt: AVPixelFormat, has_alpha: cint): cint
 proc av_find_best_pix_fmt_of_2* (dst_pix_fmt1, dst_pix_fmt2, srcc_pix_fmt: AVPixelFormat, has_alpha: cint, loss_ptr: ptr cint): AVPixelFormat

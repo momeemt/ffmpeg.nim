@@ -276,7 +276,7 @@ proc avcodec_close* (avctx: ptr AVCodecContext): cint
 proc avsubtitle_free* (sub: ptr AVSubtitle)
 proc avcodec_default_get_buffer2* (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint
 proc avcodec_align_dimensions* (s: ptr AVCodecContext, width: ptr cint, height: ptr cint)
-proc avcodec_align_dimensions2* (s: ptr AVCodecContext, width: ptr cint, height: ptr cint, linesize_align: array[AV_NUM_DATA_POINTERS, cint])
+proc avcodec_align_dimensions2* (s: ptr AVCodecContext, width: ptr cint, height: ptr cint, linesize_align: ptr cint)
 proc avcodec_enum_to_chroma_pos* (xpos: ptr cint, ypos: ptr cint, pos: AVChromaLocation): cint
 proc avcodec_chroma_pos_to_enum* (xpos: cint, ypos: cint): AVChromaLocation
 proc avcodec_decode_audio4* (avctx: ptr AVCodecContext, frame: ptr AVFrame, got_frame_ptr: ptr cint, avpkt: ptr AVPacket): cint {.deprecated.}
@@ -341,8 +341,8 @@ when defined(FF_API_CODEC_GET_SET):
 when defined(FF_API_AVPICTURE):
   type
     AVPicture* {.deprecated.} = object
-      data {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint8]
-      linesize {.deprecated.}: array[AV_NUM_DATA_POINTERS, cint]
+      data {.deprecated.}: ptr uint8
+      linesize {.deprecated.}: ptr cint
   
   proc avpicture_alloc* (picture: ptr AVPicture, pix_fmt: AVPixelFormat, width: cint, height: cint): cint {.deprecated.}
   proc avpicture_free* (picture: ptr AVPicture) {.deprecated.}

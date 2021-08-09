@@ -36,6 +36,6 @@ else:
 proc postproc_version* (): cuint
 proc postproc_configuration* (): cstring
 proc postproc_license* (): cstring
-proc pp_postprocess* (src: array[3, ptr uint8], srcStride: array[3, cint], dst: array[3, ptr uint8], dstStride: array[3, cint], horizontalSize, verticalSize: cint, QP_store: ptr int8, QP_stride: cint, mode: ptr pp_mode, ppContext: ptr pp_context, pict_type: cint)
+proc pp_postprocess* (src: ptr ptr uint8, srcStride: ptr cint, dst: ptr ptr uint8, dstStride: ptr cint, horizontalSize, verticalSize: cint, QP_store: ptr int8, QP_stride: cint, mode: ptr pp_mode, ppContext: ptr pp_context, pict_type: cint)
 proc pp_get_mode_by_name_and_quality* (width, height, flags: cint): ptr pp_context
 proc pp_free_context* (ppContext: ptr pp_context)
