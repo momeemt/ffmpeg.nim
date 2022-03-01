@@ -1,4 +1,4 @@
-from undefined_symbol import ID3D11VideoDecoder, ID3D11VideoContext, D3D11_VIDEO_DECODER_CONFIG, ID3D11VideoDecoderOutputView, HANDLE
+from ../undefined_symbol import ID3D11VideoDecoder, ID3D11VideoContext, D3D11_VIDEO_DECODER_CONFIG, ID3D11VideoDecoderOutputView, HANDLE
 
 {.pragma: d3d11va, importc, header:"<libavcodec/d3d11va.h>".}
 
@@ -23,10 +23,10 @@ type
     context_mutex: HANDLE
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
+  {.push importc, dynlib: "avcodec(|-58|-59|-60|-61|-62).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
+  {.push importc, dynlib: "libavcodec(|-58|-59|-60|-61|-62).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
+  {.push importc, dynlib: "libavcodec.so(|-58|-59|-60|-61|-62)", cdecl.}
 
 proc av_d3d11va_alloc_context* (): AVD3D11VAContext
