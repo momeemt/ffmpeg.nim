@@ -1,4 +1,4 @@
-import libavutil_dict
+import libavutil/dict
 
 block:
   {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
