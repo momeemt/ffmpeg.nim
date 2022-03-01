@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import FFTContext, FFTComplex, FFTSample, RDFTContext, RDFTransformType, DCTContext, DCTTransformType
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
+  {.push importc, dynlib: "avcodec(|-58|-59|-60|-61|-62).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
+  {.push importc, dynlib: "libavcodec(|-58|-59|-60|-61|-62).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
+  {.push importc, dynlib: "libavcodec.so(|-58|-59|-60|-61|-62)", cdecl.}
 
 proc av_fft_init* (nbits, inverse: cint): ptr FFTContext
 proc av_fft_permute* (s: ptr FFTContext, z: ptr FFTComplex)
