@@ -540,13 +540,10 @@ type
     DCT_III
     DCT_I
     DST_I
-  
-  AVBSFInternal* {.bsf.} = object
 
   AVBSFContext* {.bsf.} = object
     av_class*: ptr AVClass
     filter*: ptr AVBitStreamFilter
-    internal*: ptr AVBSFInternal
     priv_data*: pointer
     par_in*: ptr AVCodecParameters
     par_out*: ptr AVCodecParameters
