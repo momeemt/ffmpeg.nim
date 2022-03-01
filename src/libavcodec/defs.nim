@@ -51,4 +51,4 @@ const
   AV_INPUT_BUFFER_PADDING_SIZE* = 64
 
 proc av_cpb_properties_alloc* (size: ptr csize_t): ptr AVCPBProperties
-proc av_xiphlacing* (s: ptr cuchar, v: cuint): cuint
+proc av_xiphlacing* (s: ptr uint8, v: cuint): cuint
