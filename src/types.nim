@@ -1122,30 +1122,29 @@ type
     `type`*: AVMediaType
     id*: AVCodecID
     capabilities*: cint
+    max_lowres*: uint8
     supported_framerates*: ptr AVRational
     pix_fmts*: ptr AVPixelFormat
     supported_samplerates*: ptr cint
     sample_fmts*: ptr AVSampleFormat
     channel_layouts*: ptr uint64
-    max_lowres*: uint8
     priv_class*: ptr AVClass
     profiles*: ptr AVProfile
     wrapper_name*: cstring
+    caps_internal*: cint
     priv_data_size*: cint
-    next*: ptr AVCodec
     update_thread_context*: proc (dst, src: ptr AVCodecContext): cint {.cdecl.}
+    update_thread_context_for_user*: proc (dst, src: ptr AVCodecContext): cint {.cdecl.}
     defaults*: ptr AVCodecDefault
     init_static_data*: proc (codec: ptr AVCodec) {.cdecl.}
     init*: proc (a1: ptr AVCodecContext): cint {.cdecl.}
     encode_sub*: proc (a1: ptr AVCodecContext, buf: ptr uint8, buf_size: cint, sub: ptr AVSubtitle): cint {.cdecl.}
     encode2*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket, frame: ptr AVFrame, got_packet_ptr: ptr cint): cint {.cdecl.}
-    decode*: proc (a1: ptr AVCodecContext, outdata: pointer, outdata_size: ptr cint, acpkt: ptr AVPacket): cint {.cdecl.}
+    decode*: proc (avctx: ptr AVCodecContext, outdata: pointer, got_frame_ptr: ptr cint, acpkt: ptr AVPacket): cint {.cdecl.}
     close*: proc (a1: ptr AVCodecContext): cint {.cdecl.}
-    send_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint {.cdecl.}
     receive_packet*: proc (avctx: ptr AVCodecContext, avpkt: ptr AVPacket): cint {.cdecl.}
     receive_frame*: proc (avctx: ptr AVCodecContext, frame: ptr AVFrame): cint {.cdecl.}
     flush*: proc (a1: ptr AVCodecContext) {.cdecl.}
-    caps_internal*: cint
     bsfs*: cstring
     hw_configs*: ptr ptr AVCodecHWConfigInternal
     codec_tags*: ptr cuint
