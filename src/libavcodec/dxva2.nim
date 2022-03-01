@@ -1,4 +1,4 @@
-from undefined_symbol import IDirectXVideoDecoder, DXVA2_ConfigPictureDecode, LPDIRECT3DSURFACE9
+from ../undefined_symbol import IDirectXVideoDecoder, DXVA2_ConfigPictureDecode, LPDIRECT3DSURFACE9
 
 #if !defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0602
 #undef _WIN32_WINNT
