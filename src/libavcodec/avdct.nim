@@ -1,4 +1,4 @@
-import ffmpeg_types
+from ../types import AVDCT, AVClass
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-58|-59|-60|-61|-62).dll", cdecl.}
