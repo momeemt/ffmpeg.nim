@@ -1,4 +1,5 @@
 import libavutil/dict
+from libavcodec/version import FF_API_INIT_PACKET
 
 block:
   {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
@@ -1256,11 +1257,13 @@ type
     AV_PKT_DATA_PRFT
     AV_PKT_DATA_ICC_PROFILE
     AV_PKT_DATA_DOVI_CONF
+    AV_PKT_DATA_S12M_TIMECODE
+    AV_PKT_DATA_DYNAMIC_HDR10_PLUS
     AV_PKT_DATA_NB
   
   AVPacketSideData* {.packet.} = object
     data*: ptr uint8
-    size*: cint
+    size*: csize_t
     `type`*: AVPacketSideDataType
   
   AVPacket* {.packet.} = object
@@ -1275,9 +1278,9 @@ type
     side_data_elems*: cint
     duration*: int64
     pos*: int64
-
-    when defined(FF_API_CONVERGENCE_DURATION):
-      convergence_duration {.deprecated.} : int64
+    opaque*: pointer
+    opaque_ref*: AVBufferRef
+    time_base*: AVRational
   
   AVSideDataParamChangeFlags* {.packetEnum.} = enum
     AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT  = 0x0001
@@ -2971,3 +2974,8 @@ type
     chrV*: ptr SwsVector
   
   SwsContext* {.swscaleStruct.} = object
+
+# when FF_API_INIT_PACKET:
+#   type AVPacketList* {.packet, acyclic.} = object
+#     pkt*: AVPacket
+#     next*: ptr AVPacketList
