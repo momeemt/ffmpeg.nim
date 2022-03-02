@@ -1904,7 +1904,7 @@ type
   AVBufferRef* {.buffer, bycopy.} = object
     buffer*: ptr AVBuffer
     data*: ptr uint8
-    size*: cint
+    size*: csize_t
   
   AVBufferPool* {.buffer.} = object
 
