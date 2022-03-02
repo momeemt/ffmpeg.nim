@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVCRC, AVCRCId
 
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 proc av_crc_init* (ctx: ptr AVCRC, le, bits: cint, poly: uint32, ctx_size: cint): cint
 proc av_crc_get_table* (crc_id: AVCRCId): ptr AVCRC
