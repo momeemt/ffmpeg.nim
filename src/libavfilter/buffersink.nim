@@ -1,9 +1,8 @@
-import ffmpeg_types
+from ../types import AVFilter, AVFilterContext, AVFrame, AVMediaType, AVRational, AVBuffer, AVBufferRef, AVPixelFormat, AVSampleFormat
+from version import FF_API_BUFFERSINK_ALLOC
 
-when defined(FF_API_NEXT):
+when FF_API_BUFFERSINK_ALLOC:
   {.pragma: buffersink, importc, header: "<libavfilter/buffersink.h>".}
-  from libavutil_pixfmt import AVPixelFormat
-  from libavutil_samplefmt import AVSampleFormat
 
   type
     AVBufferSinkParams* {.buffersink.} = object
@@ -17,11 +16,11 @@ when defined(FF_API_NEXT):
       sample_rates*: ptr cint
 
 when defined(windows):
-  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
+  {.push importc, dynlib: "avfilter(|-7|-8|-9|-10|-11).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavfilter(|.5|.6|.7|.8).dylib", cdecl.}
+  {.push importc, dynlib: "libavfilter(|.7|.8|.9|.10|.11).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
+  {.push importc, dynlib: "avfilter.so(|.7|.8|.9|.10|.11)", cdecl.}
 
 const
   AV_BUFFERSINK_FLAG_PEEK* = 1
@@ -42,7 +41,3 @@ proc av_buffersink_get_sample_rate* (ctx: ptr AVFilterContext): cint
 proc av_buffersink_get_hw_frames_ctx* (ctx: ptr AVFilterContext): AVBufferRef
 proc av_buffersink_get_frame* (ctx: ptr AVFilterContext, frame: ptr AVFrame): cint
 proc av_buffersink_get_samples* (ctx: ptr AVFilterContext, frame: ptr AVFrame, nb_samples: cint): cint
-
-when defined(FF_API_NEXT):
-  proc av_buffersink_params_alloc* (): AVBufferSinkParams {.deprecated.}
-  proc av_abuffersink_params_alloc* (): AVABufferSinkParams {.deprecated.}
