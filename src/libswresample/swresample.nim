@@ -1,14 +1,14 @@
-import ffmpeg_types
+from ../types import AVClass, AVSampleFormat, AVMatrixEncoding, AVFrame, SwrContext
 
 const
   SWR_FLAG_RESAMPLE* = 1
 
 when defined(windows):
-  {.push importc, dynlib: "swresample(|-2|-3|-4).dll", cdecl.}
+  {.push importc, dynlib: "swresample(|-3|-4|-5|-6|-7).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libswresample(|.2|.3|.4).dylib", cdecl.}
+  {.push importc, dynlib: "libswresample(|.3|.4|.5|.6|.7).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libswresample.so(|.2|.3|.4)", cdecl.}
+  {.push importc, dynlib: "libswresample.so(|.3|.4|.5|.6|.7)", cdecl.}
 
 proc swr_get_class* (): ptr AVClass
 proc swr_alloc* (): ptr SwrContext
