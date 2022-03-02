@@ -2881,6 +2881,11 @@ type
     AV_TX_INT32_FFT = 4
     AV_TX_INT32_MDCT = 5
   
+  AVTXFlags* {.txEnum.} = enum
+    AV_TX_INPLACE = 1 shl 0
+    AV_TX_UNALIGNED = 1 shl 1
+    AV_TX_FULL_IMDCT = 1 shl 2
+  
   av_tx_fn* {.tx.} = proc (s: ptr AVTXContext, `out`, `in`: pointer, stride: ByteAddress) {.cdecl.}
 
   AVVideoEncParamsType* {.video_enc_paramsEnum.} = enum
