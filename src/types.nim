@@ -2410,11 +2410,11 @@ type
     version*: cint
     log_level_offset_offset*: cint
     parent_log_context_offset*: cint
-    child_next*: proc (obj, prev: pointer): pointer {.cdecl.}
-    child_class_next*: proc (prev: ptr AVClass): ptr AVClass {.cdecl.}
     category*: AVClassCategory
     get_category*: proc (ctx: pointer): AVClassCategory {.cdecl.}
     query_ranges*: proc (a1: ptr ptr AVOptionRanges, obj: pointer, key: cstring, flags: cint): cint {.cdecl.}
+    child_next*: proc (obj, prev: pointer): ptr pointer
+    child_class_iterate*: proc (iter: ptr pointer): ptr AVClass
 
   AVOptionType* {.optEnum, size: sizeof(cint).} = enum
     AV_OPT_TYPE_FLAGS
