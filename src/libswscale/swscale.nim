@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVPixelFormat, SwsContext, SwsFilter, SwsVector, AVClass, AVFrame
 
 when defined(windows):
-  {.push importc, dynlib: "swscale(|-4|-5|-6).dll", cdecl.}
+  {.push importc, dynlib: "swscale(|-5|-6|-7|-8).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libswscale(|.4|.5|.6).dylib", cdecl.}
+  {.push importc, dynlib: "libswscale(|.5|.6|.7|.8).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libswscale.so(|.4|.5|.6)", cdecl.}
+  {.push importc, dynlib: "libswscale.so(|.5|.6|.7|.8)", cdecl.}
 
 const
   SWS_FAST_BILINEAR* = 1
@@ -49,6 +49,12 @@ proc sws_init_context* (sws_context: ptr SwsContext, srcFilter, dstFilter: ptr S
 proc sws_freeContext* (swsContext: ptr SwsContext)
 proc sws_getContext* (srcW, srcH: cint, srcFormat: AVPixelFormat, dstW, dstH: cint, dstFormat: AVPixelFormat, flags: cint, srcFilter, dstFilter: ptr SwsFilter, param: ptr cdouble): ptr SwsContext
 proc sws_scale* (c: ptr SwsContext, srcSlice: ptr ptr uint8, srcStride: ptr cint, srcSliceY, srcSliceH: cint, dst: ptr ptr uint8, dstStride: ptr cint): cint
+proc sws_scale_frame* (c: ptr SwsContext, dst, src: ptr AVFrame): cint
+proc sws_frame_start* (c: ptr SwsContext, dst, src: ptr AVFrame): cint
+proc sws_frame_end* (c: ptr SwsContext)
+proc sws_send_slice* (c: ptr SwsContext, slice_start, slice_height: cuint): cint
+proc sws_receive_slice* (c: ptr SwsContext, slice_start, slice_height: cuint): cint
+proc sws_receive_slice_alignment* (c: ptr SwsContext): cuint
 proc sws_setColorspaceDetails* (c: ptr SwsContext, inv_table: ptr cint, srcRange: cint, table: ptr cint, dstRange, brightness, contrast, saturation: cint): cint
 proc sws_getColorspaceDetails* (c: ptr SwsContext, inv_table: ptr ptr cint, srcRange: ptr cint, table: ptr ptr cint, dstRange, brightness, contrast, saturation: ptr cint): cint
 proc sws_allocVec* (length: cint): ptr SwsVector
@@ -62,13 +68,3 @@ proc sws_getCachedContext* (context: ptr SwsContext, srcW, srcH: cint, srcFormat
 proc sws_convertPalette8ToPacked32* (src, dst: ptr uint8, num_pixels: cint, palette: ptr uint8)
 proc sws_convertPalette8ToPacked24* (src, dst: ptr uint8, num_pixels: cint, palette: ptr uint8)
 proc sws_get_class* (): ptr AVClass
-
-when defined(FF_API_SWS_VECTOR):
-  proc sws_getConstVec* (c: cdouble, length: cint): ptr SwsVector {.deprecated.}
-  proc sws_getIdentityVec* (): ptr SwsVector {.deprecated.}
-  proc sws_convVec* (a, b: ptr SwsVector) {.deprecated.}
-  proc sws_addVec* (a, b: ptr SwsVector) {.deprecated.}
-  proc sws_subVec* (a, b: ptr SwsVector) {.deprecated.}
-  proc sws_shiftVec* (a: ptr SwsVector, shift: cint) {.deprecated.}
-  proc sws_cloneVec* (a: ptr SwsVector): ptr SwsVector {.deprecated.}
-  proc sws_printVec2* (a: ptr SwsVector, log_ctx: ptr AVClass, log_level: cint) {.deprecated.}
