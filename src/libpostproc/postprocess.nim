@@ -1,4 +1,4 @@
-import ffmpeg_types
+from ../types import pp_mode, pp_context
 
 when defined(windows):
   {.push importc, dynlib: "postproc(|-53|-54|-55|-56|-57).dll", cdecl.}
@@ -22,16 +22,7 @@ const
   PP_FORMAT_440* = 0x00000010 or PP_FORMAT
   PP_PICT_TYPE_QP2* = 0x00000010 
 
-when defined(LIBPOSTPROC_VERSION_INT):
-  when LIBPOSTPROC_VERSION_INT < (52 shl 16):
-    type
-      pp_context* = pp_context_t
-      pp_mode* =  pp_mode_t
-    var pp_help*: cstring
-  else:
-    var pp_help*: cstring
-else:
-  var pp_help*: cstring
+var pp_help*: cstring
 
 proc postproc_version* (): cuint
 proc postproc_configuration* (): cstring
