@@ -1,9 +1,9 @@
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 {.pragma: d3d11va, importc, header: "<d3d11.h>".}
 {.pragma: hwcontext_d3d11va, importc, header: "<libavutil/hwcontext/d3d11va.h>".}
@@ -32,3 +32,4 @@ type
     texture*: ptr ID3D11Texture2D
     BindFlags*: cuint # UINT
     MiscFlags*: cuint # UINT
+    texture_infos*: AVD3D11FrameDescriptor
