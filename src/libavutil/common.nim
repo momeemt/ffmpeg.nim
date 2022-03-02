@@ -1,17 +1,12 @@
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 #if defined(__cplusplus) && !defined(__STDC_CONSTANT_MACROS) && !defined(UINT64_C)
 #error missing -D__STDC_CONSTANT_MACROS / #define __STDC_CONSTANT_MACROS
-
-when defined(AV_HAVE_BIGENDIAN):
-  template AV_NE* (be, le: untyped): untyped = be
-else:
-  template AV_NE* (be, le: untyped): untyped = le
 
 template RSHIFT* (a, b: untyped): untyped =
   if a > 0:
@@ -60,33 +55,17 @@ template FFNABS* (a: untyped): untyped =
   else:
     -a
 
-template FFDIFFSIGN*(x, y: untyped): untyped =
-  if x > y: 1
-  elif x < y: -1
-  else: 0
+template FFABSU* (a: untyped): untyped =
+  if a <= 0:
+    -(cast[cuint](a))
+  else:
+    cast[cuint](a)
 
-template FFMAX*(a, b: untyped): untyped =
-  if a > b: a
-  else: b
-
-template FFMAX3*(a, b, c: untyped): untyped =
-  FFMAX(FFMAX(a, b), c)
-
-template FFMIN*(a, b: untyped): untyped =
-  if a > b: b
-  else: a
-
-template FFMIN3*(a, b, c: untyped): untyped =
-  FFMIN(FFMIN(a, b), c)
-
-template FFSWAP*(_: typedesc, a, b: untyped) =
-  swap a, b
-
-template FE_ARRAY_ELEMS*[T](a: ptr T): csize_t =
-  (sizeof a) div (sizeof T)
-
-template FE_ARRAY_ELEMS*[T](a: openArray[T]): csize_t =
-  a.len
+template FFABS64U* (a: untyped): untyped =
+  if a <= 0:
+    -(cast[uint64](a))
+  else:
+    cast[uint64](a)
 
 when not defined(av_log2):
   proc av_log2* (v: cuint): cint
@@ -236,12 +215,6 @@ proc av_popcount64_c* (x: uint64): cint {.inline.} =
 proc av_parity_c* (v: uint32): cint {.inline.} =
   result = av_popcount_c(v) and 1
 
-template MKTAG* (a, b, c, d: untyped): untyped =
-  (a.int or (b.int shl 8) or (c.int shl 16) or (d.int shl 24))
-
-template MKBETAG* (a, b, c, d: untyped): untyped =
-  (d.int or (c.int shl 8) or (b.int shl 16) or (a.int shl 24))
-
 template GET_UTF8* (val, GET_BYTE, ERROR: untyped): untyped =
   val = GET_BYTE
   block:
@@ -359,3 +332,26 @@ when not defined(av_popcount64):
 
 when not defined(av_parity):
   proc av_parity* (a: uint32): cint = av_parity_c(a)
+
+# static av_always_inline int64_t av_sat_add64_c(int64_t a, int64_t b) {
+# #if (!defined(__INTEL_COMPILER) && AV_GCC_VERSION_AT_LEAST(5,1)) || AV_HAS_BUILTIN(__builtin_add_overflow)
+#     int64_t tmp;
+#     return !__builtin_add_overflow(a, b, &tmp) ? tmp : (tmp < 0 ? INT64_MAX : INT64_MIN);
+# #else
+#     int64_t s = a+(uint64_t)b;
+#     if ((int64_t)(a^b | ~s^b) >= 0)
+#         return INT64_MAX ^ (b >> 63);
+#     return s;
+# #endif
+
+# #if defined(HAVE_AV_CONFIG_H) && defined(ASSERT_LEVEL) && ASSERT_LEVEL >= 2
+#     if (amin > amax) abort();
+# #endif
+#     return FFMIN(FFMAX(a, amin), amax);
+# }
+
+# #if defined(HAVE_AV_CONFIG_H) && defined(ASSERT_LEVEL) && ASSERT_LEVEL >= 2
+#     if (amin > amax) abort();
+# #endif
+#     return FFMIN(FFMAX(a, amin), amax);
+# }
