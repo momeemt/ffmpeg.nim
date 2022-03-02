@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVPixelFormat, AVPixFmtDescriptor, AVRational, AVColorRange
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 proc av_image_fill_max_pixsteps* (max_pixsteps, max_pixstep_comps: ptr cint, pixdesc: ptr AVPixFmtDescriptor)
 proc av_image_get_linesize* (pix_fmt: AVPixelFormat, width, plane: cint): cint
