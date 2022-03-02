@@ -1,12 +1,12 @@
-import ffmpeg_types
-from libavutil_dict import AVDictionary
+from ../types import AVOption, AVRational, AVClass, AVPixelFormat, AVSampleFormat, AVOptionRanges
+from ../libavutil/dict import AVDictionary
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_OPT_FLAG_ENCODING_PARAM* = 1
@@ -49,7 +49,7 @@ proc av_opt_find* (obj: pointer, name, unit: cstring, opt_flags, search_flags: c
 proc av_opt_find2* (obj: pointer, name, unit: cstring, opt_flags, search_flags: cint, target_obj: ptr pointer): ptr AVOption
 proc av_opt_next* (obj: pointer, prev: ptr AVOption): ptr AVOption
 proc av_opt_child_next* (obj, prev: pointer): pointer
-proc av_opt_child_class_next* (parent, prev: ptr AVClass): ptr AVClass
+proc av_opt_child_class_iterate* (parent: ptr AVClass, iter: ptr pointer): ptr AVClass
 proc av_opt_set* (obj: pointer, name, val: cstring, search_flags: cint): cint
 proc av_opt_set_int* (obj: pointer, name: cstring, val: int64, search_flags: cint): cint
 proc av_opt_set_double* (obj: pointer, name: cstring, val: cdouble, search_flags: cint): cint
