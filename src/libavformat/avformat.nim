@@ -1,12 +1,13 @@
-import ffmpeg_types
-from libavutil_dict import AVDictionary
+from ../types import AVIOContext, AVPacket, AVStream, AVCodecParserContext, AVFormatContext, AVDurationEstimationMethod, AVOutputFormat, AVInputFormat, AVClass, AVCodec, AVStream, AVPacketSideDataType, AVProgram, AVProbeData, AVMediaType, AVFrame, AVCodecID, AVCodecTag, AVRational, AVTimebaseSource, AVIndexEntry
+from ../libavutil/dict import AVDictionary
+from version import FF_API_LAVF_PRIV_OPT
 
 when defined(windows):
-  {.push importc, dynlib: "avformat(|-55|-56|-57|-58).dll", cdecl.}
+  {.push importc, dynlib: "avformat(|-58|-59|-60|-61|-62).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavformat(|.55|.56|.57|.58).dylib", cdecl.}
+  {.push importc, dynlib: "libavformat(|.58|.59|.60|.61|.62).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavformat.so(|.55|.56|.57|.58)", cdecl.}
+  {.push importc, dynlib: "libavformat.so(|.58|.59|.60|.61|.62)", cdecl.}
 
 const
   AVPROBE_SCORE_EXTENSION* = 50
@@ -17,6 +18,7 @@ const
   AVPROBE_PADDING_SIZE* = 32
   AVFMT_NOFILE* = 0x0001
   AVFMT_NEEDNUMBER* = 0x0002
+  AVFMT_EXPERIMENTAL* = 0x0004
   AVFMT_SHOW_IDS* = 0x0008
   AVFMT_GLOBALHEADER* = 0x0040
   AVFMT_NOTIMESTAMPS* = 0x0080
@@ -34,23 +36,23 @@ const
   AVFMT_SEEK_TO_PTS* = 0x4000000
   AVINDEX_KEYFRAME* = 0x0001
   AVINDEX_DISCARD_FRAME* = 0x0002
-  AV_DISPOSITION_DEFAULT* = 0x0001
-  AV_DISPOSITION_DUB* = 0x0002
-  AV_DISPOSITION_ORIGINAL* = 0x0004
-  AV_DISPOSITION_COMMENT* = 0x0008
-  AV_DISPOSITION_LYRICS* = 0x0010
-  AV_DISPOSITION_KARAOKE* = 0x0020
-  AV_DISPOSITION_FORCED* = 0x0040
-  AV_DISPOSITION_HEARING_IMPAIRED* = 0x0080
-  AV_DISPOSITION_VISUAL_IMPAIRED* = 0x0100
-  AV_DISPOSITION_CLEAN_EFFECTS* = 0x0200
-  AV_DISPOSITION_ATTACHED_PIC* = 0x0400
-  AV_DISPOSITION_TIMED_THUMBNAILS* = 0x0800
-  AV_DISPOSITION_CAPTIONS* = 0x10000
-  AV_DISPOSITION_DESCRIPTIONS* = 0x20000
-  AV_DISPOSITION_METADATA* = 0x40000
-  AV_DISPOSITION_DEPENDENT* = 0x80000
-  AV_DISPOSITION_STILL_IMAGE* = 0x100000
+  AV_DISPOSITION_DEFAULT* = 1 shl 0
+  AV_DISPOSITION_DUB* = 1 shl 1
+  AV_DISPOSITION_ORIGINAL* = 1 shl 2
+  AV_DISPOSITION_COMMENT* = 1 shl 3
+  AV_DISPOSITION_LYRICS* = 1 shl 4
+  AV_DISPOSITION_KARAOKE* = 1 shl 5
+  AV_DISPOSITION_FORCED* = 1 shl 6
+  AV_DISPOSITION_HEARING_IMPAIRED* = 1 shl 7
+  AV_DISPOSITION_VISUAL_IMPAIRED* = 1 shl 8
+  AV_DISPOSITION_CLEAN_EFFECTS* = 1 shl 9
+  AV_DISPOSITION_ATTACHED_PIC* = 1 shl 10
+  AV_DISPOSITION_TIMED_THUMBNAILS* = 1 shl 11
+  AV_DISPOSITION_CAPTIONS* = 1 shl 16
+  AV_DISPOSITION_DESCRIPTIONS* = 1 shl 17
+  AV_DISPOSITION_METADATA* = 1 shl 18
+  AV_DISPOSITION_DEPENDENT* = 1 shl 19
+  AV_DISPOSITION_STILL_IMAGE* = 1 shl 20
   AV_PTS_WRAP_IGNORE* = 0
   AV_PTS_WRAP_ADD_OFFSET* = 1
   AV_PTS_WRAP_SUB_OFFSET* = -1
@@ -72,7 +74,6 @@ const
   AVFMT_FLAG_FLUSH_PACKETS* = 0x0200
   AVFMT_FLAG_BITEXACT* = 0x0400
   AVFMT_FLAG_SORT_DTS* = 0x10000
-  AVFMT_FLAG_PRIV_OPT* = 0x20000
   AVFMT_FLAG_FAST_SEEK* = 0x80000
   AVFMT_FLAG_SHORTEST* = 0x100000
   AVFMT_FLAG_AUTO_BSF* = 0x200000
@@ -88,6 +89,7 @@ const
   AVSTREAM_INIT_IN_WRITE_HEADER* = 0
   AVSTREAM_INIT_IN_INIT_OUTPUT* = 1
   AV_FRAME_FILENAME_FLAGS_MULTIPLE* = 1
+  AVSTREAM_EVENT_FLAG_NEW_PACKETS* = 1 shl 1
 
 proc av_get_packet* (s: ptr AVIOContext, pkt: ptr AVPacket, size: cint): cint
 proc av_append_packet* (s: ptr AVIOContext, pkt: ptr AVPacket, size: cint): cint
@@ -105,10 +107,11 @@ proc av_demuxer_iterate* (opaque: ptr pointer): ptr AVInputFormat
 proc avformat_alloc_context* (): ptr AVFormatContext
 proc avformat_free_context* (s: ptr AVFormatContext)
 proc avformat_get_class* (): ptr AVClass
+proc av_stream_get_class* (): ptr AVClass
 proc avformat_new_stream* (s: ptr AVFormatContext, c: ptr AVCodec): ptr AVStream
 proc av_stream_add_side_data* (st: ptr AVStream, `type`: AVPacketSideDataType, data: ptr uint8, size: csize_t): cint
-proc av_stream_new_side_data* (stream: ptr AVStream, `type`: AVPacketSideDataType, size: cint): uint8
-proc av_stream_get_side_data* (stream: ptr AVStream, `type`: AVPacketSideDataType, size: ptr cint): uint8
+proc av_stream_new_side_data* (stream: ptr AVStream, `type`: AVPacketSideDataType, size: csize_t): uint8
+proc av_stream_get_side_data* (stream: ptr AVStream, `type`: AVPacketSideDataType, size: ptr csize_t): uint8
 proc av_new_program* (s: ptr AVFormatContext, id: cint): AVProgram
 proc avformat_alloc_output_context2* (ctx: ptr ptr AVFormatContext, oformat: ptr AVOutputFormat, format_name: cstring, filename: cstring): cint
 proc av_find_input_format* (short_name: cstring): ptr AVInputFormat
@@ -118,7 +121,6 @@ proc av_probe_input_format3* (pd: ptr AVProbeData, is_opened: cint, score_ret: c
 proc av_probe_input_buffer2* (pb: ptr AVIOContext, fmt: ptr ptr AVInputFormat, url: cstring, logctx: pointer, offset, max_probe_size: cuint): cint
 proc av_probe_input_buffer* (pb: ptr AVIOContext, fmt: ptr ptr AVInputFormat, url: cstring, logctx: pointer, offset, max_probe_size: cuint): cint
 proc avformat_open_input* (ps: ptr ptr AVFormatContext, url: cstring, fmt: ptr AVInputFormat, options: ptr ptr AVDictionary): cint
-proc av_demuxer_open* (ic: ptr AVFormatContext): cint {.deprecated.}
 proc avformat_find_stream_info* (ic: ptr AVFormatContext, options: ptr ptr AVDictionary): cint
 proc av_find_program_from_stream* (ic: ptr AVFormatContext, last: ptr AVProgram, s: cint): ptr AVProgram
 proc av_program_add_stream_index* (ac: ptr AVFormatContext, progid: cint, idx: cuint)
@@ -169,48 +171,11 @@ proc avformat_match_stream_specifier* (s: ptr AVFormatContext, st: ptr AVStream,
 proc avformat_queue_attached_pictures* (s: ptr AVFormatContext): cint
 proc avformat_transfer_internal_stream_timing_info* (ofmt: ptr AVOutputFormat, ost, ist: ptr AVStream, copy_tb: AVTimebaseSource): cint
 proc av_stream_get_codec_timebase* (st: ptr AVStream): AVRational
+proc av_disposition_from_string* (disp: cstring): cint
+proc av_disposition_to_string* (siaposition: cint): cstring
+proc avformat_index_get_entries_count* (st: ptr AVStream): cint
+proc avformat_index_get_entry* (st: ptr AVStream, idx: cint): ptr AVIndexEntry
+proc avformat_index_get_entry_from_timestamp* (st: ptr AVStream, wanted_timestamp: int64, flags: cint): ptr AVIndexEntry
 
-#when defined(FF_API_AVIOFORMAT):
-
-when defined(FF_API_FORMAT_GET_SET):
-  proc av_stream_get_r_frame_rate* (s: ptr AVStream): AVRational {.deprecated.}
-  proc av_stream_set_r_frame_rate* (s: ptr AVStream, r: AVRational) {.deprecated.}
-  proc av_format_get_probe_score* (s: ptr AVFormatContext): cint {.deprecated.}
-  proc av_format_get_video_codec* (s: ptr AVFormatContext): ptr AVCodec {.deprecated.}
-  proc av_format_set_video_codec* (s: ptr AVFormatContext, c: ptr AVCodec) {.deprecated.}
-  proc av_format_get_audio_codec* (s: ptr AVFormatContext): ptr AVCodec {.deprecated.}
-  proc av_format_set_audio_codec* (s: ptr AVFormatContext, c: ptr AVCodec) {.deprecated.}
-  proc av_format_get_subtitle_codec* (s: ptr AVFormatContext): ptr AVCodec {.deprecated.}
-  proc av_format_set_subtitle_codec* (s: ptr AVFormatContext, c: ptr AVCodec) {.deprecated.}
-  proc av_format_get_data_codec* (s: ptr AVFormatContext): ptr AVCodec {.deprecated.}
-  proc av_format_set_data_codec* (s: ptr AVFormatContext, c: ptr AVCodec) {.deprecated.}
-  proc av_format_get_metadata_header_padding* (s: ptr AVFormatContext): cint {.deprecated.}
-  proc av_format_set_metadata_header_padding* (s: ptr AVFormatContext, c: cint) {.deprecated.}
-  proc av_format_get_opaque* (s: ptr AVFormatContext): pointer {.deprecated.}
-  proc av_format_set_opaque* (s: ptr AVFormatContext, opaque: pointer) {.deprecated.}
-  proc av_format_get_control_message_cb* (s: ptr AVFormatContext): av_format_control_message {.deprecated.}
-  proc av_format_set_control_message_cb* (s: ptr AVFormatContext, callback: av_format_control_message) {.deprecated.}
-  
-  when defined(FF_API_OLD_OPEN_CALLBACKS):
-    proc av_format_get_open_cb (s: ptr AVFormatContext): AVOpenCallback {.deprecated.}
-    proc av_format_set_open_cb (s: ptr AVFormatContext, callback: AVOpenCallback) {.deprecated.}
-
-  when defined(FF_API_LAVF_FFSERVER):
-    proc av_stream_get_recommended_encoder_configuration* (s: ptr AVStream): cstring {.deprecated.}
-    proc av_stream_set_recommended_encoder_configuration* (s: ptr AVStream, configuration: cstring) {.deprecated.}
-
-when defined(FF_API_LAVF_MP4A_LATM):
-  const AVFMT_FLAG_MP4A_LATM* {.deprecated.} = 0x8000
-
-when defined(FF_API_LAVF_KEEPSIDE_FLAG):
-  const AVFMT_FLAG_KEEP_SIDE_DATA* {.deprecated.} = 0x40000
-
-when defined(FF_API_NEXT):
-  proc av_register_all* () {.deprecated.}
-  proc av_register_input_format* (format: ptr AVInputFormat) {.deprecated.}
-  proc av_register_output_format* (format: ptr AVOutputFormat) {.deprecated.}
-  proc av_iformat_next* (f: ptr AVInputFormat): ptr AVInputFormat {.deprecated.}
-  proc av_oformat_next* (f: ptr AVOutputFormat): ptr AVOutputFormat {.deprecated.}
-
-when defined(FF_API_OLD_BSF):
-  proc av_apply_bitstream_filters* (codec: ptr AVCodecContext, pkt: ptr AVPacket, bsfc: ptr AVBitStreamFilterContext): cint {.deprecated.}
+when FF_API_LAVF_PRIV_OPT:
+  const AVFMT_FLAG_PRIV_OPT* = 0x20000

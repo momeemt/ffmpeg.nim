@@ -1,6 +1,6 @@
 import libavutil/dict
 from libavcodec/version as avcodecVersion import FF_API_INIT_PACKET
-from libavformat/version as avformatVersion import FF_API_AVIOCONTEXT_WRITTEN
+from libavformat/version as avformatVersion import FF_API_AVIOCONTEXT_WRITTEN, FF_API_AVSTREAM_CLASS
 from libavcodec/defs import AVAudioServiceType, AVDiscard
 
 block:
@@ -1521,7 +1521,6 @@ type
     format_probesize*: cint
     codec_whitelist*: cstring
     format_whitelist*: cstring
-    internal*: ptr AVFormatInternal
     io_repositioned*: cint
     video_codec*: ptr AVCodec
     audio_codec*: ptr AVCodec
@@ -1540,12 +1539,7 @@ type
     max_streams*: cint
     skip_estimate_duration_from_pts*: cint
     max_probe_packets*: cint
-
-    when defined(FF_API_FORMAT_FILENAME):
-      filename {.deprecated.}: array[1024, cstring]
-    
-    when defined(FF_API_OLD_OPEN_CALLBACKS):
-      open_cb {.deprecated.}: proc (s: ptr AVFormatContext, p: ptr ptr AVIOContext, url: cstring, flags: cint, int_cb: ptr AVIOInterruptCB, options: ptr ptr AVDictionary): cint {.cdecl.}
+    io_close2*: proc (s: ptr AVFormatContext, pb: ptr AVIOContext): ptr cint
 
   AVCodecTag* {.avformatStruct.} = object
 
@@ -1568,21 +1562,20 @@ type
     priv_class*: AVClass
     next*: ptr AVOutputFormat
     priv_data_size*: cint
+    flags_internal*: cint
     write_header*: proc (a1: ptr AVFormatContext): cint {.cdecl.} 
     write_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
     write_trailer*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
-    interleave_packet*: proc (a1: ptr AVFormatContext, `out`, `in`: ptr AVPacket, flush: cint): cint {.cdecl.}
+    interleave_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket, flush, has_packet: cint): cint {.cdecl.}
     query_codec*: proc (id: AVCodecID, std_compliance: cint): cint {.cdecl.}
     get_output_timestamp*: proc (s: ptr AVFormatContext, stream: cint, dts, wall: ptr int64) {.cdecl.}
     control_message*: proc (s: ptr AVFormatContext, `type`: cint, data: pointer, data_size: csize_t): cint {.cdecl.}
     write_uncoded_frame*: proc (a1: ptr AVFormatContext, stream_index: cint, frame: ptr ptr AVFrame, flags: cuint): cint {.cdecl.}
     get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint 
-    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
-    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
     data_codec*: AVCodecID
     init*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
     deinit*: proc (a1: ptr AVFormatContext) {.cdecl.}
-    check_bitstream*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
+    check_bitstream*: proc (s: ptr AVFormatContext, st: ptr AVStream, pkt: ptr AVPacket): cint {.cdecl.}
   
   AVInputFormat* {.avformat.} = object
     name*: cstring
@@ -1592,9 +1585,9 @@ type
     codec_tag*: ptr ptr AVCodecTag
     priv_class*: ptr AVClass
     mime_type*: cstring
-    next*: ptr AVInputFormat
     raw_codec_id*: cint
     priv_data_size*: cint
+    flags_internal*: cint
     read_probe*: proc (a1: ptr AVProbeData): cint {.cdecl.}
     read_header*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
     read_packet*: proc (a1: ptr AVFormatContext, pkt: ptr AVPacket): cint {.cdecl.}
@@ -1605,8 +1598,6 @@ type
     read_pause*: proc (a1: ptr AVFormatContext): cint {.cdecl.}
     read_seek2*: proc (s: ptr AVFormatContext, stream_index: cint, min_ts, ts, max_ts: int64, flags: cint): cint {.cdecl.}
     get_device_list*: proc (s: ptr AVFormatContext, device_list: ptr AVDeviceInfoList): cint {.cdecl.}
-    create_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
-    free_device_capabilities*: proc (s: ptr AVFormatContext, caps: ptr AVDeviceCapabilitiesQuery): cint {.cdecl.}
   
   AVStreamParseType* {.avformatEnum, size: sizeof(cint).} = enum
     AVSTREAM_PARSE_NONE
@@ -1626,6 +1617,8 @@ type
   AVStreamInternal* {.avformat.} = object
 
   AVStream* {.avformat.} = object
+    when FF_API_AVSTREAM_CLASS:
+      av_class*: ptr AVClass
     index*: cint
     id*: cint
     priv_data*: pointer
@@ -1644,68 +1637,7 @@ type
     event_flags*: cint
     r_frame_rate*: AVRational
     codecpar*: ptr AVCodecParameters
-    info*: ptr AVStreamInfo
     pts_wrap_bits*: cint
-    first_dts*: int64
-    cur_dts*: int64
-    last_IP_pts*: int64
-    last_IP_duration*: cint
-    probe_packets*: cint
-    codec_info_nb_frames*: cint
-    need_parsing*: AVStreamParseType
-    parser*: ptr AVCodecParserContext
-    last_in_packet_buffer*: ptr AVPacketList
-    pts_buffer*: array[MAX_REORDER_DELAY+1, int64]
-    index_entries*: ptr AVIndexEntry
-    nb_index_entries*: cint
-    index_entries_allocated_size*: cuint
-    stream_identifier*: cint
-    program_num*: cint
-    pmt_version*: cint
-    pmt_stream_idx*: cint
-    interleaver_chunk_size*: int64
-    interleaver_chunk_duration*: int64
-    request_probe*: cint
-    skip_to_keyframe*: cint
-    skip_samples*: cint
-    start_skip_samples*: int64
-    first_discard_sample*: int64
-    last_discard_sample*: int64
-    nb_decoded_frames*: cint
-    mux_ts_offset*: int64
-    pts_wrap_reference*: int64
-    pts_wrap_behavior*: cint
-    update_initial_durations_done*: cint
-    pts_reorder_error*: array[MAX_REORDER_DELAY+1, int64]
-    pts_reorder_error_count*: array[MAX_REORDER_DELAY+1, uint8]
-    last_dts_for_order_check*: int64
-    dts_ordered*: uint8
-    dts_misordered*: uint8
-    inject_global_side_data*: cint
-    display_aspect_ratio*: AVRational
-    internal*: ptr AVStreamInternal
-
-    when defined(FF_API_LAVF_AVCTX):
-      codec* {.deprecated.}: ptr AVCodecContext
-    
-    when defined(FF_API_LAVF_FFSERVER):
-      recommended_encoder_configuration* {.deprecated.}: cstring
-  
-  AVStreamInfo* = object
-    last_dts*: int64
-    duration_gcd*: int64
-    duration_count*: cint
-    rfps_duration_sum*: int64
-    duration_error*: ptr array[2, array[MAX_STD_TIMEBASES, cdouble]]
-    codec_info_duration*: int64
-    codec_info_duration_fields*: int64
-    frame_delay_evidence: cint
-    found_decoder: cint
-    last_duration: int64
-    fps_first_dts: int64
-    fps_first_dts_idx: cint
-    fps_last_dts: int64
-    fps_last_dts_idx: cint
   
   AVProgram* {.avformat.} = object
     id*: cint
@@ -1724,7 +1656,7 @@ type
     pts_wrap_behavior*: cint
   
   AVChapter* {.avformat.} = object
-    id*: cint
+    id*: int64
     time_base*: AVRational
     start*: int64
     `end`*: int64
@@ -1740,10 +1672,6 @@ type
     AVFMT_DURATION_FROM_BITRATE
   
   AVFormatInternal* {.avformat.} = object
-
-  AVPacketList* {.avformat.} = object
-    pkt*: AVPacket
-    next*: ptr AVPacketList
   
   AVTimebaseSource* {.avformatEnum.} = enum
     AVFMT_TBCF_AUTO = -1
