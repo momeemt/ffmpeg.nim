@@ -1,9 +1,9 @@
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-58|-59|-60|-61|-62).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavcodec(|-58|-59|-60|-61|-62).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|-58|-59|-60|-61|-62)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 template AV_VERSION_INT* (a, b, c: untyped): untyped =
   (a shl 16) or (b shl 8) or c
