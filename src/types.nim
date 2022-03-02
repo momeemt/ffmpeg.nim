@@ -251,7 +251,6 @@ type
     audio_service_type*: AVAudioServiceType
     request_sample_fmt*: AVSampleFormat
     get_buffer2*: proc (s: ptr AVCodecContext, frame: ptr AVFrame, flags: cint): cint {.cdecl.}
-    refcounted_frames* {.deprecated.}: cint
     qcompress*: cfloat
     qblur*: cfloat
     qmin*: cint
@@ -326,50 +325,13 @@ type
     max_samples*: int64
     export_side_data*: cint
 
-    when defined(FF_API_PRIVATE_OPT):
-      b_frame_strategy* {.deprecated.}: cint
-      mpeg_quant* {.deprecated.}: cint
-      prediction_method* {.deprecated.}: cint
-      pre_me* {.deprecated.}: cint
-      scenechange_threshold* {.deprecated.}: cint
-      noise_reduction* {.deprecated.}: cint
-      me_penalty_compensation* {.deprecated.}: cint
-      brd_scale* {.deprecated.}: cint
-      chromaoffset* {.deprecated.}: cint
-      b_sensitivity* {.deprecated.}: cint
-      coder_type* {.deprecated.}: cint
-      context_model* {.deprecated.}: cint
-      frame_skip_threshold* {.deprecated.}: cint
-      frame_skip_factor* {.deprecated.}: cint
-      frame_skip_exp* {.deprecated.}: cint
-      frame_skip_cmp* {.deprecated.}: cint
-      min_prediction_order* {.deprecated.}: cint
-      max_prediction_order* {.deprecated.}: cint
-      timecode_frame_start* {.deprecated.}: clonglong
-      rtp_payload_size* {.deprecated.}: cint
-
     when defined(FF_API_RTP_CALLBACK):
       rtp_callback* {.deprecated.}: proc (avctx: ptr AVCodecContext, data: pointer, size: cint, mb_nb: cint) {.cdecl.}
-
-    when defined(FF_API_STAT_BITS):
-      mv_bits* {.deprecated.}: cint
-      header_bits* {.deprecated.}: cint
-      i_tex_bits* {.deprecated.}: cint
-      p_text_bits* {.deprecated.}: cint
-      i_count* {.deprecated.}: cint
-      p_count* {.deprecated.}: cint
-      skip_count* {.deprecated.}: cint
-      misc_bits* {.deprecated.}: cint
-      frame_bits* {.deprecated.}: cint
 
     # if: FF_API_DEBUG_MV & else
     debug_mv*: cint
 
-    # if: FF_API_LOWRES & else
     lowres*: cint
-
-    when defined(FF_API_CODED_FRAME):
-      coded_frame* {.deprecated.}: ptr AVFrame
 
     when defined(FF_API_VBV_DELAY):
       vbv_delay* {.deprecated.}: uint64
