@@ -2233,8 +2233,11 @@ type
   
   AVVkFrameInternal* {.hwcontext_vulkanStruct.} = object
 
+  PFN_vkGetInstanceProcAddr* {.hwcontext_vulkan.} = object
+
   AVVulkanDeviceContext* {.hwcontext_vulkan.} = object
     alloc*: ptr VkAllocationCallbacks
+    get_proc_addr*: PFN_vkGetInstanceProcAddr
     inst*: VkInstance
     phys_dev*: VkPhysicalDevice
     act_dev*: VkDevice
@@ -2244,17 +2247,26 @@ type
     nb_tx_queues*: cuint
     queue_family_comp_index*: cuint
     nb_comp_queues*: cuint
+    queue_family_encode_index*: cint
+    nb_encode_queues*: cint
+    queue_family_decode_index*: cint
+    nb_decode_queues*: cint
+    device_features*: VkPhysicalDeviceFeatures2
     enabled_inst_extensions*: cstring
     nb_enabled_inst_extensions*: cint
     enabled_dev_extensions*: cstring
     nb_enabled_dev_extensions*: cint
-    device_features*: VkPhysicalDeviceFeatures2
+  
+  AVVkFrameFlags* {.hwcontext_vulkan.} = enum
+    AV_VK_FRAME_FLAG_NONE = 1 shl 0
+    AV_VK_FRAME_FLAG_CONTIGUOUS_MEMORY = 1 shl 1
   
   AVVulkanFramesContext* {.hwcontext_vulkan.} = object
     tiling*: VkImageTiling
     usage*: VkImageUsageFlagBits
     create_pnext*: pointer
     alloc_pnext*: array[AV_NUM_DATA_POINTERS, pointer]
+    flags*: AVVkFrameFlags
   
   AVVkFrame* {.hwcontext_vulkan.} = object
     img*: array[AV_NUM_DATA_POINTERS, VkImage]
@@ -2266,6 +2278,8 @@ type
     layout*: array[AV_NUM_DATA_POINTERS, VkImageLayout]
     sem*: array[AV_NUM_DATA_POINTERS, VkSemaphore]
     internal*: ptr AVVkFrameInternal
+    sem_value*: array[AV_NUM_DATA_POINTERS, uint64]
+    offset*: array[AV_NUM_DATA_POINTERS, ByteAddress]
   
   AVHWDeviceType* {.hwcontextEnum, size: sizeof(cint).} = enum
     AV_HWDEVICE_TYPE_NONE
