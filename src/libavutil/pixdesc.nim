@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVPixFmtDescriptor, AVPixelFormat, AVColorRange, AVChromaLocation, AVColorPrimaries, AVColorTransferCharacteristic, AVColorSpace
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_PIX_FMT_FLAG_BE* = 1 shl 0
@@ -14,7 +14,6 @@ const
   AV_PIX_FMT_FLAG_HWACCEL* = 1 shl 3
   AV_PIX_FMT_FLAG_PLANAR* = 1 shl 4
   AV_PIX_FMT_FLAG_RGB* = 1 shl 5
-  AV_PIX_FMT_FLAG_PSEUDOPAL* {.deprecated.} = 1 shl 6
   AV_PIX_FMT_FLAG_ALPHA* = 1 shl 7
   AV_PIX_FMT_FLAG_BAYER* = 1 shl 8
   AV_PIX_FMT_FLAG_FLOAT* = 1 shl 9

@@ -2470,11 +2470,6 @@ type
     offset*: cint
     shift*: cint
     depth*: cint
-
-    when defined(FF_API_PLUS1_MINUS1):
-      step_minus1* {.deprecated.}: cint
-      depth_minus1* {.deprecated.}: cint
-      offset_plus1* {.deprecated.}: cint
   
   AVPixFmtDescriptor* {.pixdesc, bycopy.} = object
     name*: cstring
