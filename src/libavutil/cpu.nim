@@ -1,9 +1,9 @@
 when defined(windows):
-  {.push importc, dynlib: "avcodec(|-55|-56|-57|-58|-59).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavcodec(|.55|.56|.57|.58|.59).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavcodec.so(|.55|.56|.57|.58|.59)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_CPU_FLAG_FORCE* = 0x80000000
@@ -32,6 +32,7 @@ const
   AV_CPU_FLAG_BMI1* = 0x20000
   AV_CPU_FLAG_BMI2* = 0x40000
   AV_CPU_FLAG_AVX512* = 0x100000
+  AV_CPU_FLAG_SLOW_GATHER* = 0x2000000
   AV_CPU_FLAG_ALTIVEC* = 0x0001
   AV_CPU_FLAG_VSX* = 0x0002
   AV_CPU_FLAG_POWER8* = 0x0004
@@ -44,11 +45,14 @@ const
   AV_CPU_FLAG_ARMV8* = 1 shl 6
   AV_CPU_FLAG_VFP_VM* = 1 shl 7
   AV_CPU_FLAG_SETEND* = 1 shl 16
+  AV_CPU_FLAG_MMI* = 1 shl 0
+  AV_CPU_FLAG_MSA* = 1 shl 1
+  AV_CPU_FLAG_LSX* = 1 shl 0
+  AV_CPU_FLAG_LASX* = 1 shl 1
 
 proc av_get_cpu_flags* (): cint
 proc av_force_cpu_flags* (flags: cint)
-proc av_set_cpu_flags_mask* (mask: cint) {.deprecated.}
-proc av_parse_cpu_flags* (s: cstring): cint {.deprecated.}
 proc av_parse_cpu_caps* (flags: ptr cuint, s: cstring): cint
 proc av_cpu_count* (): cint
 proc av_cpu_max_align* (): csize_t
+proc av_cpu_force_count* (count: cint)
