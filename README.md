@@ -1,8 +1,11 @@
 # ffmpeg.nim
+
+**🎉 FFmpeg.nim supports FFmpeg 5.0!**
+
 **This is a work in progress project!**
 
 ffmpeg.nim is the Nim binding for FFMpeg.  
-The version is `4.3.2`.  
+The version is `5.0`.  
 
 There are other Nim bindings for FFMpeg.  
 - [nimffmpeg](https://github.com/mashingan/nimffmpeg)
