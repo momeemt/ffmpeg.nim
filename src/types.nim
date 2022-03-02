@@ -1,5 +1,6 @@
 import libavutil/dict
 from libavcodec/version import FF_API_INIT_PACKET
+from libavcodec/defs import AVAudioServiceType, AVDiscard
 
 block:
   {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
@@ -151,41 +152,12 @@ type
   mfxSession* = object
   mfxExtBuffer* = object
 
-type
-  AVDiscard* {.avcodecEnum.} = enum
-    AVDISCARD_NONE = -16
-    AVDISCARD_DEFAULT = 0
-    AVDISCARD_NONREF = 8
-    AVDISCARD_BIDIR = 16
-    AVDISCARD_NONINTRA = 24
-    AVDISCARD_NONKEY = 32
-    AVDISCARD_ALL = 48
-
-  AVAudioServiceType* {.avcodecEnum.} = enum
-    AV_AUDIO_SERVICE_TYPE_MAIN = 0
-    AV_AUDIO_SERVICE_TYPE_EFFECTS = 1
-    AV_AUDIO_SERVICE_TYPE_VISUALLY_IMPAIRED = 2
-    AV_AUDIO_SERVICE_TYPE_HEARING_IMPAIRED = 3
-    AV_AUDIO_SERVICE_TYPE_DIALOGUE = 4
-    AV_AUDIO_SERVICE_TYPE_COMMENTARY = 5
-    AV_AUDIO_SERVICE_TYPE_EMERGENCY = 6
-    AV_AUDIO_SERVICE_TYPE_VOICE_OVER = 7
-    AV_AUDIO_SERVICE_TYPE_KARAOKE = 8
-    AV_AUDIO_SERVICE_TYPE_NB
-  
+type  
   RcOverride* {.avcodec.} = object
     start_frame*: cint
     end_frame*: cint
     qscale*: cint
     quality_factor*: cfloat
-  
-  AVPanScan* {.avcodec.} = object
-    id*: cint
-    width*: cint
-    height*: cint
-    position*: array[3, array[2, int16]]
-
-  AVCPBProperties* {.avcodec.} = object
 
   AVProducerReferenceTime* {.avcodec.} = object
     wallclock*: int64
@@ -1341,6 +1313,8 @@ type
   AVDeviceInfo* {.avdevice.} = object
     device_name*: cstring
     device_description*: cstring
+    media_types*: ptr AVMediaType
+    nb_media_types*: cint
   
   AVDeviceInfoList* {.avdevice.} = object
     devices*: ptr ptr AVDeviceInfo
@@ -1391,27 +1365,21 @@ type
     sample_rate*: cint
     format*: cint
     time_base*: AVRational
-    in_formats*: ptr AVFilterFormats
-    out_formats*: ptr AVFilterFormats
-    in_samplerates*: ptr AVFilterFormats
-    out_samplerates*: ptr AVFilterFormats
-    in_channel_layouts*: ptr AVFilterChannelLayouts
-    out_channel_layouts*: ptr AVFilterChannelLayouts
-    request_samples*: cint
+    incfg: AVFilterFormatsConfig
+    outcfg: AVFilterFormatsConfig
     init_state*: AVFilterLinkInitState
     graph*: ptr AVFilterGraph
     current_pts*: int64
     current_pts_us*: int64
     age_index*: cint
     frame_rate*: AVRational
-    partial_buf*: ptr AVFrame
-    partial_buf_size*: cint
     min_samples*: cint
     max_samples*: cint
     channels*: cint
-    flags*: cuint
-    frame_count_in*: int64
-    frame_count_out*: int64
+    frame_count_in: int64
+    frame_count_out: int64
+    sample_count_in*: int64
+    sample_count_out*: int64
     frame_pool*: pointer
     frame_wanted_out*: cint
     hw_frames_ctx*: ptr AVBufferRef
@@ -1429,6 +1397,13 @@ type
     AVLINK_UNINIT = 0
     AVLINK_STARTINIT
     AVLINK_INIT
+  
+  AVFilterFormatsUnion* {.union.} = object
+    query_func*: proc (a: ptr AVFilterContext): cint
+    pixels_list*: ptr AVPixelFormat
+    samples_list*: ptr AVSampleFormat
+    pix_fmt*: AVPixelFormat
+    sample_fmt*: AVSampleFormat
 
   AVFilter* {.avfilter.} = object
     name*: cstring
@@ -1437,17 +1412,23 @@ type
     outputs*: ptr AVFilterPad
     priv_class*: ptr AVClass
     flags*: cint
+    nb_inputs*: uint8
+    nb_outputs*: uint8
+    formats_state*: uint8
     preinit*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
     init*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
     init_dict*: proc (ctx: ptr AVFilterContext, options: ptr ptr AVDictionary): cint {.cdecl.}
     uninit*: proc (ctx: ptr AVFilterContext) {.cdecl.}
-    query_formats*: proc (a1: ptr AVFilterContext): cint {.cdecl.}
+    formats*: AVFilterFormatsUnion
     priv_size*: cint
     flags_internal*: cint
-    next*: ptr AVFilter
     process_command*: proc (a1: ptr AVFilterContext, cmd, arg, res: cstring, res_len, flags: cint): cint {.cdecl.}
-    init_opaque*: proc (ctx: ptr AVFilterContext, opaque: pointer): cint {.cdecl.}
     activate*: proc (ctx: ptr AVFilterContext): cint {.cdecl.}
+  
+  AVFilterFormatsConfig* {.avfilter.} = object
+    formats*: ptr AVFilterFormats
+    samplerates*: ptr AVFilterFormats
+    channel_layouts*: ptr AVFilterChannelLayouts
 
   avfilter_action_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, arg: pointer, jobnr, nb_jobs: cint): cint {.cdecl.}
   avfilter_execute_func* {.avfilter.} = proc (ctx: ptr AVFilterContext, `func`: ptr avfilter_action_func, arg: pointer, ret: ptr cint, nb_jobs: cint): cint {.cdecl.}
@@ -1466,9 +1447,6 @@ type
     sink_links*: ptr ptr AVFilterLink
     sink_links_count*: cint
     disable_auto_convert*: cuint
-
-    when defined(FF_API_LAVR_OPTS):
-      resample_lavr_opts {.deprecated.} : cstring
   
   AVFilterInOut* {.avfilter.} = object
     name*: cstring
