@@ -2020,8 +2020,12 @@ type
     AV_FRAME_DATA_DYNAMIC_HDR_PLUS
     AV_FRAME_DATA_REGIONS_OF_INTEREST
     AV_FRAME_DATA_VIDEO_ENC_PARAMS
-    AV_FRAME_DATA_QP_TABLE_PROPERTIES # if FF_API_FRAME_QP
-    AV_FRAME_DATA_QP_TABLE_DATA # if FF_API_FRAME_QP
+    AV_FRAME_DATA_DETECTION_BBOXES
+    AV_FRAME_DATA_DOVI_RPU_BUFFER
+    AV_FRAME_DATA_DOVI_METADATA
+    AV_FRAME_DATA_FILM_GRAIN_PARAMS
+
+    AV_FRAME_DATA_SEI_UNREGISTERED
 
   AVActiveFormatDescription* {.frameEnum, size: sizeof(cint).} = enum
     AV_AFD_SAME = 8
@@ -2035,7 +2039,7 @@ type
   AVFrameSideData* {.frame, bycopy.} = object
     `type`*: AVFrameSideDataType
     data*: ptr uint8
-    size*: cint
+    size*: csize_t
     metadata*: ptr AVDictionary
     buf*: ptr AVBufferRef
   
@@ -2096,18 +2100,8 @@ type
     crop_left*: csize_t
     crop_right*: csize_t
     private_ref*: ptr AVBufferRef
-
-    when defined(FF_API_PKT_PTS):
-      pkt_pts {.deprecated.}: int64
-
-    when defined(FF_API_ERROR_FRAME):
-      error {.deprecated.}: array[AV_NUM_DATA_POINTERS, uint64]
-
-    when defined(FF_API_FRAME_QP):
-      qscale_table {.deprecated.}: ptr int8
-      qstride {.deprecated.}: cint
-      qscale_type {.deprecated.}: cint
-      qp_table_buf {.deprecated.}: ptr AVBufferRef
+    pkt_pts*: int64
+    time_base*: AVRational
   
   AVHashContext* {.hashStruct, bycopy.} = object
 
