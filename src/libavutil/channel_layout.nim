@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVBPrint
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_CH_FRONT_LEFT* = 0x00000001
@@ -33,6 +33,11 @@ const
   AV_CH_SURROUND_DIRECT_LEFT* = 0x0000000200000000.culonglong
   AV_CH_SURROUND_DIRECT_RIGHT* = 0x0000000400000000.culonglong
   AV_CH_LOW_FREQUENCY_2* = 0x0000000800000000.culonglong
+  AV_CH_TOP_SIDE_LEFT* = 0x0000001000000000.culonglong
+  AV_CH_TOP_SIDE_RIGHT* = 0x0000002000000000.culonglong
+  AV_CH_BOTTOM_FRONT_CENTER* = 0x0000004000000000.culonglong
+  AV_CH_BOTTOM_FRONT_LEFT* = 0x0000008000000000.culonglong
+  AV_CH_BOTTOM_FRONT_RIGHT* = 0x0000010000000000.culonglong
   AV_CH_LAYOUT_NATIVE* = 0x8000000000000000
   AV_CH_LAYOUT_MONO* = AV_CH_FRONT_CENTER
   AV_CH_LAYOUT_STEREO* = AV_CH_FRONT_LEFT or AV_CH_FRONT_RIGHT
@@ -60,8 +65,35 @@ const
   AV_CH_LAYOUT_7POINT1_WIDE* = AV_CH_LAYOUT_5POINT1 or AV_CH_FRONT_LEFT_OF_CENTER or AV_CH_FRONT_RIGHT_OF_CENTER
   AV_CH_LAYOUT_7POINT1_WIDE_BACK* = AV_CH_LAYOUT_5POINT1_BACK or AV_CH_FRONT_LEFT_OF_CENTER or AV_CH_FRONT_RIGHT_OF_CENTER
   AV_CH_LAYOUT_OCTAGONAL* = AV_CH_LAYOUT_5POINT0 or AV_CH_BACK_LEFT or AV_CH_BACK_CENTER or AV_CH_BACK_RIGHT
-  AV_CH_LAYOUT_HEXADECAGONAL* = AV_CH_LAYOUT_OCTAGONAL or AV_CH_WIDE_LEFT or AV_CH_WIDE_RIGHT or AV_CH_TOP_BACK_LEFT or AV_CH_TOP_BACK_RIGHT or AV_CH_TOP_BACK_CENTER or AV_CH_TOP_FRONT_CENTER or AV_CH_TOP_FRONT_LEFT or AV_CH_TOP_FRONT_RIGHT
+  AV_CH_LAYOUT_HEXADECAGONAL* = AV_CH_LAYOUT_OCTAGONAL or
+                                AV_CH_WIDE_LEFT or
+                                AV_CH_WIDE_RIGHT or
+                                AV_CH_TOP_BACK_LEFT or
+                                AV_CH_TOP_BACK_RIGHT or
+                                AV_CH_TOP_BACK_CENTER or
+                                AV_CH_TOP_FRONT_CENTER or
+                                AV_CH_TOP_FRONT_LEFT or
+                                AV_CH_TOP_FRONT_RIGHT
   AV_CH_LAYOUT_STEREO_DOWNMIX* = AV_CH_STEREO_LEFT or AV_CH_STEREO_RIGHT
+  AV_CH_LAYOUT_22POINT2* = AV_CH_LAYOUT_5POINT1_BACK or
+                           AV_CH_FRONT_LEFT_OF_CENTER or
+                           AV_CH_FRONT_RIGHT_OF_CENTER or
+                           AV_CH_BACK_CENTER or
+                           AV_CH_LOW_FREQUENCY_2 or
+                           AV_CH_SIDE_LEFT or
+                           AV_CH_SIDE_RIGHT or
+                           AV_CH_TOP_FRONT_LEFT or
+                           AV_CH_TOP_FRONT_RIGHT or
+                           AV_CH_TOP_FRONT_CENTER or
+                           AV_CH_TOP_CENTER or
+                           AV_CH_TOP_BACK_LEFT or
+                           AV_CH_TOP_BACK_RIGHT or
+                           AV_CH_TOP_SIDE_LEFT or
+                           AV_CH_TOP_SIDE_RIGHT or
+                           AV_CH_TOP_BACK_CENTER or
+                           AV_CH_BOTTOM_FRONT_CENTER or
+                           AV_CH_BOTTOM_FRONT_LEFT or
+                           AV_CH_BOTTOM_FRONT_RIGHT
 
 proc av_get_channel_layout* (name: cstring): uint64
 proc av_get_extended_channel_layout* (name: cstring, channel_layout: ptr uint64, nb_channels: ptr cint): cint
