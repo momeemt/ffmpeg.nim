@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVFilterContext, AVBufferSrcParameters, AVFrame
 
 when defined(windows):
-  {.push importc, dynlib: "avfilter(|-5|-6|-7|-8).dll", cdecl.}
+  {.push importc, dynlib: "avfilter(|-7|-8|-9|-10|-11).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavfilter(|.5|.6|.7|.8).dylib", cdecl.}
+  {.push importc, dynlib: "libavfilter(|.7|.8|.9|.10|.11).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "avfilter.so(|.5|.6|.7|.8)", cdecl.}
+  {.push importc, dynlib: "avfilter.so(|.7|.8|.9|.10|.11)", cdecl.}
 
 const
   AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT* = 1
