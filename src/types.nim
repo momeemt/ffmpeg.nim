@@ -1,5 +1,6 @@
 import libavutil/dict
-from libavcodec/version import FF_API_INIT_PACKET
+from libavcodec/version as avcodecVersion import FF_API_INIT_PACKET
+from libavformat/version as avformatVersion import FF_API_AVIOCONTEXT_WRITTEN
 from libavcodec/defs import AVAudioServiceType, AVDiscard
 
 block:
@@ -1794,41 +1795,35 @@ type
   
   AVIOContext* {.avio.} = object
     av_class*: AVClass
-    buffer*: ptr cuchar
-    buf_ptr*: ptr cuchar
-    buf_end*: ptr cuchar
+    buffer*: ptr uint8
+    buf_ptr*: ptr uint8
+    buf_end*: ptr uint8
     opaque*: pointer
     read_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
     write_packet*: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint {.cdecl.}
     seek*: proc (opaque: pointer, offset: int64, whence: cint): int64 {.cdecl.}
     pos*: int64
     eof_reached*: cint
+    error*: cint
     write_flag*: cint
     max_packet_size*: cint
+    min_packet_size*: cint
     checksum*: culong
-    checksum_ptr*: ptr cuchar
+    checksum_ptr*: ptr uint8
     update_checksum*: proc (checksum: culong, buf: ptr uint8, size: cuint): culong {.cdecl.}
-    error*: cint
     read_pause*: proc (opaque: pointer, pause: cint): cint {.cdecl.}
     read_seek*: proc (opaque: pointer, stream_index: cint, timestamp: int64, flags: cint): int64 {.cdecl.}
     seekable*: cint
-    maxsize*: int64
     direct*: cint
-    bytes_read*: int64
-    seek_count*: cint
-    writeout_count*: cint
-    orig_buffer_size*: cint
-    short_seek_threshold*: cint
     protocol_whitelist*: cstring
     protocol_blacklist*: cstring
     write_data_type*: proc (opaque: pointer, buf: uint8, buf_size: cint, `type`: AVIODataMarkerType, time: int64): cint {.cdecl.}
     ignore_boundary_point*: cint
-    current_type*: AVIODataMarkerType
-    last_time*: int64
-    short_seek_get*: proc (opaque: pointer): cint {.cdecl.}
-    written*: int64
-    buf_ptr_max*: ptr cuchar
-    min_packet_size*: cint
+    when FF_API_AVIOCONTEXT_WRITTEN:
+      written* {.deprecated.} : int64
+    buf_ptr_max*: ptr uint8
+    bytes_read*: int64
+    bytes_written*: int64
 
   AVAudioResampleContext* {.avresampleStruct.} = object
 

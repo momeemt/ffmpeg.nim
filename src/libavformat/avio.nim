@@ -1,12 +1,12 @@
-import ffmpeg_types
-from libavutil_dict import AVDictionary
+from ../types import AVIODirContext, AVIODirEntry, AVIOContext, AVIODataMarkerType, AVIOInterruptCB, AVClass, AVBPrint
+from ../libavutil/dict import AVDictionary
 
 when defined(windows):
-  {.push importc, dynlib: "avformat(|-55|-56|-57|-58).dll", cdecl.}
+  {.push importc, dynlib: "avformat(|-58|-59|-60|-61|-62).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavformat(|.55|.56|.57|.58).dylib", cdecl.}
+  {.push importc, dynlib: "libavformat(|.58|.59|.60|.61|.62).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavformat.so(|.55|.56|.57|.58)", cdecl.}
+  {.push importc, dynlib: "libavformat.so(|.58|.59|.60|.61|.62)", cdecl.}
 
 const
   AVIO_SEEKABLE_NORMAL* = 1 shl 0
