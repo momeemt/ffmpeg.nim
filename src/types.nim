@@ -2887,6 +2887,7 @@ type
     AV_VIDEO_ENC_PARAMS_NONE = -1
     AV_VIDEO_ENC_PARAMS_VP9
     AV_VIDEO_ENC_PARAMS_H264
+    AV_VIDEO_ENC_PARAMS_MPEG2
   
   AVVideoEncParams* {.video_enc_params.} = object
     nb_blocks*: cuint
