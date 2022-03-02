@@ -1,11 +1,11 @@
-import ffmpeg_types
+from ../types import AVHashContext
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_HASH_MAX_SIZE* = 64
@@ -20,8 +20,4 @@ proc av_hash_final_bin* (ctx: ptr AVHashContext, dst: ptr uint8, size: cint)
 proc av_hash_final_hex* (ctx: ptr AVHashContext, dst: ptr uint8, size: cint)
 proc av_hash_final_b64* (ctx: ptr AVHashContext, dst: ptr uint8, size: cint)
 proc av_hash_freep* (ctx: ptr ptr AVHashContext)
-
-when defined(FF_API_CRYPTO_SIZE_T):
-  proc av_hash_update* (ctx: ptr AVHashContext, src: ptr uint8, len: cint)
-else:
-  proc av_hash_update* (ctx: ptr AVHashContext, src: ptr uint8, len: csize_t)
+proc av_hash_update* (ctx: ptr AVHashContext, src: ptr uint8, len: csize_t)
