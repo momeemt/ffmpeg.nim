@@ -1,15 +1,18 @@
-import ffmpeg_types
+from ../types import AVEscapeMode
+from version import FF_API_D2STR
 
 when defined(windows):
-  {.push importc, dynlib: "avutil-(|55|56|57).dll", cdecl.}
+  {.push importc, dynlib: "avutil-(|56|57|58|59|60).dll", cdecl.}
 elif defined(macosx):
-  {.push importc, dynlib: "libavutil(|.55|.56|.57).dylib", cdecl.}
+  {.push importc, dynlib: "libavutil(|.56|.57|.58|.59|.60).dylib", cdecl.}
 else:
-  {.push importc, dynlib: "libavutil.so(|.55|.56|.57)", cdecl.}
+  {.push importc, dynlib: "libavutil.so(|.56|.57|.58|.59|.60)", cdecl.}
 
 const
   AV_ESCAPE_FLAG_WHITESPACE* = 1 shl 0
   AV_ESCAPE_FLAG_STRICT* = 1 shl 1
+  AV_ESCAPE_FLAG_XML_SINGLE_QUOTES* = 1 shl 2
+  AV_ESCAPE_FLAG_XML_DOUBLE_QUOTES* = 1 shl 3
   AV_UTF8_FLAG_ACCEPT_INVALID_BIG_CODES* = 1
   AV_UTF8_FLAG_ACCEPT_NON_CHARACTERS* = 2
   AV_UTF8_FLAG_ACCEPT_SURROGATES* = 4
@@ -24,7 +27,6 @@ proc av_strlcpy* (dst, src: cstring, size: csize_t): csize_t
 proc av_strlcat* (dst, src: cstring, size: csize_t): csize_t
 proc av_strlcatf* (dst: cstring, size: csize_t, fmt: cstring): csize_t {.varargs.} #132
 proc av_asprintf* (fmt: cstring): cstring #156
-proc av_d2str* (d: cdouble): cstring
 proc av_get_token* (buf: cstringArray, term: cstring): cstring
 proc av_strtok* (s, delim: cstring, saveptr: cstringArray): cstring
 proc av_strcasecmp* (a, b: cstring): cint
@@ -72,3 +74,6 @@ proc av_isxdigit* (c: cint): cint {.inline.} =
   # c = av_tolower(c);
   # return av_isdigit(c) || (c >= 'a' && c <= 'f');
   discard
+
+when FF_API_D2STR:
+  proc av_d2str* (d: cdouble): cstring {.deprecated.}

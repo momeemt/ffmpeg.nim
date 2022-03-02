@@ -1856,6 +1856,7 @@ type
     AV_ESCAPE_MODE_AUTO
     AV_ESCAPE_MODE_BACKSLASH
     AV_ESCAPE_MODE_QUOTE
+    AV_ESCAPE_MODE_XML
   
   AVMediaType* {.avutilEnum, size: sizeof(cint).} = enum
     AVMEDIA_TYPE_UNKNOWN = -1
