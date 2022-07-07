@@ -1990,7 +1990,6 @@ type
     crop_left*: csize_t
     crop_right*: csize_t
     private_ref*: ptr AVBufferRef
-    pkt_pts*: int64
     time_base*: AVRational
   
   AVHashContext* {.hashStruct, bycopy.} = object
