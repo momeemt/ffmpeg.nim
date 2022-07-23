@@ -1,0 +1,18 @@
+from ../libavutil/version import AV_VERSION_INT, AV_VERSION
+from ../libavutil/macros import AV_STRINGIFY
+
+when defined(windows):
+  {.push importc, dynlib: "swresample(|-3|-4|-5|-6|-7).dll", cdecl.}
+elif defined(macosx):
+  {.push importc, dynlib: "libswresample(|.3|.4|.5|.6|.7).dylib", cdecl.}
+else:
+  {.push importc, dynlib: "libswresample.so(|.3|.4|.5|.6|.7)", cdecl.}
+
+const
+  LIBSWRESAMPLE_VERSION_MAJOR* = 4
+  LIBSWRESAMPLE_VERSION_MINOR* = 3
+  LIBSWRESAMPLE_VERSION_MICRO* = 100
+  LIBSWRESAMPLE_VERSION_INT* = AV_VERSION_INT(LIBSWRESAMPLE_VERSION_MAJOR, LIBSWRESAMPLE_VERSION_MINOR, LIBSWRESAMPLE_VERSION_MICRO)
+  LIBSWRESAMPLE_VERSION* = AV_VERSION(LIBSWRESAMPLE_VERSION_MAJOR, LIBSWRESAMPLE_VERSION_MINOR, LIBSWRESAMPLE_VERSION_MICRO)
+  LIBSWRESAMPLE_BUILD* = LIBSWRESAMPLE_VERSION_INT
+  LIBSWRESAMPLE_IDENT* = "SwR" & AV_STRINGIFY(LIBSWRESAMPLE_VERSION)
