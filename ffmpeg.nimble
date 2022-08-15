@@ -5,8 +5,7 @@ author        = "momeemt"
 description   = "ffmpeg.nim is the Nim binding for FFmpeg 5.0."
 license       = "LGPL-2.1-or-later"
 srcDir        = "src"
-installDirs   = @["cinclude", "ffmpeg"]
-installFiles  = @["ffmpeg.nim"]
+installDirs   = @["cinclude"]
 
 # Dependencies
 
