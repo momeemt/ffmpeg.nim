@@ -1,10 +1,10 @@
-# ffmpeg.nim
+# FFmpeg.nim
 
 **🎉 FFmpeg.nim supports FFmpeg 5.0!**
 
 **This is a work in progress project!**
 
-ffmpeg.nim is the Nim binding for FFMpeg.  
+FFmpeg.nim is the Nim binding for FFmpeg.  
 The version is `5.0`.  
 
 There are other Nim bindings for FFMpeg.  
@@ -16,10 +16,10 @@ There are other Nim bindings for FFMpeg.
 ## install
 
 ```bash:install
-nimble install ffmpeg
+nimble install FFmpeg
 ```
 
-You will need to install ffmpeg.
+You will need to install FFmpeg.
 
 ## Why don't we use 'c2nim'?
 'c2nim' is a useful tool for developing a Nim wrapper. However, FFmpeg uses many attributes and syntaxes that cannot be analyzed by 'c2nim'.
