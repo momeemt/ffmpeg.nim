@@ -1,5 +1,4 @@
 import libavutil/dict
-from libavcodec/version as avcodecVersion import FF_API_INIT_PACKET
 from libavformat/version as avformatVersion import FF_API_AVIOCONTEXT_WRITTEN, FF_API_AVSTREAM_CLASS
 from libavcodec/defs import AVAudioServiceType, AVDiscard
 

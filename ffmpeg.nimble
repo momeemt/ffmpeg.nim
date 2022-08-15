@@ -1,13 +1,25 @@
 # Package
 
-version       = "0.5.3"
+version       = "0.5.4"
 author        = "momeemt"
-description   = "ffmpeg.nim is the Nim binding for FFMpeg(5.0)."
-license       = "GPL-3.0-or-later"
+description   = "ffmpeg.nim is the Nim binding for FFmpeg 5.0."
+license       = "LGPL-2.1-or-later"
 srcDir        = "src"
-installDirs   = @["cinclude", "ffmpeg"]
-installFiles  = @["ffmpeg.nim"]
+installDirs   = @["cinclude"]
 
 # Dependencies
 
 requires "nim >= 1.4.4"
+
+# Tasks
+task docs, "Generate documents":
+  rmDir "docs"
+  exec "nimble doc --project --index:on -o:docs src/ffmpeg.nim"
+
+task ci, "Run CI":
+  exec "nim -v"
+  exec "nimble -v"
+  exec "nimble check"
+  exec "nimble install -Y"
+  exec "nimble test -Y"
+  exec "nimble docs -Y"
