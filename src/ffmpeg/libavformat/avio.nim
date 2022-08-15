@@ -28,10 +28,10 @@ proc avio_open_dir* (s: ptr ptr AVIODirContext, url: cstring, options: ptr ptr A
 proc avio_read_dir* (s: ptr AVIODirContext, next: ptr ptr AVIODirEntry): cint
 proc avio_close_dir* (s: ptr ptr AVIODirContext): cint
 proc avio_free_directory_entry* (entry: ptr ptr AVIODirEntry)
-proc avio_alloc_context* (buffer: ptr cuchar, buffer_size, write_flag: cint, opaque: pointer, read_packet: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint, write_packet: proc (opaque: pointer, buf: uint8, buf_size: cint): cint, seek: proc (opaque: pointer, offset: int64, whence: cint): int64): ptr AVIOContext
+proc avio_alloc_context* (buffer: ptr uint8, buffer_size, write_flag: cint, opaque: pointer, read_packet: proc (opaque: pointer, buf: ptr uint8, buf_size: cint): cint, write_packet: proc (opaque: pointer, buf: uint8, buf_size: cint): cint, seek: proc (opaque: pointer, offset: int64, whence: cint): int64): ptr AVIOContext
 proc avio_context_free* (s: ptr ptr AVIOContext)
 proc avio_w8* (s: ptr AVIOContext, b: cint)
-proc avio_write* (s: ptr AVIOContext, buf: ptr cuchar, size: cint)
+proc avio_write* (s: ptr AVIOContext, buf: ptr uint8, size: cint)
 proc avio_wl64* (s: ptr AVIOContext, val: uint64)
 proc avio_wb64* (s: ptr AVIOContext, val: uint64)
 proc avio_wl32* (s: ptr AVIOContext, val: cuint)
@@ -51,8 +51,8 @@ proc avio_feof* (s: ptr AVIOContext): cint
 proc avio_printf* (s: ptr AVIOContext, fmt: cstring): cint {.varargs.} # TODO: 578
 proc avio_print_string_array* (s: ptr AVIOContext, strings: cstringArray)
 proc avio_flush* (s: ptr AVIOContext)
-proc avio_read* (s: ptr AVIOContext, buf: ptr cuchar, size: cint): cint
-proc avio_read_partial* (s: ptr AVIOContext, buf: ptr cuchar, size: cint): cint
+proc avio_read* (s: ptr AVIOContext, buf: ptr uint8, size: cint): cint
+proc avio_read_partial* (s: ptr AVIOContext, buf: ptr uint8, size: cint): cint
 proc avio_r8* (s: AVIOContext): cint
 proc avio_rl16* (s: AVIOContext): cuint
 proc avio_rl24* (s: AVIOContext): cuint

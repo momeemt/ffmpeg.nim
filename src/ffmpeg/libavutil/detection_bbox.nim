@@ -1,5 +1,4 @@
 from ../types import AVRational, AVFrame
-from avassert import av_assert0
 
 when defined(windows):
   {.push importc, dynlib: "avcodec(|-58|-59|-60|-61|-62).dll", cdecl.}
