@@ -1,0 +1,2 @@
+av_jni_set_java_vm	ffmpeg/libavcodec/jni.html#av_jni_set_java_vm,pointer,pointer	jni: av_jni_set_java_vm(vm, log_ctx: pointer): cint	
+av_jni_get_java_vm	ffmpeg/libavcodec/jni.html#av_jni_get_java_vm,pointer	jni: av_jni_get_java_vm(log_ctx: pointer): pointer	

@@ -1,0 +1,38 @@
+AV_ESCAPE_FLAG_WHITESPACE	ffmpeg/libavutil/avstring.html#AV_ESCAPE_FLAG_WHITESPACE	avstring: AV_ESCAPE_FLAG_WHITESPACE	
+AV_ESCAPE_FLAG_STRICT	ffmpeg/libavutil/avstring.html#AV_ESCAPE_FLAG_STRICT	avstring: AV_ESCAPE_FLAG_STRICT	
+AV_ESCAPE_FLAG_XML_SINGLE_QUOTES	ffmpeg/libavutil/avstring.html#AV_ESCAPE_FLAG_XML_SINGLE_QUOTES	avstring: AV_ESCAPE_FLAG_XML_SINGLE_QUOTES	
+AV_ESCAPE_FLAG_XML_DOUBLE_QUOTES	ffmpeg/libavutil/avstring.html#AV_ESCAPE_FLAG_XML_DOUBLE_QUOTES	avstring: AV_ESCAPE_FLAG_XML_DOUBLE_QUOTES	
+AV_UTF8_FLAG_ACCEPT_INVALID_BIG_CODES	ffmpeg/libavutil/avstring.html#AV_UTF8_FLAG_ACCEPT_INVALID_BIG_CODES	avstring: AV_UTF8_FLAG_ACCEPT_INVALID_BIG_CODES	
+AV_UTF8_FLAG_ACCEPT_NON_CHARACTERS	ffmpeg/libavutil/avstring.html#AV_UTF8_FLAG_ACCEPT_NON_CHARACTERS	avstring: AV_UTF8_FLAG_ACCEPT_NON_CHARACTERS	
+AV_UTF8_FLAG_ACCEPT_SURROGATES	ffmpeg/libavutil/avstring.html#AV_UTF8_FLAG_ACCEPT_SURROGATES	avstring: AV_UTF8_FLAG_ACCEPT_SURROGATES	
+AV_UTF8_FLAG_EXCLUDE_XML_INVALID_CONTROL_CODES	ffmpeg/libavutil/avstring.html#AV_UTF8_FLAG_EXCLUDE_XML_INVALID_CONTROL_CODES	avstring: AV_UTF8_FLAG_EXCLUDE_XML_INVALID_CONTROL_CODES	
+AV_UTF8_FLAG_ACCEPT_ALL	ffmpeg/libavutil/avstring.html#AV_UTF8_FLAG_ACCEPT_ALL	avstring: AV_UTF8_FLAG_ACCEPT_ALL	
+av_strstart	ffmpeg/libavutil/avstring.html#av_strstart,cstring,cstring,cstringArray	avstring: av_strstart(str, pfx: cstring; ptr: cstringArray): cint	
+av_stristart	ffmpeg/libavutil/avstring.html#av_stristart,cstring,cstring,cstringArray	avstring: av_stristart(str, pfx: cstring; ptr: cstringArray): cint	
+av_stristr	ffmpeg/libavutil/avstring.html#av_stristr,cstring,cstring	avstring: av_stristr(haystack, needle: cstring): cstring	
+av_strnstr	ffmpeg/libavutil/avstring.html#av_strnstr,cstring,cstring,csize_t	avstring: av_strnstr(haystack, needle: cstring; hay_length: csize_t): cstring	
+av_strlcpy	ffmpeg/libavutil/avstring.html#av_strlcpy,cstring,cstring,csize_t	avstring: av_strlcpy(dst, src: cstring; size: csize_t): csize_t	
+av_strlcat	ffmpeg/libavutil/avstring.html#av_strlcat,cstring,cstring,csize_t	avstring: av_strlcat(dst, src: cstring; size: csize_t): csize_t	
+av_strlcatf	ffmpeg/libavutil/avstring.html#av_strlcatf,cstring,csize_t,cstring	avstring: av_strlcatf(dst: cstring; size: csize_t; fmt: cstring): csize_t	
+av_asprintf	ffmpeg/libavutil/avstring.html#av_asprintf,cstring	avstring: av_asprintf(fmt: cstring): cstring	
+av_get_token	ffmpeg/libavutil/avstring.html#av_get_token,cstringArray,cstring	avstring: av_get_token(buf: cstringArray; term: cstring): cstring	
+av_strtok	ffmpeg/libavutil/avstring.html#av_strtok,cstring,cstring,cstringArray	avstring: av_strtok(s, delim: cstring; saveptr: cstringArray): cstring	
+av_strcasecmp	ffmpeg/libavutil/avstring.html#av_strcasecmp,cstring,cstring	avstring: av_strcasecmp(a, b: cstring): cint	
+av_strncasecmp	ffmpeg/libavutil/avstring.html#av_strncasecmp,cstring,cstring,csize_t	avstring: av_strncasecmp(a, b: cstring; n: csize_t): cint	
+av_strireplace	ffmpeg/libavutil/avstring.html#av_strireplace,cstring,cstring,cstring	avstring: av_strireplace(str, from, to: cstring): cstring	
+av_basename	ffmpeg/libavutil/avstring.html#av_basename,cstring	avstring: av_basename(path: cstring): cstring	
+av_dirname	ffmpeg/libavutil/avstring.html#av_dirname,cstring	avstring: av_dirname(path: cstring): cstring	
+av_match_name	ffmpeg/libavutil/avstring.html#av_match_name,cstring,cstring	avstring: av_match_name(name, names: cstring): cint	
+av_append_path_component	ffmpeg/libavutil/avstring.html#av_append_path_component,cstring,cstring	avstring: av_append_path_component(path, component: cstring): cstring	
+av_escape	ffmpeg/libavutil/avstring.html#av_escape,cstringArray,cstring,cstring,AVEscapeMode,cint	avstring: av_escape(dst: cstringArray; src, special_chars: cstring; mode: AVEscapeMode;\n          flags: cint): cint	
+av_utf8_decode	ffmpeg/libavutil/avstring.html#av_utf8_decode,ptr.int32,ptr.ptr.uint8,ptr.uint8,cuint	avstring: av_utf8_decode(codep: ptr int32; bufp: ptr ptr uint8; buf_end: ptr uint8;\n               flags: cuint): cint	
+av_match_list	ffmpeg/libavutil/avstring.html#av_match_list,cstring,cstring,cstring	avstring: av_match_list(name, list: cstring; separator: cstring): cint	
+av_sscanf	ffmpeg/libavutil/avstring.html#av_sscanf,cstring,cstring	avstring: av_sscanf(string: cstring; format: cstring)	
+av_strnlen	ffmpeg/libavutil/avstring.html#av_strnlen,cstring,csize_t	avstring: av_strnlen(s: cstring; len: csize_t): csize_t	
+av_isdigit	ffmpeg/libavutil/avstring.html#av_isdigit,cint	avstring: av_isdigit(c: cint): cint	
+av_isgraph	ffmpeg/libavutil/avstring.html#av_isgraph,cint	avstring: av_isgraph(c: cint): cint	
+av_isspace	ffmpeg/libavutil/avstring.html#av_isspace,cint	avstring: av_isspace(c: cint): cint	
+av_toupper	ffmpeg/libavutil/avstring.html#av_toupper,cint	avstring: av_toupper(c: cint): cint	
+av_tolower	ffmpeg/libavutil/avstring.html#av_tolower,cint	avstring: av_tolower(c: cint): cint	
+av_isxdigit	ffmpeg/libavutil/avstring.html#av_isxdigit,cint	avstring: av_isxdigit(c: cint): cint	
+av_d2str	ffmpeg/libavutil/avstring.html#av_d2str,cdouble	avstring: av_d2str(d: cdouble): cstring	

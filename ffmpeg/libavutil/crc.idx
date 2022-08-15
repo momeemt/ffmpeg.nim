@@ -1,0 +1,3 @@
+av_crc_init	ffmpeg/libavutil/crc.html#av_crc_init,ptr.AVCRC,cint,cint,uint32,cint	crc: av_crc_init(ctx: ptr AVCRC; le, bits: cint; poly: uint32; ctx_size: cint): cint	
+av_crc_get_table	ffmpeg/libavutil/crc.html#av_crc_get_table,AVCRCId	crc: av_crc_get_table(crc_id: AVCRCId): ptr AVCRC	
+av_crc	ffmpeg/libavutil/crc.html#av_crc,ptr.AVCRC,uint32,ptr.uint8,csize_t	crc: av_crc(ctx: ptr AVCRC; crc: uint32; buffer: ptr uint8; length: csize_t): uint32	

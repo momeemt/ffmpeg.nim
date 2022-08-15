@@ -1,0 +1,3 @@
+av_rc4_alloc	ffmpeg/libavutil/rc4.html#av_rc4_alloc	rc4: av_rc4_alloc(): ptr AVRC4	
+av_rc4_init	ffmpeg/libavutil/rc4.html#av_rc4_init,ptr.AVRC4,ptr.uint8,cint,cint	rc4: av_rc4_init(d: ptr AVRC4; key: ptr uint8; key_bits, decrypt: cint): cint	
+av_rc4_crypt	ffmpeg/libavutil/rc4.html#av_rc4_crypt,ptr.AVRC4,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	rc4: av_rc4_crypt(d: ptr AVRC4; dst, src: ptr uint8; count: cint; iv: ptr uint8;\n             decrypt: cint)	

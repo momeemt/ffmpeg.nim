@@ -1,0 +1,4 @@
+av_des_alloc	ffmpeg/libavutil/des.html#av_des_alloc	des: av_des_alloc(): ptr AVDES	
+av_des_init	ffmpeg/libavutil/des.html#av_des_init,ptr.AVDES,ptr.uint8,cint,cint	des: av_des_init(d: ptr AVDES; key: ptr uint8; key_bits, decrypt: cint): cint	
+av_des_crypt	ffmpeg/libavutil/des.html#av_des_crypt,ptr.AVDES,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	des: av_des_crypt(d: ptr AVDES; dst, src: ptr uint8; ccount: cint; iv: ptr uint8;\n             decrypt: cint)	
+av_des_mac	ffmpeg/libavutil/des.html#av_des_mac,ptr.AVDES,ptr.uint8,ptr.uint8,cint	des: av_des_mac(d: ptr AVDES; dst, src: ptr uint8; count: cint)	

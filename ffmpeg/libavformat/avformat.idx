@@ -1,0 +1,166 @@
+AVPROBE_SCORE_EXTENSION	ffmpeg/libavformat/avformat.html#AVPROBE_SCORE_EXTENSION	avformat: AVPROBE_SCORE_EXTENSION	
+AVPROBE_SCORE_MIME	ffmpeg/libavformat/avformat.html#AVPROBE_SCORE_MIME	avformat: AVPROBE_SCORE_MIME	
+AVPROBE_SCORE_MAX	ffmpeg/libavformat/avformat.html#AVPROBE_SCORE_MAX	avformat: AVPROBE_SCORE_MAX	
+AVPROBE_SCORE_RETRY	ffmpeg/libavformat/avformat.html#AVPROBE_SCORE_RETRY	avformat: AVPROBE_SCORE_RETRY	
+AVPROBE_SCORE_STREAM_RETRY	ffmpeg/libavformat/avformat.html#AVPROBE_SCORE_STREAM_RETRY	avformat: AVPROBE_SCORE_STREAM_RETRY	
+AVPROBE_PADDING_SIZE	ffmpeg/libavformat/avformat.html#AVPROBE_PADDING_SIZE	avformat: AVPROBE_PADDING_SIZE	
+AVFMT_NOFILE	ffmpeg/libavformat/avformat.html#AVFMT_NOFILE	avformat: AVFMT_NOFILE	
+AVFMT_NEEDNUMBER	ffmpeg/libavformat/avformat.html#AVFMT_NEEDNUMBER	avformat: AVFMT_NEEDNUMBER	
+AVFMT_EXPERIMENTAL	ffmpeg/libavformat/avformat.html#AVFMT_EXPERIMENTAL	avformat: AVFMT_EXPERIMENTAL	
+AVFMT_SHOW_IDS	ffmpeg/libavformat/avformat.html#AVFMT_SHOW_IDS	avformat: AVFMT_SHOW_IDS	
+AVFMT_GLOBALHEADER	ffmpeg/libavformat/avformat.html#AVFMT_GLOBALHEADER	avformat: AVFMT_GLOBALHEADER	
+AVFMT_NOTIMESTAMPS	ffmpeg/libavformat/avformat.html#AVFMT_NOTIMESTAMPS	avformat: AVFMT_NOTIMESTAMPS	
+AVFMT_GENERIC_INDEX	ffmpeg/libavformat/avformat.html#AVFMT_GENERIC_INDEX	avformat: AVFMT_GENERIC_INDEX	
+AVFMT_TS_DISCONT	ffmpeg/libavformat/avformat.html#AVFMT_TS_DISCONT	avformat: AVFMT_TS_DISCONT	
+AVFMT_VARIABLE_FPS	ffmpeg/libavformat/avformat.html#AVFMT_VARIABLE_FPS	avformat: AVFMT_VARIABLE_FPS	
+AVFMT_NODIMENSIONS	ffmpeg/libavformat/avformat.html#AVFMT_NODIMENSIONS	avformat: AVFMT_NODIMENSIONS	
+AVFMT_NOSTREAMS	ffmpeg/libavformat/avformat.html#AVFMT_NOSTREAMS	avformat: AVFMT_NOSTREAMS	
+AVFMT_NOBINSEARCH	ffmpeg/libavformat/avformat.html#AVFMT_NOBINSEARCH	avformat: AVFMT_NOBINSEARCH	
+AVFMT_NOGENSEARCH	ffmpeg/libavformat/avformat.html#AVFMT_NOGENSEARCH	avformat: AVFMT_NOGENSEARCH	
+AVFMT_NO_BYTE_SEEK	ffmpeg/libavformat/avformat.html#AVFMT_NO_BYTE_SEEK	avformat: AVFMT_NO_BYTE_SEEK	
+AVFMT_ALLOW_FLUSH	ffmpeg/libavformat/avformat.html#AVFMT_ALLOW_FLUSH	avformat: AVFMT_ALLOW_FLUSH	
+AVFMT_TS_NONSTRICT	ffmpeg/libavformat/avformat.html#AVFMT_TS_NONSTRICT	avformat: AVFMT_TS_NONSTRICT	
+AVFMT_TS_NEGATIVE	ffmpeg/libavformat/avformat.html#AVFMT_TS_NEGATIVE	avformat: AVFMT_TS_NEGATIVE	
+AVFMT_SEEK_TO_PTS	ffmpeg/libavformat/avformat.html#AVFMT_SEEK_TO_PTS	avformat: AVFMT_SEEK_TO_PTS	
+AVINDEX_KEYFRAME	ffmpeg/libavformat/avformat.html#AVINDEX_KEYFRAME	avformat: AVINDEX_KEYFRAME	
+AVINDEX_DISCARD_FRAME	ffmpeg/libavformat/avformat.html#AVINDEX_DISCARD_FRAME	avformat: AVINDEX_DISCARD_FRAME	
+AV_DISPOSITION_DEFAULT	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_DEFAULT	avformat: AV_DISPOSITION_DEFAULT	
+AV_DISPOSITION_DUB	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_DUB	avformat: AV_DISPOSITION_DUB	
+AV_DISPOSITION_ORIGINAL	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_ORIGINAL	avformat: AV_DISPOSITION_ORIGINAL	
+AV_DISPOSITION_COMMENT	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_COMMENT	avformat: AV_DISPOSITION_COMMENT	
+AV_DISPOSITION_LYRICS	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_LYRICS	avformat: AV_DISPOSITION_LYRICS	
+AV_DISPOSITION_KARAOKE	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_KARAOKE	avformat: AV_DISPOSITION_KARAOKE	
+AV_DISPOSITION_FORCED	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_FORCED	avformat: AV_DISPOSITION_FORCED	
+AV_DISPOSITION_HEARING_IMPAIRED	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_HEARING_IMPAIRED	avformat: AV_DISPOSITION_HEARING_IMPAIRED	
+AV_DISPOSITION_VISUAL_IMPAIRED	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_VISUAL_IMPAIRED	avformat: AV_DISPOSITION_VISUAL_IMPAIRED	
+AV_DISPOSITION_CLEAN_EFFECTS	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_CLEAN_EFFECTS	avformat: AV_DISPOSITION_CLEAN_EFFECTS	
+AV_DISPOSITION_ATTACHED_PIC	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_ATTACHED_PIC	avformat: AV_DISPOSITION_ATTACHED_PIC	
+AV_DISPOSITION_TIMED_THUMBNAILS	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_TIMED_THUMBNAILS	avformat: AV_DISPOSITION_TIMED_THUMBNAILS	
+AV_DISPOSITION_CAPTIONS	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_CAPTIONS	avformat: AV_DISPOSITION_CAPTIONS	
+AV_DISPOSITION_DESCRIPTIONS	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_DESCRIPTIONS	avformat: AV_DISPOSITION_DESCRIPTIONS	
+AV_DISPOSITION_METADATA	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_METADATA	avformat: AV_DISPOSITION_METADATA	
+AV_DISPOSITION_DEPENDENT	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_DEPENDENT	avformat: AV_DISPOSITION_DEPENDENT	
+AV_DISPOSITION_STILL_IMAGE	ffmpeg/libavformat/avformat.html#AV_DISPOSITION_STILL_IMAGE	avformat: AV_DISPOSITION_STILL_IMAGE	
+AV_PTS_WRAP_IGNORE	ffmpeg/libavformat/avformat.html#AV_PTS_WRAP_IGNORE	avformat: AV_PTS_WRAP_IGNORE	
+AV_PTS_WRAP_ADD_OFFSET	ffmpeg/libavformat/avformat.html#AV_PTS_WRAP_ADD_OFFSET	avformat: AV_PTS_WRAP_ADD_OFFSET	
+AV_PTS_WRAP_SUB_OFFSET	ffmpeg/libavformat/avformat.html#AV_PTS_WRAP_SUB_OFFSET	avformat: AV_PTS_WRAP_SUB_OFFSET	
+AVSTREAM_EVENT_FLAG_METADATA_UPDATED	ffmpeg/libavformat/avformat.html#AVSTREAM_EVENT_FLAG_METADATA_UPDATED	avformat: AVSTREAM_EVENT_FLAG_METADATA_UPDATED	
+MAX_STD_TIMEBASES	ffmpeg/libavformat/avformat.html#MAX_STD_TIMEBASES	avformat: MAX_STD_TIMEBASES	
+MAX_REORDER_DELAY	ffmpeg/libavformat/avformat.html#MAX_REORDER_DELAY	avformat: MAX_REORDER_DELAY	
+AV_PROGRAM_RUNNING	ffmpeg/libavformat/avformat.html#AV_PROGRAM_RUNNING	avformat: AV_PROGRAM_RUNNING	
+AVFMTCTX_NOHEADER	ffmpeg/libavformat/avformat.html#AVFMTCTX_NOHEADER	avformat: AVFMTCTX_NOHEADER	
+AVFMTCTX_UNSEEKABLE	ffmpeg/libavformat/avformat.html#AVFMTCTX_UNSEEKABLE	avformat: AVFMTCTX_UNSEEKABLE	
+AVFMT_FLAG_GENPTS	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_GENPTS	avformat: AVFMT_FLAG_GENPTS	
+AVFMT_FLAG_IGNIDX	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_IGNIDX	avformat: AVFMT_FLAG_IGNIDX	
+AVFMT_FLAG_NONBLOCK	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_NONBLOCK	avformat: AVFMT_FLAG_NONBLOCK	
+AVFMT_FLAG_IGNDTS	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_IGNDTS	avformat: AVFMT_FLAG_IGNDTS	
+AVFMT_FLAG_NOFILLIN	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_NOFILLIN	avformat: AVFMT_FLAG_NOFILLIN	
+AVFMT_FLAG_NOPARSE	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_NOPARSE	avformat: AVFMT_FLAG_NOPARSE	
+AVFMT_FLAG_NOBUFFER	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_NOBUFFER	avformat: AVFMT_FLAG_NOBUFFER	
+AVFMT_FLAG_CUSTOM_IO	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_CUSTOM_IO	avformat: AVFMT_FLAG_CUSTOM_IO	
+AVFMT_FLAG_DISCARD_CORRUPT	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_DISCARD_CORRUPT	avformat: AVFMT_FLAG_DISCARD_CORRUPT	
+AVFMT_FLAG_FLUSH_PACKETS	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_FLUSH_PACKETS	avformat: AVFMT_FLAG_FLUSH_PACKETS	
+AVFMT_FLAG_BITEXACT	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_BITEXACT	avformat: AVFMT_FLAG_BITEXACT	
+AVFMT_FLAG_SORT_DTS	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_SORT_DTS	avformat: AVFMT_FLAG_SORT_DTS	
+AVFMT_FLAG_FAST_SEEK	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_FAST_SEEK	avformat: AVFMT_FLAG_FAST_SEEK	
+AVFMT_FLAG_SHORTEST	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_SHORTEST	avformat: AVFMT_FLAG_SHORTEST	
+AVFMT_FLAG_AUTO_BSF	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_AUTO_BSF	avformat: AVFMT_FLAG_AUTO_BSF	
+FF_FDEBUG_TS	ffmpeg/libavformat/avformat.html#FF_FDEBUG_TS	avformat: FF_FDEBUG_TS	
+AVFMT_EVENT_FLAG_METADATA_UPDATED	ffmpeg/libavformat/avformat.html#AVFMT_EVENT_FLAG_METADATA_UPDATED	avformat: AVFMT_EVENT_FLAG_METADATA_UPDATED	
+AVFMT_AVOID_NEG_TS_AUTO	ffmpeg/libavformat/avformat.html#AVFMT_AVOID_NEG_TS_AUTO	avformat: AVFMT_AVOID_NEG_TS_AUTO	
+AVFMT_AVOID_NEG_TS_MAKE_NON_NEGATIVE	ffmpeg/libavformat/avformat.html#AVFMT_AVOID_NEG_TS_MAKE_NON_NEGATIVE	avformat: AVFMT_AVOID_NEG_TS_MAKE_NON_NEGATIVE	
+AVFMT_AVOID_NEG_TS_MAKE_ZERO	ffmpeg/libavformat/avformat.html#AVFMT_AVOID_NEG_TS_MAKE_ZERO	avformat: AVFMT_AVOID_NEG_TS_MAKE_ZERO	
+AVSEEK_FLAG_BACKWARD	ffmpeg/libavformat/avformat.html#AVSEEK_FLAG_BACKWARD	avformat: AVSEEK_FLAG_BACKWARD	
+AVSEEK_FLAG_BYTE	ffmpeg/libavformat/avformat.html#AVSEEK_FLAG_BYTE	avformat: AVSEEK_FLAG_BYTE	
+AVSEEK_FLAG_ANY	ffmpeg/libavformat/avformat.html#AVSEEK_FLAG_ANY	avformat: AVSEEK_FLAG_ANY	
+AVSEEK_FLAG_FRAME	ffmpeg/libavformat/avformat.html#AVSEEK_FLAG_FRAME	avformat: AVSEEK_FLAG_FRAME	
+AVSTREAM_INIT_IN_WRITE_HEADER	ffmpeg/libavformat/avformat.html#AVSTREAM_INIT_IN_WRITE_HEADER	avformat: AVSTREAM_INIT_IN_WRITE_HEADER	
+AVSTREAM_INIT_IN_INIT_OUTPUT	ffmpeg/libavformat/avformat.html#AVSTREAM_INIT_IN_INIT_OUTPUT	avformat: AVSTREAM_INIT_IN_INIT_OUTPUT	
+AV_FRAME_FILENAME_FLAGS_MULTIPLE	ffmpeg/libavformat/avformat.html#AV_FRAME_FILENAME_FLAGS_MULTIPLE	avformat: AV_FRAME_FILENAME_FLAGS_MULTIPLE	
+AVSTREAM_EVENT_FLAG_NEW_PACKETS	ffmpeg/libavformat/avformat.html#AVSTREAM_EVENT_FLAG_NEW_PACKETS	avformat: AVSTREAM_EVENT_FLAG_NEW_PACKETS	
+av_get_packet	ffmpeg/libavformat/avformat.html#av_get_packet,ptr.AVIOContext,ptr.AVPacket,cint	avformat: av_get_packet(s: ptr AVIOContext; pkt: ptr AVPacket; size: cint): cint	
+av_append_packet	ffmpeg/libavformat/avformat.html#av_append_packet,ptr.AVIOContext,ptr.AVPacket,cint	avformat: av_append_packet(s: ptr AVIOContext; pkt: ptr AVPacket; size: cint): cint	
+av_stream_get_parser	ffmpeg/libavformat/avformat.html#av_stream_get_parser,ptr.AVStream	avformat: av_stream_get_parser(s: ptr AVStream): ptr AVCodecParserContext	
+av_stream_get_end_pts	ffmpeg/libavformat/avformat.html#av_stream_get_end_pts,ptr.AVStream	avformat: av_stream_get_end_pts(st: ptr AVStream): int64	
+av_format_inject_global_side_data	ffmpeg/libavformat/avformat.html#av_format_inject_global_side_data,ptr.AVFormatContext	avformat: av_format_inject_global_side_data(s: ptr AVFormatContext)	
+av_fmt_ctx_get_duration_estimation_method	ffmpeg/libavformat/avformat.html#av_fmt_ctx_get_duration_estimation_method,ptr.AVFormatContext	avformat: av_fmt_ctx_get_duration_estimation_method(ctx: ptr AVFormatContext): AVDurationEstimationMethod	
+avformat_version	ffmpeg/libavformat/avformat.html#avformat_version	avformat: avformat_version(): cuint	
+avformat_configuration	ffmpeg/libavformat/avformat.html#avformat_configuration	avformat: avformat_configuration(): cstring	
+avformat_license	ffmpeg/libavformat/avformat.html#avformat_license	avformat: avformat_license(): cstring	
+avformat_network_init	ffmpeg/libavformat/avformat.html#avformat_network_init	avformat: avformat_network_init(): cint	
+avformat_network_deinit	ffmpeg/libavformat/avformat.html#avformat_network_deinit	avformat: avformat_network_deinit(): cint	
+av_muxer_iterate	ffmpeg/libavformat/avformat.html#av_muxer_iterate,ptr.pointer	avformat: av_muxer_iterate(opaque: ptr pointer): ptr AVOutputFormat	
+av_demuxer_iterate	ffmpeg/libavformat/avformat.html#av_demuxer_iterate,ptr.pointer	avformat: av_demuxer_iterate(opaque: ptr pointer): ptr AVInputFormat	
+avformat_alloc_context	ffmpeg/libavformat/avformat.html#avformat_alloc_context	avformat: avformat_alloc_context(): ptr AVFormatContext	
+avformat_free_context	ffmpeg/libavformat/avformat.html#avformat_free_context,ptr.AVFormatContext	avformat: avformat_free_context(s: ptr AVFormatContext)	
+avformat_get_class	ffmpeg/libavformat/avformat.html#avformat_get_class	avformat: avformat_get_class(): ptr AVClass	
+av_stream_get_class	ffmpeg/libavformat/avformat.html#av_stream_get_class	avformat: av_stream_get_class(): ptr AVClass	
+avformat_new_stream	ffmpeg/libavformat/avformat.html#avformat_new_stream,ptr.AVFormatContext,ptr.AVCodec	avformat: avformat_new_stream(s: ptr AVFormatContext; c: ptr AVCodec): ptr AVStream	
+av_stream_add_side_data	ffmpeg/libavformat/avformat.html#av_stream_add_side_data,ptr.AVStream,AVPacketSideDataType,ptr.uint8,csize_t	avformat: av_stream_add_side_data(st: ptr AVStream; type: AVPacketSideDataType;\n                        data: ptr uint8; size: csize_t): cint	
+av_stream_new_side_data	ffmpeg/libavformat/avformat.html#av_stream_new_side_data,ptr.AVStream,AVPacketSideDataType,csize_t	avformat: av_stream_new_side_data(stream: ptr AVStream; type: AVPacketSideDataType;\n                        size: csize_t): uint8	
+av_stream_get_side_data	ffmpeg/libavformat/avformat.html#av_stream_get_side_data,ptr.AVStream,AVPacketSideDataType,ptr.csize_t	avformat: av_stream_get_side_data(stream: ptr AVStream; type: AVPacketSideDataType;\n                        size: ptr csize_t): uint8	
+av_new_program	ffmpeg/libavformat/avformat.html#av_new_program,ptr.AVFormatContext,cint	avformat: av_new_program(s: ptr AVFormatContext; id: cint): AVProgram	
+avformat_alloc_output_context2	ffmpeg/libavformat/avformat.html#avformat_alloc_output_context2,ptr.ptr.AVFormatContext,ptr.AVOutputFormat,cstring,cstring	avformat: avformat_alloc_output_context2(ctx: ptr ptr AVFormatContext;\n                               oformat: ptr AVOutputFormat;\n                               format_name: cstring; filename: cstring): cint	
+av_find_input_format	ffmpeg/libavformat/avformat.html#av_find_input_format,cstring	avformat: av_find_input_format(short_name: cstring): ptr AVInputFormat	
+av_probe_input_format	ffmpeg/libavformat/avformat.html#av_probe_input_format,ptr.AVProbeData,cint	avformat: av_probe_input_format(pd: ptr AVProbeData; is_opened: cint): ptr AVInputFormat	
+av_probe_input_format2	ffmpeg/libavformat/avformat.html#av_probe_input_format2,ptr.AVProbeData,cint,cint	avformat: av_probe_input_format2(pd: ptr AVProbeData; is_opened, score_max: cint): ptr AVInputFormat	
+av_probe_input_format3	ffmpeg/libavformat/avformat.html#av_probe_input_format3,ptr.AVProbeData,cint,cint	avformat: av_probe_input_format3(pd: ptr AVProbeData; is_opened: cint; score_ret: cint): ptr AVInputFormat	
+av_probe_input_buffer2	ffmpeg/libavformat/avformat.html#av_probe_input_buffer2,ptr.AVIOContext,ptr.ptr.AVInputFormat,cstring,pointer,cuint,cuint	avformat: av_probe_input_buffer2(pb: ptr AVIOContext; fmt: ptr ptr AVInputFormat;\n                       url: cstring; logctx: pointer;\n                       offset, max_probe_size: cuint): cint	
+av_probe_input_buffer	ffmpeg/libavformat/avformat.html#av_probe_input_buffer,ptr.AVIOContext,ptr.ptr.AVInputFormat,cstring,pointer,cuint,cuint	avformat: av_probe_input_buffer(pb: ptr AVIOContext; fmt: ptr ptr AVInputFormat;\n                      url: cstring; logctx: pointer;\n                      offset, max_probe_size: cuint): cint	
+avformat_open_input	ffmpeg/libavformat/avformat.html#avformat_open_input,ptr.ptr.AVFormatContext,cstring,ptr.AVInputFormat,ptr.ptr.AVDictionary	avformat: avformat_open_input(ps: ptr ptr AVFormatContext; url: cstring;\n                    fmt: ptr AVInputFormat; options: ptr ptr AVDictionary): cint	
+avformat_find_stream_info	ffmpeg/libavformat/avformat.html#avformat_find_stream_info,ptr.AVFormatContext,ptr.ptr.AVDictionary	avformat: avformat_find_stream_info(ic: ptr AVFormatContext; options: ptr ptr AVDictionary): cint	
+av_find_program_from_stream	ffmpeg/libavformat/avformat.html#av_find_program_from_stream,ptr.AVFormatContext,ptr.AVProgram,cint	avformat: av_find_program_from_stream(ic: ptr AVFormatContext; last: ptr AVProgram;\n                            s: cint): ptr AVProgram	
+av_program_add_stream_index	ffmpeg/libavformat/avformat.html#av_program_add_stream_index,ptr.AVFormatContext,cint,cuint	avformat: av_program_add_stream_index(ac: ptr AVFormatContext; progid: cint; idx: cuint)	
+av_find_best_stream	ffmpeg/libavformat/avformat.html#av_find_best_stream,ptr.AVFormatContext,AVMediaType,cint,cint,ptr.ptr.AVCodec,cint	avformat: av_find_best_stream(ic: ptr AVFormatContext; type: AVMediaType;\n                    wanted_stream_nb, related_stream: cint;\n                    decoder_ret: ptr ptr AVCodec; flags: cint): cint	
+av_read_frame	ffmpeg/libavformat/avformat.html#av_read_frame,ptr.AVFormatContext,ptr.AVPacket	avformat: av_read_frame(s: ptr AVFormatContext; pkt: ptr AVPacket): cint	
+av_seek_frame	ffmpeg/libavformat/avformat.html#av_seek_frame,ptr.AVFormatContext,cint,int64,cint	avformat: av_seek_frame(s: ptr AVFormatContext; stream_index: cint; timestamp: int64;\n              flags: cint): cint	
+avformat_seek_file	ffmpeg/libavformat/avformat.html#avformat_seek_file,ptr.AVFormatContext,cint,int64,int64,int64,cint	avformat: avformat_seek_file(s: ptr AVFormatContext; stream_index: cint;\n                   min_ts, ts, max_ts: int64; flags: cint): cint	
+avformat_flush	ffmpeg/libavformat/avformat.html#avformat_flush,ptr.AVFormatContext	avformat: avformat_flush(s: ptr AVFormatContext): cint	
+av_read_play	ffmpeg/libavformat/avformat.html#av_read_play,ptr.AVFormatContext	avformat: av_read_play(s: ptr AVFormatContext): cint	
+av_read_pause	ffmpeg/libavformat/avformat.html#av_read_pause,ptr.AVFormatContext	avformat: av_read_pause(s: ptr AVFormatContext): cint	
+avformat_close_input	ffmpeg/libavformat/avformat.html#avformat_close_input,ptr.ptr.AVFormatContext	avformat: avformat_close_input(s: ptr ptr AVFormatContext)	
+avformat_write_header	ffmpeg/libavformat/avformat.html#avformat_write_header,ptr.AVFormatContext,ptr.ptr.AVDictionary	avformat: avformat_write_header(s: ptr AVFormatContext; options: ptr ptr AVDictionary): cint	
+avformat_init_output	ffmpeg/libavformat/avformat.html#avformat_init_output,ptr.AVFormatContext,ptr.ptr.AVDictionary	avformat: avformat_init_output(s: ptr AVFormatContext; options: ptr ptr AVDictionary): cint	
+av_write_frame	ffmpeg/libavformat/avformat.html#av_write_frame,ptr.AVFormatContext,ptr.AVPacket	avformat: av_write_frame(s: ptr AVFormatContext; pkt: ptr AVPacket): cint	
+av_interleaved_write_frame	ffmpeg/libavformat/avformat.html#av_interleaved_write_frame,ptr.AVFormatContext,ptr.AVPacket	avformat: av_interleaved_write_frame(s: ptr AVFormatContext; pkt: ptr AVPacket): cint	
+av_write_uncoded_frame	ffmpeg/libavformat/avformat.html#av_write_uncoded_frame,ptr.AVFormatContext,cint,ptr.AVFrame	avformat: av_write_uncoded_frame(s: ptr AVFormatContext; stream_index: cint;\n                       frame: ptr AVFrame): cint	
+av_interleaved_write_uncoded_frame	ffmpeg/libavformat/avformat.html#av_interleaved_write_uncoded_frame,ptr.AVFormatContext,cint,ptr.AVFrame	avformat: av_interleaved_write_uncoded_frame(s: ptr AVFormatContext; stream_index: cint;\n                                   frame: ptr AVFrame): cint	
+av_write_uncoded_frame_query	ffmpeg/libavformat/avformat.html#av_write_uncoded_frame_query,ptr.AVFormatContext,cint	avformat: av_write_uncoded_frame_query(s: ptr AVFormatContext; stream_index: cint): cint	
+av_write_trailer	ffmpeg/libavformat/avformat.html#av_write_trailer,ptr.AVFormatContext	avformat: av_write_trailer(s: ptr AVFormatContext): cint	
+av_guess_format	ffmpeg/libavformat/avformat.html#av_guess_format,cstring,cstring,cstring	avformat: av_guess_format(short_name: cstring; filename: cstring; mime_type: cstring): ptr AVOutputFormat	
+av_guess_codec	ffmpeg/libavformat/avformat.html#av_guess_codec,ptr.AVOutputFormat,cstring,cstring,cstring,AVMediaType	avformat: av_guess_codec(fmt: ptr AVOutputFormat;\n               short_name, filenamme, mime_type: cstring; type: AVMediaType): AVCodecID	
+av_get_output_timestamp	ffmpeg/libavformat/avformat.html#av_get_output_timestamp,ptr.AVFormatContext,cint,ptr.int64,ptr.int64	avformat: av_get_output_timestamp(s: ptr AVFormatContext; stream: cint;\n                        dts, wall: ptr int64): cint	
+av_hex_dump	ffmpeg/libavformat/avformat.html#av_hex_dump,ptr.File,ptr.uint8,cint	avformat: av_hex_dump(f: ptr File; buf: ptr uint8; size: cint)	
+av_hex_dump_log	ffmpeg/libavformat/avformat.html#av_hex_dump_log,pointer,cint,ptr.uint8,cint	avformat: av_hex_dump_log(avcl: pointer; level: cint; buf: ptr uint8; size: cint)	
+av_pkt_dump2	ffmpeg/libavformat/avformat.html#av_pkt_dump2,ptr.File,ptr.AVPacket,cint,ptr.AVStream	avformat: av_pkt_dump2(f: ptr File; pkt: ptr AVPacket; dump_payload: cint;\n             st: ptr AVStream)	
+av_pkt_dump_log2	ffmpeg/libavformat/avformat.html#av_pkt_dump_log2,pointer,cint,ptr.AVPacket,cint,ptr.AVStream	avformat: av_pkt_dump_log2(avcl: pointer; level: cint; pkt: ptr AVPacket;\n                 dump_payload: cint; st: ptr AVStream)	
+av_codec_get_id	ffmpeg/libavformat/avformat.html#av_codec_get_id,ptr.ptr.AVCodecTag,cuint	avformat: av_codec_get_id(tags: ptr ptr AVCodecTag; tag: cuint): AVCodecID	
+av_codec_get_tag	ffmpeg/libavformat/avformat.html#av_codec_get_tag,ptr.ptr.AVCodecTag,AVCodecID	avformat: av_codec_get_tag(tags: ptr ptr AVCodecTag; id: AVCodecID): cuint	
+av_codec_get_tag2	ffmpeg/libavformat/avformat.html#av_codec_get_tag2,ptr.ptr.AVCodecTag,AVCodecID,ptr.cuint	avformat: av_codec_get_tag2(tags: ptr ptr AVCodecTag; id: AVCodecID; tag: ptr cuint): cint	
+av_find_default_stream_index	ffmpeg/libavformat/avformat.html#av_find_default_stream_index,ptr.AVFormatContext	avformat: av_find_default_stream_index(s: ptr AVFormatContext): cint	
+av_index_search_timestamp	ffmpeg/libavformat/avformat.html#av_index_search_timestamp,ptr.AVStream,int64,cint	avformat: av_index_search_timestamp(st: ptr AVStream; timestamp: int64; flags: cint): cint	
+av_add_index_entry	ffmpeg/libavformat/avformat.html#av_add_index_entry,ptr.AVStream,int64,int64,cint,cint,cint	avformat: av_add_index_entry(st: ptr AVStream; pos, time_stamp: int64;\n                   size, distance, flags: cint): cint	
+av_url_split	ffmpeg/libavformat/avformat.html#av_url_split,cstring,cint,cstring,cint,cstring,cint,ptr.cint,cstring,cint,cstring	avformat: av_url_split(proto: cstring; proto_size: cint; authorization: cstring;\n             authorization_size: cint; hostname: cstring; hostname_size: cint;\n             port_ptr: ptr cint; path: cstring; path_size: cint; url: cstring)	
+av_dump_format	ffmpeg/libavformat/avformat.html#av_dump_format,ptr.AVFormatContext,cint,cstring,cint	avformat: av_dump_format(ic: ptr AVFormatContext; index: cint; url: cstring;\n               is_output: cint)	
+av_get_frame_filename2	ffmpeg/libavformat/avformat.html#av_get_frame_filename2,cstring,cint,cstring,cint,cint	avformat: av_get_frame_filename2(buf: cstring; buf_size: cint; path: cstring;\n                       number: cint; flags: cint): cint	
+av_get_frame_filename	ffmpeg/libavformat/avformat.html#av_get_frame_filename,cstring,cint,cstring,cint	avformat: av_get_frame_filename(buf: cstring; buf_size: cint; path: cstring; number: cint): cint	
+av_filename_number_test	ffmpeg/libavformat/avformat.html#av_filename_number_test,cstring	avformat: av_filename_number_test(filename: cstring): cint	
+av_sdp_create	ffmpeg/libavformat/avformat.html#av_sdp_create,ptr.openArray[AVFormatContext],cint,cstring,cint	avformat: av_sdp_create(ac: ptr openArray[AVFormatContext]; n_files: cint; buf: cstring;\n              size: cint): cint	
+av_match_ext	ffmpeg/libavformat/avformat.html#av_match_ext,cstring,cstring	avformat: av_match_ext(filename, extensions: cstring): cint	
+avformat_query_codec	ffmpeg/libavformat/avformat.html#avformat_query_codec,ptr.AVOutputFormat,AVCodecID,cint	avformat: avformat_query_codec(ofmt: ptr AVOutputFormat; codec_id: AVCodecID;\n                     std_compliance: cint): cint	
+avformat_get_riff_video_tags	ffmpeg/libavformat/avformat.html#avformat_get_riff_video_tags	avformat: avformat_get_riff_video_tags(): ptr AVCodecTag	
+avformat_get_riff_audio_tags	ffmpeg/libavformat/avformat.html#avformat_get_riff_audio_tags	avformat: avformat_get_riff_audio_tags(): ptr AVCodecTag	
+avformat_get_mov_video_tags	ffmpeg/libavformat/avformat.html#avformat_get_mov_video_tags	avformat: avformat_get_mov_video_tags(): AVCodecTag	
+avformat_get_mov_audio_tags	ffmpeg/libavformat/avformat.html#avformat_get_mov_audio_tags	avformat: avformat_get_mov_audio_tags(): AVCodecTag	
+av_guess_sample_aspect_ratio	ffmpeg/libavformat/avformat.html#av_guess_sample_aspect_ratio,ptr.AVFormatContext,ptr.AVStream,ptr.AVFrame	avformat: av_guess_sample_aspect_ratio(format: ptr AVFormatContext; stream: ptr AVStream;\n                             frame: ptr AVFrame): AVRational	
+av_guess_frame_rate	ffmpeg/libavformat/avformat.html#av_guess_frame_rate,ptr.AVFormatContext,ptr.AVStream,ptr.AVFrame	avformat: av_guess_frame_rate(ctx: ptr AVFormatContext; stream: ptr AVStream;\n                    frame: ptr AVFrame): AVRational	
+avformat_match_stream_specifier	ffmpeg/libavformat/avformat.html#avformat_match_stream_specifier,ptr.AVFormatContext,ptr.AVStream,cstring	avformat: avformat_match_stream_specifier(s: ptr AVFormatContext; st: ptr AVStream;\n                                spec: cstring): cint	
+avformat_queue_attached_pictures	ffmpeg/libavformat/avformat.html#avformat_queue_attached_pictures,ptr.AVFormatContext	avformat: avformat_queue_attached_pictures(s: ptr AVFormatContext): cint	
+avformat_transfer_internal_stream_timing_info	ffmpeg/libavformat/avformat.html#avformat_transfer_internal_stream_timing_info,ptr.AVOutputFormat,ptr.AVStream,ptr.AVStream,AVTimebaseSource	avformat: avformat_transfer_internal_stream_timing_info(ofmt: ptr AVOutputFormat;\n    ost, ist: ptr AVStream; copy_tb: AVTimebaseSource): cint	
+av_stream_get_codec_timebase	ffmpeg/libavformat/avformat.html#av_stream_get_codec_timebase,ptr.AVStream	avformat: av_stream_get_codec_timebase(st: ptr AVStream): AVRational	
+av_disposition_from_string	ffmpeg/libavformat/avformat.html#av_disposition_from_string,cstring	avformat: av_disposition_from_string(disp: cstring): cint	
+av_disposition_to_string	ffmpeg/libavformat/avformat.html#av_disposition_to_string,cint	avformat: av_disposition_to_string(siaposition: cint): cstring	
+avformat_index_get_entries_count	ffmpeg/libavformat/avformat.html#avformat_index_get_entries_count,ptr.AVStream	avformat: avformat_index_get_entries_count(st: ptr AVStream): cint	
+avformat_index_get_entry	ffmpeg/libavformat/avformat.html#avformat_index_get_entry,ptr.AVStream,cint	avformat: avformat_index_get_entry(st: ptr AVStream; idx: cint): ptr AVIndexEntry	
+avformat_index_get_entry_from_timestamp	ffmpeg/libavformat/avformat.html#avformat_index_get_entry_from_timestamp,ptr.AVStream,int64,cint	avformat: avformat_index_get_entry_from_timestamp(st: ptr AVStream;\n                                        wanted_timestamp: int64; flags: cint): ptr AVIndexEntry	
+AVFMT_FLAG_PRIV_OPT	ffmpeg/libavformat/avformat.html#AVFMT_FLAG_PRIV_OPT	avformat: AVFMT_FLAG_PRIV_OPT	

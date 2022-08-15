@@ -1,0 +1,5 @@
+AV_STEREO3D_FLAG_INVERT	ffmpeg/libavutil/stereo3d.html#AV_STEREO3D_FLAG_INVERT	stereo3d: AV_STEREO3D_FLAG_INVERT	
+av_stereo3d_alloc	ffmpeg/libavutil/stereo3d.html#av_stereo3d_alloc	stereo3d: av_stereo3d_alloc(): AVStereo3D	
+av_stereo3d_create_side_data	ffmpeg/libavutil/stereo3d.html#av_stereo3d_create_side_data,ptr.AVFrame	stereo3d: av_stereo3d_create_side_data(frame: ptr AVFrame): ptr AVStereo3D	
+av_stereo3d_type_name	ffmpeg/libavutil/stereo3d.html#av_stereo3d_type_name,cuint	stereo3d: av_stereo3d_type_name(type: cuint): cstring	
+av_stereo3d_from_name	ffmpeg/libavutil/stereo3d.html#av_stereo3d_from_name,cstring	stereo3d: av_stereo3d_from_name(name: cstring): cint	

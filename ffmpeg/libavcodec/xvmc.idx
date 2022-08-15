@@ -1,0 +1,4 @@
+XvMCMacroBlock	ffmpeg/libavcodec/xvmc.html#XvMCMacroBlock	xvmc: XvMCMacroBlock	
+XvMCSurface	ffmpeg/libavcodec/xvmc.html#XvMCSurface	xvmc: XvMCSurface	
+xvmc_pix_fmt	ffmpeg/libavcodec/xvmc.html#xvmc_pix_fmt	xvmc: xvmc_pix_fmt	
+AV_XVMC_ID	ffmpeg/libavcodec/xvmc.html#AV_XVMC_ID	xvmc: AV_XVMC_ID	

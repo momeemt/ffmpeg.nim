@@ -1,0 +1,17 @@
+AV_VERSION_INT	ffmpeg/libavutil/version.html#AV_VERSION_INT.t,untyped,untyped,untyped	version: AV_VERSION_INT(a, b, c: untyped): untyped	
+AV_VERSION_DOT	ffmpeg/libavutil/version.html#AV_VERSION_DOT.t,untyped,untyped,untyped	version: AV_VERSION_DOT(a, b, c: untyped): untyped	
+AV_VERSION	ffmpeg/libavutil/version.html#AV_VERSION.t,untyped,untyped,untyped	version: AV_VERSION(a, b, c: untyped): untyped	
+AV_VERSION_MAJOR	ffmpeg/libavutil/version.html#AV_VERSION_MAJOR.t,untyped	version: AV_VERSION_MAJOR(a: untyped): untyped	
+AV_VERSION_MINOR	ffmpeg/libavutil/version.html#AV_VERSION_MINOR.t,untyped	version: AV_VERSION_MINOR(a: untyped): untyped	
+AV_VERSION_MICRO	ffmpeg/libavutil/version.html#AV_VERSION_MICRO.t,untyped	version: AV_VERSION_MICRO(a: untyped): untyped	
+LIBAVUTIL_VERSION_MAJOR	ffmpeg/libavutil/version.html#LIBAVUTIL_VERSION_MAJOR	version: LIBAVUTIL_VERSION_MAJOR	
+LIBAVUTIL_VERSION_MINOR	ffmpeg/libavutil/version.html#LIBAVUTIL_VERSION_MINOR	version: LIBAVUTIL_VERSION_MINOR	
+LIBAVUTIL_VERSION_MICRO	ffmpeg/libavutil/version.html#LIBAVUTIL_VERSION_MICRO	version: LIBAVUTIL_VERSION_MICRO	
+LIBAVUTIL_VERSION_INT	ffmpeg/libavutil/version.html#LIBAVUTIL_VERSION_INT	version: LIBAVUTIL_VERSION_INT	
+LIBAVUTIL_VERSION	ffmpeg/libavutil/version.html#LIBAVUTIL_VERSION	version: LIBAVUTIL_VERSION	
+LIBAVUTIL_BUILD	ffmpeg/libavutil/version.html#LIBAVUTIL_BUILD	version: LIBAVUTIL_BUILD	
+LIBAVUTIL_IDENT	ffmpeg/libavutil/version.html#LIBAVUTIL_IDENT	version: LIBAVUTIL_IDENT	
+FF_API_D2STR	ffmpeg/libavutil/version.html#FF_API_D2STR	version: FF_API_D2STR	
+FF_API_DECLARE_ALIGNED	ffmpeg/libavutil/version.html#FF_API_DECLARE_ALIGNED	version: FF_API_DECLARE_ALIGNED	
+FF_API_COLORSPACE_NAME	ffmpeg/libavutil/version.html#FF_API_COLORSPACE_NAME	version: FF_API_COLORSPACE_NAME	
+FF_API_AV_MALLOCZ_ARRAY	ffmpeg/libavutil/version.html#FF_API_AV_MALLOCZ_ARRAY	version: FF_API_AV_MALLOCZ_ARRAY	

@@ -1,0 +1,19 @@
+AVBufferSinkParams	ffmpeg/libavfilter/buffersink.html#AVBufferSinkParams	buffersink: AVBufferSinkParams	
+AVABufferSinkParams	ffmpeg/libavfilter/buffersink.html#AVABufferSinkParams	buffersink: AVABufferSinkParams	
+AV_BUFFERSINK_FLAG_PEEK	ffmpeg/libavfilter/buffersink.html#AV_BUFFERSINK_FLAG_PEEK	buffersink: AV_BUFFERSINK_FLAG_PEEK	
+AV_BUFFERSINK_FLAG_NO_REQUEST	ffmpeg/libavfilter/buffersink.html#AV_BUFFERSINK_FLAG_NO_REQUEST	buffersink: AV_BUFFERSINK_FLAG_NO_REQUEST	
+av_buffersink_get_frame_flags	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_frame_flags,ptr.AVFilterContext,ptr.AVFrame,cint	buffersink: av_buffersink_get_frame_flags(ctx: ptr AVFilterContext; frame: ptr AVFrame;\n                              flags: cint): cint	
+av_buffersink_set_frame_size	ffmpeg/libavfilter/buffersink.html#av_buffersink_set_frame_size,ptr.AVFilterContext,cuint	buffersink: av_buffersink_set_frame_size(ctx: ptr AVFilterContext; frame_size: cuint)	
+av_buffersink_get_type	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_type,ptr.AVFilterContext	buffersink: av_buffersink_get_type(ctx: ptr AVFilterContext): AVMediaType	
+av_buffersink_get_time_base	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_time_base,ptr.AVFilterContext	buffersink: av_buffersink_get_time_base(ctx: ptr AVFilterContext): AVRational	
+av_buffersink_get_format	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_format,ptr.AVFilterContext	buffersink: av_buffersink_get_format(ctx: ptr AVFilterContext): cint	
+av_buffersink_get_frame_rate	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_frame_rate,ptr.AVFilterContext	buffersink: av_buffersink_get_frame_rate(ctx: ptr AVFilterContext): AVRational	
+av_buffersink_get_w	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_w,ptr.AVFilterContext	buffersink: av_buffersink_get_w(ctx: ptr AVFilterContext): cint	
+av_buffersink_get_h	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_h,ptr.AVFilterContext	buffersink: av_buffersink_get_h(ctx: ptr AVFilterContext): cint	
+av_buffersink_get_sample_aspect_ratio	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_sample_aspect_ratio,ptr.AVFilterContext	buffersink: av_buffersink_get_sample_aspect_ratio(ctx: ptr AVFilterContext): AVRational	
+av_buffersink_get_channels	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_channels,ptr.AVFilterContext	buffersink: av_buffersink_get_channels(ctx: ptr AVFilterContext): cint	
+av_buffersink_get_channel_layout	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_channel_layout,ptr.AVFilterContext	buffersink: av_buffersink_get_channel_layout(ctx: ptr AVFilterContext): uint64	
+av_buffersink_get_sample_rate	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_sample_rate,ptr.AVFilterContext	buffersink: av_buffersink_get_sample_rate(ctx: ptr AVFilterContext): cint	
+av_buffersink_get_hw_frames_ctx	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_hw_frames_ctx,ptr.AVFilterContext	buffersink: av_buffersink_get_hw_frames_ctx(ctx: ptr AVFilterContext): AVBufferRef	
+av_buffersink_get_frame	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_frame,ptr.AVFilterContext,ptr.AVFrame	buffersink: av_buffersink_get_frame(ctx: ptr AVFilterContext; frame: ptr AVFrame): cint	
+av_buffersink_get_samples	ffmpeg/libavfilter/buffersink.html#av_buffersink_get_samples,ptr.AVFilterContext,ptr.AVFrame,cint	buffersink: av_buffersink_get_samples(ctx: ptr AVFilterContext; frame: ptr AVFrame;\n                          nb_samples: cint): cint	

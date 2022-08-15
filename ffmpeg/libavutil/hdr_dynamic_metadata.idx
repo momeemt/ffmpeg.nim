@@ -1,0 +1,2 @@
+av_dynamic_hdr_plus_alloc	ffmpeg/libavutil/hdr_dynamic_metadata.html#av_dynamic_hdr_plus_alloc,ptr.csize_t	hdr_dynamic_metadata: av_dynamic_hdr_plus_alloc(size: ptr csize_t): ptr AVDynamicHDRPlus	
+av_dynamic_hdr_plus_create_side_data	ffmpeg/libavutil/hdr_dynamic_metadata.html#av_dynamic_hdr_plus_create_side_data,ptr.AVFrame	hdr_dynamic_metadata: av_dynamic_hdr_plus_create_side_data(frame: ptr AVFrame): ptr AVDynamicHDRPlus	

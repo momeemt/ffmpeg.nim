@@ -1,0 +1,4 @@
+av_lfg_init	ffmpeg/libavutil/lfg.html#av_lfg_init,ptr.AVLFG,cuint	lfg: av_lfg_init(c: ptr AVLFG; seed: cuint)	
+av_lfg_init_from_data	ffmpeg/libavutil/lfg.html#av_lfg_init_from_data,ptr.AVLFG,ptr.uint8,cuint	lfg: av_lfg_init_from_data(c: ptr AVLFG; data: ptr uint8; length: cuint): cint	
+av_bmg_get	ffmpeg/libavutil/lfg.html#av_bmg_get,ptr.AVLFG,ptr.cdouble	lfg: av_bmg_get(lfg: ptr AVLFG; out: ptr cdouble)	
+av_lfg_get	ffmpeg/libavutil/lfg.html#av_lfg_get,ptr.AVLFG	lfg: av_lfg_get(c: ptr AVLFG): cuint	

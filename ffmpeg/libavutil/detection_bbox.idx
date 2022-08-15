@@ -1,0 +1,7 @@
+AV_DETECTION_BBOX_LABEL_NAME_MAX_SIZE	ffmpeg/libavutil/detection_bbox.html#AV_DETECTION_BBOX_LABEL_NAME_MAX_SIZE	detection_bbox: AV_DETECTION_BBOX_LABEL_NAME_MAX_SIZE	
+AV_NUM_DETECTION_BBOX_CLASSIFY	ffmpeg/libavutil/detection_bbox.html#AV_NUM_DETECTION_BBOX_CLASSIFY	detection_bbox: AV_NUM_DETECTION_BBOX_CLASSIFY	
+AVDetectionBBox	ffmpeg/libavutil/detection_bbox.html#AVDetectionBBox	detection_bbox: AVDetectionBBox	
+AVDetectionBBoxHeader	ffmpeg/libavutil/detection_bbox.html#AVDetectionBBoxHeader	detection_bbox: AVDetectionBBoxHeader	
+av_get_detection_bbox	ffmpeg/libavutil/detection_bbox.html#av_get_detection_bbox,ptr.AVDetectionBBoxHeader,cuint	detection_bbox: av_get_detection_bbox(header: ptr AVDetectionBBoxHeader; idx: cuint): ptr AVDetectionBBox	
+av_detection_bbox_alloc	ffmpeg/libavutil/detection_bbox.html#av_detection_bbox_alloc,uint32,ptr.csize_t	detection_bbox: av_detection_bbox_alloc(nb_bboxes: uint32; out_size: ptr csize_t): ptr AVDetectionBBoxHeader	
+av_detection_bbox_create_side_data	ffmpeg/libavutil/detection_bbox.html#av_detection_bbox_create_side_data,ptr.AVFrame,uint32	detection_bbox: av_detection_bbox_create_side_data(frame: ptr AVFrame; nb_bboxes: uint32): ptr AVDetectionBBoxHeader	

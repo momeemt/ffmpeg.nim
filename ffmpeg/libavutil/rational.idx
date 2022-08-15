@@ -1,0 +1,14 @@
+av_make_q	ffmpeg/libavutil/rational.html#av_make_q,cint,cint	rational: av_make_q(num: cint; den: cint): AVRational	
+av_cmp_q	ffmpeg/libavutil/rational.html#av_cmp_q,AVRational,AVRational	rational: av_cmp_q(a, b: AVRational): cint	
+av_q2d	ffmpeg/libavutil/rational.html#av_q2d,AVRational	rational: av_q2d(a: AVRational): cdouble	
+av_inv_q	ffmpeg/libavutil/rational.html#av_inv_q,AVRational	rational: av_inv_q(q: AVRational): AVRational	
+av_reduce	ffmpeg/libavutil/rational.html#av_reduce,ptr.cint,ptr.cint,int64,int64,int64	rational: av_reduce(dst_num, dst_den: ptr cint; num, denn, max: int64): cint	
+av_mul_q	ffmpeg/libavutil/rational.html#av_mul_q,AVRational,AVRational	rational: av_mul_q(b, c: AVRational): AVRational	
+av_div_q	ffmpeg/libavutil/rational.html#av_div_q,AVRational,AVRational	rational: av_div_q(b, c: AVRational): AVRational	
+av_add_q	ffmpeg/libavutil/rational.html#av_add_q,AVRational,AVRational	rational: av_add_q(b, c: AVRational): AVRational	
+av_sub_q	ffmpeg/libavutil/rational.html#av_sub_q,AVRational,AVRational	rational: av_sub_q(b, c: AVRational): AVRational	
+av_d2q	ffmpeg/libavutil/rational.html#av_d2q,cdouble,cint	rational: av_d2q(d: cdouble; max: cint): AVRational	
+av_nearer_q	ffmpeg/libavutil/rational.html#av_nearer_q,AVRational,AVRational,AVRational	rational: av_nearer_q(q, q1, q2: AVRational): cint	
+av_find_nearest_q_idx	ffmpeg/libavutil/rational.html#av_find_nearest_q_idx,AVRational,ptr.AVRational	rational: av_find_nearest_q_idx(q: AVRational; q_list: ptr AVRational): cint	
+av_q2intfloat	ffmpeg/libavutil/rational.html#av_q2intfloat,AVRational	rational: av_q2intfloat(q: AVRational): uint32	
+av_gcd_q	ffmpeg/libavutil/rational.html#av_gcd_q,AVRational,AVRational,cint,AVRational	rational: av_gcd_q(a, b: AVRational; max_den: cint; def: AVRational): AVRational	

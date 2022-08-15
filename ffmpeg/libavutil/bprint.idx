@@ -1,0 +1,15 @@
+AV_BPRINT_SIZE_UNLIMITED	ffmpeg/libavutil/bprint.html#AV_BPRINT_SIZE_UNLIMITED	bprint: AV_BPRINT_SIZE_UNLIMITED	
+AV_BPRINT_SIZE_AUTOMATIC	ffmpeg/libavutil/bprint.html#AV_BPRINT_SIZE_AUTOMATIC	bprint: AV_BPRINT_SIZE_AUTOMATIC	
+AV_BPRINT_SIZE_COUNT_ONLY	ffmpeg/libavutil/bprint.html#AV_BPRINT_SIZE_COUNT_ONLY	bprint: AV_BPRINT_SIZE_COUNT_ONLY	
+av_bprint_init	ffmpeg/libavutil/bprint.html#av_bprint_init,ptr.AVBPrint,cuint,cuint	bprint: av_bprint_init(buf: ptr AVBPrint; size_init, size_max: cuint)	
+av_bprint_init_for_buffer	ffmpeg/libavutil/bprint.html#av_bprint_init_for_buffer,ptr.AVBPrint,cstring,cuint	bprint: av_bprint_init_for_buffer(buf: ptr AVBPrint; buffer: cstring; size: cuint)	
+av_bprintf	ffmpeg/libavutil/bprint.html#av_bprintf,ptr.AVBPrint,cstring	bprint: av_bprintf(buf: ptr AVBPrint; fmt: cstring)	
+av_vbprintf	ffmpeg/libavutil/bprint.html#av_vbprintf,ptr.AVBPrint,cstring,va_list	bprint: av_vbprintf(buf: ptr AVBPrint; fmt: cstring; vl_arg: va_list)	
+av_bprint_chars	ffmpeg/libavutil/bprint.html#av_bprint_chars,ptr.AVBPrint,cchar,cuint	bprint: av_bprint_chars(buf: ptr AVBPrint; c: cchar; n: cuint)	
+av_bprint_append_data	ffmpeg/libavutil/bprint.html#av_bprint_append_data,ptr.AVBPrint,cstring,cuint	bprint: av_bprint_append_data(buf: ptr AVBPrint; data: cstring; size: cuint)	
+av_bprint_strftime	ffmpeg/libavutil/bprint.html#av_bprint_strftime,ptr.AVBPrint,cstring,ptr.tm	bprint: av_bprint_strftime(buf: ptr AVBPrint; fmt: cstring; tm: ptr tm)	
+av_bprint_get_buffer	ffmpeg/libavutil/bprint.html#av_bprint_get_buffer,ptr.AVBPrint,cuint,ptr.ptr.uint8,ptr.cuint	bprint: av_bprint_get_buffer(buf: ptr AVBPrint; size: cuint; mem: ptr ptr uint8;\n                     actual_size: ptr cuint)	
+av_bprint_clear	ffmpeg/libavutil/bprint.html#av_bprint_clear,ptr.AVBPrint	bprint: av_bprint_clear(buf: ptr AVBPrint)	
+av_bprint_finalize	ffmpeg/libavutil/bprint.html#av_bprint_finalize,ptr.AVBPrint,cstringArray	bprint: av_bprint_finalize(buf: ptr AVBPrint; ret_str: cstringArray): cint	
+av_bprint_escape	ffmpeg/libavutil/bprint.html#av_bprint_escape,ptr.AVBPrint,cstring,cstring,AVEscapeMode,cint	bprint: av_bprint_escape(dstbuf: ptr AVBPrint; src, special_chars: cstring;\n                 mode: AVEscapeMode; flags: cint)	
+av_bprint_is_complete	ffmpeg/libavutil/bprint.html#av_bprint_is_complete,ptr.AVBPrint	bprint: av_bprint_is_complete(buf: ptr AVBPrint): cint	

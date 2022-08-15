@@ -1,0 +1,34 @@
+AV_CODEC_CAP_DRAW_HORIZ_BAND	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_DRAW_HORIZ_BAND	codec: AV_CODEC_CAP_DRAW_HORIZ_BAND	
+AV_CODEC_CAP_DR1	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_DR1	codec: AV_CODEC_CAP_DR1	
+AV_CODEC_CAP_DELAY	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_DELAY	codec: AV_CODEC_CAP_DELAY	
+AV_CODEC_CAP_SMALL_LAST_FRAME	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_SMALL_LAST_FRAME	codec: AV_CODEC_CAP_SMALL_LAST_FRAME	
+AV_CODEC_CAP_SUBFRAMES	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_SUBFRAMES	codec: AV_CODEC_CAP_SUBFRAMES	
+AV_CODEC_CAP_EXPERIMENTAL	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_EXPERIMENTAL	codec: AV_CODEC_CAP_EXPERIMENTAL	
+AV_CODEC_CAP_CHANNEL_CONF	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_CHANNEL_CONF	codec: AV_CODEC_CAP_CHANNEL_CONF	
+AV_CODEC_CAP_FRAME_THREADS	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_FRAME_THREADS	codec: AV_CODEC_CAP_FRAME_THREADS	
+AV_CODEC_CAP_SLICE_THREADS	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_SLICE_THREADS	codec: AV_CODEC_CAP_SLICE_THREADS	
+AV_CODEC_CAP_PARAM_CHANGE	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_PARAM_CHANGE	codec: AV_CODEC_CAP_PARAM_CHANGE	
+AV_CODEC_CAP_OTHER_THREADS	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_OTHER_THREADS	codec: AV_CODEC_CAP_OTHER_THREADS	
+AV_CODEC_CAP_VARIABLE_FRAME_SIZE	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_VARIABLE_FRAME_SIZE	codec: AV_CODEC_CAP_VARIABLE_FRAME_SIZE	
+AV_CODEC_CAP_AVOID_PROBING	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_AVOID_PROBING	codec: AV_CODEC_CAP_AVOID_PROBING	
+AV_CODEC_CAP_HARDWARE	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_HARDWARE	codec: AV_CODEC_CAP_HARDWARE	
+AV_CODEC_CAP_HYBRID	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_HYBRID	codec: AV_CODEC_CAP_HYBRID	
+AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE	codec: AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE	
+AV_CODEC_CAP_ENCODER_FLUSH	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_ENCODER_FLUSH	codec: AV_CODEC_CAP_ENCODER_FLUSH	
+AV_CODEC_HW_CONFIG_METHOD_HW_DEVICE_CTX	ffmpeg/libavcodec/codec.html#AV_CODEC_HW_CONFIG_METHOD_HW_DEVICE_CTX	codec: AV_CODEC_HW_CONFIG_METHOD_HW_DEVICE_CTX	
+AV_CODEC_HW_CONFIG_METHOD_HW_FRAMES_CTX	ffmpeg/libavcodec/codec.html#AV_CODEC_HW_CONFIG_METHOD_HW_FRAMES_CTX	codec: AV_CODEC_HW_CONFIG_METHOD_HW_FRAMES_CTX	
+AV_CODEC_HW_CONFIG_METHOD_INTERNAL	ffmpeg/libavcodec/codec.html#AV_CODEC_HW_CONFIG_METHOD_INTERNAL	codec: AV_CODEC_HW_CONFIG_METHOD_INTERNAL	
+AV_CODEC_HW_CONFIG_METHOD_AD_HOC	ffmpeg/libavcodec/codec.html#AV_CODEC_HW_CONFIG_METHOD_AD_HOC	codec: AV_CODEC_HW_CONFIG_METHOD_AD_HOC	
+AV_CODEC_CAP_INTRA_ONLY	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_INTRA_ONLY	codec: AV_CODEC_CAP_INTRA_ONLY	
+AV_CODEC_CAP_LOSSLESS	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_LOSSLESS	codec: AV_CODEC_CAP_LOSSLESS	
+AV_CODEC_CAP_TRUNCATED	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_TRUNCATED	codec: AV_CODEC_CAP_TRUNCATED	
+AV_CODEC_CAP_AUTO_THREADS	ffmpeg/libavcodec/codec.html#AV_CODEC_CAP_AUTO_THREADS	codec: AV_CODEC_CAP_AUTO_THREADS	
+av_codec_iterate	ffmpeg/libavcodec/codec.html#av_codec_iterate,ptr.pointer	codec: av_codec_iterate(opaque: ptr pointer): ptr AVCodec	
+avcodec_find_decoder	ffmpeg/libavcodec/codec.html#avcodec_find_decoder,AVCodecID	codec: avcodec_find_decoder(id: AVCodecID): ptr AVCodec	
+avcodec_find_decoder_by_name	ffmpeg/libavcodec/codec.html#avcodec_find_decoder_by_name,cstring	codec: avcodec_find_decoder_by_name(name: cstring): ptr AVCodec	
+avcodec_find_encoder	ffmpeg/libavcodec/codec.html#avcodec_find_encoder,AVCodecID	codec: avcodec_find_encoder(id: AVCodecID): ptr AVCodec	
+avcodec_find_encoder_by_name	ffmpeg/libavcodec/codec.html#avcodec_find_encoder_by_name,cstring	codec: avcodec_find_encoder_by_name(name: cstring): ptr AVCodec	
+av_codec_is_encoder	ffmpeg/libavcodec/codec.html#av_codec_is_encoder,ptr.AVCodec	codec: av_codec_is_encoder(codec: ptr AVCodec): cint	
+av_codec_is_decoder	ffmpeg/libavcodec/codec.html#av_codec_is_decoder,ptr.AVCodec	codec: av_codec_is_decoder(codec: ptr AVCodec): cint	
+av_get_profile_name	ffmpeg/libavcodec/codec.html#av_get_profile_name,ptr.AVCodec,cint	codec: av_get_profile_name(codec: ptr AVCodec; profile: cint): ptr cchar	
+avcodec_get_hw_config	ffmpeg/libavcodec/codec.html#avcodec_get_hw_config,ptr.AVCodec,cint	codec: avcodec_get_hw_config(codec: ptr AVCodec; index: cint): ptr AVCodecHWConfig	

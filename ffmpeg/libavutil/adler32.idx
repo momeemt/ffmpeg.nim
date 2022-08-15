@@ -1,0 +1,2 @@
+AVAdler	ffmpeg/libavutil/adler32.html#AVAdler	adler32: AVAdler	
+av_adler32_update	ffmpeg/libavutil/adler32.html#av_adler32_update,AVAdler,ptr.uint8,csize_t	adler32: av_adler32_update(adler: AVAdler; buf: ptr uint8; len: csize_t): AVAdler	

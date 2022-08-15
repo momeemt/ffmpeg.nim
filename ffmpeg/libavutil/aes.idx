@@ -1,0 +1,4 @@
+av_aes_size	ffmpeg/libavutil/aes.html#av_aes_size	aes: av_aes_size	
+av_aes_alloc	ffmpeg/libavutil/aes.html#av_aes_alloc	aes: av_aes_alloc(): ptr AVAES	
+av_aes_init	ffmpeg/libavutil/aes.html#av_aes_init,ptr.AVAES,ptr.uint8,cint,cint	aes: av_aes_init(a: ptr AVAES; key: ptr uint8; key_bits, decrypt: cint): cint	
+av_aes_crypt	ffmpeg/libavutil/aes.html#av_aes_crypt,ptr.AVAES,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	aes: av_aes_crypt(a: ptr AVAES; dst, src: ptr uint8; count: cint; iv: ptr uint8;\n             decrypt: cint)	

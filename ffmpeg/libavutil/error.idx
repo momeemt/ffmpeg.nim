@@ -1,0 +1,34 @@
+AV_ERROR_MAX_STRING_SIZE	ffmpeg/libavutil/error.html#AV_ERROR_MAX_STRING_SIZE	error: AV_ERROR_MAX_STRING_SIZE	
+AVERROR	ffmpeg/libavutil/error.html#AVERROR.t,untyped	error: AVERROR(e: untyped): untyped	
+AVUNERROR	ffmpeg/libavutil/error.html#AVUNERROR.t,untyped	error: AVUNERROR(e: untyped): untyped	
+FFERRTAG	ffmpeg/libavutil/error.html#FFERRTAG.t,untyped,untyped,untyped,untyped	error: FFERRTAG(a, b, c, d: untyped): untyped	
+AVERROR_BSF_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_BSF_NOT_FOUND.t	error: AVERROR_BSF_NOT_FOUND(): untyped	
+AVERROR_BUG	ffmpeg/libavutil/error.html#AVERROR_BUG.t	error: AVERROR_BUG(): untyped	
+AVERROR_BUFFER_TOO_SMALL	ffmpeg/libavutil/error.html#AVERROR_BUFFER_TOO_SMALL.t	error: AVERROR_BUFFER_TOO_SMALL(): untyped	
+AVERROR_DECODER_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_DECODER_NOT_FOUND.t	error: AVERROR_DECODER_NOT_FOUND(): untyped	
+AVERROR_DEMUXER_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_DEMUXER_NOT_FOUND.t	error: AVERROR_DEMUXER_NOT_FOUND(): untyped	
+AVERROR_ENCODER_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_ENCODER_NOT_FOUND.t	error: AVERROR_ENCODER_NOT_FOUND(): untyped	
+AVERROR_EOF	ffmpeg/libavutil/error.html#AVERROR_EOF.t	error: AVERROR_EOF(): untyped	
+AVERROR_EXIT	ffmpeg/libavutil/error.html#AVERROR_EXIT.t	error: AVERROR_EXIT(): untyped	
+AVERROR_EXTERNAL	ffmpeg/libavutil/error.html#AVERROR_EXTERNAL.t	error: AVERROR_EXTERNAL(): untyped	
+AVERROR_FILTER_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_FILTER_NOT_FOUND.t	error: AVERROR_FILTER_NOT_FOUND(): untyped	
+AVERROR_INVALIDDATA	ffmpeg/libavutil/error.html#AVERROR_INVALIDDATA.t	error: AVERROR_INVALIDDATA(): untyped	
+AVERROR_MUXER_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_MUXER_NOT_FOUND.t	error: AVERROR_MUXER_NOT_FOUND(): untyped	
+AVERROR_OPTION_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_OPTION_NOT_FOUND.t	error: AVERROR_OPTION_NOT_FOUND(): untyped	
+AVERROR_PATCHWELCOME	ffmpeg/libavutil/error.html#AVERROR_PATCHWELCOME.t	error: AVERROR_PATCHWELCOME(): untyped	
+AVERROR_PROTOCOL_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_PROTOCOL_NOT_FOUND.t	error: AVERROR_PROTOCOL_NOT_FOUND(): untyped	
+AVERROR_STREAM_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_STREAM_NOT_FOUND.t	error: AVERROR_STREAM_NOT_FOUND(): untyped	
+AVERROR_BUG2	ffmpeg/libavutil/error.html#AVERROR_BUG2.t	error: AVERROR_BUG2(): untyped	
+AVERROR_UNKNOWN	ffmpeg/libavutil/error.html#AVERROR_UNKNOWN.t	error: AVERROR_UNKNOWN(): untyped	
+AVERROR_EXPERIMENTAL	ffmpeg/libavutil/error.html#AVERROR_EXPERIMENTAL.t	error: AVERROR_EXPERIMENTAL(): untyped	
+AVERROR_INPUT_CHANGED	ffmpeg/libavutil/error.html#AVERROR_INPUT_CHANGED.t	error: AVERROR_INPUT_CHANGED(): untyped	
+AVERROR_OUTPUT_CHANGED	ffmpeg/libavutil/error.html#AVERROR_OUTPUT_CHANGED.t	error: AVERROR_OUTPUT_CHANGED(): untyped	
+AVERROR_HTTP_BAD_REQUEST	ffmpeg/libavutil/error.html#AVERROR_HTTP_BAD_REQUEST.t	error: AVERROR_HTTP_BAD_REQUEST(): untyped	
+AVERROR_HTTP_UNAUTHORIZED	ffmpeg/libavutil/error.html#AVERROR_HTTP_UNAUTHORIZED.t	error: AVERROR_HTTP_UNAUTHORIZED(): untyped	
+AVERROR_HTTP_FORBIDDEN	ffmpeg/libavutil/error.html#AVERROR_HTTP_FORBIDDEN.t	error: AVERROR_HTTP_FORBIDDEN(): untyped	
+AVERROR_HTTP_NOT_FOUND	ffmpeg/libavutil/error.html#AVERROR_HTTP_NOT_FOUND.t	error: AVERROR_HTTP_NOT_FOUND(): untyped	
+AVERROR_HTTP_OTHER_4XX	ffmpeg/libavutil/error.html#AVERROR_HTTP_OTHER_4XX.t	error: AVERROR_HTTP_OTHER_4XX(): untyped	
+AVERROR_HTTP_SERVER_ERROR	ffmpeg/libavutil/error.html#AVERROR_HTTP_SERVER_ERROR.t	error: AVERROR_HTTP_SERVER_ERROR(): untyped	
+av_err2str	ffmpeg/libavutil/error.html#av_err2str.t,untyped	error: av_err2str(errnum: untyped): untyped	
+av_strerror	ffmpeg/libavutil/error.html#av_strerror,cint,cstring,csize_t	error: av_strerror(errnum: cint; errbuf: cstring; errbuf_size: csize_t): cint	
+av_make_error_string	ffmpeg/libavutil/error.html#av_make_error_string,cstring,csize_t,cint	error: av_make_error_string(errbuf: cstring; errbuf_size: csize_t; errnum: cint): cstring	

@@ -1,0 +1,1 @@
+av_downmix_info_update_side_data	ffmpeg/libavutil/downmin_info.html#av_downmix_info_update_side_data,ptr.AVFrame	downmin_info: av_downmix_info_update_side_data(frame: ptr AVFrame): ptr AVDownmixInfo	

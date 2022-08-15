@@ -1,0 +1,61 @@
+RSHIFT	ffmpeg/libavutil/common.html#RSHIFT.t,untyped,untyped	common: RSHIFT(a, b: untyped): untyped	
+ROUNDED_DIV	ffmpeg/libavutil/common.html#ROUNDED_DIV.t,untyped,untyped	common: ROUNDED_DIV(a, b: untyped): untyped	
+AV_CEIL_RSHIFT	ffmpeg/libavutil/common.html#AV_CEIL_RSHIFT.t,untyped,untyped	common: AV_CEIL_RSHIFT(a, b: untyped): untyped	
+FF_CEIL_RSHIFT	ffmpeg/libavutil/common.html#FF_CEIL_RSHIFT.t,untyped,untyped	common: FF_CEIL_RSHIFT(a, b: untyped): untyped	
+FFUDIV	ffmpeg/libavutil/common.html#FFUDIV.t,untyped,untyped	common: FFUDIV(a, b: untyped): untyped	
+FFUMOD	ffmpeg/libavutil/common.html#FFUMOD.t,untyped,untyped	common: FFUMOD(a, b: untyped): untyped	
+FFABS	ffmpeg/libavutil/common.html#FFABS.t,untyped	common: FFABS(a: untyped): untyped	
+FFSIGN	ffmpeg/libavutil/common.html#FFSIGN.t,untyped	common: FFSIGN(a: untyped): untyped	
+FFNABS	ffmpeg/libavutil/common.html#FFNABS.t,untyped	common: FFNABS(a: untyped): untyped	
+FFABSU	ffmpeg/libavutil/common.html#FFABSU.t,untyped	common: FFABSU(a: untyped): untyped	
+FFABS64U	ffmpeg/libavutil/common.html#FFABS64U.t,untyped	common: FFABS64U(a: untyped): untyped	
+av_log2	ffmpeg/libavutil/common.html#av_log2,cuint	common: av_log2(v: cuint): cint	
+av_log2_16bit	ffmpeg/libavutil/common.html#av_log2_16bit,cuint	common: av_log2_16bit(v: cuint): cint	
+av_clip_c	ffmpeg/libavutil/common.html#av_clip_c,cint,cint,cint	common: av_clip_c(a, amin, amax: cint): cint	
+av_clip64_c	ffmpeg/libavutil/common.html#av_clip64_c,int64,int64,int64	common: av_clip64_c(a, amin, amax: int64): int64	
+av_clip_uint8_c	ffmpeg/libavutil/common.html#av_clip_uint8_c,cint	common: av_clip_uint8_c(a: cint): uint8	
+av_clip_int8_c	ffmpeg/libavutil/common.html#av_clip_int8_c,cint	common: av_clip_int8_c(a: cint): int8	
+av_clip_uint16_c	ffmpeg/libavutil/common.html#av_clip_uint16_c,cint	common: av_clip_uint16_c(a: cint): uint16	
+av_clip_int16_c	ffmpeg/libavutil/common.html#av_clip_int16_c,cint	common: av_clip_int16_c(a: cint): int16	
+av_clipl_int32_c	ffmpeg/libavutil/common.html#av_clipl_int32_c,int64	common: av_clipl_int32_c(a: int64): int32	
+av_clip_intp2_c	ffmpeg/libavutil/common.html#av_clip_intp2_c,cint,cint	common: av_clip_intp2_c(a: cint; p: cint): cint	
+av_clip_uintp2_c	ffmpeg/libavutil/common.html#av_clip_uintp2_c,cint,cint	common: av_clip_uintp2_c(a: cint; p: cint): cuint	
+av_mod_uintp2_c	ffmpeg/libavutil/common.html#av_mod_uintp2_c,cuint,cuint	common: av_mod_uintp2_c(a, p: cuint): cuint	
+av_sat_add32_c	ffmpeg/libavutil/common.html#av_sat_add32_c,cint,cint	common: av_sat_add32_c(a, b: cint): cint	
+av_sat_dadd32_c	ffmpeg/libavutil/common.html#av_sat_dadd32_c,cint,cint	common: av_sat_dadd32_c(a, b: cint): cint	
+av_sat_sub32_c	ffmpeg/libavutil/common.html#av_sat_sub32_c,cint,cint	common: av_sat_sub32_c(a, b: cint): cint	
+av_sat_dsub32_c	ffmpeg/libavutil/common.html#av_sat_dsub32_c,cint,cint	common: av_sat_dsub32_c(a, b: cint): cint	
+av_sat_add64_c	ffmpeg/libavutil/common.html#av_sat_add64_c,int64,int64	common: av_sat_add64_c(a, b: int64): int64	
+av_sat_sub64_c	ffmpeg/libavutil/common.html#av_sat_sub64_c,int64,int64	common: av_sat_sub64_c(a, b: int64): int64	
+av_clipf_c	ffmpeg/libavutil/common.html#av_clipf_c,cfloat,cfloat,cfloat	common: av_clipf_c(a: cfloat; amin: cfloat; amax: cfloat): cfloat	
+av_clipd_c	ffmpeg/libavutil/common.html#av_clipd_c,cdouble,cdouble,cdouble	common: av_clipd_c(a: cdouble; amin: cdouble; amax: cdouble): cdouble	
+av_ceil_log2_c	ffmpeg/libavutil/common.html#av_ceil_log2_c,cint	common: av_ceil_log2_c(x: cint): cint	
+av_popcount_c	ffmpeg/libavutil/common.html#av_popcount_c,uint32	common: av_popcount_c(x: uint32): cint	
+av_popcount64_c	ffmpeg/libavutil/common.html#av_popcount64_c,uint64	common: av_popcount64_c(x: uint64): cint	
+av_parity_c	ffmpeg/libavutil/common.html#av_parity_c,uint32	common: av_parity_c(v: uint32): cint	
+GET_UTF8	ffmpeg/libavutil/common.html#GET_UTF8.t,untyped,untyped,untyped	common: GET_UTF8(val, GET_BYTE, ERROR: untyped): untyped	
+GET_UTF16	ffmpeg/libavutil/common.html#GET_UTF16.t,untyped,untyped,untyped	common: GET_UTF16(cal, GET_16BIT, ERROR: untyped): untyped	
+PUT_UTF8	ffmpeg/libavutil/common.html#PUT_UTF8.t,untyped,untyped,untyped	common: PUT_UTF8(val, tmp, PUT_BYTE: untyped): untyped	
+PUT_UTF16	ffmpeg/libavutil/common.html#PUT_UTF16.t,untyped,untyped,untyped	common: PUT_UTF16(val, tmp, PUT_16BIT: untyped): untyped	
+av_ceil_log2	ffmpeg/libavutil/common.html#av_ceil_log2,cint	common: av_ceil_log2(x: cint): cint	
+av_clip	ffmpeg/libavutil/common.html#av_clip,cint,cint,cint	common: av_clip(a, amin, amax: cint): cint	
+av_clip64	ffmpeg/libavutil/common.html#av_clip64,int64,int64,int64	common: av_clip64(a, amin, amax: int64): int64	
+av_clip_uint8	ffmpeg/libavutil/common.html#av_clip_uint8,cint	common: av_clip_uint8(a: cint): uint8	
+av_clip_int8	ffmpeg/libavutil/common.html#av_clip_int8,cint	common: av_clip_int8(a: cint): int8	
+av_clip_uint16	ffmpeg/libavutil/common.html#av_clip_uint16,cint	common: av_clip_uint16(a: cint): uint16	
+av_clip_int16	ffmpeg/libavutil/common.html#av_clip_int16,cint	common: av_clip_int16(a: cint): int16	
+av_clipl_int32	ffmpeg/libavutil/common.html#av_clipl_int32,int64	common: av_clipl_int32(a: int64): int32	
+av_clip_intp2	ffmpeg/libavutil/common.html#av_clip_intp2,cint,cint	common: av_clip_intp2(a, p: cint): cint	
+av_clip_uintp2	ffmpeg/libavutil/common.html#av_clip_uintp2,cint,cint	common: av_clip_uintp2(a, p: cint): cuint	
+av_mod_uintp2	ffmpeg/libavutil/common.html#av_mod_uintp2,cuint,cuint	common: av_mod_uintp2(a, p: cuint): cuint	
+av_sat_add32	ffmpeg/libavutil/common.html#av_sat_add32,cint,cint	common: av_sat_add32(a, b: cint): cint	
+av_sat_dadd32	ffmpeg/libavutil/common.html#av_sat_dadd32,cint,cint	common: av_sat_dadd32(a, b: cint): cint	
+av_sat_sub32	ffmpeg/libavutil/common.html#av_sat_sub32,cint,cint	common: av_sat_sub32(a, b: cint): cint	
+av_sat_dsub32	ffmpeg/libavutil/common.html#av_sat_dsub32,cint,cint	common: av_sat_dsub32(a, b: cint): cint	
+av_sat_add64	ffmpeg/libavutil/common.html#av_sat_add64,int64,int64	common: av_sat_add64(a, b: int64): int64	
+av_sat_sub64	ffmpeg/libavutil/common.html#av_sat_sub64,int64,int64	common: av_sat_sub64(a, b: int64): int64	
+av_clipf	ffmpeg/libavutil/common.html#av_clipf,cfloat,cfloat,cfloat	common: av_clipf(a, b, c: cfloat): cfloat	
+av_clipd	ffmpeg/libavutil/common.html#av_clipd,cdouble,cdouble,cdouble	common: av_clipd(a, b, c: cdouble): cdouble	
+av_popcount	ffmpeg/libavutil/common.html#av_popcount,uint32	common: av_popcount(a: uint32): cint	
+av_popcount64	ffmpeg/libavutil/common.html#av_popcount64,uint64	common: av_popcount64(a: uint64): cint	
+av_parity	ffmpeg/libavutil/common.html#av_parity,uint32	common: av_parity(a: uint32): cint	

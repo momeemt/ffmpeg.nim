@@ -1,0 +1,1 @@
+av_ac3_parse_header	ffmpeg/libavcodec/ac3_parser.html#av_ac3_parse_header,ptr.uint8,uint8,ptr.uint8,ptr.uint16	ac3_parser: av_ac3_parse_header(buf: ptr uint8; size_t: uint8; bitstream_id: ptr uint8;\n                    frame_size: ptr uint16): cint	

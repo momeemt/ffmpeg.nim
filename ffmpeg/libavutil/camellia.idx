@@ -1,0 +1,4 @@
+av_camellia_size	ffmpeg/libavutil/camellia.html#av_camellia_size	camellia: av_camellia_size	
+av_camellia_alloc	ffmpeg/libavutil/camellia.html#av_camellia_alloc	camellia: av_camellia_alloc(): ptr AVCAMELLIA	
+av_camellia_init	ffmpeg/libavutil/camellia.html#av_camellia_init,ptr.AVCAMELLIA,ptr.uint8,cint	camellia: av_camellia_init(ctx: ptr AVCAMELLIA; key: ptr uint8; key_bits: cint): cint	
+av_camellia_crypt	ffmpeg/libavutil/camellia.html#av_camellia_crypt,ptr.AVCAMELLIA,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	camellia: av_camellia_crypt(ctx: ptr AVCAMELLIA; dst, src: ptr uint8; count: cint;\n                  iv: ptr uint8; decrypt: cint)	

@@ -1,0 +1,23 @@
+SWR_FLAG_RESAMPLE	ffmpeg/libswresample/swresample.html#SWR_FLAG_RESAMPLE	swresample: SWR_FLAG_RESAMPLE	
+swr_get_class	ffmpeg/libswresample/swresample.html#swr_get_class	swresample: swr_get_class(): ptr AVClass	
+swr_alloc	ffmpeg/libswresample/swresample.html#swr_alloc	swresample: swr_alloc(): ptr SwrContext	
+swr_init	ffmpeg/libswresample/swresample.html#swr_init,ptr.SwrContext	swresample: swr_init(s: ptr SwrContext): cint	
+swr_is_initialized	ffmpeg/libswresample/swresample.html#swr_is_initialized,ptr.SwrContext	swresample: swr_is_initialized(s: ptr SwrContext): cint	
+swr_alloc_set_opts	ffmpeg/libswresample/swresample.html#swr_alloc_set_opts,ptr.SwrContext,int64,AVSampleFormat,cint,int64,AVSampleFormat,cint,cint,pointer	swresample: swr_alloc_set_opts(s: ptr SwrContext; out_ch_layout: int64;\n                   out_sample_fmt: AVSampleFormat; out_sample_rate: cint;\n                   in_ch_layout: int64; in_sample_fmt: AVSampleFormat;\n                   in_sample_rate, log_offset: cint; log_ctx: pointer): ptr SwrContext	
+swr_free	ffmpeg/libswresample/swresample.html#swr_free,ptr.ptr.SwrContext	swresample: swr_free(s: ptr ptr SwrContext)	
+swr_close	ffmpeg/libswresample/swresample.html#swr_close,ptr.SwrContext	swresample: swr_close(s: ptr SwrContext)	
+swr_convert	ffmpeg/libswresample/swresample.html#swr_convert,ptr.SwrContext,ptr.ptr.uint8,cint,ptr.ptr.uint8,cint	swresample: swr_convert(s: ptr SwrContext; out: ptr ptr uint8; out_count: cint;\n            in: ptr ptr uint8; in_count: cint): cint	
+swr_next_pts	ffmpeg/libswresample/swresample.html#swr_next_pts,ptr.SwrContext,int64	swresample: swr_next_pts(s: ptr SwrContext; pts: int64): int64	
+swr_set_compensation	ffmpeg/libswresample/swresample.html#swr_set_compensation,ptr.SwrContext,cint,cint	swresample: swr_set_compensation(s: ptr SwrContext; sample_delta: cint;\n                     compensation_distance: cint): cint	
+swr_set_channel_mapping	ffmpeg/libswresample/swresample.html#swr_set_channel_mapping,ptr.SwrContext,ptr.cint	swresample: swr_set_channel_mapping(s: ptr SwrContext; channel_map: ptr cint): cint	
+swr_build_matrix	ffmpeg/libswresample/swresample.html#swr_build_matrix,uint64,uint64,cdouble,cdouble,cdouble,cdouble,cdouble,ptr.cdouble,cint,AVMatrixEncoding,pointer	swresample: swr_build_matrix(in_layout, out_layout: uint64; center_mix_level,\n    surround_mix_level, lfe_mix_level, rematrix_maxval, rematrix_volume: cdouble;\n                 matrix: ptr cdouble; stride: cint;\n                 matrix_encoding: AVMatrixEncoding; log_ctx: pointer): cint	
+swr_set_matrix	ffmpeg/libswresample/swresample.html#swr_set_matrix,ptr.SwrContext,ptr.cdouble,cint	swresample: swr_set_matrix(s: ptr SwrContext; matrix: ptr cdouble; stride: cint): cint	
+swr_drop_output	ffmpeg/libswresample/swresample.html#swr_drop_output,ptr.SwrContext,cint	swresample: swr_drop_output(s: ptr SwrContext; count: cint): cint	
+swr_inject_silence	ffmpeg/libswresample/swresample.html#swr_inject_silence,ptr.SwrContext,cint	swresample: swr_inject_silence(s: ptr SwrContext; count: cint): cint	
+swr_get_delay	ffmpeg/libswresample/swresample.html#swr_get_delay,ptr.SwrContext,int64	swresample: swr_get_delay(s: ptr SwrContext; base: int64): int64	
+swr_get_out_samples	ffmpeg/libswresample/swresample.html#swr_get_out_samples,ptr.SwrContext,cint	swresample: swr_get_out_samples(s: ptr SwrContext; in_samples: cint): cint	
+swresample_version	ffmpeg/libswresample/swresample.html#swresample_version	swresample: swresample_version(): cuint	
+swresample_configuration	ffmpeg/libswresample/swresample.html#swresample_configuration	swresample: swresample_configuration(): cstring	
+swresample_license	ffmpeg/libswresample/swresample.html#swresample_license	swresample: swresample_license(): cstring	
+swr_convert_frame	ffmpeg/libswresample/swresample.html#swr_convert_frame,ptr.SwrContext,ptr.AVFrame,ptr.AVFrame	swresample: swr_convert_frame(swr: ptr SwrContext; output, input: ptr AVFrame): cint	
+swr_config_frame	ffmpeg/libswresample/swresample.html#swr_config_frame,ptr.SwrContext,ptr.AVFrame,ptr.AVFrame	swresample: swr_config_frame(swr: ptr SwrContext; out, in: ptr AVFrame): cint	

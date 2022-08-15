@@ -1,0 +1,20 @@
+FF_LAMBDA_SHIFT	ffmpeg/libavutil/avutil.html#FF_LAMBDA_SHIFT	avutil: FF_LAMBDA_SHIFT	
+FF_LAMBDA_SCALE	ffmpeg/libavutil/avutil.html#FF_LAMBDA_SCALE	avutil: FF_LAMBDA_SCALE	
+FF_QP2LAMBDA	ffmpeg/libavutil/avutil.html#FF_QP2LAMBDA	avutil: FF_QP2LAMBDA	
+FF_LAMBDA_MAX	ffmpeg/libavutil/avutil.html#FF_LAMBDA_MAX	avutil: FF_LAMBDA_MAX	
+FF_QUALITY_SCALE	ffmpeg/libavutil/avutil.html#FF_QUALITY_SCALE	avutil: FF_QUALITY_SCALE	
+AV_NOPTS_VALUE	ffmpeg/libavutil/avutil.html#AV_NOPTS_VALUE	avutil: AV_NOPTS_VALUE	
+AV_TIME_BASE	ffmpeg/libavutil/avutil.html#AV_TIME_BASE	avutil: AV_TIME_BASE	
+AV_FOURCC_MAX_STRING_SIZE	ffmpeg/libavutil/avutil.html#AV_FOURCC_MAX_STRING_SIZE	avutil: AV_FOURCC_MAX_STRING_SIZE	
+avutil_version	ffmpeg/libavutil/avutil.html#avutil_version	avutil: avutil_version(): cuint	
+av_version_info	ffmpeg/libavutil/avutil.html#av_version_info	avutil: av_version_info(): cstring	
+avutil_configuration	ffmpeg/libavutil/avutil.html#avutil_configuration	avutil: avutil_configuration(): cstring	
+avutil_license	ffmpeg/libavutil/avutil.html#avutil_license	avutil: avutil_license(): cstring	
+av_get_media_type_string	ffmpeg/libavutil/avutil.html#av_get_media_type_string,AVMediaType	avutil: av_get_media_type_string(media_type: AVMediaType): cstring	
+av_get_picture_type_char	ffmpeg/libavutil/avutil.html#av_get_picture_type_char,AVPictureType	avutil: av_get_picture_type_char(pict_type: AVPictureType): cchar	
+av_int_list_length_for_size	ffmpeg/libavutil/avutil.html#av_int_list_length_for_size,cuint,pointer,uint64	avutil: av_int_list_length_for_size(elsize: cuint; list: pointer; term: uint64): cuint	
+av_fopen_utf8	ffmpeg/libavutil/avutil.html#av_fopen_utf8,cstring,cstring	avutil: av_fopen_utf8(path, mode: cstring): ptr File	
+av_get_time_base_q	ffmpeg/libavutil/avutil.html#av_get_time_base_q	avutil: av_get_time_base_q(): AVRational	
+av_fourcc_make_string	ffmpeg/libavutil/avutil.html#av_fourcc_make_string,cstring,uint32	avutil: av_fourcc_make_string(buf: cstring; fourcc: uint32): cstring	
+av_x_if_null	ffmpeg/libavutil/avutil.html#av_x_if_null,pointer,pointer	avutil: av_x_if_null(p, x: pointer): pointer	
+av_int_list_length	ffmpeg/libavutil/avutil.html#av_int_list_length.t,untyped,untyped	avutil: av_int_list_length(list, term: untyped): untyped	

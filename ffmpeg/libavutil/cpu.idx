@@ -1,0 +1,49 @@
+AV_CPU_FLAG_FORCE	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_FORCE	cpu: AV_CPU_FLAG_FORCE	
+AV_CPU_FLAG_MMX	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_MMX	cpu: AV_CPU_FLAG_MMX	
+AV_CPU_FLAG_MMXEXT	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_MMXEXT	cpu: AV_CPU_FLAG_MMXEXT	
+AV_CPU_FLAG_3DNOW	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_3DNOW	cpu: AV_CPU_FLAG_3DNOW	
+AV_CPU_FLAG_SSE	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE	cpu: AV_CPU_FLAG_SSE	
+AV_CPU_FLAG_SSE2	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE2	cpu: AV_CPU_FLAG_SSE2	
+AV_CPU_FLAG_SSE2SLOW	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE2SLOW	cpu: AV_CPU_FLAG_SSE2SLOW	
+AV_CPU_FLAG_3DNOWEXT	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_3DNOWEXT	cpu: AV_CPU_FLAG_3DNOWEXT	
+AV_CPU_FLAG_SSE3	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE3	cpu: AV_CPU_FLAG_SSE3	
+AV_CPU_FLAG_SSE3SLOW	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE3SLOW	cpu: AV_CPU_FLAG_SSE3SLOW	
+AV_CPU_FLAG_SSSE3	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSSE3	cpu: AV_CPU_FLAG_SSSE3	
+AV_CPU_FLAG_SSSE3SLOW	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSSE3SLOW	cpu: AV_CPU_FLAG_SSSE3SLOW	
+AV_CPU_FLAG_ATOM	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ATOM	cpu: AV_CPU_FLAG_ATOM	
+AV_CPU_FLAG_SSE4	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE4	cpu: AV_CPU_FLAG_SSE4	
+AV_CPU_FLAG_SSE42	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SSE42	cpu: AV_CPU_FLAG_SSE42	
+AV_CPU_FLAG_AESNI	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_AESNI	cpu: AV_CPU_FLAG_AESNI	
+AV_CPU_FLAG_AVX	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_AVX	cpu: AV_CPU_FLAG_AVX	
+AV_CPU_FLAG_AVXSLOW	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_AVXSLOW	cpu: AV_CPU_FLAG_AVXSLOW	
+AV_CPU_FLAG_XOP	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_XOP	cpu: AV_CPU_FLAG_XOP	
+AV_CPU_FLAG_FMA4	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_FMA4	cpu: AV_CPU_FLAG_FMA4	
+AV_CPU_FLAG_CMOV	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_CMOV	cpu: AV_CPU_FLAG_CMOV	
+AV_CPU_FLAG_AVX2	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_AVX2	cpu: AV_CPU_FLAG_AVX2	
+AV_CPU_FLAG_FMA3	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_FMA3	cpu: AV_CPU_FLAG_FMA3	
+AV_CPU_FLAG_BMI1	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_BMI1	cpu: AV_CPU_FLAG_BMI1	
+AV_CPU_FLAG_BMI2	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_BMI2	cpu: AV_CPU_FLAG_BMI2	
+AV_CPU_FLAG_AVX512	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_AVX512	cpu: AV_CPU_FLAG_AVX512	
+AV_CPU_FLAG_SLOW_GATHER	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SLOW_GATHER	cpu: AV_CPU_FLAG_SLOW_GATHER	
+AV_CPU_FLAG_ALTIVEC	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ALTIVEC	cpu: AV_CPU_FLAG_ALTIVEC	
+AV_CPU_FLAG_VSX	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_VSX	cpu: AV_CPU_FLAG_VSX	
+AV_CPU_FLAG_POWER8	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_POWER8	cpu: AV_CPU_FLAG_POWER8	
+AV_CPU_FLAG_ARMV5TE	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ARMV5TE	cpu: AV_CPU_FLAG_ARMV5TE	
+AV_CPU_FLAG_ARMV6	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ARMV6	cpu: AV_CPU_FLAG_ARMV6	
+AV_CPU_FLAG_ARMV6T2	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ARMV6T2	cpu: AV_CPU_FLAG_ARMV6T2	
+AV_CPU_FLAG_VFP	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_VFP	cpu: AV_CPU_FLAG_VFP	
+AV_CPU_FLAG_VFPV3	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_VFPV3	cpu: AV_CPU_FLAG_VFPV3	
+AV_CPU_FLAG_NEON	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_NEON	cpu: AV_CPU_FLAG_NEON	
+AV_CPU_FLAG_ARMV8	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_ARMV8	cpu: AV_CPU_FLAG_ARMV8	
+AV_CPU_FLAG_VFP_VM	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_VFP_VM	cpu: AV_CPU_FLAG_VFP_VM	
+AV_CPU_FLAG_SETEND	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_SETEND	cpu: AV_CPU_FLAG_SETEND	
+AV_CPU_FLAG_MMI	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_MMI	cpu: AV_CPU_FLAG_MMI	
+AV_CPU_FLAG_MSA	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_MSA	cpu: AV_CPU_FLAG_MSA	
+AV_CPU_FLAG_LSX	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_LSX	cpu: AV_CPU_FLAG_LSX	
+AV_CPU_FLAG_LASX	ffmpeg/libavutil/cpu.html#AV_CPU_FLAG_LASX	cpu: AV_CPU_FLAG_LASX	
+av_get_cpu_flags	ffmpeg/libavutil/cpu.html#av_get_cpu_flags	cpu: av_get_cpu_flags(): cint	
+av_force_cpu_flags	ffmpeg/libavutil/cpu.html#av_force_cpu_flags,cint	cpu: av_force_cpu_flags(flags: cint)	
+av_parse_cpu_caps	ffmpeg/libavutil/cpu.html#av_parse_cpu_caps,ptr.cuint,cstring	cpu: av_parse_cpu_caps(flags: ptr cuint; s: cstring): cint	
+av_cpu_count	ffmpeg/libavutil/cpu.html#av_cpu_count	cpu: av_cpu_count(): cint	
+av_cpu_max_align	ffmpeg/libavutil/cpu.html#av_cpu_max_align	cpu: av_cpu_max_align(): csize_t	
+av_cpu_force_count	ffmpeg/libavutil/cpu.html#av_cpu_force_count,cint	cpu: av_cpu_force_count(count: cint)	

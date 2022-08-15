@@ -1,0 +1,3 @@
+av_tea_alloc	ffmpeg/libavutil/tea.html#av_tea_alloc	tea: av_tea_alloc(): ptr AVTEA	
+av_tea_init	ffmpeg/libavutil/tea.html#av_tea_init,ptr.AVTEA,ptr.uint8,cint	tea: av_tea_init(ctx: ptr AVTEA; key: ptr uint8; rounds: cint)	
+av_tea_crypt	ffmpeg/libavutil/tea.html#av_tea_crypt,ptr.AVTEA,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	tea: av_tea_crypt(ctx: ptr AVTEA; dst, src: ptr uint8; count: cint; iv: ptr uint8;\n             decrypt: cint)	

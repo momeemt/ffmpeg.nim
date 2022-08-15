@@ -1,0 +1,68 @@
+AV_OPT_FLAG_ENCODING_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_ENCODING_PARAM	opt: AV_OPT_FLAG_ENCODING_PARAM	
+AV_OPT_FLAG_DECODING_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_DECODING_PARAM	opt: AV_OPT_FLAG_DECODING_PARAM	
+AV_OPT_FLAG_AUDIO_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_AUDIO_PARAM	opt: AV_OPT_FLAG_AUDIO_PARAM	
+AV_OPT_FLAG_VIDEO_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_VIDEO_PARAM	opt: AV_OPT_FLAG_VIDEO_PARAM	
+AV_OPT_FLAG_SUBTITLE_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_SUBTITLE_PARAM	opt: AV_OPT_FLAG_SUBTITLE_PARAM	
+AV_OPT_FLAG_EXPORT	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_EXPORT	opt: AV_OPT_FLAG_EXPORT	
+AV_OPT_FLAG_READONLY	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_READONLY	opt: AV_OPT_FLAG_READONLY	
+AV_OPT_FLAG_BSF_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_BSF_PARAM	opt: AV_OPT_FLAG_BSF_PARAM	
+AV_OPT_FLAG_RUNTIME_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_RUNTIME_PARAM	opt: AV_OPT_FLAG_RUNTIME_PARAM	
+AV_OPT_FLAG_FILTERING_PARAM	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_FILTERING_PARAM	opt: AV_OPT_FLAG_FILTERING_PARAM	
+AV_OPT_FLAG_DEPRECATED	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_DEPRECATED	opt: AV_OPT_FLAG_DEPRECATED	
+AV_OPT_FLAG_CHILD_CONSTS	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_CHILD_CONSTS	opt: AV_OPT_FLAG_CHILD_CONSTS	
+AV_OPT_FLAG_IMPLICIT_KEY	ffmpeg/libavutil/opt.html#AV_OPT_FLAG_IMPLICIT_KEY	opt: AV_OPT_FLAG_IMPLICIT_KEY	
+AV_OPT_SEARCH_CHILDREN	ffmpeg/libavutil/opt.html#AV_OPT_SEARCH_CHILDREN	opt: AV_OPT_SEARCH_CHILDREN	
+AV_OPT_SEARCH_FAKE_OBJ	ffmpeg/libavutil/opt.html#AV_OPT_SEARCH_FAKE_OBJ	opt: AV_OPT_SEARCH_FAKE_OBJ	
+AV_OPT_ALLOW_NULL	ffmpeg/libavutil/opt.html#AV_OPT_ALLOW_NULL	opt: AV_OPT_ALLOW_NULL	
+AV_OPT_MULTI_COMPONENT_RANGE	ffmpeg/libavutil/opt.html#AV_OPT_MULTI_COMPONENT_RANGE	opt: AV_OPT_MULTI_COMPONENT_RANGE	
+AV_OPT_SERIALIZE_SKIP_DEFAULTS	ffmpeg/libavutil/opt.html#AV_OPT_SERIALIZE_SKIP_DEFAULTS	opt: AV_OPT_SERIALIZE_SKIP_DEFAULTS	
+AV_OPT_SERIALIZE_OPT_FLAGS_EXACT	ffmpeg/libavutil/opt.html#AV_OPT_SERIALIZE_OPT_FLAGS_EXACT	opt: AV_OPT_SERIALIZE_OPT_FLAGS_EXACT	
+av_opt_show2	ffmpeg/libavutil/opt.html#av_opt_show2,pointer,pointer,cint,cint	opt: av_opt_show2(obj, av_log_obj: pointer; req_flags, rej_flags: cint): cint	
+av_opt_set_defaults	ffmpeg/libavutil/opt.html#av_opt_set_defaults,pointer	opt: av_opt_set_defaults(s: pointer)	
+av_opt_set_defaults2	ffmpeg/libavutil/opt.html#av_opt_set_defaults2,pointer,cint,cint	opt: av_opt_set_defaults2(s: pointer; mask, flags: cint)	
+av_set_options_string	ffmpeg/libavutil/opt.html#av_set_options_string,pointer,cstring,cstring,cstring	opt: av_set_options_string(ctx: pointer; opts, key_val_sep, pairs_sep: cstring): cint	
+av_opt_set_from_string	ffmpeg/libavutil/opt.html#av_opt_set_from_string,pointer,cstring,cstringArray,cstring,cstring	opt: av_opt_set_from_string(ctx: pointer; opts: cstring; shorthand: cstringArray;\n                       key_val_sep, pairs_sep: cstring): cint	
+av_opt_free	ffmpeg/libavutil/opt.html#av_opt_free,pointer	opt: av_opt_free(obj: pointer)	
+av_opt_flag_is_set	ffmpeg/libavutil/opt.html#av_opt_flag_is_set,pointer,cstring,cstring	opt: av_opt_flag_is_set(obj: pointer; field_name, flag_name: cstring): cint	
+av_opt_set_dict	ffmpeg/libavutil/opt.html#av_opt_set_dict,pointer,ptr.ptr.AVDictionary	opt: av_opt_set_dict(obj: pointer; options: ptr ptr AVDictionary): cint	
+av_opt_set_dict2	ffmpeg/libavutil/opt.html#av_opt_set_dict2,pointer,ptr.ptr.AVDictionary,cint	opt: av_opt_set_dict2(obj: pointer; options: ptr ptr AVDictionary; search_flags: cint): cint	
+av_opt_get_key_value	ffmpeg/libavutil/opt.html#av_opt_get_key_value,cstringArray,cstring,cstring,cuint,cstringArray,cstringArray	opt: av_opt_get_key_value(ropts: cstringArray; key_val_sep, pairs_sep: cstring;\n                     flags: cuint; rkey, rval: cstringArray): cint	
+av_opt_eval_flags	ffmpeg/libavutil/opt.html#av_opt_eval_flags,pointer,ptr.AVOption,cstring,ptr.cint	opt: av_opt_eval_flags(obj: pointer; o: ptr AVOption; val: cstring;\n                  flags_out: ptr cint): cint	
+av_opt_eval_int	ffmpeg/libavutil/opt.html#av_opt_eval_int,pointer,ptr.AVOption,cstring,ptr.cint	opt: av_opt_eval_int(obj: pointer; o: ptr AVOption; val: cstring; int_out: ptr cint): cint	
+av_opt_eval_int64	ffmpeg/libavutil/opt.html#av_opt_eval_int64,pointer,ptr.AVOption,cstring,ptr.int64	opt: av_opt_eval_int64(obj: pointer; o: ptr AVOption; val: cstring;\n                  int64_out: ptr int64): cint	
+av_opt_eval_float	ffmpeg/libavutil/opt.html#av_opt_eval_float,pointer,ptr.AVOption,cstring,ptr.cfloat	opt: av_opt_eval_float(obj: pointer; o: ptr AVOption; val: cstring;\n                  float_out: ptr cfloat): cint	
+av_opt_eval_double	ffmpeg/libavutil/opt.html#av_opt_eval_double,pointer,ptr.AVOption,cstring,ptr.cdouble	opt: av_opt_eval_double(obj: pointer; o: ptr AVOption; val: cstring;\n                   double_out: ptr cdouble): cint	
+av_opt_eval_q	ffmpeg/libavutil/opt.html#av_opt_eval_q,pointer,ptr.AVOption,cstring,ptr.AVRational	opt: av_opt_eval_q(obj: pointer; o: ptr AVOption; val: cstring; q_out: ptr AVRational): cint	
+av_opt_find	ffmpeg/libavutil/opt.html#av_opt_find,pointer,cstring,cstring,cint,cint	opt: av_opt_find(obj: pointer; name, unit: cstring; opt_flags, search_flags: cint): ptr AVOption	
+av_opt_find2	ffmpeg/libavutil/opt.html#av_opt_find2,pointer,cstring,cstring,cint,cint,ptr.pointer	opt: av_opt_find2(obj: pointer; name, unit: cstring; opt_flags, search_flags: cint;\n             target_obj: ptr pointer): ptr AVOption	
+av_opt_next	ffmpeg/libavutil/opt.html#av_opt_next,pointer,ptr.AVOption	opt: av_opt_next(obj: pointer; prev: ptr AVOption): ptr AVOption	
+av_opt_child_next	ffmpeg/libavutil/opt.html#av_opt_child_next,pointer,pointer	opt: av_opt_child_next(obj, prev: pointer): pointer	
+av_opt_child_class_iterate	ffmpeg/libavutil/opt.html#av_opt_child_class_iterate,ptr.AVClass,ptr.pointer	opt: av_opt_child_class_iterate(parent: ptr AVClass; iter: ptr pointer): ptr AVClass	
+av_opt_set	ffmpeg/libavutil/opt.html#av_opt_set,pointer,cstring,cstring,cint	opt: av_opt_set(obj: pointer; name, val: cstring; search_flags: cint): cint	
+av_opt_set_int	ffmpeg/libavutil/opt.html#av_opt_set_int,pointer,cstring,int64,cint	opt: av_opt_set_int(obj: pointer; name: cstring; val: int64; search_flags: cint): cint	
+av_opt_set_double	ffmpeg/libavutil/opt.html#av_opt_set_double,pointer,cstring,cdouble,cint	opt: av_opt_set_double(obj: pointer; name: cstring; val: cdouble; search_flags: cint): cint	
+av_opt_set_q	ffmpeg/libavutil/opt.html#av_opt_set_q,pointer,cstring,AVRational,cint	opt: av_opt_set_q(obj: pointer; name: cstring; val: AVRational; search_flags: cint): cint	
+av_opt_set_bin	ffmpeg/libavutil/opt.html#av_opt_set_bin,pointer,cstring,ptr.uint8,cint,cint	opt: av_opt_set_bin(obj: pointer; name: cstring; val: ptr uint8;\n               size, search_flags: cint): cint	
+av_opt_set_image_size	ffmpeg/libavutil/opt.html#av_opt_set_image_size,pointer,cstring,cint,cint,cint	opt: av_opt_set_image_size(obj: pointer; name: cstring; w, h, search_flags: cint): cint	
+av_opt_set_pixel_fmt	ffmpeg/libavutil/opt.html#av_opt_set_pixel_fmt,pointer,cstring,AVPixelFormat,cint	opt: av_opt_set_pixel_fmt(obj: pointer; name: cstring; fmt: AVPixelFormat;\n                     search_flags: cint): cint	
+av_opt_set_sample_fmt	ffmpeg/libavutil/opt.html#av_opt_set_sample_fmt,pointer,cstring,AVSampleFormat,cint	opt: av_opt_set_sample_fmt(obj: pointer; name: cstring; fmt: AVSampleFormat;\n                      search_flags: cint): cint	
+av_opt_set_video_rate	ffmpeg/libavutil/opt.html#av_opt_set_video_rate,pointer,cstring,AVRational,cint	opt: av_opt_set_video_rate(obj: pointer; name: cstring; val: AVRational;\n                      search_flags: cint): cint	
+av_opt_set_channel_layout	ffmpeg/libavutil/opt.html#av_opt_set_channel_layout,pointer,cstring,ptr.AVDictionary,cint	opt: av_opt_set_channel_layout(obj: pointer; name: cstring; val: ptr AVDictionary;\n                          search_flags: cint): cint	
+av_opt_get	ffmpeg/libavutil/opt.html#av_opt_get,pointer,cstring,cint,ptr.ptr.uint8	opt: av_opt_get(obj: pointer; name: cstring; search_flags: cint;\n           out_val: ptr ptr uint8): cint	
+v_opt_get_int	ffmpeg/libavutil/opt.html#v_opt_get_int,pointer,cstring,cint,ptr.int64	opt: v_opt_get_int(obj: pointer; name: cstring; search_flags: cint;\n              out_val: ptr int64): cint	
+av_opt_get_double	ffmpeg/libavutil/opt.html#av_opt_get_double,pointer,cstring,cint,ptr.cdouble	opt: av_opt_get_double(obj: pointer; name: cstring; search_flags: cint;\n                  out_val: ptr cdouble): cint	
+av_opt_get_q	ffmpeg/libavutil/opt.html#av_opt_get_q,pointer,cstring,cint,ptr.AVRational	opt: av_opt_get_q(obj: pointer; name: cstring; search_flags: cint;\n             out_val: ptr AVRational): cint	
+av_opt_get_image_size	ffmpeg/libavutil/opt.html#av_opt_get_image_size,pointer,cstring,cint,ptr.cint,ptr.cint	opt: av_opt_get_image_size(obj: pointer; name: cstring; search_flags: cint;\n                      w_out, h_out: ptr cint): cint	
+av_opt_get_pixel_fmt	ffmpeg/libavutil/opt.html#av_opt_get_pixel_fmt,pointer,cstring,cint,ptr.AVPixelFormat	opt: av_opt_get_pixel_fmt(obj: pointer; name: cstring; search_flags: cint;\n                     out_fmt: ptr AVPixelFormat): cint	
+av_opt_get_sample_fmt	ffmpeg/libavutil/opt.html#av_opt_get_sample_fmt,pointer,cstring,cint,ptr.AVSampleFormat	opt: av_opt_get_sample_fmt(obj: pointer; name: cstring; search_flags: cint;\n                      out_val: ptr AVSampleFormat): cint	
+av_opt_get_video_rate	ffmpeg/libavutil/opt.html#av_opt_get_video_rate,pointer,cstring,cint,ptr.AVRational	opt: av_opt_get_video_rate(obj: pointer; name: cstring; search_flags: cint;\n                      out_val: ptr AVRational): cint	
+av_opt_get_channel_layout	ffmpeg/libavutil/opt.html#av_opt_get_channel_layout,pointer,cstring,cint,ptr.int64	opt: av_opt_get_channel_layout(obj: pointer; name: cstring; search_flags: cint;\n                          ch_layout: ptr int64): cint	
+av_opt_get_dict_val	ffmpeg/libavutil/opt.html#av_opt_get_dict_val,pointer,cstring,cint,ptr.ptr.AVDictionary	opt: av_opt_get_dict_val(obj: pointer; name: cstring; search_flags: cint;\n                    out_val: ptr ptr AVDictionary): cint	
+av_opt_ptr	ffmpeg/libavutil/opt.html#av_opt_ptr,ptr.AVClass,pointer,cstring	opt: av_opt_ptr(avclass: ptr AVClass; obj: pointer; name: cstring): pointer	
+av_opt_freep_ranges	ffmpeg/libavutil/opt.html#av_opt_freep_ranges,ptr.ptr.AVOptionRanges	opt: av_opt_freep_ranges(ranges: ptr ptr AVOptionRanges)	
+av_opt_query_ranges	ffmpeg/libavutil/opt.html#av_opt_query_ranges,ptr.ptr.AVOptionRanges,pointer,cstringArray,cint	opt: av_opt_query_ranges(a1: ptr ptr AVOptionRanges; obj: pointer; key: cstringArray;\n                    flags: cint): cint	
+av_opt_copy	ffmpeg/libavutil/opt.html#av_opt_copy,pointer,pointer	opt: av_opt_copy(dest, src: pointer): cint	
+av_opt_query_ranges_default	ffmpeg/libavutil/opt.html#av_opt_query_ranges_default,ptr.ptr.AVOptionRanges,pointer,cstring,cint	opt: av_opt_query_ranges_default(a1: ptr ptr AVOptionRanges; obj: pointer;\n                            key: cstring; flags: cint): cint	
+av_opt_is_set_to_default	ffmpeg/libavutil/opt.html#av_opt_is_set_to_default,pointer,ptr.AVOption	opt: av_opt_is_set_to_default(obj: pointer; o: ptr AVOption): cint	
+av_opt_is_set_to_default_by_name	ffmpeg/libavutil/opt.html#av_opt_is_set_to_default_by_name,pointer,cstring,cint	opt: av_opt_is_set_to_default_by_name(obj: pointer; name: cstring; search_flags: cint): cint	
+av_opt_serialize	ffmpeg/libavutil/opt.html#av_opt_serialize,pointer,cint,cint,cstringArray,cstring,cstring	opt: av_opt_serialize(obj: pointer; opt_flags: cint; flags: cint;\n                 buffer: cstringArray; key_val_sep, pairs_sep: cstring): cint	

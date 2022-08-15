@@ -1,0 +1,4 @@
+av_spherical_alloc	ffmpeg/libavutil/spherical.html#av_spherical_alloc,ptr.csize_t	spherical: av_spherical_alloc(size: ptr csize_t): ptr AVSphericalMapping	
+av_spherical_tile_bounds	ffmpeg/libavutil/spherical.html#av_spherical_tile_bounds,ptr.AVSphericalMapping,csize_t,csize_t,ptr.csize_t,ptr.csize_t,ptr.csize_t,ptr.csize_t	spherical: av_spherical_tile_bounds(map: ptr AVSphericalMapping; width, height: csize_t;\n                         left, top, right, bottom: ptr csize_t)	
+av_spherical_projection_name	ffmpeg/libavutil/spherical.html#av_spherical_projection_name,AVSphericalProjection	spherical: av_spherical_projection_name(projection: AVSphericalProjection): cstring	
+av_spherical_from_name	ffmpeg/libavutil/spherical.html#av_spherical_from_name,cstring	spherical: av_spherical_from_name(name: cstring): cint	

@@ -1,0 +1,3 @@
+VdpDevice	ffmpeg/libavutil/hwcontext_vdpau.html#VdpDevice	hwcontext_vdpau: VdpDevice	
+VdpGetProcAddress	ffmpeg/libavutil/hwcontext_vdpau.html#VdpGetProcAddress	hwcontext_vdpau: VdpGetProcAddress	
+AVVDPAUDeviceContext	ffmpeg/libavutil/hwcontext_vdpau.html#AVVDPAUDeviceContext	hwcontext_vdpau: AVVDPAUDeviceContext	

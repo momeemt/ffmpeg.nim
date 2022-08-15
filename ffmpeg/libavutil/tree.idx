@@ -1,0 +1,6 @@
+av_tree_node_size	ffmpeg/libavutil/tree.html#av_tree_node_size	tree: av_tree_node_size	
+av_tree_node_alloc	ffmpeg/libavutil/tree.html#av_tree_node_alloc	tree: av_tree_node_alloc(): ptr AVTreeNode	
+av_tree_find	ffmpeg/libavutil/tree.html#av_tree_find,ptr.AVTreeNode,pointer,proc(pointer,pointer),ptr.pointer	tree: av_tree_find(root: ptr AVTreeNode; key: pointer;\n             cmp: proc (key, b: pointer): cint; next: ptr pointer): pointer	
+av_tree_insert	ffmpeg/libavutil/tree.html#av_tree_insert,ptr.ptr.AVTreeNode,pointer,proc(pointer,pointer),ptr.ptr.AVTreeNode	tree: av_tree_insert(rootp: ptr ptr AVTreeNode; key: pointer;\n               cmp: proc (key, b: pointer): cint; next: ptr ptr AVTreeNode): pointer	
+av_tree_destroy	ffmpeg/libavutil/tree.html#av_tree_destroy,ptr.AVTreeNode	tree: av_tree_destroy(t: ptr AVTreeNode)	
+av_tree_enumerate	ffmpeg/libavutil/tree.html#av_tree_enumerate,ptr.AVTreeNode,pointer,proc(pointer,pointer),proc(pointer,pointer)	tree: av_tree_enumerate(t: ptr AVTreeNode; opaque: pointer;\n                  cmp: proc (opaque, elem: pointer);\n                  enu: proc (opaque, elem: pointer))	

@@ -1,0 +1,1 @@
+av_pixelutils_get_sad_fn	ffmpeg/libavutil/pixelutils.html#av_pixelutils_get_sad_fn,cint,cint,cint,pointer	pixelutils: av_pixelutils_get_sad_fn(w_bits, h_bits, aligned: cint; log_ctx: pointer): proc	

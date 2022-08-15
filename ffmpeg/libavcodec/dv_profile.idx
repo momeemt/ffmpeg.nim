@@ -1,0 +1,4 @@
+DV_PROFILE_BYTES	ffmpeg/libavcodec/dv_profile.html#DV_PROFILE_BYTES	dv_profile: DV_PROFILE_BYTES	
+av_dv_frame_profile	ffmpeg/libavcodec/dv_profile.html#av_dv_frame_profile,ptr.AVDVProfile,ptr.uint8,cuint	dv_profile: av_dv_frame_profile(sys: ptr AVDVProfile; frame: ptr uint8; buf_size: cuint): ptr AVDVProfile	
+av_dv_codec_profile	ffmpeg/libavcodec/dv_profile.html#av_dv_codec_profile,cint,cint,AVPixelFormat	dv_profile: av_dv_codec_profile(width, height: cint; pix_fmt: AVPixelFormat): ptr AVDVProfile	
+av_dv_codec_profile2	ffmpeg/libavcodec/dv_profile.html#av_dv_codec_profile2,cint,cint,AVPixelFormat,AVRational	dv_profile: av_dv_codec_profile2(width, height: cint; pix_fmt: AVPixelFormat;\n                     frame_rate: AVRational): ptr AVDVProfile	

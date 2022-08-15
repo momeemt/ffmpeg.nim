@@ -1,0 +1,1 @@
+av_dovi_alloc	ffmpeg/libavutil/dovi_meta.html#av_dovi_alloc,ptr.csize_t	dovi_meta: av_dovi_alloc(size: ptr csize_t): ptr AVDOVIDecoderConfigurationRecord	

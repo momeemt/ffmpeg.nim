@@ -1,0 +1,20 @@
+M_E	ffmpeg/libavutil/mathmatics.html#M_E	mathmatics: M_E	
+M_LN2	ffmpeg/libavutil/mathmatics.html#M_LN2	mathmatics: M_LN2	
+M_LN10	ffmpeg/libavutil/mathmatics.html#M_LN10	mathmatics: M_LN10	
+M_LOG2_10	ffmpeg/libavutil/mathmatics.html#M_LOG2_10	mathmatics: M_LOG2_10	
+M_PHI	ffmpeg/libavutil/mathmatics.html#M_PHI	mathmatics: M_PHI	
+M_PI	ffmpeg/libavutil/mathmatics.html#M_PI	mathmatics: M_PI	
+M_PI_2	ffmpeg/libavutil/mathmatics.html#M_PI_2	mathmatics: M_PI_2	
+M_SQRT1_2	ffmpeg/libavutil/mathmatics.html#M_SQRT1_2	mathmatics: M_SQRT1_2	
+M_SQRT2	ffmpeg/libavutil/mathmatics.html#M_SQRT2	mathmatics: M_SQRT2	
+NAN	ffmpeg/libavutil/mathmatics.html#NAN	mathmatics: NAN	
+INFINITY	ffmpeg/libavutil/mathmatics.html#INFINITY	mathmatics: INFINITY	
+av_gcd	ffmpeg/libavutil/mathmatics.html#av_gcd,int64,int64	mathmatics: av_gcd(a, b: int64): int64	
+av_rescale	ffmpeg/libavutil/mathmatics.html#av_rescale,int64,int64,int64	mathmatics: av_rescale(a, b, c: int64): int64	
+av_rescale_rnd	ffmpeg/libavutil/mathmatics.html#av_rescale_rnd,int64,int64,int64,AVRounding	mathmatics: av_rescale_rnd(a, b, c: int64; rnd: AVRounding): int64	
+av_rescale_q	ffmpeg/libavutil/mathmatics.html#av_rescale_q,int64,AVRational,AVRational	mathmatics: av_rescale_q(a: int64; bq, cq: AVRational): int64	
+av_rescale_q_rnd	ffmpeg/libavutil/mathmatics.html#av_rescale_q_rnd,int64,AVRational,AVRational,AVRounding	mathmatics: av_rescale_q_rnd(a: int64; bq, cq: AVRational; rnd: AVRounding): int64	
+av_compare_ts	ffmpeg/libavutil/mathmatics.html#av_compare_ts,int64,AVRational,int64,AVRational	mathmatics: av_compare_ts(ts_a: int64; tb_a: AVRational; ts_b: int64; tb_b: AVRational): cint	
+av_compare_mod	ffmpeg/libavutil/mathmatics.html#av_compare_mod,uint64,uint64,uint64	mathmatics: av_compare_mod(a, b, mod: uint64): int64	
+av_rescale_delta	ffmpeg/libavutil/mathmatics.html#av_rescale_delta,AVRational,int64,AVRational,cint,ptr.int64,AVRational	mathmatics: av_rescale_delta(in_tb: AVRational; in_ts: int64; fs_tb: AVRational;\n                 duration: cint; last: ptr int64; out_tb: AVRational): int64	
+av_add_stable	ffmpeg/libavutil/mathmatics.html#av_add_stable,AVRational,int64,AVRational,int64	mathmatics: av_add_stable(ts_tb: AVRational; ts: int64; inc_tb: AVRational; inc: int64): int64	

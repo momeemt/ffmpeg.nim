@@ -1,0 +1,15 @@
+av_fft_init	ffmpeg/libavcodec/avfft.html#av_fft_init,cint,cint	avfft: av_fft_init(nbits, inverse: cint): ptr FFTContext	
+av_fft_permute	ffmpeg/libavcodec/avfft.html#av_fft_permute,ptr.FFTContext,ptr.FFTComplex	avfft: av_fft_permute(s: ptr FFTContext; z: ptr FFTComplex)	
+av_fft_calc	ffmpeg/libavcodec/avfft.html#av_fft_calc,ptr.FFTContext,ptr.FFTComplex	avfft: av_fft_calc(s: ptr FFTContext; z: ptr FFTComplex)	
+av_fft_end	ffmpeg/libavcodec/avfft.html#av_fft_end,ptr.FFTContext	avfft: av_fft_end(s: ptr FFTContext)	
+av_mdct_init	ffmpeg/libavcodec/avfft.html#av_mdct_init,cint,cint,cdouble	avfft: av_mdct_init(nbits, inverse: cint; scale: cdouble): ptr FFTContext	
+av_imdct_calc	ffmpeg/libavcodec/avfft.html#av_imdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_imdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)	
+av_imdct_half	ffmpeg/libavcodec/avfft.html#av_imdct_half,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_imdct_half(s: ptr FFTContext; output, input: ptr FFTSample)	
+av_mdct_calc	ffmpeg/libavcodec/avfft.html#av_mdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_mdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)	
+av_mdct_end	ffmpeg/libavcodec/avfft.html#av_mdct_end,ptr.FFTContext	avfft: av_mdct_end(s: ptr FFTContext)	
+av_rdft_init	ffmpeg/libavcodec/avfft.html#av_rdft_init,cint,RDFTransformType	avfft: av_rdft_init(nbits: cint; trans: RDFTransformType): ptr RDFTContext	
+av_rdft_calc	ffmpeg/libavcodec/avfft.html#av_rdft_calc,ptr.RDFTContext,ptr.FFTSample	avfft: av_rdft_calc(s: ptr RDFTContext; data: ptr FFTSample)	
+av_rdft_end	ffmpeg/libavcodec/avfft.html#av_rdft_end,ptr.RDFTContext	avfft: av_rdft_end(s: ptr RDFTContext)	
+av_dct_init	ffmpeg/libavcodec/avfft.html#av_dct_init,cint,DCTTransformType	avfft: av_dct_init(nbits: cint; type: DCTTransformType): ptr DCTContext	
+av_dct_calc	ffmpeg/libavcodec/avfft.html#av_dct_calc,ptr.DCTContext,ptr.FFTSample	avfft: av_dct_calc(s: ptr DCTContext; data: ptr FFTSample)	
+av_dct_end	ffmpeg/libavcodec/avfft.html#av_dct_end,ptr.DCTContext	avfft: av_dct_end(s: ptr DCTContext)	

@@ -1,0 +1,17 @@
+AVDictionaryEntry	ffmpeg/libavutil/dict.html#AVDictionaryEntry	dict: AVDictionaryEntry	
+AVDictionary	ffmpeg/libavutil/dict.html#AVDictionary	dict: AVDictionary	
+AV_DICT_MATCH_CASE	ffmpeg/libavutil/dict.html#AV_DICT_MATCH_CASE	dict: AV_DICT_MATCH_CASE	
+AV_DICT_IGNORE_SUFFIX	ffmpeg/libavutil/dict.html#AV_DICT_IGNORE_SUFFIX	dict: AV_DICT_IGNORE_SUFFIX	
+AV_DICT_DONT_STRDUP_KEY	ffmpeg/libavutil/dict.html#AV_DICT_DONT_STRDUP_KEY	dict: AV_DICT_DONT_STRDUP_KEY	
+AV_DICT_DONT_STRDUP_VAL	ffmpeg/libavutil/dict.html#AV_DICT_DONT_STRDUP_VAL	dict: AV_DICT_DONT_STRDUP_VAL	
+AV_DICT_DONT_OVERWRITE	ffmpeg/libavutil/dict.html#AV_DICT_DONT_OVERWRITE	dict: AV_DICT_DONT_OVERWRITE	
+AV_DICT_APPEND	ffmpeg/libavutil/dict.html#AV_DICT_APPEND	dict: AV_DICT_APPEND	
+AV_DICT_MULTIKEY	ffmpeg/libavutil/dict.html#AV_DICT_MULTIKEY	dict: AV_DICT_MULTIKEY	
+av_dict_get	ffmpeg/libavutil/dict.html#av_dict_get,ptr.AVDictionary,cstring,ptr.AVDictionaryEntry,cint	dict: av_dict_get(m: ptr AVDictionary; key: cstring; prev: ptr AVDictionaryEntry;\n            flags: cint): ptr AVDictionaryEntry	
+av_dict_count	ffmpeg/libavutil/dict.html#av_dict_count,ptr.AVDictionary	dict: av_dict_count(m: ptr AVDictionary): cint	
+av_dict_set	ffmpeg/libavutil/dict.html#av_dict_set,ptr.ptr.AVDictionary,cstring,cstring,cint	dict: av_dict_set(pm: ptr ptr AVDictionary; key, value: cstring; flags: cint): cint	
+av_dict_set_int	ffmpeg/libavutil/dict.html#av_dict_set_int,ptr.ptr.AVDictionary,cstring,int64,cint	dict: av_dict_set_int(pm: ptr ptr AVDictionary; key: cstring; value: int64;\n                flags: cint): cint	
+av_dict_parse_string	ffmpeg/libavutil/dict.html#av_dict_parse_string,ptr.ptr.AVDictionary,cstring,cstring,cstring,cint	dict: av_dict_parse_string(pm: ptr ptr AVDictionary;\n                     str, key_val_sep, pairs_sep: cstring; flags: cint): cint	
+av_dict_copy	ffmpeg/libavutil/dict.html#av_dict_copy,ptr.ptr.AVDictionary,ptr.AVDictionary,cint	dict: av_dict_copy(dst: ptr ptr AVDictionary; src: ptr AVDictionary; flags: cint): cint	
+av_dict_free	ffmpeg/libavutil/dict.html#av_dict_free,ptr.ptr.AVDictionary	dict: av_dict_free(m: ptr ptr AVDictionary)	
+av_dict_get_string	ffmpeg/libavutil/dict.html#av_dict_get_string,ptr.AVDictionary,cstringArray,cchar,cchar	dict: av_dict_get_string(m: ptr AVDictionary; buffer: cstringArray;\n                   key_val_sep, pairs_sep: cchar)	

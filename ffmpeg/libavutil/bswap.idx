@@ -1,0 +1,21 @@
+AV_BSWAP16C	ffmpeg/libavutil/bswap.html#AV_BSWAP16C.t,untyped	bswap: AV_BSWAP16C(x: untyped): untyped	
+AV_BSWAP32C	ffmpeg/libavutil/bswap.html#AV_BSWAP32C.t,untyped	bswap: AV_BSWAP32C(x: untyped): untyped	
+AV_BSWAP64C	ffmpeg/libavutil/bswap.html#AV_BSWAP64C.t,untyped	bswap: AV_BSWAP64C(x: untyped): untyped	
+AV_BSWAPC	ffmpeg/libavutil/bswap.html#AV_BSWAPC.t,untyped,untyped	bswap: AV_BSWAPC(s, x: untyped): untyped	
+av_bswap16	ffmpeg/libavutil/bswap.html#av_bswap16,uint16	bswap: av_bswap16(x: uint16): uint16	
+av_bswap32	ffmpeg/libavutil/bswap.html#av_bswap32,uint32	bswap: av_bswap32(x: uint32): uint32	
+av_bswap64	ffmpeg/libavutil/bswap.html#av_bswap64,uint64	bswap: av_bswap64(x: uint64): uint64	
+av_be2ne16	ffmpeg/libavutil/bswap.html#av_be2ne16.t,untyped	bswap: av_be2ne16(x: untyped): untyped	
+av_be2ne32	ffmpeg/libavutil/bswap.html#av_be2ne32.t,untyped	bswap: av_be2ne32(x: untyped): untyped	
+av_be2ne64	ffmpeg/libavutil/bswap.html#av_be2ne64.t,untyped	bswap: av_be2ne64(x: untyped): untyped	
+av_le2ne16	ffmpeg/libavutil/bswap.html#av_le2ne16.t,untyped	bswap: av_le2ne16(x: untyped): untyped	
+av_le2ne32	ffmpeg/libavutil/bswap.html#av_le2ne32.t,untyped	bswap: av_le2ne32(x: untyped): untyped	
+av_le2ne64	ffmpeg/libavutil/bswap.html#av_le2ne64.t,untyped	bswap: av_le2ne64(x: untyped): untyped	
+AV_BE2NEC	ffmpeg/libavutil/bswap.html#AV_BE2NEC.t,untyped,untyped	bswap: AV_BE2NEC(s, x: untyped): untyped	
+AV_LE2NEC	ffmpeg/libavutil/bswap.html#AV_LE2NEC.t,untyped,untyped	bswap: AV_LE2NEC(s, x: untyped): untyped	
+AV_BE2NE16C	ffmpeg/libavutil/bswap.html#AV_BE2NE16C.t,untyped	bswap: AV_BE2NE16C(x: untyped): untyped	
+AV_BE2NE32C	ffmpeg/libavutil/bswap.html#AV_BE2NE32C.t,untyped	bswap: AV_BE2NE32C(x: untyped): untyped	
+AV_BE2NE64C	ffmpeg/libavutil/bswap.html#AV_BE2NE64C.t,untyped	bswap: AV_BE2NE64C(x: untyped): untyped	
+AV_LE2NE16C	ffmpeg/libavutil/bswap.html#AV_LE2NE16C.t,untyped	bswap: AV_LE2NE16C(x: untyped): untyped	
+AV_LE2NE32C	ffmpeg/libavutil/bswap.html#AV_LE2NE32C.t,untyped	bswap: AV_LE2NE32C(x: untyped): untyped	
+AV_LE2NE64C	ffmpeg/libavutil/bswap.html#AV_LE2NE64C.t,untyped	bswap: AV_LE2NE64C(x: untyped): untyped	

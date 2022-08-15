@@ -1,0 +1,5 @@
+av_assert0	ffmpeg/libavutil/avassert.html#av_assert0.t,untyped	avassert: av_assert0(cond: untyped): untyped	
+av_assert0_fpu	ffmpeg/libavutil/avassert.html#av_assert0_fpu	avassert: av_assert0_fpu()	
+av_assert1	ffmpeg/libavutil/avassert.html#av_assert1.t,untyped	avassert: av_assert1(cond: untyped): untyped	
+av_assert2	ffmpeg/libavutil/avassert.html#av_assert2.t,untyped	avassert: av_assert2(cond: untyped): untyped	
+av_assert2_fpu	ffmpeg/libavutil/avassert.html#av_assert2_fpu.t	avassert: av_assert2_fpu(): untyped	

@@ -1,0 +1,28 @@
+AV_LOG_QUIET	ffmpeg/libavutil/log.html#AV_LOG_QUIET	log: AV_LOG_QUIET	
+AV_LOG_PANIC	ffmpeg/libavutil/log.html#AV_LOG_PANIC	log: AV_LOG_PANIC	
+AV_LOG_FATAL	ffmpeg/libavutil/log.html#AV_LOG_FATAL	log: AV_LOG_FATAL	
+AV_LOG_ERROR	ffmpeg/libavutil/log.html#AV_LOG_ERROR	log: AV_LOG_ERROR	
+AV_LOG_WARNING	ffmpeg/libavutil/log.html#AV_LOG_WARNING	log: AV_LOG_WARNING	
+AV_LOG_INFO	ffmpeg/libavutil/log.html#AV_LOG_INFO	log: AV_LOG_INFO	
+AV_LOG_VERBOSE	ffmpeg/libavutil/log.html#AV_LOG_VERBOSE	log: AV_LOG_VERBOSE	
+AV_LOG_DEBUG	ffmpeg/libavutil/log.html#AV_LOG_DEBUG	log: AV_LOG_DEBUG	
+AV_LOG_TRACE	ffmpeg/libavutil/log.html#AV_LOG_TRACE	log: AV_LOG_TRACE	
+AV_LOG_MAX_OFFSET	ffmpeg/libavutil/log.html#AV_LOG_MAX_OFFSET	log: AV_LOG_MAX_OFFSET	
+AV_LOG_SKIP_REPEATED	ffmpeg/libavutil/log.html#AV_LOG_SKIP_REPEATED	log: AV_LOG_SKIP_REPEATED	
+AV_LOG_PRINT_LEVEL	ffmpeg/libavutil/log.html#AV_LOG_PRINT_LEVEL	log: AV_LOG_PRINT_LEVEL	
+AV_IS_INPUT_DEVICE	ffmpeg/libavutil/log.html#AV_IS_INPUT_DEVICE.t,untyped	log: AV_IS_INPUT_DEVICE(category: untyped): untyped	
+AV_IS_OUTPUT_DEVICE	ffmpeg/libavutil/log.html#AV_IS_OUTPUT_DEVICE.t,untyped	log: AV_IS_OUTPUT_DEVICE(category: untyped): untyped	
+AV_LOG_C	ffmpeg/libavutil/log.html#AV_LOG_C.t,untyped	log: AV_LOG_C(x: untyped): untyped	
+av_log	ffmpeg/libavutil/log.html#av_log,pointer,cint,cstring	log: av_log(avcl: pointer; level: cint; fmt: cstring)	
+av_log_once	ffmpeg/libavutil/log.html#av_log_once,pointer,cint,cint,ptr.cint,cstring	log: av_log_once(avcl: pointer; initial_level, subsequent_level: cint;\n            state: ptr cint; fmt: cstring)	
+av_vlog	ffmpeg/libavutil/log.html#av_vlog,pointer,cint,cstring,va_list	log: av_vlog(avcl: pointer; level: cint; fmt: cstring; vl: va_list)	
+av_log_get_level	ffmpeg/libavutil/log.html#av_log_get_level	log: av_log_get_level(): cint	
+av_log_set_level	ffmpeg/libavutil/log.html#av_log_set_level,cint	log: av_log_set_level(level: cint)	
+av_log_set_callback	ffmpeg/libavutil/log.html#av_log_set_callback,proc(pointer,cint,cstring,va_list)	log: av_log_set_callback(callback: proc (a1: pointer; a2: cint; a3: cstring;\n                                    a4: va_list))	
+av_log_default_callback	ffmpeg/libavutil/log.html#av_log_default_callback,pointer,cint,cchar,va_list	log: av_log_default_callback(avcl: pointer; level: cint; fmt: cchar; vl: va_list)	
+av_default_item_name	ffmpeg/libavutil/log.html#av_default_item_name,pointer	log: av_default_item_name(ctx: pointer): cstring	
+av_default_get_category	ffmpeg/libavutil/log.html#av_default_get_category,pointer	log: av_default_get_category(ptr: pointer): AVClassCategory	
+av_log_format_line	ffmpeg/libavutil/log.html#av_log_format_line,pointer,cint,cstring,va_list,cstring,cint,ptr.cint	log: av_log_format_line(ptr: pointer; level: cint; fmt: cstring; vl: va_list;\n                   line: cstring; line_size: cint; print_prefix: ptr cint)	
+av_log_format_line2	ffmpeg/libavutil/log.html#av_log_format_line2,pointer,cint,cstring,va_list,cstring,cint,ptr.cint	log: av_log_format_line2(ptr: pointer; level: cint; fmt: cstring; vl: va_list;\n                    line: cstring; line_size: cint; print_prefix: ptr cint): cint	
+av_log_set_flags	ffmpeg/libavutil/log.html#av_log_set_flags,cint	log: av_log_set_flags(arg: cint)	
+av_log_get_flags	ffmpeg/libavutil/log.html#av_log_get_flags	log: av_log_get_flags(): cint	

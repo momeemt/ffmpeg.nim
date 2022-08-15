@@ -1,0 +1,2 @@
+av_vk_frame_alloc	ffmpeg/libavutil/hwcontext_vulkan.html#av_vk_frame_alloc	hwcontext_vulkan: av_vk_frame_alloc(): AVVkFrame	
+av_vkfmt_from_pixfmt	ffmpeg/libavutil/hwcontext_vulkan.html#av_vkfmt_from_pixfmt,AVPixelFormat	hwcontext_vulkan: av_vkfmt_from_pixfmt(p: AVPixelFormat): ptr VkFormat	

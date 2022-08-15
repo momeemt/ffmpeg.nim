@@ -1,0 +1,2 @@
+AV_AAC_ADTS_HEADER_SIZE	ffmpeg/libavcodec/adts_parser.html#AV_AAC_ADTS_HEADER_SIZE	adts_parser: AV_AAC_ADTS_HEADER_SIZE	
+av_adts_header_parse	ffmpeg/libavcodec/adts_parser.html#av_adts_header_parse,ptr.uint8,ptr.uint32,ptr.uint8	adts_parser: av_adts_header_parse(buf: ptr uint8; samples: ptr uint32; frames: ptr uint8): cint	

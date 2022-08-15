@@ -1,0 +1,27 @@
+AV_NUM_DATA_POINTERS	ffmpeg/libavutil/frame.html#AV_NUM_DATA_POINTERS	frame: AV_NUM_DATA_POINTERS	
+AV_FRAME_FLAG_CORRUPT	ffmpeg/libavutil/frame.html#AV_FRAME_FLAG_CORRUPT	frame: AV_FRAME_FLAG_CORRUPT	
+AV_FRAME_FLAG_DISCARD	ffmpeg/libavutil/frame.html#AV_FRAME_FLAG_DISCARD	frame: AV_FRAME_FLAG_DISCARD	
+FF_DECODE_ERROR_INVALID_BITSTREAM	ffmpeg/libavutil/frame.html#FF_DECODE_ERROR_INVALID_BITSTREAM	frame: FF_DECODE_ERROR_INVALID_BITSTREAM	
+FF_DECODE_ERROR_MISSING_REFERENCE	ffmpeg/libavutil/frame.html#FF_DECODE_ERROR_MISSING_REFERENCE	frame: FF_DECODE_ERROR_MISSING_REFERENCE	
+FF_DECODE_ERROR_CONCEALMENT_ACTIVE	ffmpeg/libavutil/frame.html#FF_DECODE_ERROR_CONCEALMENT_ACTIVE	frame: FF_DECODE_ERROR_CONCEALMENT_ACTIVE	
+FF_DECODE_ERROR_DECODE_SLICES	ffmpeg/libavutil/frame.html#FF_DECODE_ERROR_DECODE_SLICES	frame: FF_DECODE_ERROR_DECODE_SLICES	
+AV_FRAME_CROP_UNALIGNED	ffmpeg/libavutil/frame.html#AV_FRAME_CROP_UNALIGNED	frame: AV_FRAME_CROP_UNALIGNED	
+av_frame_alloc	ffmpeg/libavutil/frame.html#av_frame_alloc	frame: av_frame_alloc(): ptr AVFrame	
+av_frame_free	ffmpeg/libavutil/frame.html#av_frame_free,ptr.ptr.AVFrame	frame: av_frame_free(frame: ptr ptr AVFrame)	
+av_frame_ref	ffmpeg/libavutil/frame.html#av_frame_ref,ptr.AVFrame,ptr.AVFrame	frame: av_frame_ref(dst, src: ptr AVFrame): cint	
+av_frame_clone	ffmpeg/libavutil/frame.html#av_frame_clone,ptr.AVFrame	frame: av_frame_clone(src: ptr AVFrame): ptr AVFrame	
+av_frame_unref	ffmpeg/libavutil/frame.html#av_frame_unref,ptr.AVFrame	frame: av_frame_unref(frame: ptr AVFrame)	
+av_frame_move_ref	ffmpeg/libavutil/frame.html#av_frame_move_ref,ptr.AVFrame,ptr.AVFrame	frame: av_frame_move_ref(dst, src: ptr AVFrame)	
+av_frame_get_buffer	ffmpeg/libavutil/frame.html#av_frame_get_buffer,ptr.AVFrame,cint	frame: av_frame_get_buffer(frame: ptr AVFrame; align: cint): cint	
+av_frame_is_writable	ffmpeg/libavutil/frame.html#av_frame_is_writable,ptr.AVFrame	frame: av_frame_is_writable(frame: ptr AVFrame): cint	
+av_frame_make_writable	ffmpeg/libavutil/frame.html#av_frame_make_writable,ptr.AVFrame	frame: av_frame_make_writable(frame: ptr AVFrame): cint	
+av_frame_copy	ffmpeg/libavutil/frame.html#av_frame_copy,ptr.AVFrame,ptr.AVFrame	frame: av_frame_copy(dst, src: ptr AVFrame): cint	
+av_frame_copy_props	ffmpeg/libavutil/frame.html#av_frame_copy_props,ptr.AVFrame,ptr.AVFrame	frame: av_frame_copy_props(dst, src: ptr AVFrame): cint	
+av_frame_get_plane_buffer	ffmpeg/libavutil/frame.html#av_frame_get_plane_buffer,ptr.AVFrame,cint	frame: av_frame_get_plane_buffer(frame: ptr AVFrame; plane: cint): ptr AVBufferRef	
+av_frame_new_side_data	ffmpeg/libavutil/frame.html#av_frame_new_side_data,ptr.AVFrame,AVFrameSideDataType,csize_t	frame: av_frame_new_side_data(frame: ptr AVFrame; type: AVFrameSideDataType;\n                       size: csize_t): ptr AVFrameSideData	
+av_frame_new_side_data_from_buf	ffmpeg/libavutil/frame.html#av_frame_new_side_data_from_buf,ptr.AVFrame,AVFrameSideDataType,ptr.AVBufferRef	frame: av_frame_new_side_data_from_buf(frame: ptr AVFrame; type: AVFrameSideDataType;\n                                buf: ptr AVBufferRef): ptr AVFrameSideData	
+av_frame_get_side_data	ffmpeg/libavutil/frame.html#av_frame_get_side_data,ptr.AVFrame,AVFrameSideDataType	frame: av_frame_get_side_data(frame: ptr AVFrame; type: AVFrameSideDataType): ptr AVFrameSideData	
+av_frame_remove_side_data	ffmpeg/libavutil/frame.html#av_frame_remove_side_data,ptr.AVFrame,AVFrameSideDataType	frame: av_frame_remove_side_data(frame: ptr AVFrame; type: AVFrameSideDataType)	
+av_frame_apply_cropping	ffmpeg/libavutil/frame.html#av_frame_apply_cropping,ptr.AVFrame,cint	frame: av_frame_apply_cropping(frame: ptr AVFrame; flags: cint): cint	
+av_frame_side_data_name	ffmpeg/libavutil/frame.html#av_frame_side_data_name,AVFrameSideDataType	frame: av_frame_side_data_name(type: AVFrameSideDataType): cstring	
+av_get_colorspace_name	ffmpeg/libavutil/frame.html#av_get_colorspace_name,AVColorSpace	frame: av_get_colorspace_name(val: AVColorSpace): cstring	

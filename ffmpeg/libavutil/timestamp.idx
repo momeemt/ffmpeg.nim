@@ -1,0 +1,3 @@
+AV_TS_MAX_STRING_SIZE	ffmpeg/libavutil/timestamp.html#AV_TS_MAX_STRING_SIZE	timestamp: AV_TS_MAX_STRING_SIZE	
+av_ts2str	ffmpeg/libavutil/timestamp.html#av_ts2str.t,untyped	timestamp: av_ts2str(ts: untyped): untyped	
+av_ts2timestr	ffmpeg/libavutil/timestamp.html#av_ts2timestr.t,untyped,untyped	timestamp: av_ts2timestr(ts, tb: untyped): untyped	

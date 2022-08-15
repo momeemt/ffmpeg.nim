@@ -1,0 +1,5 @@
+av_murmur3_alloc	ffmpeg/libavutil/murmur3.html#av_murmur3_alloc	murmur3: av_murmur3_alloc(): AVMurMur3	
+av_murmur3_init_seeded	ffmpeg/libavutil/murmur3.html#av_murmur3_init_seeded,ptr.AVMurMur3,uint64	murmur3: av_murmur3_init_seeded(c: ptr AVMurMur3; seed: uint64)	
+av_murmur3_init	ffmpeg/libavutil/murmur3.html#av_murmur3_init,ptr.AVMurMur3	murmur3: av_murmur3_init(c: ptr AVMurMur3)	
+av_murmur3_final	ffmpeg/libavutil/murmur3.html#av_murmur3_final,ptr.AVMurMur3,ptr.uint8	murmur3: av_murmur3_final(c: ptr AVMurMur3; dst: ptr uint8)	
+av_murmur3_update	ffmpeg/libavutil/murmur3.html#av_murmur3_update,ptr.AVMurMur3,ptr.uint8,csize_t	murmur3: av_murmur3_update(c: ptr AVMurMur3; src: ptr uint8; len: csize_t)	

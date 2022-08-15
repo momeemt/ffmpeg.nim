@@ -1,0 +1,5 @@
+AV_BF_ROUNDS	ffmpeg/libavutil/blowfish.html#AV_BF_ROUNDS	blowfish: AV_BF_ROUNDS	
+av_blowfish_alloc	ffmpeg/libavutil/blowfish.html#av_blowfish_alloc	blowfish: av_blowfish_alloc(): AVBlowfish	
+av_blowfish_init	ffmpeg/libavutil/blowfish.html#av_blowfish_init,ptr.AVBlowfish,ptr.uint8,cint	blowfish: av_blowfish_init(ctx: ptr AVBlowfish; key: ptr uint8; key_len: cint)	
+av_blowfish_crypt_ecb	ffmpeg/libavutil/blowfish.html#av_blowfish_crypt_ecb,ptr.AVBlowfish,ptr.uint32,ptr.uint32,cint	blowfish: av_blowfish_crypt_ecb(ctx: ptr AVBlowfish; xl, xr: ptr uint32; decrypt: cint)	
+av_blowfish_crypt	ffmpeg/libavutil/blowfish.html#av_blowfish_crypt,ptr.AVBlowfish,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	blowfish: av_blowfish_crypt(ctx: ptr AVBlowfish; dst, src: ptr uint8; count: cint;\n                  iv: ptr uint8; decrypt: cint)	

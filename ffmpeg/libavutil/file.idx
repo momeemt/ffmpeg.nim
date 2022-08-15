@@ -1,0 +1,3 @@
+av_file_map	ffmpeg/libavutil/file.html#av_file_map,cstring,ptr.ptr.uint8,ptr.csize_t,cint,pointer	file: av_file_map(filename: cstring; bufptr: ptr ptr uint8; size: ptr csize_t;\n            log_offset: cint; log_ctx: pointer): cint	
+av_file_unmap	ffmpeg/libavutil/file.html#av_file_unmap,ptr.uint8,csize_t	file: av_file_unmap(bufptr: ptr uint8; size: csize_t)	
+av_tempfile	ffmpeg/libavutil/file.html#av_tempfile,cstring,cstringArray,cuint,pointer	file: av_tempfile(prefix: cstring; filename: cstringArray; log_offset: cuint;\n            log_ctx: pointer): cint	

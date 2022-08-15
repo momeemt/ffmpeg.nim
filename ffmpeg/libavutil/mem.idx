@@ -1,0 +1,24 @@
+av_malloc	ffmpeg/libavutil/mem.html#av_malloc,csize_t	mem: av_malloc(size: csize_t): pointer	
+av_mallocz	ffmpeg/libavutil/mem.html#av_mallocz,csize_t	mem: av_mallocz(size: csize_t): pointer	
+av_malloc_array	ffmpeg/libavutil/mem.html#av_malloc_array,csize_t,csize_t	mem: av_malloc_array(nmemb, size: csize_t): pointer	
+av_calloc	ffmpeg/libavutil/mem.html#av_calloc,csize_t,csize_t	mem: av_calloc(nmemb, size: csize_t): pointer	
+av_realloc	ffmpeg/libavutil/mem.html#av_realloc,pointer,csize_t	mem: av_realloc(ptr: pointer; size: csize_t): pointer	
+av_reallocp	ffmpeg/libavutil/mem.html#av_reallocp,pointer,csize_t	mem: av_reallocp(ptr: pointer; size: csize_t): cint	
+av_realloc_f	ffmpeg/libavutil/mem.html#av_realloc_f,pointer,csize_t,csize_t	mem: av_realloc_f(ptr: pointer; nelem, elsize: csize_t): pointer	
+av_realloc_array	ffmpeg/libavutil/mem.html#av_realloc_array,pointer,csize_t,csize_t	mem: av_realloc_array(ptr: pointer; nmemb, size: csize_t): pointer	
+av_reallocp_array	ffmpeg/libavutil/mem.html#av_reallocp_array,pointer,csize_t,csize_t	mem: av_reallocp_array(ptr: pointer; nmemb, size: csize_t): cint	
+av_fast_realloc	ffmpeg/libavutil/mem.html#av_fast_realloc,pointer,ptr.cuint,csize_t	mem: av_fast_realloc(ptr: pointer; size: ptr cuint; min_size: csize_t): pointer	
+av_fast_malloc	ffmpeg/libavutil/mem.html#av_fast_malloc,pointer,ptr.cuint,csize_t	mem: av_fast_malloc(ptr: pointer; size: ptr cuint; min_size: csize_t)	
+av_fast_mallocz	ffmpeg/libavutil/mem.html#av_fast_mallocz,pointer,ptr.cuint,csize_t	mem: av_fast_mallocz(ptr: pointer; size: ptr cuint; min_size: csize_t)	
+av_free	ffmpeg/libavutil/mem.html#av_free,pointer	mem: av_free(ptr: pointer)	
+av_freep	ffmpeg/libavutil/mem.html#av_freep,pointer	mem: av_freep(ptr: pointer)	
+av_strdup	ffmpeg/libavutil/mem.html#av_strdup,cstring	mem: av_strdup(s: cstring): cstring	
+av_strndup	ffmpeg/libavutil/mem.html#av_strndup,cstring,csize_t	mem: av_strndup(s: cstring; len: csize_t): cstring	
+av_memdup	ffmpeg/libavutil/mem.html#av_memdup,pointer,csize_t	mem: av_memdup(p: pointer; size: csize_t): pointer	
+av_memcpy_backptr	ffmpeg/libavutil/mem.html#av_memcpy_backptr,ptr.uint8,cint,cint	mem: av_memcpy_backptr(dst: ptr uint8; back, cnt: cint)	
+av_dynarray_add	ffmpeg/libavutil/mem.html#av_dynarray_add,pointer,ptr.cint,pointer	mem: av_dynarray_add(tab_ptr: pointer; nb_ptr: ptr cint; elem: pointer)	
+av_dynarray_add_nofree	ffmpeg/libavutil/mem.html#av_dynarray_add_nofree,pointer,ptr.cint,pointer	mem: av_dynarray_add_nofree(tab_ptr: pointer; nb_ptr: ptr cint; elem: pointer): cint	
+av_dynarray2_add	ffmpeg/libavutil/mem.html#av_dynarray2_add,ptr.pointer,ptr.cint,csize_t,ptr.uint8	mem: av_dynarray2_add(tab_ptr: ptr pointer; nb_ptr: ptr cint; elem_size: csize_t;\n                 elem_data: ptr uint8): pointer	
+av_max_alloc	ffmpeg/libavutil/mem.html#av_max_alloc,csize_t	mem: av_max_alloc(max: csize_t)	
+av_size_mult	ffmpeg/libavutil/mem.html#av_size_mult,csize_t,csize_t,ptr.csize_t	mem: av_size_mult(a, b: csize_t; r: ptr csize_t): cint	
+av_mallocz_array	ffmpeg/libavutil/mem.html#av_mallocz_array,csize_t,csize_t	mem: av_mallocz_array(nmemb, size: csize_t): pointer	

@@ -1,0 +1,5 @@
+av_sha_size	ffmpeg/libavutil/sha.html#av_sha_size	sha: av_sha_size	
+av_sha_alloc	ffmpeg/libavutil/sha.html#av_sha_alloc	sha: av_sha_alloc(): ptr AVSHA	
+av_sha_init	ffmpeg/libavutil/sha.html#av_sha_init,ptr.AVSHA,cint	sha: av_sha_init(context: ptr AVSHA; bits: cint): cint	
+av_sha_final	ffmpeg/libavutil/sha.html#av_sha_final,ptr.AVSHA,ptr.uint8	sha: av_sha_final(context: ptr AVSHA; digest: ptr uint8)	
+av_sha_update	ffmpeg/libavutil/sha.html#av_sha_update,ptr.AVSHA,ptr.uint8,csize_t	sha: av_sha_update(ctx: ptr AVSHA; data: ptr uint8; len: csize_t)	

@@ -1,0 +1,11 @@
+av_audio_fifo_free	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_free,ptr.AVAudioFifo	audio_fifo: av_audio_fifo_free(af: ptr AVAudioFifo)	
+av_audio_fifo_alloc	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_alloc,AVSampleFormat,cint,cint	audio_fifo: av_audio_fifo_alloc(sample_fmt: AVSampleFormat; channels, nb_samples: cint): ptr AVAudioFifo	
+av_audio_fifo_realloc	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_realloc,ptr.AVAudioFifo,cint	audio_fifo: av_audio_fifo_realloc(af: ptr AVAudioFifo; nb_samples: cint): cint	
+av_audio_fifo_write	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_write,ptr.AVAudioFifo,ptr.pointer,cint	audio_fifo: av_audio_fifo_write(af: ptr AVAudioFifo; data: ptr pointer; nb_samples: cint): cint	
+av_audio_fifo_peek	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_peek,ptr.AVAudioFifo,ptr.pointer,cint	audio_fifo: av_audio_fifo_peek(af: ptr AVAudioFifo; data: ptr pointer; nb_samples: cint): cint	
+av_audio_fifo_peek_at	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_peek_at,ptr.AVAudioFifo,ptr.pointer,cint,cint	audio_fifo: av_audio_fifo_peek_at(af: ptr AVAudioFifo; data: ptr pointer;\n                      nb_samples, offset: cint): cint	
+av_audio_fifo_read	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_read,ptr.AVAudioFifo,ptr.pointer,cint	audio_fifo: av_audio_fifo_read(af: ptr AVAudioFifo; data: ptr pointer; nb_samples: cint): cint	
+av_audio_fifo_drain	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_drain,ptr.AVAudioFifo,cint	audio_fifo: av_audio_fifo_drain(af: ptr AVAudioFifo; nb_samples: cint): cint	
+av_audio_fifo_reset	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_reset,ptr.AVAudioFifo	audio_fifo: av_audio_fifo_reset(af: ptr AVAudioFifo)	
+av_audio_fifo_size	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_size,ptr.AVAudioFifo	audio_fifo: av_audio_fifo_size(af: ptr AVAudioFifo): cint	
+av_audio_fifo_space	ffmpeg/libavutil/audio_fifo.html#av_audio_fifo_space,ptr.AVAudioFifo	audio_fifo: av_audio_fifo_space(af: ptr AVAudioFifo): cint	
