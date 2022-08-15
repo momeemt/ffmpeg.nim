@@ -21,8 +21,8 @@ jobs:
     - uses: jiro4989/setup-nim-action@v1.3.57
     - run: nimble docs
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.4.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./docs
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
