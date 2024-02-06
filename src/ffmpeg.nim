@@ -89,7 +89,3 @@ else:
 
 when defined(macosx):
   export videotoolbox, hwcontext_videotoolbox
-
-# A way to avoid UncheckedArrays and ptr's to ptr's in Nim
-{.compile: currentSourcePath.parentDir() / "cinclude" / "kyuickWrap.c".}
-proc getAVStream*(ctx: ptr AVFormatContext, index: cint): ptr AVStream {.importc.}
