@@ -10,8 +10,6 @@ else:
   {.push importc, dynlib: "libavdevice.so(|.58|.59|.60|.61|.62)", cdecl.}
 
 when FF_API_DEVICE_CAPABILITIES:
-  var av_device_capabilities* {.deprecated.} : ptr AVOption
-  
   proc avdevice_capabilities_create* (caps: ptr ptr AVDeviceCapabilitiesQuery, s: ptr AVFormatContext, device_options: ptr ptr AVDictionary): cint {.deprecated.}
   proc avdevice_capabilities_free* (caps: ptr ptr AVDeviceCapabilitiesQuery, s: ptr AVFormatContext) {.deprecated.}
 
