@@ -1,16 +1,17 @@
-av_bsf_get_by_name	ffmpeg/libavcodec/bsf.html#av_bsf_get_by_name,cstring	bsf: av_bsf_get_by_name(name: cstring): ptr AVBitStreamFilter	
-av_bsf_iterate	ffmpeg/libavcodec/bsf.html#av_bsf_iterate,ptr.pointer	bsf: av_bsf_iterate(opaque: ptr pointer): ptr AVBitStreamFilter	
-av_bsf_alloc	ffmpeg/libavcodec/bsf.html#av_bsf_alloc,ptr.AVBitStreamFilter,ptr.ptr.AVBSFContext	bsf: av_bsf_alloc(filter: ptr AVBitStreamFilter; ctx: ptr ptr AVBSFContext): cint	
-av_bsf_init	ffmpeg/libavcodec/bsf.html#av_bsf_init,ptr.AVBSFContext	bsf: av_bsf_init(ctx: ptr AVBSFContext): cint	
-av_bsf_send_packet	ffmpeg/libavcodec/bsf.html#av_bsf_send_packet,ptr.AVBSFContext,ptr.AVPacket	bsf: av_bsf_send_packet(ctx: ptr AVBSFContext; pkt: ptr AVPacket): cint	
-av_bsf_receive_packet	ffmpeg/libavcodec/bsf.html#av_bsf_receive_packet,ptr.AVBSFContext,ptr.AVPacket	bsf: av_bsf_receive_packet(ctx: ptr AVBSFContext; pkt: ptr AVPacket): cint	
-av_bsf_flush	ffmpeg/libavcodec/bsf.html#av_bsf_flush,ptr.AVBSFContext	bsf: av_bsf_flush(ctx: ptr AVBSFContext)	
-av_bsf_free	ffmpeg/libavcodec/bsf.html#av_bsf_free,ptr.ptr.AVBSFContext	bsf: av_bsf_free(ctx: ptr ptr AVBSFContext)	
-av_bsf_get_class	ffmpeg/libavcodec/bsf.html#av_bsf_get_class	bsf: av_bsf_get_class(): ptr AVClass	
-av_bsf_list_alloc	ffmpeg/libavcodec/bsf.html#av_bsf_list_alloc	bsf: av_bsf_list_alloc(): ptr AVBSFList	
-av_bsf_list_free	ffmpeg/libavcodec/bsf.html#av_bsf_list_free,ptr.ptr.AVBSFList	bsf: av_bsf_list_free(lst: ptr ptr AVBSFList)	
-av_bsf_list_append	ffmpeg/libavcodec/bsf.html#av_bsf_list_append,ptr.AVBSFList,ptr.AVBSFContext	bsf: av_bsf_list_append(lst: ptr AVBSFList; bsf: ptr AVBSFContext): cint	
-av_bsf_list_append2	ffmpeg/libavcodec/bsf.html#av_bsf_list_append2,ptr.AVBSFList,cstring,ptr.ptr.AVDictionary	bsf: av_bsf_list_append2(lst: ptr AVBSFList; bsf_name: cstring;\n                    options: ptr ptr AVDictionary): cint	
-av_bsf_list_finalize	ffmpeg/libavcodec/bsf.html#av_bsf_list_finalize,ptr.ptr.AVBSFList,ptr.ptr.AVBSFContext	bsf: av_bsf_list_finalize(lst: ptr ptr AVBSFList; bsf: ptr ptr AVBSFContext): cint	
-av_bsf_list_parse_str	ffmpeg/libavcodec/bsf.html#av_bsf_list_parse_str,cstring,ptr.ptr.AVBSFContext	bsf: av_bsf_list_parse_str(str: cstring; bsf: ptr ptr AVBSFContext): cint	
-av_bsf_get_null_filter	ffmpeg/libavcodec/bsf.html#av_bsf_get_null_filter,ptr.ptr.AVBSFContext	bsf: av_bsf_get_null_filter(bsf: ptr ptr AVBSFContext): cint	
+nimTitle	bsf	ffmpeg/libavcodec/bsf.html	module src/ffmpeg/libavcodec/bsf		0
+nim	av_bsf_get_by_name	ffmpeg/libavcodec/bsf.html#av_bsf_get_by_name,cstring	proc av_bsf_get_by_name(name: cstring): ptr AVBitStreamFilter		11
+nim	av_bsf_iterate	ffmpeg/libavcodec/bsf.html#av_bsf_iterate,ptr.pointer	proc av_bsf_iterate(opaque: ptr pointer): ptr AVBitStreamFilter		12
+nim	av_bsf_alloc	ffmpeg/libavcodec/bsf.html#av_bsf_alloc,ptr.AVBitStreamFilter,ptr.ptr.AVBSFContext	proc av_bsf_alloc(filter: ptr AVBitStreamFilter; ctx: ptr ptr AVBSFContext): cint		13
+nim	av_bsf_init	ffmpeg/libavcodec/bsf.html#av_bsf_init,ptr.AVBSFContext	proc av_bsf_init(ctx: ptr AVBSFContext): cint		14
+nim	av_bsf_send_packet	ffmpeg/libavcodec/bsf.html#av_bsf_send_packet,ptr.AVBSFContext,ptr.AVPacket	proc av_bsf_send_packet(ctx: ptr AVBSFContext; pkt: ptr AVPacket): cint		15
+nim	av_bsf_receive_packet	ffmpeg/libavcodec/bsf.html#av_bsf_receive_packet,ptr.AVBSFContext,ptr.AVPacket	proc av_bsf_receive_packet(ctx: ptr AVBSFContext; pkt: ptr AVPacket): cint		16
+nim	av_bsf_flush	ffmpeg/libavcodec/bsf.html#av_bsf_flush,ptr.AVBSFContext	proc av_bsf_flush(ctx: ptr AVBSFContext)		17
+nim	av_bsf_free	ffmpeg/libavcodec/bsf.html#av_bsf_free,ptr.ptr.AVBSFContext	proc av_bsf_free(ctx: ptr ptr AVBSFContext)		18
+nim	av_bsf_get_class	ffmpeg/libavcodec/bsf.html#av_bsf_get_class	proc av_bsf_get_class(): ptr AVClass		19
+nim	av_bsf_list_alloc	ffmpeg/libavcodec/bsf.html#av_bsf_list_alloc	proc av_bsf_list_alloc(): ptr AVBSFList		20
+nim	av_bsf_list_free	ffmpeg/libavcodec/bsf.html#av_bsf_list_free,ptr.ptr.AVBSFList	proc av_bsf_list_free(lst: ptr ptr AVBSFList)		21
+nim	av_bsf_list_append	ffmpeg/libavcodec/bsf.html#av_bsf_list_append,ptr.AVBSFList,ptr.AVBSFContext	proc av_bsf_list_append(lst: ptr AVBSFList; bsf: ptr AVBSFContext): cint		22
+nim	av_bsf_list_append2	ffmpeg/libavcodec/bsf.html#av_bsf_list_append2,ptr.AVBSFList,cstring,ptr.ptr.AVDictionary	proc av_bsf_list_append2(lst: ptr AVBSFList; bsf_name: cstring;\n                    options: ptr ptr AVDictionary): cint		23
+nim	av_bsf_list_finalize	ffmpeg/libavcodec/bsf.html#av_bsf_list_finalize,ptr.ptr.AVBSFList,ptr.ptr.AVBSFContext	proc av_bsf_list_finalize(lst: ptr ptr AVBSFList; bsf: ptr ptr AVBSFContext): cint		24
+nim	av_bsf_list_parse_str	ffmpeg/libavcodec/bsf.html#av_bsf_list_parse_str,cstring,ptr.ptr.AVBSFContext	proc av_bsf_list_parse_str(str: cstring; bsf: ptr ptr AVBSFContext): cint		25
+nim	av_bsf_get_null_filter	ffmpeg/libavcodec/bsf.html#av_bsf_get_null_filter,ptr.ptr.AVBSFContext	proc av_bsf_get_null_filter(bsf: ptr ptr AVBSFContext): cint		26

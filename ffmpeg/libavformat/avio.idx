@@ -1,71 +1,72 @@
-AVIO_SEEKABLE_NORMAL	ffmpeg/libavformat/avio.html#AVIO_SEEKABLE_NORMAL	avio: AVIO_SEEKABLE_NORMAL	
-AVIO_SEEKABLE_TIME	ffmpeg/libavformat/avio.html#AVIO_SEEKABLE_TIME	avio: AVIO_SEEKABLE_TIME	
-AVSEEK_SIZE	ffmpeg/libavformat/avio.html#AVSEEK_SIZE	avio: AVSEEK_SIZE	
-AVSEEK_FORCE	ffmpeg/libavformat/avio.html#AVSEEK_FORCE	avio: AVSEEK_FORCE	
-AVIO_FLAG_READ	ffmpeg/libavformat/avio.html#AVIO_FLAG_READ	avio: AVIO_FLAG_READ	
-AVIO_FLAG_WRITE	ffmpeg/libavformat/avio.html#AVIO_FLAG_WRITE	avio: AVIO_FLAG_WRITE	
-AVIO_FLAG_READ_WRITE	ffmpeg/libavformat/avio.html#AVIO_FLAG_READ_WRITE	avio: AVIO_FLAG_READ_WRITE	
-AVIO_FLAG_NONBLOCK	ffmpeg/libavformat/avio.html#AVIO_FLAG_NONBLOCK	avio: AVIO_FLAG_NONBLOCK	
-AVIO_FLAG_DIRECT	ffmpeg/libavformat/avio.html#AVIO_FLAG_DIRECT	avio: AVIO_FLAG_DIRECT	
-SEEK_CUR	ffmpeg/libavformat/avio.html#SEEK_CUR	avio: SEEK_CUR	
-avio_find_protocol_name	ffmpeg/libavformat/avio.html#avio_find_protocol_name,cstring	avio: avio_find_protocol_name(url: cstring): cstring	
-avio_check	ffmpeg/libavformat/avio.html#avio_check,cstring,cint	avio: avio_check(url: cstring; flags: cint): cint	
-avpriv_io_move	ffmpeg/libavformat/avio.html#avpriv_io_move,cstring,cstring	avio: avpriv_io_move(url_src, url_dst: cstring): cint	
-avpriv_io_delete	ffmpeg/libavformat/avio.html#avpriv_io_delete,cstring	avio: avpriv_io_delete(url: cstring): cint	
-avio_open_dir	ffmpeg/libavformat/avio.html#avio_open_dir,ptr.ptr.AVIODirContext,cstring,ptr.ptr.AVDictionary	avio: avio_open_dir(s: ptr ptr AVIODirContext; url: cstring;\n              options: ptr ptr AVDictionary): cint	
-avio_read_dir	ffmpeg/libavformat/avio.html#avio_read_dir,ptr.AVIODirContext,ptr.ptr.AVIODirEntry	avio: avio_read_dir(s: ptr AVIODirContext; next: ptr ptr AVIODirEntry): cint	
-avio_close_dir	ffmpeg/libavformat/avio.html#avio_close_dir,ptr.ptr.AVIODirContext	avio: avio_close_dir(s: ptr ptr AVIODirContext): cint	
-avio_free_directory_entry	ffmpeg/libavformat/avio.html#avio_free_directory_entry,ptr.ptr.AVIODirEntry	avio: avio_free_directory_entry(entry: ptr ptr AVIODirEntry)	
-avio_alloc_context	ffmpeg/libavformat/avio.html#avio_alloc_context,ptr.uint8,cint,cint,pointer,proc(pointer,ptr.uint8,cint),proc(pointer,uint8,cint),proc(pointer,int64,cint)	avio: avio_alloc_context(buffer: ptr uint8; buffer_size, write_flag: cint;\n                   opaque: pointer; read_packet: proc (opaque: pointer;\n    buf: ptr uint8; buf_size: cint): cint; write_packet: proc (opaque: pointer;\n    buf: uint8; buf_size: cint): cint; seek: proc (opaque: pointer;\n    offset: int64; whence: cint): int64): ptr AVIOContext	
-avio_context_free	ffmpeg/libavformat/avio.html#avio_context_free,ptr.ptr.AVIOContext	avio: avio_context_free(s: ptr ptr AVIOContext)	
-avio_w8	ffmpeg/libavformat/avio.html#avio_w8,ptr.AVIOContext,cint	avio: avio_w8(s: ptr AVIOContext; b: cint)	
-avio_write	ffmpeg/libavformat/avio.html#avio_write,ptr.AVIOContext,ptr.uint8,cint	avio: avio_write(s: ptr AVIOContext; buf: ptr uint8; size: cint)	
-avio_wl64	ffmpeg/libavformat/avio.html#avio_wl64,ptr.AVIOContext,uint64	avio: avio_wl64(s: ptr AVIOContext; val: uint64)	
-avio_wb64	ffmpeg/libavformat/avio.html#avio_wb64,ptr.AVIOContext,uint64	avio: avio_wb64(s: ptr AVIOContext; val: uint64)	
-avio_wl32	ffmpeg/libavformat/avio.html#avio_wl32,ptr.AVIOContext,cuint	avio: avio_wl32(s: ptr AVIOContext; val: cuint)	
-avio_wb32	ffmpeg/libavformat/avio.html#avio_wb32,ptr.AVIOContext,cuint	avio: avio_wb32(s: ptr AVIOContext; val: cuint)	
-avio_wl24	ffmpeg/libavformat/avio.html#avio_wl24,ptr.AVIOContext,cuint	avio: avio_wl24(s: ptr AVIOContext; val: cuint)	
-avio_wb24	ffmpeg/libavformat/avio.html#avio_wb24,ptr.AVIOContext,cuint	avio: avio_wb24(s: ptr AVIOContext; val: cuint)	
-avio_wl16	ffmpeg/libavformat/avio.html#avio_wl16,ptr.AVIOContext,cuint	avio: avio_wl16(s: ptr AVIOContext; val: cuint)	
-avio_wb16	ffmpeg/libavformat/avio.html#avio_wb16,ptr.AVIOContext,cuint	avio: avio_wb16(s: ptr AVIOContext; val: cuint)	
-avio_put_str	ffmpeg/libavformat/avio.html#avio_put_str,ptr.AVIOContext,cstring	avio: avio_put_str(s: ptr AVIOContext; str: cstring): cint	
-avio_put_str16le	ffmpeg/libavformat/avio.html#avio_put_str16le,ptr.AVIOContext,cstring	avio: avio_put_str16le(s: ptr AVIOContext; str: cstring): cint	
-avio_put_str16be	ffmpeg/libavformat/avio.html#avio_put_str16be,ptr.AVIOContext,cstring	avio: avio_put_str16be(s: ptr AVIOContext; str: cstring): cint	
-avio_write_marker	ffmpeg/libavformat/avio.html#avio_write_marker,ptr.AVIOContext,int64,AVIODataMarkerType	avio: avio_write_marker(s: ptr AVIOContext; time: int64; type: AVIODataMarkerType)	
-avio_seek	ffmpeg/libavformat/avio.html#avio_seek,ptr.AVIOContext,int64,cint	avio: avio_seek(s: ptr AVIOContext; offset: int64; whence: cint): int64	
-avio_skip	ffmpeg/libavformat/avio.html#avio_skip,ptr.AVIOContext,int64	avio: avio_skip(s: ptr AVIOContext; offset: int64): int64	
-avio_size	ffmpeg/libavformat/avio.html#avio_size,ptr.AVIOContext	avio: avio_size(s: ptr AVIOContext): int64	
-avio_feof	ffmpeg/libavformat/avio.html#avio_feof,ptr.AVIOContext	avio: avio_feof(s: ptr AVIOContext): cint	
-avio_printf	ffmpeg/libavformat/avio.html#avio_printf,ptr.AVIOContext,cstring	avio: avio_printf(s: ptr AVIOContext; fmt: cstring): cint	
-avio_print_string_array	ffmpeg/libavformat/avio.html#avio_print_string_array,ptr.AVIOContext,cstringArray	avio: avio_print_string_array(s: ptr AVIOContext; strings: cstringArray)	
-avio_flush	ffmpeg/libavformat/avio.html#avio_flush,ptr.AVIOContext	avio: avio_flush(s: ptr AVIOContext)	
-avio_read	ffmpeg/libavformat/avio.html#avio_read,ptr.AVIOContext,ptr.uint8,cint	avio: avio_read(s: ptr AVIOContext; buf: ptr uint8; size: cint): cint	
-avio_read_partial	ffmpeg/libavformat/avio.html#avio_read_partial,ptr.AVIOContext,ptr.uint8,cint	avio: avio_read_partial(s: ptr AVIOContext; buf: ptr uint8; size: cint): cint	
-avio_r8	ffmpeg/libavformat/avio.html#avio_r8,AVIOContext	avio: avio_r8(s: AVIOContext): cint	
-avio_rl16	ffmpeg/libavformat/avio.html#avio_rl16,AVIOContext	avio: avio_rl16(s: AVIOContext): cuint	
-avio_rl24	ffmpeg/libavformat/avio.html#avio_rl24,AVIOContext	avio: avio_rl24(s: AVIOContext): cuint	
-avio_rl32	ffmpeg/libavformat/avio.html#avio_rl32,AVIOContext	avio: avio_rl32(s: AVIOContext): cuint	
-avio_rl64	ffmpeg/libavformat/avio.html#avio_rl64,AVIOContext	avio: avio_rl64(s: AVIOContext): uint64	
-avio_rb16	ffmpeg/libavformat/avio.html#avio_rb16,AVIOContext	avio: avio_rb16(s: AVIOContext): cuint	
-avio_rb24	ffmpeg/libavformat/avio.html#avio_rb24,AVIOContext	avio: avio_rb24(s: AVIOContext): cuint	
-avio_rb32	ffmpeg/libavformat/avio.html#avio_rb32,AVIOContext	avio: avio_rb32(s: AVIOContext): cuint	
-avio_rb64	ffmpeg/libavformat/avio.html#avio_rb64,AVIOContext	avio: avio_rb64(s: AVIOContext): cuint	
-avio_get_str	ffmpeg/libavformat/avio.html#avio_get_str,ptr.AVIOContext,cint,cstring,cint	avio: avio_get_str(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint	
-avio_get_str16le	ffmpeg/libavformat/avio.html#avio_get_str16le,ptr.AVIOContext,cint,cstring,cint	avio: avio_get_str16le(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint	
-avio_get_str16be	ffmpeg/libavformat/avio.html#avio_get_str16be,ptr.AVIOContext,cint,cstring,cint	avio: avio_get_str16be(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint	
-avio_open	ffmpeg/libavformat/avio.html#avio_open,ptr.ptr.AVIOContext,cstring,cint	avio: avio_open(s: ptr ptr AVIOContext; url: cstring; flags: cint): cint	
-avio_open2	ffmpeg/libavformat/avio.html#avio_open2,ptr.ptr.AVIOContext,cstring,cint,ptr.AVIOInterruptCB,ptr.ptr.AVDictionary	avio: avio_open2(s: ptr ptr AVIOContext; url: cstring; flags: cint;\n           int_cb: ptr AVIOInterruptCB; options: ptr ptr AVDictionary): cint	
-avio_close	ffmpeg/libavformat/avio.html#avio_close,ptr.AVIOContext	avio: avio_close(s: ptr AVIOContext): cint	
-avio_closep	ffmpeg/libavformat/avio.html#avio_closep,ptr.ptr.AVIOContext	avio: avio_closep(s: ptr ptr AVIOContext): cint	
-avio_open_dyn_buf	ffmpeg/libavformat/avio.html#avio_open_dyn_buf,ptr.ptr.AVIOContext	avio: avio_open_dyn_buf(s: ptr ptr AVIOContext): cint	
-avio_get_dyn_buf	ffmpeg/libavformat/avio.html#avio_get_dyn_buf,ptr.AVIOContext,ptr.ptr.uint8	avio: avio_get_dyn_buf(s: ptr AVIOContext; pbuffer: ptr ptr uint8): cint	
-avio_close_dyn_buf	ffmpeg/libavformat/avio.html#avio_close_dyn_buf,ptr.AVIOContext,ptr.uint8	avio: avio_close_dyn_buf(s: ptr AVIOContext; pbuffer: ptr uint8): cint	
-avio_enum_protocols	ffmpeg/libavformat/avio.html#avio_enum_protocols,pointer,cint	avio: avio_enum_protocols(opaque: pointer; output: cint): cstring	
-avio_protocol_get_class	ffmpeg/libavformat/avio.html#avio_protocol_get_class,cstring	avio: avio_protocol_get_class(name: cstring): ptr AVClass	
-avio_pause	ffmpeg/libavformat/avio.html#avio_pause,ptr.AVIOContext,cint	avio: avio_pause(h: ptr AVIOContext; pause: cint): cint	
-avio_seek_time	ffmpeg/libavformat/avio.html#avio_seek_time,ptr.AVIOContext,cint,int64,cint	avio: avio_seek_time(h: ptr AVIOContext; stream_index: cint; timestamp: int64;\n               flags: cint): int64	
-avio_read_to_bprint	ffmpeg/libavformat/avio.html#avio_read_to_bprint,ptr.AVIOContext,ptr.AVBPrint,csize_t	avio: avio_read_to_bprint(h: ptr AVIOContext; pb: ptr AVBPrint; max_size: csize_t): cint	
-avio_accept	ffmpeg/libavformat/avio.html#avio_accept,ptr.AVIOContext,ptr.ptr.AVIOContext	avio: avio_accept(s: ptr AVIOContext; c: ptr ptr AVIOContext): cint	
-avio_handshake	ffmpeg/libavformat/avio.html#avio_handshake,ptr.AVIOContext	avio: avio_handshake(c: ptr AVIOContext): cint	
-avio_tell	ffmpeg/libavformat/avio.html#avio_tell,ptr.AVIOContext	avio: avio_tell(s: ptr AVIOContext): int64	
-avio_print	ffmpeg/libavformat/avio.html#avio_print.t,varargs[untyped]	avio: avio_print(s: varargs[untyped]): untyped	
+nimTitle	avio	ffmpeg/libavformat/avio.html	module src/ffmpeg/libavformat/avio		0
+nim	AVIO_SEEKABLE_NORMAL	ffmpeg/libavformat/avio.html#AVIO_SEEKABLE_NORMAL	const AVIO_SEEKABLE_NORMAL		12
+nim	AVIO_SEEKABLE_TIME	ffmpeg/libavformat/avio.html#AVIO_SEEKABLE_TIME	const AVIO_SEEKABLE_TIME		13
+nim	AVSEEK_SIZE	ffmpeg/libavformat/avio.html#AVSEEK_SIZE	const AVSEEK_SIZE		14
+nim	AVSEEK_FORCE	ffmpeg/libavformat/avio.html#AVSEEK_FORCE	const AVSEEK_FORCE		15
+nim	AVIO_FLAG_READ	ffmpeg/libavformat/avio.html#AVIO_FLAG_READ	const AVIO_FLAG_READ		16
+nim	AVIO_FLAG_WRITE	ffmpeg/libavformat/avio.html#AVIO_FLAG_WRITE	const AVIO_FLAG_WRITE		17
+nim	AVIO_FLAG_READ_WRITE	ffmpeg/libavformat/avio.html#AVIO_FLAG_READ_WRITE	const AVIO_FLAG_READ_WRITE		18
+nim	AVIO_FLAG_NONBLOCK	ffmpeg/libavformat/avio.html#AVIO_FLAG_NONBLOCK	const AVIO_FLAG_NONBLOCK		19
+nim	AVIO_FLAG_DIRECT	ffmpeg/libavformat/avio.html#AVIO_FLAG_DIRECT	const AVIO_FLAG_DIRECT		20
+nim	SEEK_CUR	ffmpeg/libavformat/avio.html#SEEK_CUR	const SEEK_CUR		21
+nim	avio_find_protocol_name	ffmpeg/libavformat/avio.html#avio_find_protocol_name,cstring	proc avio_find_protocol_name(url: cstring): cstring		23
+nim	avio_check	ffmpeg/libavformat/avio.html#avio_check,cstring,cint	proc avio_check(url: cstring; flags: cint): cint		24
+nim	avpriv_io_move	ffmpeg/libavformat/avio.html#avpriv_io_move,cstring,cstring	proc avpriv_io_move(url_src, url_dst: cstring): cint		25
+nim	avpriv_io_delete	ffmpeg/libavformat/avio.html#avpriv_io_delete,cstring	proc avpriv_io_delete(url: cstring): cint		26
+nim	avio_open_dir	ffmpeg/libavformat/avio.html#avio_open_dir,ptr.ptr.AVIODirContext,cstring,ptr.ptr.AVDictionary	proc avio_open_dir(s: ptr ptr AVIODirContext; url: cstring;\n              options: ptr ptr AVDictionary): cint		27
+nim	avio_read_dir	ffmpeg/libavformat/avio.html#avio_read_dir,ptr.AVIODirContext,ptr.ptr.AVIODirEntry	proc avio_read_dir(s: ptr AVIODirContext; next: ptr ptr AVIODirEntry): cint		28
+nim	avio_close_dir	ffmpeg/libavformat/avio.html#avio_close_dir,ptr.ptr.AVIODirContext	proc avio_close_dir(s: ptr ptr AVIODirContext): cint		29
+nim	avio_free_directory_entry	ffmpeg/libavformat/avio.html#avio_free_directory_entry,ptr.ptr.AVIODirEntry	proc avio_free_directory_entry(entry: ptr ptr AVIODirEntry)		30
+nim	avio_alloc_context	ffmpeg/libavformat/avio.html#avio_alloc_context,ptr.uint8,cint,cint,pointer,proc(pointer,ptr.uint8,cint),proc(pointer,uint8,cint),proc(pointer,int64,cint)	proc avio_alloc_context(buffer: ptr uint8; buffer_size, write_flag: cint;\n                   opaque: pointer; read_packet: proc (opaque: pointer;\n    buf: ptr uint8; buf_size: cint): cint; write_packet: proc (opaque: pointer;\n    buf: uint8; buf_size: cint): cint; seek: proc (opaque: pointer;\n    offset: int64; whence: cint): int64): ptr AVIOContext		31
+nim	avio_context_free	ffmpeg/libavformat/avio.html#avio_context_free,ptr.ptr.AVIOContext	proc avio_context_free(s: ptr ptr AVIOContext)		32
+nim	avio_w8	ffmpeg/libavformat/avio.html#avio_w8,ptr.AVIOContext,cint	proc avio_w8(s: ptr AVIOContext; b: cint)		33
+nim	avio_write	ffmpeg/libavformat/avio.html#avio_write,ptr.AVIOContext,ptr.uint8,cint	proc avio_write(s: ptr AVIOContext; buf: ptr uint8; size: cint)		34
+nim	avio_wl64	ffmpeg/libavformat/avio.html#avio_wl64,ptr.AVIOContext,uint64	proc avio_wl64(s: ptr AVIOContext; val: uint64)		35
+nim	avio_wb64	ffmpeg/libavformat/avio.html#avio_wb64,ptr.AVIOContext,uint64	proc avio_wb64(s: ptr AVIOContext; val: uint64)		36
+nim	avio_wl32	ffmpeg/libavformat/avio.html#avio_wl32,ptr.AVIOContext,cuint	proc avio_wl32(s: ptr AVIOContext; val: cuint)		37
+nim	avio_wb32	ffmpeg/libavformat/avio.html#avio_wb32,ptr.AVIOContext,cuint	proc avio_wb32(s: ptr AVIOContext; val: cuint)		38
+nim	avio_wl24	ffmpeg/libavformat/avio.html#avio_wl24,ptr.AVIOContext,cuint	proc avio_wl24(s: ptr AVIOContext; val: cuint)		39
+nim	avio_wb24	ffmpeg/libavformat/avio.html#avio_wb24,ptr.AVIOContext,cuint	proc avio_wb24(s: ptr AVIOContext; val: cuint)		40
+nim	avio_wl16	ffmpeg/libavformat/avio.html#avio_wl16,ptr.AVIOContext,cuint	proc avio_wl16(s: ptr AVIOContext; val: cuint)		41
+nim	avio_wb16	ffmpeg/libavformat/avio.html#avio_wb16,ptr.AVIOContext,cuint	proc avio_wb16(s: ptr AVIOContext; val: cuint)		42
+nim	avio_put_str	ffmpeg/libavformat/avio.html#avio_put_str,ptr.AVIOContext,cstring	proc avio_put_str(s: ptr AVIOContext; str: cstring): cint		43
+nim	avio_put_str16le	ffmpeg/libavformat/avio.html#avio_put_str16le,ptr.AVIOContext,cstring	proc avio_put_str16le(s: ptr AVIOContext; str: cstring): cint		44
+nim	avio_put_str16be	ffmpeg/libavformat/avio.html#avio_put_str16be,ptr.AVIOContext,cstring	proc avio_put_str16be(s: ptr AVIOContext; str: cstring): cint		45
+nim	avio_write_marker	ffmpeg/libavformat/avio.html#avio_write_marker,ptr.AVIOContext,int64,AVIODataMarkerType	proc avio_write_marker(s: ptr AVIOContext; time: int64; type: AVIODataMarkerType)		46
+nim	avio_seek	ffmpeg/libavformat/avio.html#avio_seek,ptr.AVIOContext,int64,cint	proc avio_seek(s: ptr AVIOContext; offset: int64; whence: cint): int64		47
+nim	avio_skip	ffmpeg/libavformat/avio.html#avio_skip,ptr.AVIOContext,int64	proc avio_skip(s: ptr AVIOContext; offset: int64): int64		48
+nim	avio_size	ffmpeg/libavformat/avio.html#avio_size,ptr.AVIOContext	proc avio_size(s: ptr AVIOContext): int64		49
+nim	avio_feof	ffmpeg/libavformat/avio.html#avio_feof,ptr.AVIOContext	proc avio_feof(s: ptr AVIOContext): cint		50
+nim	avio_printf	ffmpeg/libavformat/avio.html#avio_printf,ptr.AVIOContext,cstring	proc avio_printf(s: ptr AVIOContext; fmt: cstring): cint		51
+nim	avio_print_string_array	ffmpeg/libavformat/avio.html#avio_print_string_array,ptr.AVIOContext,cstringArray	proc avio_print_string_array(s: ptr AVIOContext; strings: cstringArray)		52
+nim	avio_flush	ffmpeg/libavformat/avio.html#avio_flush,ptr.AVIOContext	proc avio_flush(s: ptr AVIOContext)		53
+nim	avio_read	ffmpeg/libavformat/avio.html#avio_read,ptr.AVIOContext,ptr.uint8,cint	proc avio_read(s: ptr AVIOContext; buf: ptr uint8; size: cint): cint		54
+nim	avio_read_partial	ffmpeg/libavformat/avio.html#avio_read_partial,ptr.AVIOContext,ptr.uint8,cint	proc avio_read_partial(s: ptr AVIOContext; buf: ptr uint8; size: cint): cint		55
+nim	avio_r8	ffmpeg/libavformat/avio.html#avio_r8,AVIOContext	proc avio_r8(s: AVIOContext): cint		56
+nim	avio_rl16	ffmpeg/libavformat/avio.html#avio_rl16,AVIOContext	proc avio_rl16(s: AVIOContext): cuint		57
+nim	avio_rl24	ffmpeg/libavformat/avio.html#avio_rl24,AVIOContext	proc avio_rl24(s: AVIOContext): cuint		58
+nim	avio_rl32	ffmpeg/libavformat/avio.html#avio_rl32,AVIOContext	proc avio_rl32(s: AVIOContext): cuint		59
+nim	avio_rl64	ffmpeg/libavformat/avio.html#avio_rl64,AVIOContext	proc avio_rl64(s: AVIOContext): uint64		60
+nim	avio_rb16	ffmpeg/libavformat/avio.html#avio_rb16,AVIOContext	proc avio_rb16(s: AVIOContext): cuint		61
+nim	avio_rb24	ffmpeg/libavformat/avio.html#avio_rb24,AVIOContext	proc avio_rb24(s: AVIOContext): cuint		62
+nim	avio_rb32	ffmpeg/libavformat/avio.html#avio_rb32,AVIOContext	proc avio_rb32(s: AVIOContext): cuint		63
+nim	avio_rb64	ffmpeg/libavformat/avio.html#avio_rb64,AVIOContext	proc avio_rb64(s: AVIOContext): cuint		64
+nim	avio_get_str	ffmpeg/libavformat/avio.html#avio_get_str,ptr.AVIOContext,cint,cstring,cint	proc avio_get_str(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint		65
+nim	avio_get_str16le	ffmpeg/libavformat/avio.html#avio_get_str16le,ptr.AVIOContext,cint,cstring,cint	proc avio_get_str16le(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint		66
+nim	avio_get_str16be	ffmpeg/libavformat/avio.html#avio_get_str16be,ptr.AVIOContext,cint,cstring,cint	proc avio_get_str16be(pb: ptr AVIOContext; maxlen: cint; buf: cstring; buflen: cint): cint		67
+nim	avio_open	ffmpeg/libavformat/avio.html#avio_open,ptr.ptr.AVIOContext,cstring,cint	proc avio_open(s: ptr ptr AVIOContext; url: cstring; flags: cint): cint		68
+nim	avio_open2	ffmpeg/libavformat/avio.html#avio_open2,ptr.ptr.AVIOContext,cstring,cint,ptr.AVIOInterruptCB,ptr.ptr.AVDictionary	proc avio_open2(s: ptr ptr AVIOContext; url: cstring; flags: cint;\n           int_cb: ptr AVIOInterruptCB; options: ptr ptr AVDictionary): cint		69
+nim	avio_close	ffmpeg/libavformat/avio.html#avio_close,ptr.AVIOContext	proc avio_close(s: ptr AVIOContext): cint		70
+nim	avio_closep	ffmpeg/libavformat/avio.html#avio_closep,ptr.ptr.AVIOContext	proc avio_closep(s: ptr ptr AVIOContext): cint		71
+nim	avio_open_dyn_buf	ffmpeg/libavformat/avio.html#avio_open_dyn_buf,ptr.ptr.AVIOContext	proc avio_open_dyn_buf(s: ptr ptr AVIOContext): cint		72
+nim	avio_get_dyn_buf	ffmpeg/libavformat/avio.html#avio_get_dyn_buf,ptr.AVIOContext,ptr.ptr.uint8	proc avio_get_dyn_buf(s: ptr AVIOContext; pbuffer: ptr ptr uint8): cint		73
+nim	avio_close_dyn_buf	ffmpeg/libavformat/avio.html#avio_close_dyn_buf,ptr.AVIOContext,ptr.uint8	proc avio_close_dyn_buf(s: ptr AVIOContext; pbuffer: ptr uint8): cint		74
+nim	avio_enum_protocols	ffmpeg/libavformat/avio.html#avio_enum_protocols,pointer,cint	proc avio_enum_protocols(opaque: pointer; output: cint): cstring		75
+nim	avio_protocol_get_class	ffmpeg/libavformat/avio.html#avio_protocol_get_class,cstring	proc avio_protocol_get_class(name: cstring): ptr AVClass		76
+nim	avio_pause	ffmpeg/libavformat/avio.html#avio_pause,ptr.AVIOContext,cint	proc avio_pause(h: ptr AVIOContext; pause: cint): cint		77
+nim	avio_seek_time	ffmpeg/libavformat/avio.html#avio_seek_time,ptr.AVIOContext,cint,int64,cint	proc avio_seek_time(h: ptr AVIOContext; stream_index: cint; timestamp: int64;\n               flags: cint): int64		78
+nim	avio_read_to_bprint	ffmpeg/libavformat/avio.html#avio_read_to_bprint,ptr.AVIOContext,ptr.AVBPrint,csize_t	proc avio_read_to_bprint(h: ptr AVIOContext; pb: ptr AVBPrint; max_size: csize_t): cint		79
+nim	avio_accept	ffmpeg/libavformat/avio.html#avio_accept,ptr.AVIOContext,ptr.ptr.AVIOContext	proc avio_accept(s: ptr AVIOContext; c: ptr ptr AVIOContext): cint		80
+nim	avio_handshake	ffmpeg/libavformat/avio.html#avio_handshake,ptr.AVIOContext	proc avio_handshake(c: ptr AVIOContext): cint		81
+nim	avio_tell	ffmpeg/libavformat/avio.html#avio_tell,ptr.AVIOContext	proc avio_tell(s: ptr AVIOContext): int64		83
+nim	avio_print	ffmpeg/libavformat/avio.html#avio_print.t,varargs[untyped]	template avio_print(s: varargs[untyped]): untyped		87

@@ -1,301 +1,302 @@
-AV_INPUT_BUFFER_MIN_SIZE	ffmpeg/libavcodec/avcodec.html#AV_INPUT_BUFFER_MIN_SIZE	avcodec: AV_INPUT_BUFFER_MIN_SIZE	
-AV_CODEC_FLAG_UNALIGNED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_UNALIGNED	avcodec: AV_CODEC_FLAG_UNALIGNED	
-AV_CODEC_FLAG_QSCALE	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_QSCALE	avcodec: AV_CODEC_FLAG_QSCALE	
-AV_CODEC_FLAG_4MV	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_4MV	avcodec: AV_CODEC_FLAG_4MV	
-AV_CODEC_FLAG_OUTPUT_CORRUPT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_OUTPUT_CORRUPT	avcodec: AV_CODEC_FLAG_OUTPUT_CORRUPT	
-AV_CODEC_FLAG_QPEL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_QPEL	avcodec: AV_CODEC_FLAG_QPEL	
-AV_CODEC_FLAG_DROPCHANGED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_DROPCHANGED	avcodec: AV_CODEC_FLAG_DROPCHANGED	
-AV_CODEC_FLAG_PASS1	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PASS1	avcodec: AV_CODEC_FLAG_PASS1	
-AV_CODEC_FLAG_PASS2	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PASS2	avcodec: AV_CODEC_FLAG_PASS2	
-AV_CODEC_FLAG_LOOP_FILTER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_LOOP_FILTER	avcodec: AV_CODEC_FLAG_LOOP_FILTER	
-AV_CODEC_FLAG_GRAY	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_GRAY	avcodec: AV_CODEC_FLAG_GRAY	
-AV_CODEC_FLAG_PSNR	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PSNR	avcodec: AV_CODEC_FLAG_PSNR	
-AV_CODEC_FLAG_INTERLACED_DCT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_INTERLACED_DCT	avcodec: AV_CODEC_FLAG_INTERLACED_DCT	
-AV_CODEC_FLAG_LOW_DELAY	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_LOW_DELAY	avcodec: AV_CODEC_FLAG_LOW_DELAY	
-AV_CODEC_FLAG_GLOBAL_HEADER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_GLOBAL_HEADER	avcodec: AV_CODEC_FLAG_GLOBAL_HEADER	
-AV_CODEC_FLAG_BITEXACT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_BITEXACT	avcodec: AV_CODEC_FLAG_BITEXACT	
-AV_CODEC_FLAG_AC_PRED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_AC_PRED	avcodec: AV_CODEC_FLAG_AC_PRED	
-AV_CODEC_FLAG_INTERLACED_ME	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_INTERLACED_ME	avcodec: AV_CODEC_FLAG_INTERLACED_ME	
-AV_CODEC_FLAG_CLOSED_GOP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_CLOSED_GOP	avcodec: AV_CODEC_FLAG_CLOSED_GOP	
-AV_CODEC_FLAG2_FAST	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_FAST	avcodec: AV_CODEC_FLAG2_FAST	
-AV_CODEC_FLAG2_NO_OUTPUT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_NO_OUTPUT	avcodec: AV_CODEC_FLAG2_NO_OUTPUT	
-AV_CODEC_FLAG2_LOCAL_HEADER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_LOCAL_HEADER	avcodec: AV_CODEC_FLAG2_LOCAL_HEADER	
-AV_CODEC_FLAG2_DROP_FRAME_TIMECODE	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_DROP_FRAME_TIMECODE	avcodec: AV_CODEC_FLAG2_DROP_FRAME_TIMECODE	
-AV_CODEC_FLAG2_CHUNKS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_CHUNKS	avcodec: AV_CODEC_FLAG2_CHUNKS	
-AV_CODEC_FLAG2_IGNORE_CROP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_IGNORE_CROP	avcodec: AV_CODEC_FLAG2_IGNORE_CROP	
-AV_CODEC_FLAG2_SHOW_ALL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_SHOW_ALL	avcodec: AV_CODEC_FLAG2_SHOW_ALL	
-AV_CODEC_FLAG2_EXPORT_MVS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_EXPORT_MVS	avcodec: AV_CODEC_FLAG2_EXPORT_MVS	
-AV_CODEC_FLAG2_SKIP_MANUAL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_SKIP_MANUAL	avcodec: AV_CODEC_FLAG2_SKIP_MANUAL	
-AV_CODEC_FLAG2_RO_FLUSH_NOOP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_RO_FLUSH_NOOP	avcodec: AV_CODEC_FLAG2_RO_FLUSH_NOOP	
-AV_CODEC_EXPORT_DATA_MVS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_MVS	avcodec: AV_CODEC_EXPORT_DATA_MVS	
-AV_CODEC_EXPORT_DATA_PRFT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_PRFT	avcodec: AV_CODEC_EXPORT_DATA_PRFT	
-AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS	avcodec: AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS	
-AV_GET_BUFFER_FLAG_REF	ffmpeg/libavcodec/avcodec.html#AV_GET_BUFFER_FLAG_REF	avcodec: AV_GET_BUFFER_FLAG_REF	
-FF_COMPRESSION_DEFAULT	ffmpeg/libavcodec/avcodec.html#FF_COMPRESSION_DEFAULT	avcodec: FF_COMPRESSION_DEFAULT	
-FF_CMP_SAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_SAD	avcodec: FF_CMP_SAD	
-FF_CMP_SSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_SSE	avcodec: FF_CMP_SSE	
-FF_CMP_SATD	ffmpeg/libavcodec/avcodec.html#FF_CMP_SATD	avcodec: FF_CMP_SATD	
-FF_CMP_DCT	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCT	avcodec: FF_CMP_DCT	
-FF_CMP_PSNR	ffmpeg/libavcodec/avcodec.html#FF_CMP_PSNR	avcodec: FF_CMP_PSNR	
-FF_CMP_BIT	ffmpeg/libavcodec/avcodec.html#FF_CMP_BIT	avcodec: FF_CMP_BIT	
-FF_CMP_RD	ffmpeg/libavcodec/avcodec.html#FF_CMP_RD	avcodec: FF_CMP_RD	
-FF_CMP_ZERO	ffmpeg/libavcodec/avcodec.html#FF_CMP_ZERO	avcodec: FF_CMP_ZERO	
-FF_CMP_VSAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_VSAD	avcodec: FF_CMP_VSAD	
-FF_CMP_VSSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_VSSE	avcodec: FF_CMP_VSSE	
-FF_CMP_NSSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_NSSE	avcodec: FF_CMP_NSSE	
-FF_CMP_W53	ffmpeg/libavcodec/avcodec.html#FF_CMP_W53	avcodec: FF_CMP_W53	
-FF_CMP_W97	ffmpeg/libavcodec/avcodec.html#FF_CMP_W97	avcodec: FF_CMP_W97	
-FF_CMP_DCTMAX	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCTMAX	avcodec: FF_CMP_DCTMAX	
-FF_CMP_DCT264	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCT264	avcodec: FF_CMP_DCT264	
-FF_CMP_MEDIAN_SAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_MEDIAN_SAD	avcodec: FF_CMP_MEDIAN_SAD	
-FF_CMP_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_CMP_CHROMA	avcodec: FF_CMP_CHROMA	
-SLICE_FLAG_CODED_ORDER	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_CODED_ORDER	avcodec: SLICE_FLAG_CODED_ORDER	
-SLICE_FLAG_ALLOW_FIELD	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_ALLOW_FIELD	avcodec: SLICE_FLAG_ALLOW_FIELD	
-SLICE_FLAG_ALLOW_PLANE	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_ALLOW_PLANE	avcodec: SLICE_FLAG_ALLOW_PLANE	
-FF_MB_DECISION_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_SIMPLE	avcodec: FF_MB_DECISION_SIMPLE	
-FF_MB_DECISION_BITS	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_BITS	avcodec: FF_MB_DECISION_BITS	
-FF_MB_DECISION_RD	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_RD	avcodec: FF_MB_DECISION_RD	
-FF_CODER_TYPE_VLC	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_VLC	avcodec: FF_CODER_TYPE_VLC	
-FF_CODER_TYPE_AC	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_AC	avcodec: FF_CODER_TYPE_AC	
-FF_CODER_TYPE_RAW	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_RAW	avcodec: FF_CODER_TYPE_RAW	
-FF_CODER_TYPE_RLE	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_RLE	avcodec: FF_CODER_TYPE_RLE	
-FF_BUG_AUTODETECT	ffmpeg/libavcodec/avcodec.html#FF_BUG_AUTODETECT	avcodec: FF_BUG_AUTODETECT	
-FF_BUG_XVID_ILACE	ffmpeg/libavcodec/avcodec.html#FF_BUG_XVID_ILACE	avcodec: FF_BUG_XVID_ILACE	
-FF_BUG_UMP4	ffmpeg/libavcodec/avcodec.html#FF_BUG_UMP4	avcodec: FF_BUG_UMP4	
-FF_BUG_NO_PADDING	ffmpeg/libavcodec/avcodec.html#FF_BUG_NO_PADDING	avcodec: FF_BUG_NO_PADDING	
-FF_BUG_AMV	ffmpeg/libavcodec/avcodec.html#FF_BUG_AMV	avcodec: FF_BUG_AMV	
-FF_BUG_QPEL_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_BUG_QPEL_CHROMA	avcodec: FF_BUG_QPEL_CHROMA	
-FF_BUG_STD_QPEL	ffmpeg/libavcodec/avcodec.html#FF_BUG_STD_QPEL	avcodec: FF_BUG_STD_QPEL	
-FF_BUG_QPEL_CHROMA2	ffmpeg/libavcodec/avcodec.html#FF_BUG_QPEL_CHROMA2	avcodec: FF_BUG_QPEL_CHROMA2	
-FF_BUG_DIRECT_BLOCKSIZE	ffmpeg/libavcodec/avcodec.html#FF_BUG_DIRECT_BLOCKSIZE	avcodec: FF_BUG_DIRECT_BLOCKSIZE	
-FF_BUG_EDGE	ffmpeg/libavcodec/avcodec.html#FF_BUG_EDGE	avcodec: FF_BUG_EDGE	
-FF_BUG_HPEL_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_BUG_HPEL_CHROMA	avcodec: FF_BUG_HPEL_CHROMA	
-FF_BUG_DC_CLIP	ffmpeg/libavcodec/avcodec.html#FF_BUG_DC_CLIP	avcodec: FF_BUG_DC_CLIP	
-FF_BUG_MS	ffmpeg/libavcodec/avcodec.html#FF_BUG_MS	avcodec: FF_BUG_MS	
-FF_BUG_TRUNCATED	ffmpeg/libavcodec/avcodec.html#FF_BUG_TRUNCATED	avcodec: FF_BUG_TRUNCATED	
-FF_BUG_IEDGE	ffmpeg/libavcodec/avcodec.html#FF_BUG_IEDGE	avcodec: FF_BUG_IEDGE	
-FF_COMPLIANCE_VERY_STRICT	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_VERY_STRICT	avcodec: FF_COMPLIANCE_VERY_STRICT	
-FF_COMPLIANCE_STRICT	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_STRICT	avcodec: FF_COMPLIANCE_STRICT	
-FF_COMPLIANCE_NORMAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_NORMAL	avcodec: FF_COMPLIANCE_NORMAL	
-FF_COMPLIANCE_UNOFFICIAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_UNOFFICIAL	avcodec: FF_COMPLIANCE_UNOFFICIAL	
-FF_COMPLIANCE_EXPERIMENTAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_EXPERIMENTAL	avcodec: FF_COMPLIANCE_EXPERIMENTAL	
-FF_EC_GUESS_MVS	ffmpeg/libavcodec/avcodec.html#FF_EC_GUESS_MVS	avcodec: FF_EC_GUESS_MVS	
-FF_EC_DEBLOCK	ffmpeg/libavcodec/avcodec.html#FF_EC_DEBLOCK	avcodec: FF_EC_DEBLOCK	
-FF_EC_FAVOR_INTER	ffmpeg/libavcodec/avcodec.html#FF_EC_FAVOR_INTER	avcodec: FF_EC_FAVOR_INTER	
-FF_DEBUG_PICT_INFO	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_PICT_INFO	avcodec: FF_DEBUG_PICT_INFO	
-FF_DEBUG_RC	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_RC	avcodec: FF_DEBUG_RC	
-FF_DEBUG_BITSTREAM	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BITSTREAM	avcodec: FF_DEBUG_BITSTREAM	
-FF_DEBUG_MB_TYPE	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_MB_TYPE	avcodec: FF_DEBUG_MB_TYPE	
-FF_DEBUG_QP	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_QP	avcodec: FF_DEBUG_QP	
-FF_DEBUG_DCT_COEFF	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_DCT_COEFF	avcodec: FF_DEBUG_DCT_COEFF	
-FF_DEBUG_SKIP	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_SKIP	avcodec: FF_DEBUG_SKIP	
-FF_DEBUG_STARTCODE	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_STARTCODE	avcodec: FF_DEBUG_STARTCODE	
-FF_DEBUG_ER	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_ER	avcodec: FF_DEBUG_ER	
-FF_DEBUG_MMCO	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_MMCO	avcodec: FF_DEBUG_MMCO	
-FF_DEBUG_BUGS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BUGS	avcodec: FF_DEBUG_BUGS	
-FF_DEBUG_BUFFERS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BUFFERS	avcodec: FF_DEBUG_BUFFERS	
-FF_DEBUG_THREADS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_THREADS	avcodec: FF_DEBUG_THREADS	
-FF_DEBUG_GREEN_MD	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_GREEN_MD	avcodec: FF_DEBUG_GREEN_MD	
-FF_DEBUG_NOMC	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_NOMC	avcodec: FF_DEBUG_NOMC	
-FF_DEBUG_VIS_MV_P_FOR	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_P_FOR	avcodec: FF_DEBUG_VIS_MV_P_FOR	
-FF_DEBUG_VIS_MV_B_FOR	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_B_FOR	avcodec: FF_DEBUG_VIS_MV_B_FOR	
-FF_DEBUG_VIS_MV_B_BACK	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_B_BACK	avcodec: FF_DEBUG_VIS_MV_B_BACK	
-AV_EF_CRCCHECK	ffmpeg/libavcodec/avcodec.html#AV_EF_CRCCHECK	avcodec: AV_EF_CRCCHECK	
-AV_EF_BITSTREAM	ffmpeg/libavcodec/avcodec.html#AV_EF_BITSTREAM	avcodec: AV_EF_BITSTREAM	
-AV_EF_BUFFER	ffmpeg/libavcodec/avcodec.html#AV_EF_BUFFER	avcodec: AV_EF_BUFFER	
-AV_EF_EXPLODE	ffmpeg/libavcodec/avcodec.html#AV_EF_EXPLODE	avcodec: AV_EF_EXPLODE	
-AV_EF_IGNORE_ERR	ffmpeg/libavcodec/avcodec.html#AV_EF_IGNORE_ERR	avcodec: AV_EF_IGNORE_ERR	
-AV_EF_CAREFUL	ffmpeg/libavcodec/avcodec.html#AV_EF_CAREFUL	avcodec: AV_EF_CAREFUL	
-AV_EF_COMPLIANT	ffmpeg/libavcodec/avcodec.html#AV_EF_COMPLIANT	avcodec: AV_EF_COMPLIANT	
-AV_EF_AGGRESSIVE	ffmpeg/libavcodec/avcodec.html#AV_EF_AGGRESSIVE	avcodec: AV_EF_AGGRESSIVE	
-FF_DCT_AUTO	ffmpeg/libavcodec/avcodec.html#FF_DCT_AUTO	avcodec: FF_DCT_AUTO	
-FF_DCT_FASTINT	ffmpeg/libavcodec/avcodec.html#FF_DCT_FASTINT	avcodec: FF_DCT_FASTINT	
-FF_DCT_INT	ffmpeg/libavcodec/avcodec.html#FF_DCT_INT	avcodec: FF_DCT_INT	
-FF_DCT_MMX	ffmpeg/libavcodec/avcodec.html#FF_DCT_MMX	avcodec: FF_DCT_MMX	
-FF_DCT_ALTIVEC	ffmpeg/libavcodec/avcodec.html#FF_DCT_ALTIVEC	avcodec: FF_DCT_ALTIVEC	
-FF_DCT_FAAN	ffmpeg/libavcodec/avcodec.html#FF_DCT_FAAN	avcodec: FF_DCT_FAAN	
-FF_IDCT_AUTO	ffmpeg/libavcodec/avcodec.html#FF_IDCT_AUTO	avcodec: FF_IDCT_AUTO	
-FF_IDCT_INT	ffmpeg/libavcodec/avcodec.html#FF_IDCT_INT	avcodec: FF_IDCT_INT	
-FF_IDCT_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLE	avcodec: FF_IDCT_SIMPLE	
-FF_IDCT_SIMPLEMMX	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEMMX	avcodec: FF_IDCT_SIMPLEMMX	
-FF_IDCT_ARM	ffmpeg/libavcodec/avcodec.html#FF_IDCT_ARM	avcodec: FF_IDCT_ARM	
-FF_IDCT_ALTIVEC	ffmpeg/libavcodec/avcodec.html#FF_IDCT_ALTIVEC	avcodec: FF_IDCT_ALTIVEC	
-FF_IDCT_SIMPLEARM	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARM	avcodec: FF_IDCT_SIMPLEARM	
-FF_IDCT_XVID	ffmpeg/libavcodec/avcodec.html#FF_IDCT_XVID	avcodec: FF_IDCT_XVID	
-FF_IDCT_SIMPLEARMV5TE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARMV5TE	avcodec: FF_IDCT_SIMPLEARMV5TE	
-FF_IDCT_SIMPLEARMV6	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARMV6	avcodec: FF_IDCT_SIMPLEARMV6	
-FF_IDCT_FAAN	ffmpeg/libavcodec/avcodec.html#FF_IDCT_FAAN	avcodec: FF_IDCT_FAAN	
-FF_IDCT_SIMPLENEON	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLENEON	avcodec: FF_IDCT_SIMPLENEON	
-FF_IDCT_NONE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_NONE	avcodec: FF_IDCT_NONE	
-FF_IDCT_SIMPLEAUTO	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEAUTO	avcodec: FF_IDCT_SIMPLEAUTO	
-FF_THREAD_FRAME	ffmpeg/libavcodec/avcodec.html#FF_THREAD_FRAME	avcodec: FF_THREAD_FRAME	
-FF_THREAD_SLICE	ffmpeg/libavcodec/avcodec.html#FF_THREAD_SLICE	avcodec: FF_THREAD_SLICE	
-FF_PROFILE_UNKNOWN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_UNKNOWN	avcodec: FF_PROFILE_UNKNOWN	
-FF_PROFILE_RESERVED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_RESERVED	avcodec: FF_PROFILE_RESERVED	
-FF_PROFILE_AAC_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_MAIN	avcodec: FF_PROFILE_AAC_MAIN	
-FF_PROFILE_AAC_LOW	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LOW	avcodec: FF_PROFILE_AAC_LOW	
-FF_PROFILE_AAC_SSR	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_SSR	avcodec: FF_PROFILE_AAC_SSR	
-FF_PROFILE_AAC_LTP	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LTP	avcodec: FF_PROFILE_AAC_LTP	
-FF_PROFILE_AAC_HE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_HE	avcodec: FF_PROFILE_AAC_HE	
-FF_PROFILE_AAC_HE_V2	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_HE_V2	avcodec: FF_PROFILE_AAC_HE_V2	
-FF_PROFILE_AAC_LD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LD	avcodec: FF_PROFILE_AAC_LD	
-FF_PROFILE_AAC_ELD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_ELD	avcodec: FF_PROFILE_AAC_ELD	
-FF_PROFILE_MPEG2_AAC_LOW	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_AAC_LOW	avcodec: FF_PROFILE_MPEG2_AAC_LOW	
-FF_PROFILE_MPEG2_AAC_HE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_AAC_HE	avcodec: FF_PROFILE_MPEG2_AAC_HE	
-FF_PROFILE_DNXHD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHD	avcodec: FF_PROFILE_DNXHD	
-FF_PROFILE_DNXHR_LB	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_LB	avcodec: FF_PROFILE_DNXHR_LB	
-FF_PROFILE_DNXHR_SQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_SQ	avcodec: FF_PROFILE_DNXHR_SQ	
-FF_PROFILE_DNXHR_HQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_HQ	avcodec: FF_PROFILE_DNXHR_HQ	
-FF_PROFILE_DNXHR_HQX	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_HQX	avcodec: FF_PROFILE_DNXHR_HQX	
-FF_PROFILE_DNXHR_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_444	avcodec: FF_PROFILE_DNXHR_444	
-FF_PROFILE_DTS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS	avcodec: FF_PROFILE_DTS	
-FF_PROFILE_DTS_ES	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_ES	avcodec: FF_PROFILE_DTS_ES	
-FF_PROFILE_DTS_96_24	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_96_24	avcodec: FF_PROFILE_DTS_96_24	
-FF_PROFILE_DTS_HD_HRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_HD_HRA	avcodec: FF_PROFILE_DTS_HD_HRA	
-FF_PROFILE_DTS_HD_MA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_HD_MA	avcodec: FF_PROFILE_DTS_HD_MA	
-FF_PROFILE_DTS_EXPRESS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_EXPRESS	avcodec: FF_PROFILE_DTS_EXPRESS	
-FF_PROFILE_MPEG2_422	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_422	avcodec: FF_PROFILE_MPEG2_422	
-FF_PROFILE_MPEG2_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_HIGH	avcodec: FF_PROFILE_MPEG2_HIGH	
-FF_PROFILE_MPEG2_SS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SS	avcodec: FF_PROFILE_MPEG2_SS	
-FF_PROFILE_MPEG2_SNR_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SNR_SCALABLE	avcodec: FF_PROFILE_MPEG2_SNR_SCALABLE	
-FF_PROFILE_MPEG2_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_MAIN	avcodec: FF_PROFILE_MPEG2_MAIN	
-FF_PROFILE_MPEG2_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SIMPLE	avcodec: FF_PROFILE_MPEG2_SIMPLE	
-FF_PROFILE_H264_CONSTRAINED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CONSTRAINED	avcodec: FF_PROFILE_H264_CONSTRAINED	
-FF_PROFILE_H264_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_INTRA	avcodec: FF_PROFILE_H264_INTRA	
-FF_PROFILE_H264_BASELINE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_BASELINE	avcodec: FF_PROFILE_H264_BASELINE	
-FF_PROFILE_H264_CONSTRAINED_BASELINE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CONSTRAINED_BASELINE	avcodec: FF_PROFILE_H264_CONSTRAINED_BASELINE	
-FF_PROFILE_H264_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_MAIN	avcodec: FF_PROFILE_H264_MAIN	
-FF_PROFILE_H264_EXTENDED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_EXTENDED	avcodec: FF_PROFILE_H264_EXTENDED	
-FF_PROFILE_H264_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH	avcodec: FF_PROFILE_H264_HIGH	
-FF_PROFILE_H264_HIGH_10	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_10	avcodec: FF_PROFILE_H264_HIGH_10	
-FF_PROFILE_H264_HIGH_10_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_10_INTRA	avcodec: FF_PROFILE_H264_HIGH_10_INTRA	
-FF_PROFILE_H264_MULTIVIEW_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_MULTIVIEW_HIGH	avcodec: FF_PROFILE_H264_MULTIVIEW_HIGH	
-FF_PROFILE_H264_HIGH_422	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_422	avcodec: FF_PROFILE_H264_HIGH_422	
-FF_PROFILE_H264_HIGH_422_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_422_INTRA	avcodec: FF_PROFILE_H264_HIGH_422_INTRA	
-FF_PROFILE_H264_STEREO_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_STEREO_HIGH	avcodec: FF_PROFILE_H264_STEREO_HIGH	
-FF_PROFILE_H264_HIGH_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444	avcodec: FF_PROFILE_H264_HIGH_444	
-FF_PROFILE_H264_HIGH_444_PREDICTIVE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444_PREDICTIVE	avcodec: FF_PROFILE_H264_HIGH_444_PREDICTIVE	
-FF_PROFILE_H264_HIGH_444_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444_INTRA	avcodec: FF_PROFILE_H264_HIGH_444_INTRA	
-FF_PROFILE_H264_CAVLC_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CAVLC_444	avcodec: FF_PROFILE_H264_CAVLC_444	
-FF_PROFILE_VC1_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_SIMPLE	avcodec: FF_PROFILE_VC1_SIMPLE	
-FF_PROFILE_VC1_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_MAIN	avcodec: FF_PROFILE_VC1_MAIN	
-FF_PROFILE_VC1_COMPLEX	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_COMPLEX	avcodec: FF_PROFILE_VC1_COMPLEX	
-FF_PROFILE_VC1_ADVANCED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_ADVANCED	avcodec: FF_PROFILE_VC1_ADVANCED	
-FF_PROFILE_MPEG4_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE	avcodec: FF_PROFILE_MPEG4_SIMPLE	
-FF_PROFILE_MPEG4_SIMPLE_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_SCALABLE	avcodec: FF_PROFILE_MPEG4_SIMPLE_SCALABLE	
-FF_PROFILE_MPEG4_CORE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_CORE	avcodec: FF_PROFILE_MPEG4_CORE	
-FF_PROFILE_MPEG4_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_MAIN	avcodec: FF_PROFILE_MPEG4_MAIN	
-FF_PROFILE_MPEG4_N_BIT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_N_BIT	avcodec: FF_PROFILE_MPEG4_N_BIT	
-FF_PROFILE_MPEG4_SCALABLE_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SCALABLE_TEXTURE	avcodec: FF_PROFILE_MPEG4_SCALABLE_TEXTURE	
-FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION	avcodec: FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION	
-FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE	avcodec: FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE	
-FF_PROFILE_MPEG4_HYBRID	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_HYBRID	avcodec: FF_PROFILE_MPEG4_HYBRID	
-FF_PROFILE_MPEG4_ADVANCED_REAL_TIME	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_REAL_TIME	avcodec: FF_PROFILE_MPEG4_ADVANCED_REAL_TIME	
-FF_PROFILE_MPEG4_CORE_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_CORE_SCALABLE	avcodec: FF_PROFILE_MPEG4_CORE_SCALABLE	
-FF_PROFILE_MPEG4_ADVANCED_CODING	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_CODING	avcodec: FF_PROFILE_MPEG4_ADVANCED_CODING	
-FF_PROFILE_MPEG4_ADVANCED_CORE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_CORE	avcodec: FF_PROFILE_MPEG4_ADVANCED_CORE	
-FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE	avcodec: FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE	
-FF_PROFILE_MPEG4_SIMPLE_STUDIO	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_STUDIO	avcodec: FF_PROFILE_MPEG4_SIMPLE_STUDIO	
-FF_PROFILE_MPEG4_ADVANCED_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_SIMPLE	avcodec: FF_PROFILE_MPEG4_ADVANCED_SIMPLE	
-FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0	avcodec: FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0	
-FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1	avcodec: FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1	
-FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION	avcodec: FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION	
-FF_PROFILE_JPEG2000_DCINEMA_2K	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_DCINEMA_2K	avcodec: FF_PROFILE_JPEG2000_DCINEMA_2K	
-FF_PROFILE_JPEG2000_DCINEMA_4K	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_DCINEMA_4K	avcodec: FF_PROFILE_JPEG2000_DCINEMA_4K	
-FF_PROFILE_VP9_0	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_0	avcodec: FF_PROFILE_VP9_0	
-FF_PROFILE_VP9_1	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_1	avcodec: FF_PROFILE_VP9_1	
-FF_PROFILE_VP9_2	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_2	avcodec: FF_PROFILE_VP9_2	
-FF_PROFILE_VP9_3	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_3	avcodec: FF_PROFILE_VP9_3	
-FF_PROFILE_HEVC_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN	avcodec: FF_PROFILE_HEVC_MAIN	
-FF_PROFILE_HEVC_MAIN_10	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN_10	avcodec: FF_PROFILE_HEVC_MAIN_10	
-FF_PROFILE_HEVC_MAIN_STILL_PICTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN_STILL_PICTURE	avcodec: FF_PROFILE_HEVC_MAIN_STILL_PICTURE	
-FF_PROFILE_HEVC_REXT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_REXT	avcodec: FF_PROFILE_HEVC_REXT	
-FF_PROFILE_AV1_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_MAIN	avcodec: FF_PROFILE_AV1_MAIN	
-FF_PROFILE_AV1_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_HIGH	avcodec: FF_PROFILE_AV1_HIGH	
-FF_PROFILE_AV1_PROFESSIONAL	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_PROFESSIONAL	avcodec: FF_PROFILE_AV1_PROFESSIONAL	
-FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT	avcodec: FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT	
-FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT	avcodec: FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT	
-FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT	avcodec: FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT	
-FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS	avcodec: FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS	
-FF_PROFILE_MJPEG_JPEG_LS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_JPEG_LS	avcodec: FF_PROFILE_MJPEG_JPEG_LS	
-FF_PROFILE_SBC_MSBC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_SBC_MSBC	avcodec: FF_PROFILE_SBC_MSBC	
-FF_PROFILE_PRORES_PROXY	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_PROXY	avcodec: FF_PROFILE_PRORES_PROXY	
-FF_PROFILE_PRORES_LT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_LT	avcodec: FF_PROFILE_PRORES_LT	
-FF_PROFILE_PRORES_STANDARD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_STANDARD	avcodec: FF_PROFILE_PRORES_STANDARD	
-FF_PROFILE_PRORES_HQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_HQ	avcodec: FF_PROFILE_PRORES_HQ	
-FF_PROFILE_PRORES_4444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_4444	avcodec: FF_PROFILE_PRORES_4444	
-FF_PROFILE_PRORES_XQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_XQ	avcodec: FF_PROFILE_PRORES_XQ	
-FF_PROFILE_ARIB_PROFILE_A	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_ARIB_PROFILE_A	avcodec: FF_PROFILE_ARIB_PROFILE_A	
-FF_PROFILE_ARIB_PROFILE_C	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_ARIB_PROFILE_C	avcodec: FF_PROFILE_ARIB_PROFILE_C	
-FF_PROFILE_KLVA_SYNC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_KLVA_SYNC	avcodec: FF_PROFILE_KLVA_SYNC	
-FF_PROFILE_KLVA_ASYNC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_KLVA_ASYNC	avcodec: FF_PROFILE_KLVA_ASYNC	
-FF_LEVEL_UNKNOWN	ffmpeg/libavcodec/avcodec.html#FF_LEVEL_UNKNOWN	avcodec: FF_LEVEL_UNKNOWN	
-FF_SUB_CHARENC_MODE_DO_NOTHING	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_DO_NOTHING	avcodec: FF_SUB_CHARENC_MODE_DO_NOTHING	
-FF_SUB_CHARENC_MODE_AUTOMATIC	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_AUTOMATIC	avcodec: FF_SUB_CHARENC_MODE_AUTOMATIC	
-FF_SUB_CHARENC_MODE_PRE_DECODER	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_PRE_DECODER	avcodec: FF_SUB_CHARENC_MODE_PRE_DECODER	
-FF_SUB_CHARENC_MODE_IGNORE	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_IGNORE	avcodec: FF_SUB_CHARENC_MODE_IGNORE	
-FF_CODEC_PROPERTY_LOSSLESS	ffmpeg/libavcodec/avcodec.html#FF_CODEC_PROPERTY_LOSSLESS	avcodec: FF_CODEC_PROPERTY_LOSSLESS	
-FF_CODEC_PROPERTY_CLOSED_CAPTIONS	ffmpeg/libavcodec/avcodec.html#FF_CODEC_PROPERTY_CLOSED_CAPTIONS	avcodec: FF_CODEC_PROPERTY_CLOSED_CAPTIONS	
-FF_SUB_TEXT_FMT_ASS	ffmpeg/libavcodec/avcodec.html#FF_SUB_TEXT_FMT_ASS	avcodec: FF_SUB_TEXT_FMT_ASS	
-FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS	ffmpeg/libavcodec/avcodec.html#FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS	avcodec: FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS	
-AV_HWACCEL_CODEC_CAP_EXPERIMENTAL	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_CODEC_CAP_EXPERIMENTAL	avcodec: AV_HWACCEL_CODEC_CAP_EXPERIMENTAL	
-AV_HWACCEL_FLAG_IGNORE_LEVEL	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_IGNORE_LEVEL	avcodec: AV_HWACCEL_FLAG_IGNORE_LEVEL	
-AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH	avcodec: AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH	
-AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH	avcodec: AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH	
-AV_SUBTITLE_FLAG_FORCED	ffmpeg/libavcodec/avcodec.html#AV_SUBTITLE_FLAG_FORCED	avcodec: AV_SUBTITLE_FLAG_FORCED	
-AV_PARSER_PTS_NB	ffmpeg/libavcodec/avcodec.html#AV_PARSER_PTS_NB	avcodec: AV_PARSER_PTS_NB	
-PARSER_FLAG_COMPLETE_FRAMES	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_COMPLETE_FRAMES	avcodec: PARSER_FLAG_COMPLETE_FRAMES	
-PARSER_FLAG_ONCE	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_ONCE	avcodec: PARSER_FLAG_ONCE	
-PARSER_FLAG_FETCHED_OFFSET	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_FETCHED_OFFSET	avcodec: PARSER_FLAG_FETCHED_OFFSET	
-PARSER_FLAG_USE_CODEC_TS	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_USE_CODEC_TS	avcodec: PARSER_FLAG_USE_CODEC_TS	
-AV_CODEC_EXPORT_DATA_FILM_GRAIN	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_FILM_GRAIN	avcodec: AV_CODEC_EXPORT_DATA_FILM_GRAIN	
-AV_GET_ENCODE_BUFFER_FLAG_REF	ffmpeg/libavcodec/avcodec.html#AV_GET_ENCODE_BUFFER_FLAG_REF	avcodec: AV_GET_ENCODE_BUFFER_FLAG_REF	
-avcodec_version	ffmpeg/libavcodec/avcodec.html#avcodec_version	avcodec: avcodec_version(): cuint	
-avcodec_configuration	ffmpeg/libavcodec/avcodec.html#avcodec_configuration	avcodec: avcodec_configuration(): cstring	
-avcodec_license	ffmpeg/libavcodec/avcodec.html#avcodec_license	avcodec: avcodec_license(): cchar	
-avcodec_alloc_context3	ffmpeg/libavcodec/avcodec.html#avcodec_alloc_context3,ptr.AVCodec	avcodec: avcodec_alloc_context3(codec: ptr AVCodec): ptr AVCodecContext	
-avcodec_free_context	ffmpeg/libavcodec/avcodec.html#avcodec_free_context,ptr.ptr.AVCodecContext	avcodec: avcodec_free_context(avctx: ptr ptr AVCodecContext)	
-avcodec_get_class	ffmpeg/libavcodec/avcodec.html#avcodec_get_class	avcodec: avcodec_get_class(): ptr AVClass	
-avcodec_parameters_from_context	ffmpeg/libavcodec/avcodec.html#avcodec_parameters_from_context,ptr.AVCodecParameters,ptr.AVCodecContext	avcodec: avcodec_parameters_from_context(par: ptr AVCodecParameters;\n                                codec: ptr AVCodecContext): cint	
-avcodec_parameters_to_context	ffmpeg/libavcodec/avcodec.html#avcodec_parameters_to_context,ptr.AVCodecContext,ptr.AVCodecParameters	avcodec: avcodec_parameters_to_context(codec: ptr AVCodecContext;\n                              par: ptr AVCodecParameters): cint	
-avcodec_open2	ffmpeg/libavcodec/avcodec.html#avcodec_open2,ptr.AVCodecContext,ptr.AVCodec,ptr.ptr.AVDictionary	avcodec: avcodec_open2(avctx: ptr AVCodecContext; codec: ptr AVCodec;\n              options: ptr ptr AVDictionary): cint	
-avcodec_close	ffmpeg/libavcodec/avcodec.html#avcodec_close,ptr.AVCodecContext	avcodec: avcodec_close(avctx: ptr AVCodecContext): cint	
-avsubtitle_free	ffmpeg/libavcodec/avcodec.html#avsubtitle_free,ptr.AVSubtitle	avcodec: avsubtitle_free(sub: ptr AVSubtitle)	
-avcodec_default_get_buffer2	ffmpeg/libavcodec/avcodec.html#avcodec_default_get_buffer2,ptr.AVCodecContext,ptr.AVFrame,cint	avcodec: avcodec_default_get_buffer2(s: ptr AVCodecContext; frame: ptr AVFrame;\n                            flags: cint): cint	
-avcodec_align_dimensions	ffmpeg/libavcodec/avcodec.html#avcodec_align_dimensions,ptr.AVCodecContext,ptr.cint,ptr.cint	avcodec: avcodec_align_dimensions(s: ptr AVCodecContext; width: ptr cint;\n                         height: ptr cint)	
-avcodec_align_dimensions2	ffmpeg/libavcodec/avcodec.html#avcodec_align_dimensions2,ptr.AVCodecContext,ptr.cint,ptr.cint,ptr.cint	avcodec: avcodec_align_dimensions2(s: ptr AVCodecContext; width: ptr cint;\n                          height: ptr cint; linesize_align: ptr cint)	
-avcodec_enum_to_chroma_pos	ffmpeg/libavcodec/avcodec.html#avcodec_enum_to_chroma_pos,ptr.cint,ptr.cint,AVChromaLocation	avcodec: avcodec_enum_to_chroma_pos(xpos: ptr cint; ypos: ptr cint; pos: AVChromaLocation): cint	
-avcodec_chroma_pos_to_enum	ffmpeg/libavcodec/avcodec.html#avcodec_chroma_pos_to_enum,cint,cint	avcodec: avcodec_chroma_pos_to_enum(xpos: cint; ypos: cint): AVChromaLocation	
-avcodec_decode_subtitle2	ffmpeg/libavcodec/avcodec.html#avcodec_decode_subtitle2,ptr.AVCodecContext,ptr.AVSubtitle,ptr.cint,ptr.AVPacket	avcodec: avcodec_decode_subtitle2(avctx: ptr AVCodecContext; sub: ptr AVSubtitle;\n                         got_sub_ptr: ptr cint; avpkt: ptr AVPacket): cint	
-avcodec_send_packet	ffmpeg/libavcodec/avcodec.html#avcodec_send_packet,ptr.AVCodecContext,ptr.AVPacket	avcodec: avcodec_send_packet(avctx: ptr AVCodecContext; avpkt: ptr AVPacket): cint	
-avcodec_receive_frame	ffmpeg/libavcodec/avcodec.html#avcodec_receive_frame,ptr.AVCodecContext,ptr.AVFrame	avcodec: avcodec_receive_frame(avctx: ptr AVCodecContext; frame: ptr AVFrame): cint	
-avcodec_send_frame	ffmpeg/libavcodec/avcodec.html#avcodec_send_frame,ptr.AVCodecContext,ptr.AVFrame	avcodec: avcodec_send_frame(avctx: ptr AVCodecContext; frame: ptr AVFrame): cint	
-avcodec_receive_packet	ffmpeg/libavcodec/avcodec.html#avcodec_receive_packet,ptr.AVCodecContext,ptr.AVPacket	avcodec: avcodec_receive_packet(avctx: ptr AVCodecContext; avpkt: ptr AVPacket): cint	
-avcodec_get_hw_frames_parameters	ffmpeg/libavcodec/avcodec.html#avcodec_get_hw_frames_parameters,ptr.AVCodecContext,ptr.AVBufferRef,AVPixelFormat,ptr.ptr.AVBufferRef	avcodec: avcodec_get_hw_frames_parameters(avctx: ptr AVCodecContext;\n                                 device_ref: ptr AVBufferRef;\n                                 hw_pix_fmt: AVPixelFormat;\n                                 out_frames_ref: ptr ptr AVBufferRef): cint	
-av_parser_iterate	ffmpeg/libavcodec/avcodec.html#av_parser_iterate,ptr.pointer	avcodec: av_parser_iterate(opaque: ptr pointer): ptr AVCodecParser	
-av_parser_init	ffmpeg/libavcodec/avcodec.html#av_parser_init,cint	avcodec: av_parser_init(codec_id: cint): ptr AVCodecParserContext	
-av_parser_parse2	ffmpeg/libavcodec/avcodec.html#av_parser_parse2,ptr.AVCodecParserContext,ptr.AVCodecContext,ptr.ptr.uint8,ptr.cint,ptr.uint8,cint,int64,int64,int64	avcodec: av_parser_parse2(s: ptr AVCodecParserContext; avctx: ptr AVCodecContext;\n                 poutbuf: ptr ptr uint8; poutbuf_size: ptr cint; buf: ptr uint8;\n                 buf_size: cint; pts: int64; dts: int64; pos: int64): cint	
-av_parser_change	ffmpeg/libavcodec/avcodec.html#av_parser_change,ptr.AVCodecParserContext,ptr.AVCodecContext,ptr.ptr.uint8,ptr.cint,ptr.uint8,cint,cint	avcodec: av_parser_change(s: ptr AVCodecParserContext; avctx: ptr AVCodecContext;\n                 poutbuf: ptr ptr uint8; poutbuf_size: ptr cint; buf: ptr uint8;\n                 buf_size: cint; keyframe: cint): cint	
-av_parser_close	ffmpeg/libavcodec/avcodec.html#av_parser_close,ptr.AVCodecParserContext	avcodec: av_parser_close(s: ptr AVCodecParserContext)	
-avcodec_encode_audio2	ffmpeg/libavcodec/avcodec.html#avcodec_encode_audio2,ptr.AVCodecContext,ptr.AVPacket,ptr.AVFrame,ptr.cint	avcodec: avcodec_encode_audio2(avctx: ptr AVCodecContext; avpkt: ptr AVPacket;\n                      frame: ptr AVFrame; got_packet_ptr: ptr cint): cint	
-avcodec_encode_video2	ffmpeg/libavcodec/avcodec.html#avcodec_encode_video2,ptr.AVCodecContext,ptr.AVPacket,ptr.AVFrame,ptr.cint	avcodec: avcodec_encode_video2(avctx: ptr AVCodecContext; avpkt: ptr AVPacket;\n                      frame: ptr AVFrame; got_packet_ptr: ptr cint): cint	
-avcodec_encode_subtitle	ffmpeg/libavcodec/avcodec.html#avcodec_encode_subtitle,ptr.AVCodecContext,ptr.uint8,cint,ptr.AVSubtitle	avcodec: avcodec_encode_subtitle(avctx: ptr AVCodecContext; buf: ptr uint8;\n                        buf_size: cint; sub: ptr AVSubtitle): cint	
-avcodec_pix_fmt_to_codec_tag	ffmpeg/libavcodec/avcodec.html#avcodec_pix_fmt_to_codec_tag,AVPixelFormat	avcodec: avcodec_pix_fmt_to_codec_tag(pix_fmt: AVPixelFormat): uint	
-avcodec_find_best_pix_fmt_of_list	ffmpeg/libavcodec/avcodec.html#avcodec_find_best_pix_fmt_of_list,UncheckedArray[AVPixelFormat],AVPixelFormat,cint,ptr.cint	avcodec: avcodec_find_best_pix_fmt_of_list(pix_fmt_list: UncheckedArray[AVPixelFormat];\n                                  src_pix_fmt: AVPixelFormat; has_alpha: cint;\n                                  loss_ptr: ptr cint): AVPixelFormat	
-avcodec_default_get_format	ffmpeg/libavcodec/avcodec.html#avcodec_default_get_format,ptr.AVCodecContext,UncheckedArray[AVPixelFormat]	avcodec: avcodec_default_get_format(s: ptr AVCodecContext;\n                           fmt: UncheckedArray[AVPixelFormat]): AVPixelFormat	
-avcodec_string	ffmpeg/libavcodec/avcodec.html#avcodec_string,cstring,cint,ptr.AVCodecContext,cint	avcodec: avcodec_string(buf: cstring; buf_size: cint; enc: ptr AVCodecContext;\n               encode: cint)	
-av_get_profile_name	ffmpeg/libavcodec/avcodec.html#av_get_profile_name,ptr.AVCodec,cint	avcodec: av_get_profile_name(codec: ptr AVCodec; profile: cint): cstring	
-avcodec_profile_name	ffmpeg/libavcodec/avcodec.html#avcodec_profile_name,AVCodecID,cint	avcodec: avcodec_profile_name(codec_id: AVCodecID; profile: cint): cstring	
-avcodec_default_execute	ffmpeg/libavcodec/avcodec.html#avcodec_default_execute,ptr.AVCodecContext,proc(ptr.AVCodecContext,pointer),pointer,ptr.cint,cint,cint	avcodec: avcodec_default_execute(c: ptr AVCodecContext; func: proc (\n    c2: ptr AVCodecContext; arg2: pointer): cint; arg: pointer; ret: ptr cint;\n                        count: cint; size: cint): cint	
-avcodec_default_execute2	ffmpeg/libavcodec/avcodec.html#avcodec_default_execute2,ptr.AVCodecContext,proc(ptr.AVCodecContext,pointer,cint,cint),pointer,ptr.cint,ptr.cint	avcodec: avcodec_default_execute2(c: ptr AVCodecContext; func: proc (\n    c2: ptr AVCodecContext; arg2: pointer; a3: cint; a4: cint): cint;\n                         arg: pointer; ret: ptr cint; count: ptr cint): cint	
-avcodec_fill_audio_frame	ffmpeg/libavcodec/avcodec.html#avcodec_fill_audio_frame,ptr.AVFrame,cint,AVSampleFormat,ptr.uint8,cint,cint	avcodec: avcodec_fill_audio_frame(frame: ptr AVFrame; nb_channels: cint;\n                         sample_fmt: AVSampleFormat; buf: ptr uint8;\n                         buf_size: cint; align: cint): cint	
-avcodec_flush_buffers	ffmpeg/libavcodec/avcodec.html#avcodec_flush_buffers,ptr.AVCodecContext	avcodec: avcodec_flush_buffers(avctx: ptr AVCodecContext)	
-av_get_bits_per_sample	ffmpeg/libavcodec/avcodec.html#av_get_bits_per_sample,AVCodecID	avcodec: av_get_bits_per_sample(codec_id: AVCodecID): cint	
-av_get_pcm_codec	ffmpeg/libavcodec/avcodec.html#av_get_pcm_codec,AVSampleFormat,cint	avcodec: av_get_pcm_codec(fmt: AVSampleFormat; be: cint): AVCodecID	
-av_get_exact_bits_per_sample	ffmpeg/libavcodec/avcodec.html#av_get_exact_bits_per_sample,AVCodecID	avcodec: av_get_exact_bits_per_sample(codec_id: AVCodecID): cint	
-av_get_audio_frame_duration	ffmpeg/libavcodec/avcodec.html#av_get_audio_frame_duration,ptr.AVCodecContext,cint	avcodec: av_get_audio_frame_duration(avvctx: ptr AVCodecContext; frame_bytes: cint): cint	
-av_get_audio_frame_duration2	ffmpeg/libavcodec/avcodec.html#av_get_audio_frame_duration2,ptr.AVCodecParameters,cint	avcodec: av_get_audio_frame_duration2(par: ptr AVCodecParameters; frame_bytes: cint): cint	
-av_fast_padded_malloc	ffmpeg/libavcodec/avcodec.html#av_fast_padded_malloc,pointer,ptr.uint,uint	avcodec: av_fast_padded_malloc(ptr: pointer; size: ptr uint; min_size: uint)	
-av_fast_padded_mallocz	ffmpeg/libavcodec/avcodec.html#av_fast_padded_mallocz,pointer,ptr.uint,uint	avcodec: av_fast_padded_mallocz(ptr: pointer; size: ptr uint; min_size: uint)	
-avcodec_is_open	ffmpeg/libavcodec/avcodec.html#avcodec_is_open,ptr.AVCodecContext	avcodec: avcodec_is_open(s: ptr AVCodecContext): cint	
-AV_CODEC_FLAG_TRUNCATED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_TRUNCATED	avcodec: AV_CODEC_FLAG_TRUNCATED	
+nimTitle	avcodec	ffmpeg/libavcodec/avcodec.html	module src/ffmpeg/libavcodec/avcodec		0
+nim	AV_INPUT_BUFFER_MIN_SIZE	ffmpeg/libavcodec/avcodec.html#AV_INPUT_BUFFER_MIN_SIZE	const AV_INPUT_BUFFER_MIN_SIZE		13
+nim	AV_CODEC_FLAG_UNALIGNED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_UNALIGNED	const AV_CODEC_FLAG_UNALIGNED		14
+nim	AV_CODEC_FLAG_QSCALE	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_QSCALE	const AV_CODEC_FLAG_QSCALE		15
+nim	AV_CODEC_FLAG_4MV	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_4MV	const AV_CODEC_FLAG_4MV		16
+nim	AV_CODEC_FLAG_OUTPUT_CORRUPT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_OUTPUT_CORRUPT	const AV_CODEC_FLAG_OUTPUT_CORRUPT		17
+nim	AV_CODEC_FLAG_QPEL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_QPEL	const AV_CODEC_FLAG_QPEL		18
+nim	AV_CODEC_FLAG_DROPCHANGED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_DROPCHANGED	const AV_CODEC_FLAG_DROPCHANGED		19
+nim	AV_CODEC_FLAG_PASS1	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PASS1	const AV_CODEC_FLAG_PASS1		20
+nim	AV_CODEC_FLAG_PASS2	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PASS2	const AV_CODEC_FLAG_PASS2		21
+nim	AV_CODEC_FLAG_LOOP_FILTER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_LOOP_FILTER	const AV_CODEC_FLAG_LOOP_FILTER		22
+nim	AV_CODEC_FLAG_GRAY	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_GRAY	const AV_CODEC_FLAG_GRAY		23
+nim	AV_CODEC_FLAG_PSNR	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_PSNR	const AV_CODEC_FLAG_PSNR		24
+nim	AV_CODEC_FLAG_INTERLACED_DCT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_INTERLACED_DCT	const AV_CODEC_FLAG_INTERLACED_DCT		25
+nim	AV_CODEC_FLAG_LOW_DELAY	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_LOW_DELAY	const AV_CODEC_FLAG_LOW_DELAY		26
+nim	AV_CODEC_FLAG_GLOBAL_HEADER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_GLOBAL_HEADER	const AV_CODEC_FLAG_GLOBAL_HEADER		27
+nim	AV_CODEC_FLAG_BITEXACT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_BITEXACT	const AV_CODEC_FLAG_BITEXACT		28
+nim	AV_CODEC_FLAG_AC_PRED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_AC_PRED	const AV_CODEC_FLAG_AC_PRED		29
+nim	AV_CODEC_FLAG_INTERLACED_ME	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_INTERLACED_ME	const AV_CODEC_FLAG_INTERLACED_ME		30
+nim	AV_CODEC_FLAG_CLOSED_GOP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_CLOSED_GOP	const AV_CODEC_FLAG_CLOSED_GOP		31
+nim	AV_CODEC_FLAG2_FAST	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_FAST	const AV_CODEC_FLAG2_FAST		32
+nim	AV_CODEC_FLAG2_NO_OUTPUT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_NO_OUTPUT	const AV_CODEC_FLAG2_NO_OUTPUT		33
+nim	AV_CODEC_FLAG2_LOCAL_HEADER	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_LOCAL_HEADER	const AV_CODEC_FLAG2_LOCAL_HEADER		34
+nim	AV_CODEC_FLAG2_DROP_FRAME_TIMECODE	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_DROP_FRAME_TIMECODE	const AV_CODEC_FLAG2_DROP_FRAME_TIMECODE		35
+nim	AV_CODEC_FLAG2_CHUNKS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_CHUNKS	const AV_CODEC_FLAG2_CHUNKS		36
+nim	AV_CODEC_FLAG2_IGNORE_CROP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_IGNORE_CROP	const AV_CODEC_FLAG2_IGNORE_CROP		37
+nim	AV_CODEC_FLAG2_SHOW_ALL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_SHOW_ALL	const AV_CODEC_FLAG2_SHOW_ALL		38
+nim	AV_CODEC_FLAG2_EXPORT_MVS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_EXPORT_MVS	const AV_CODEC_FLAG2_EXPORT_MVS		39
+nim	AV_CODEC_FLAG2_SKIP_MANUAL	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_SKIP_MANUAL	const AV_CODEC_FLAG2_SKIP_MANUAL		40
+nim	AV_CODEC_FLAG2_RO_FLUSH_NOOP	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG2_RO_FLUSH_NOOP	const AV_CODEC_FLAG2_RO_FLUSH_NOOP		41
+nim	AV_CODEC_EXPORT_DATA_MVS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_MVS	const AV_CODEC_EXPORT_DATA_MVS		42
+nim	AV_CODEC_EXPORT_DATA_PRFT	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_PRFT	const AV_CODEC_EXPORT_DATA_PRFT		43
+nim	AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS	const AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS		44
+nim	AV_GET_BUFFER_FLAG_REF	ffmpeg/libavcodec/avcodec.html#AV_GET_BUFFER_FLAG_REF	const AV_GET_BUFFER_FLAG_REF		45
+nim	FF_COMPRESSION_DEFAULT	ffmpeg/libavcodec/avcodec.html#FF_COMPRESSION_DEFAULT	const FF_COMPRESSION_DEFAULT		46
+nim	FF_CMP_SAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_SAD	const FF_CMP_SAD		47
+nim	FF_CMP_SSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_SSE	const FF_CMP_SSE		48
+nim	FF_CMP_SATD	ffmpeg/libavcodec/avcodec.html#FF_CMP_SATD	const FF_CMP_SATD		49
+nim	FF_CMP_DCT	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCT	const FF_CMP_DCT		50
+nim	FF_CMP_PSNR	ffmpeg/libavcodec/avcodec.html#FF_CMP_PSNR	const FF_CMP_PSNR		51
+nim	FF_CMP_BIT	ffmpeg/libavcodec/avcodec.html#FF_CMP_BIT	const FF_CMP_BIT		52
+nim	FF_CMP_RD	ffmpeg/libavcodec/avcodec.html#FF_CMP_RD	const FF_CMP_RD		53
+nim	FF_CMP_ZERO	ffmpeg/libavcodec/avcodec.html#FF_CMP_ZERO	const FF_CMP_ZERO		54
+nim	FF_CMP_VSAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_VSAD	const FF_CMP_VSAD		55
+nim	FF_CMP_VSSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_VSSE	const FF_CMP_VSSE		56
+nim	FF_CMP_NSSE	ffmpeg/libavcodec/avcodec.html#FF_CMP_NSSE	const FF_CMP_NSSE		57
+nim	FF_CMP_W53	ffmpeg/libavcodec/avcodec.html#FF_CMP_W53	const FF_CMP_W53		58
+nim	FF_CMP_W97	ffmpeg/libavcodec/avcodec.html#FF_CMP_W97	const FF_CMP_W97		59
+nim	FF_CMP_DCTMAX	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCTMAX	const FF_CMP_DCTMAX		60
+nim	FF_CMP_DCT264	ffmpeg/libavcodec/avcodec.html#FF_CMP_DCT264	const FF_CMP_DCT264		61
+nim	FF_CMP_MEDIAN_SAD	ffmpeg/libavcodec/avcodec.html#FF_CMP_MEDIAN_SAD	const FF_CMP_MEDIAN_SAD		62
+nim	FF_CMP_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_CMP_CHROMA	const FF_CMP_CHROMA		63
+nim	SLICE_FLAG_CODED_ORDER	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_CODED_ORDER	const SLICE_FLAG_CODED_ORDER		64
+nim	SLICE_FLAG_ALLOW_FIELD	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_ALLOW_FIELD	const SLICE_FLAG_ALLOW_FIELD		65
+nim	SLICE_FLAG_ALLOW_PLANE	ffmpeg/libavcodec/avcodec.html#SLICE_FLAG_ALLOW_PLANE	const SLICE_FLAG_ALLOW_PLANE		66
+nim	FF_MB_DECISION_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_SIMPLE	const FF_MB_DECISION_SIMPLE		67
+nim	FF_MB_DECISION_BITS	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_BITS	const FF_MB_DECISION_BITS		68
+nim	FF_MB_DECISION_RD	ffmpeg/libavcodec/avcodec.html#FF_MB_DECISION_RD	const FF_MB_DECISION_RD		69
+nim	FF_CODER_TYPE_VLC	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_VLC	const FF_CODER_TYPE_VLC		70
+nim	FF_CODER_TYPE_AC	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_AC	const FF_CODER_TYPE_AC		71
+nim	FF_CODER_TYPE_RAW	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_RAW	const FF_CODER_TYPE_RAW		72
+nim	FF_CODER_TYPE_RLE	ffmpeg/libavcodec/avcodec.html#FF_CODER_TYPE_RLE	const FF_CODER_TYPE_RLE		73
+nim	FF_BUG_AUTODETECT	ffmpeg/libavcodec/avcodec.html#FF_BUG_AUTODETECT	const FF_BUG_AUTODETECT		74
+nim	FF_BUG_XVID_ILACE	ffmpeg/libavcodec/avcodec.html#FF_BUG_XVID_ILACE	const FF_BUG_XVID_ILACE		75
+nim	FF_BUG_UMP4	ffmpeg/libavcodec/avcodec.html#FF_BUG_UMP4	const FF_BUG_UMP4		76
+nim	FF_BUG_NO_PADDING	ffmpeg/libavcodec/avcodec.html#FF_BUG_NO_PADDING	const FF_BUG_NO_PADDING		77
+nim	FF_BUG_AMV	ffmpeg/libavcodec/avcodec.html#FF_BUG_AMV	const FF_BUG_AMV		78
+nim	FF_BUG_QPEL_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_BUG_QPEL_CHROMA	const FF_BUG_QPEL_CHROMA		79
+nim	FF_BUG_STD_QPEL	ffmpeg/libavcodec/avcodec.html#FF_BUG_STD_QPEL	const FF_BUG_STD_QPEL		80
+nim	FF_BUG_QPEL_CHROMA2	ffmpeg/libavcodec/avcodec.html#FF_BUG_QPEL_CHROMA2	const FF_BUG_QPEL_CHROMA2		81
+nim	FF_BUG_DIRECT_BLOCKSIZE	ffmpeg/libavcodec/avcodec.html#FF_BUG_DIRECT_BLOCKSIZE	const FF_BUG_DIRECT_BLOCKSIZE		82
+nim	FF_BUG_EDGE	ffmpeg/libavcodec/avcodec.html#FF_BUG_EDGE	const FF_BUG_EDGE		83
+nim	FF_BUG_HPEL_CHROMA	ffmpeg/libavcodec/avcodec.html#FF_BUG_HPEL_CHROMA	const FF_BUG_HPEL_CHROMA		84
+nim	FF_BUG_DC_CLIP	ffmpeg/libavcodec/avcodec.html#FF_BUG_DC_CLIP	const FF_BUG_DC_CLIP		85
+nim	FF_BUG_MS	ffmpeg/libavcodec/avcodec.html#FF_BUG_MS	const FF_BUG_MS		86
+nim	FF_BUG_TRUNCATED	ffmpeg/libavcodec/avcodec.html#FF_BUG_TRUNCATED	const FF_BUG_TRUNCATED		87
+nim	FF_BUG_IEDGE	ffmpeg/libavcodec/avcodec.html#FF_BUG_IEDGE	const FF_BUG_IEDGE		88
+nim	FF_COMPLIANCE_VERY_STRICT	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_VERY_STRICT	const FF_COMPLIANCE_VERY_STRICT		89
+nim	FF_COMPLIANCE_STRICT	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_STRICT	const FF_COMPLIANCE_STRICT		90
+nim	FF_COMPLIANCE_NORMAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_NORMAL	const FF_COMPLIANCE_NORMAL		91
+nim	FF_COMPLIANCE_UNOFFICIAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_UNOFFICIAL	const FF_COMPLIANCE_UNOFFICIAL		92
+nim	FF_COMPLIANCE_EXPERIMENTAL	ffmpeg/libavcodec/avcodec.html#FF_COMPLIANCE_EXPERIMENTAL	const FF_COMPLIANCE_EXPERIMENTAL		93
+nim	FF_EC_GUESS_MVS	ffmpeg/libavcodec/avcodec.html#FF_EC_GUESS_MVS	const FF_EC_GUESS_MVS		94
+nim	FF_EC_DEBLOCK	ffmpeg/libavcodec/avcodec.html#FF_EC_DEBLOCK	const FF_EC_DEBLOCK		95
+nim	FF_EC_FAVOR_INTER	ffmpeg/libavcodec/avcodec.html#FF_EC_FAVOR_INTER	const FF_EC_FAVOR_INTER		96
+nim	FF_DEBUG_PICT_INFO	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_PICT_INFO	const FF_DEBUG_PICT_INFO		97
+nim	FF_DEBUG_RC	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_RC	const FF_DEBUG_RC		98
+nim	FF_DEBUG_BITSTREAM	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BITSTREAM	const FF_DEBUG_BITSTREAM		99
+nim	FF_DEBUG_MB_TYPE	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_MB_TYPE	const FF_DEBUG_MB_TYPE		100
+nim	FF_DEBUG_QP	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_QP	const FF_DEBUG_QP		101
+nim	FF_DEBUG_DCT_COEFF	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_DCT_COEFF	const FF_DEBUG_DCT_COEFF		102
+nim	FF_DEBUG_SKIP	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_SKIP	const FF_DEBUG_SKIP		103
+nim	FF_DEBUG_STARTCODE	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_STARTCODE	const FF_DEBUG_STARTCODE		104
+nim	FF_DEBUG_ER	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_ER	const FF_DEBUG_ER		105
+nim	FF_DEBUG_MMCO	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_MMCO	const FF_DEBUG_MMCO		106
+nim	FF_DEBUG_BUGS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BUGS	const FF_DEBUG_BUGS		107
+nim	FF_DEBUG_BUFFERS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_BUFFERS	const FF_DEBUG_BUFFERS		108
+nim	FF_DEBUG_THREADS	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_THREADS	const FF_DEBUG_THREADS		109
+nim	FF_DEBUG_GREEN_MD	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_GREEN_MD	const FF_DEBUG_GREEN_MD		110
+nim	FF_DEBUG_NOMC	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_NOMC	const FF_DEBUG_NOMC		111
+nim	FF_DEBUG_VIS_MV_P_FOR	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_P_FOR	const FF_DEBUG_VIS_MV_P_FOR		112
+nim	FF_DEBUG_VIS_MV_B_FOR	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_B_FOR	const FF_DEBUG_VIS_MV_B_FOR		113
+nim	FF_DEBUG_VIS_MV_B_BACK	ffmpeg/libavcodec/avcodec.html#FF_DEBUG_VIS_MV_B_BACK	const FF_DEBUG_VIS_MV_B_BACK		114
+nim	AV_EF_CRCCHECK	ffmpeg/libavcodec/avcodec.html#AV_EF_CRCCHECK	const AV_EF_CRCCHECK		115
+nim	AV_EF_BITSTREAM	ffmpeg/libavcodec/avcodec.html#AV_EF_BITSTREAM	const AV_EF_BITSTREAM		116
+nim	AV_EF_BUFFER	ffmpeg/libavcodec/avcodec.html#AV_EF_BUFFER	const AV_EF_BUFFER		117
+nim	AV_EF_EXPLODE	ffmpeg/libavcodec/avcodec.html#AV_EF_EXPLODE	const AV_EF_EXPLODE		118
+nim	AV_EF_IGNORE_ERR	ffmpeg/libavcodec/avcodec.html#AV_EF_IGNORE_ERR	const AV_EF_IGNORE_ERR		119
+nim	AV_EF_CAREFUL	ffmpeg/libavcodec/avcodec.html#AV_EF_CAREFUL	const AV_EF_CAREFUL		120
+nim	AV_EF_COMPLIANT	ffmpeg/libavcodec/avcodec.html#AV_EF_COMPLIANT	const AV_EF_COMPLIANT		121
+nim	AV_EF_AGGRESSIVE	ffmpeg/libavcodec/avcodec.html#AV_EF_AGGRESSIVE	const AV_EF_AGGRESSIVE		122
+nim	FF_DCT_AUTO	ffmpeg/libavcodec/avcodec.html#FF_DCT_AUTO	const FF_DCT_AUTO		123
+nim	FF_DCT_FASTINT	ffmpeg/libavcodec/avcodec.html#FF_DCT_FASTINT	const FF_DCT_FASTINT		124
+nim	FF_DCT_INT	ffmpeg/libavcodec/avcodec.html#FF_DCT_INT	const FF_DCT_INT		125
+nim	FF_DCT_MMX	ffmpeg/libavcodec/avcodec.html#FF_DCT_MMX	const FF_DCT_MMX		126
+nim	FF_DCT_ALTIVEC	ffmpeg/libavcodec/avcodec.html#FF_DCT_ALTIVEC	const FF_DCT_ALTIVEC		127
+nim	FF_DCT_FAAN	ffmpeg/libavcodec/avcodec.html#FF_DCT_FAAN	const FF_DCT_FAAN		128
+nim	FF_IDCT_AUTO	ffmpeg/libavcodec/avcodec.html#FF_IDCT_AUTO	const FF_IDCT_AUTO		129
+nim	FF_IDCT_INT	ffmpeg/libavcodec/avcodec.html#FF_IDCT_INT	const FF_IDCT_INT		130
+nim	FF_IDCT_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLE	const FF_IDCT_SIMPLE		131
+nim	FF_IDCT_SIMPLEMMX	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEMMX	const FF_IDCT_SIMPLEMMX		132
+nim	FF_IDCT_ARM	ffmpeg/libavcodec/avcodec.html#FF_IDCT_ARM	const FF_IDCT_ARM		133
+nim	FF_IDCT_ALTIVEC	ffmpeg/libavcodec/avcodec.html#FF_IDCT_ALTIVEC	const FF_IDCT_ALTIVEC		134
+nim	FF_IDCT_SIMPLEARM	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARM	const FF_IDCT_SIMPLEARM		135
+nim	FF_IDCT_XVID	ffmpeg/libavcodec/avcodec.html#FF_IDCT_XVID	const FF_IDCT_XVID		136
+nim	FF_IDCT_SIMPLEARMV5TE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARMV5TE	const FF_IDCT_SIMPLEARMV5TE		137
+nim	FF_IDCT_SIMPLEARMV6	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEARMV6	const FF_IDCT_SIMPLEARMV6		138
+nim	FF_IDCT_FAAN	ffmpeg/libavcodec/avcodec.html#FF_IDCT_FAAN	const FF_IDCT_FAAN		139
+nim	FF_IDCT_SIMPLENEON	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLENEON	const FF_IDCT_SIMPLENEON		140
+nim	FF_IDCT_NONE	ffmpeg/libavcodec/avcodec.html#FF_IDCT_NONE	const FF_IDCT_NONE		141
+nim	FF_IDCT_SIMPLEAUTO	ffmpeg/libavcodec/avcodec.html#FF_IDCT_SIMPLEAUTO	const FF_IDCT_SIMPLEAUTO		142
+nim	FF_THREAD_FRAME	ffmpeg/libavcodec/avcodec.html#FF_THREAD_FRAME	const FF_THREAD_FRAME		143
+nim	FF_THREAD_SLICE	ffmpeg/libavcodec/avcodec.html#FF_THREAD_SLICE	const FF_THREAD_SLICE		144
+nim	FF_PROFILE_UNKNOWN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_UNKNOWN	const FF_PROFILE_UNKNOWN		145
+nim	FF_PROFILE_RESERVED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_RESERVED	const FF_PROFILE_RESERVED		146
+nim	FF_PROFILE_AAC_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_MAIN	const FF_PROFILE_AAC_MAIN		147
+nim	FF_PROFILE_AAC_LOW	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LOW	const FF_PROFILE_AAC_LOW		148
+nim	FF_PROFILE_AAC_SSR	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_SSR	const FF_PROFILE_AAC_SSR		149
+nim	FF_PROFILE_AAC_LTP	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LTP	const FF_PROFILE_AAC_LTP		150
+nim	FF_PROFILE_AAC_HE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_HE	const FF_PROFILE_AAC_HE		151
+nim	FF_PROFILE_AAC_HE_V2	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_HE_V2	const FF_PROFILE_AAC_HE_V2		152
+nim	FF_PROFILE_AAC_LD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_LD	const FF_PROFILE_AAC_LD		153
+nim	FF_PROFILE_AAC_ELD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AAC_ELD	const FF_PROFILE_AAC_ELD		154
+nim	FF_PROFILE_MPEG2_AAC_LOW	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_AAC_LOW	const FF_PROFILE_MPEG2_AAC_LOW		155
+nim	FF_PROFILE_MPEG2_AAC_HE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_AAC_HE	const FF_PROFILE_MPEG2_AAC_HE		156
+nim	FF_PROFILE_DNXHD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHD	const FF_PROFILE_DNXHD		157
+nim	FF_PROFILE_DNXHR_LB	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_LB	const FF_PROFILE_DNXHR_LB		158
+nim	FF_PROFILE_DNXHR_SQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_SQ	const FF_PROFILE_DNXHR_SQ		159
+nim	FF_PROFILE_DNXHR_HQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_HQ	const FF_PROFILE_DNXHR_HQ		160
+nim	FF_PROFILE_DNXHR_HQX	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_HQX	const FF_PROFILE_DNXHR_HQX		161
+nim	FF_PROFILE_DNXHR_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DNXHR_444	const FF_PROFILE_DNXHR_444		162
+nim	FF_PROFILE_DTS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS	const FF_PROFILE_DTS		163
+nim	FF_PROFILE_DTS_ES	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_ES	const FF_PROFILE_DTS_ES		164
+nim	FF_PROFILE_DTS_96_24	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_96_24	const FF_PROFILE_DTS_96_24		165
+nim	FF_PROFILE_DTS_HD_HRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_HD_HRA	const FF_PROFILE_DTS_HD_HRA		166
+nim	FF_PROFILE_DTS_HD_MA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_HD_MA	const FF_PROFILE_DTS_HD_MA		167
+nim	FF_PROFILE_DTS_EXPRESS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_DTS_EXPRESS	const FF_PROFILE_DTS_EXPRESS		168
+nim	FF_PROFILE_MPEG2_422	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_422	const FF_PROFILE_MPEG2_422		169
+nim	FF_PROFILE_MPEG2_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_HIGH	const FF_PROFILE_MPEG2_HIGH		170
+nim	FF_PROFILE_MPEG2_SS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SS	const FF_PROFILE_MPEG2_SS		171
+nim	FF_PROFILE_MPEG2_SNR_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SNR_SCALABLE	const FF_PROFILE_MPEG2_SNR_SCALABLE		172
+nim	FF_PROFILE_MPEG2_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_MAIN	const FF_PROFILE_MPEG2_MAIN		173
+nim	FF_PROFILE_MPEG2_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG2_SIMPLE	const FF_PROFILE_MPEG2_SIMPLE		174
+nim	FF_PROFILE_H264_CONSTRAINED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CONSTRAINED	const FF_PROFILE_H264_CONSTRAINED		175
+nim	FF_PROFILE_H264_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_INTRA	const FF_PROFILE_H264_INTRA		176
+nim	FF_PROFILE_H264_BASELINE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_BASELINE	const FF_PROFILE_H264_BASELINE		177
+nim	FF_PROFILE_H264_CONSTRAINED_BASELINE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CONSTRAINED_BASELINE	const FF_PROFILE_H264_CONSTRAINED_BASELINE		178
+nim	FF_PROFILE_H264_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_MAIN	const FF_PROFILE_H264_MAIN		179
+nim	FF_PROFILE_H264_EXTENDED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_EXTENDED	const FF_PROFILE_H264_EXTENDED		180
+nim	FF_PROFILE_H264_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH	const FF_PROFILE_H264_HIGH		181
+nim	FF_PROFILE_H264_HIGH_10	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_10	const FF_PROFILE_H264_HIGH_10		182
+nim	FF_PROFILE_H264_HIGH_10_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_10_INTRA	const FF_PROFILE_H264_HIGH_10_INTRA		183
+nim	FF_PROFILE_H264_MULTIVIEW_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_MULTIVIEW_HIGH	const FF_PROFILE_H264_MULTIVIEW_HIGH		184
+nim	FF_PROFILE_H264_HIGH_422	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_422	const FF_PROFILE_H264_HIGH_422		185
+nim	FF_PROFILE_H264_HIGH_422_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_422_INTRA	const FF_PROFILE_H264_HIGH_422_INTRA		186
+nim	FF_PROFILE_H264_STEREO_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_STEREO_HIGH	const FF_PROFILE_H264_STEREO_HIGH		187
+nim	FF_PROFILE_H264_HIGH_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444	const FF_PROFILE_H264_HIGH_444		188
+nim	FF_PROFILE_H264_HIGH_444_PREDICTIVE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444_PREDICTIVE	const FF_PROFILE_H264_HIGH_444_PREDICTIVE		189
+nim	FF_PROFILE_H264_HIGH_444_INTRA	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_HIGH_444_INTRA	const FF_PROFILE_H264_HIGH_444_INTRA		190
+nim	FF_PROFILE_H264_CAVLC_444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_H264_CAVLC_444	const FF_PROFILE_H264_CAVLC_444		191
+nim	FF_PROFILE_VC1_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_SIMPLE	const FF_PROFILE_VC1_SIMPLE		192
+nim	FF_PROFILE_VC1_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_MAIN	const FF_PROFILE_VC1_MAIN		193
+nim	FF_PROFILE_VC1_COMPLEX	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_COMPLEX	const FF_PROFILE_VC1_COMPLEX		194
+nim	FF_PROFILE_VC1_ADVANCED	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VC1_ADVANCED	const FF_PROFILE_VC1_ADVANCED		195
+nim	FF_PROFILE_MPEG4_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE	const FF_PROFILE_MPEG4_SIMPLE		196
+nim	FF_PROFILE_MPEG4_SIMPLE_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_SCALABLE	const FF_PROFILE_MPEG4_SIMPLE_SCALABLE		197
+nim	FF_PROFILE_MPEG4_CORE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_CORE	const FF_PROFILE_MPEG4_CORE		198
+nim	FF_PROFILE_MPEG4_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_MAIN	const FF_PROFILE_MPEG4_MAIN		199
+nim	FF_PROFILE_MPEG4_N_BIT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_N_BIT	const FF_PROFILE_MPEG4_N_BIT		200
+nim	FF_PROFILE_MPEG4_SCALABLE_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SCALABLE_TEXTURE	const FF_PROFILE_MPEG4_SCALABLE_TEXTURE		201
+nim	FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION	const FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION		202
+nim	FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE	const FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE		203
+nim	FF_PROFILE_MPEG4_HYBRID	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_HYBRID	const FF_PROFILE_MPEG4_HYBRID		204
+nim	FF_PROFILE_MPEG4_ADVANCED_REAL_TIME	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_REAL_TIME	const FF_PROFILE_MPEG4_ADVANCED_REAL_TIME		205
+nim	FF_PROFILE_MPEG4_CORE_SCALABLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_CORE_SCALABLE	const FF_PROFILE_MPEG4_CORE_SCALABLE		206
+nim	FF_PROFILE_MPEG4_ADVANCED_CODING	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_CODING	const FF_PROFILE_MPEG4_ADVANCED_CODING		207
+nim	FF_PROFILE_MPEG4_ADVANCED_CORE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_CORE	const FF_PROFILE_MPEG4_ADVANCED_CORE		208
+nim	FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE	const FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE		209
+nim	FF_PROFILE_MPEG4_SIMPLE_STUDIO	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_SIMPLE_STUDIO	const FF_PROFILE_MPEG4_SIMPLE_STUDIO		210
+nim	FF_PROFILE_MPEG4_ADVANCED_SIMPLE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MPEG4_ADVANCED_SIMPLE	const FF_PROFILE_MPEG4_ADVANCED_SIMPLE		211
+nim	FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0	const FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0		212
+nim	FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1	const FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1		213
+nim	FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION	const FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION		214
+nim	FF_PROFILE_JPEG2000_DCINEMA_2K	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_DCINEMA_2K	const FF_PROFILE_JPEG2000_DCINEMA_2K		215
+nim	FF_PROFILE_JPEG2000_DCINEMA_4K	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_JPEG2000_DCINEMA_4K	const FF_PROFILE_JPEG2000_DCINEMA_4K		216
+nim	FF_PROFILE_VP9_0	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_0	const FF_PROFILE_VP9_0		217
+nim	FF_PROFILE_VP9_1	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_1	const FF_PROFILE_VP9_1		218
+nim	FF_PROFILE_VP9_2	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_2	const FF_PROFILE_VP9_2		219
+nim	FF_PROFILE_VP9_3	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_VP9_3	const FF_PROFILE_VP9_3		220
+nim	FF_PROFILE_HEVC_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN	const FF_PROFILE_HEVC_MAIN		221
+nim	FF_PROFILE_HEVC_MAIN_10	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN_10	const FF_PROFILE_HEVC_MAIN_10		222
+nim	FF_PROFILE_HEVC_MAIN_STILL_PICTURE	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_MAIN_STILL_PICTURE	const FF_PROFILE_HEVC_MAIN_STILL_PICTURE		223
+nim	FF_PROFILE_HEVC_REXT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_HEVC_REXT	const FF_PROFILE_HEVC_REXT		224
+nim	FF_PROFILE_AV1_MAIN	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_MAIN	const FF_PROFILE_AV1_MAIN		225
+nim	FF_PROFILE_AV1_HIGH	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_HIGH	const FF_PROFILE_AV1_HIGH		226
+nim	FF_PROFILE_AV1_PROFESSIONAL	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_AV1_PROFESSIONAL	const FF_PROFILE_AV1_PROFESSIONAL		227
+nim	FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT	const FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT		228
+nim	FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT	const FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT		229
+nim	FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT	const FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT		230
+nim	FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS	const FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS		231
+nim	FF_PROFILE_MJPEG_JPEG_LS	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_MJPEG_JPEG_LS	const FF_PROFILE_MJPEG_JPEG_LS		232
+nim	FF_PROFILE_SBC_MSBC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_SBC_MSBC	const FF_PROFILE_SBC_MSBC		233
+nim	FF_PROFILE_PRORES_PROXY	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_PROXY	const FF_PROFILE_PRORES_PROXY		234
+nim	FF_PROFILE_PRORES_LT	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_LT	const FF_PROFILE_PRORES_LT		235
+nim	FF_PROFILE_PRORES_STANDARD	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_STANDARD	const FF_PROFILE_PRORES_STANDARD		236
+nim	FF_PROFILE_PRORES_HQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_HQ	const FF_PROFILE_PRORES_HQ		237
+nim	FF_PROFILE_PRORES_4444	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_4444	const FF_PROFILE_PRORES_4444		238
+nim	FF_PROFILE_PRORES_XQ	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_PRORES_XQ	const FF_PROFILE_PRORES_XQ		239
+nim	FF_PROFILE_ARIB_PROFILE_A	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_ARIB_PROFILE_A	const FF_PROFILE_ARIB_PROFILE_A		240
+nim	FF_PROFILE_ARIB_PROFILE_C	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_ARIB_PROFILE_C	const FF_PROFILE_ARIB_PROFILE_C		241
+nim	FF_PROFILE_KLVA_SYNC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_KLVA_SYNC	const FF_PROFILE_KLVA_SYNC		242
+nim	FF_PROFILE_KLVA_ASYNC	ffmpeg/libavcodec/avcodec.html#FF_PROFILE_KLVA_ASYNC	const FF_PROFILE_KLVA_ASYNC		243
+nim	FF_LEVEL_UNKNOWN	ffmpeg/libavcodec/avcodec.html#FF_LEVEL_UNKNOWN	const FF_LEVEL_UNKNOWN		244
+nim	FF_SUB_CHARENC_MODE_DO_NOTHING	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_DO_NOTHING	const FF_SUB_CHARENC_MODE_DO_NOTHING		245
+nim	FF_SUB_CHARENC_MODE_AUTOMATIC	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_AUTOMATIC	const FF_SUB_CHARENC_MODE_AUTOMATIC		246
+nim	FF_SUB_CHARENC_MODE_PRE_DECODER	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_PRE_DECODER	const FF_SUB_CHARENC_MODE_PRE_DECODER		247
+nim	FF_SUB_CHARENC_MODE_IGNORE	ffmpeg/libavcodec/avcodec.html#FF_SUB_CHARENC_MODE_IGNORE	const FF_SUB_CHARENC_MODE_IGNORE		248
+nim	FF_CODEC_PROPERTY_LOSSLESS	ffmpeg/libavcodec/avcodec.html#FF_CODEC_PROPERTY_LOSSLESS	const FF_CODEC_PROPERTY_LOSSLESS		249
+nim	FF_CODEC_PROPERTY_CLOSED_CAPTIONS	ffmpeg/libavcodec/avcodec.html#FF_CODEC_PROPERTY_CLOSED_CAPTIONS	const FF_CODEC_PROPERTY_CLOSED_CAPTIONS		250
+nim	FF_SUB_TEXT_FMT_ASS	ffmpeg/libavcodec/avcodec.html#FF_SUB_TEXT_FMT_ASS	const FF_SUB_TEXT_FMT_ASS		251
+nim	FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS	ffmpeg/libavcodec/avcodec.html#FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS	const FF_SUB_TEXT_FMT_ASS_WITH_TIMINGS		252
+nim	AV_HWACCEL_CODEC_CAP_EXPERIMENTAL	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_CODEC_CAP_EXPERIMENTAL	const AV_HWACCEL_CODEC_CAP_EXPERIMENTAL		253
+nim	AV_HWACCEL_FLAG_IGNORE_LEVEL	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_IGNORE_LEVEL	const AV_HWACCEL_FLAG_IGNORE_LEVEL		254
+nim	AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH	const AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH		255
+nim	AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH	ffmpeg/libavcodec/avcodec.html#AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH	const AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH		256
+nim	AV_SUBTITLE_FLAG_FORCED	ffmpeg/libavcodec/avcodec.html#AV_SUBTITLE_FLAG_FORCED	const AV_SUBTITLE_FLAG_FORCED		257
+nim	AV_PARSER_PTS_NB	ffmpeg/libavcodec/avcodec.html#AV_PARSER_PTS_NB	const AV_PARSER_PTS_NB		258
+nim	PARSER_FLAG_COMPLETE_FRAMES	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_COMPLETE_FRAMES	const PARSER_FLAG_COMPLETE_FRAMES		259
+nim	PARSER_FLAG_ONCE	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_ONCE	const PARSER_FLAG_ONCE		260
+nim	PARSER_FLAG_FETCHED_OFFSET	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_FETCHED_OFFSET	const PARSER_FLAG_FETCHED_OFFSET		261
+nim	PARSER_FLAG_USE_CODEC_TS	ffmpeg/libavcodec/avcodec.html#PARSER_FLAG_USE_CODEC_TS	const PARSER_FLAG_USE_CODEC_TS		262
+nim	AV_CODEC_EXPORT_DATA_FILM_GRAIN	ffmpeg/libavcodec/avcodec.html#AV_CODEC_EXPORT_DATA_FILM_GRAIN	const AV_CODEC_EXPORT_DATA_FILM_GRAIN		263
+nim	AV_GET_ENCODE_BUFFER_FLAG_REF	ffmpeg/libavcodec/avcodec.html#AV_GET_ENCODE_BUFFER_FLAG_REF	const AV_GET_ENCODE_BUFFER_FLAG_REF		264
+nim	avcodec_version	ffmpeg/libavcodec/avcodec.html#avcodec_version	proc avcodec_version(): cuint		266
+nim	avcodec_configuration	ffmpeg/libavcodec/avcodec.html#avcodec_configuration	proc avcodec_configuration(): cstring		267
+nim	avcodec_license	ffmpeg/libavcodec/avcodec.html#avcodec_license	proc avcodec_license(): cchar		268
+nim	avcodec_alloc_context3	ffmpeg/libavcodec/avcodec.html#avcodec_alloc_context3,ptr.AVCodec	proc avcodec_alloc_context3(codec: ptr AVCodec): ptr AVCodecContext		269
+nim	avcodec_free_context	ffmpeg/libavcodec/avcodec.html#avcodec_free_context,ptr.ptr.AVCodecContext	proc avcodec_free_context(avctx: ptr ptr AVCodecContext)		270
+nim	avcodec_get_class	ffmpeg/libavcodec/avcodec.html#avcodec_get_class	proc avcodec_get_class(): ptr AVClass		271
+nim	avcodec_parameters_from_context	ffmpeg/libavcodec/avcodec.html#avcodec_parameters_from_context,ptr.AVCodecParameters,ptr.AVCodecContext	proc avcodec_parameters_from_context(par: ptr AVCodecParameters;\n                                codec: ptr AVCodecContext): cint		272
+nim	avcodec_parameters_to_context	ffmpeg/libavcodec/avcodec.html#avcodec_parameters_to_context,ptr.AVCodecContext,ptr.AVCodecParameters	proc avcodec_parameters_to_context(codec: ptr AVCodecContext;\n                              par: ptr AVCodecParameters): cint		273
+nim	avcodec_open2	ffmpeg/libavcodec/avcodec.html#avcodec_open2,ptr.AVCodecContext,ptr.AVCodec,ptr.ptr.AVDictionary	proc avcodec_open2(avctx: ptr AVCodecContext; codec: ptr AVCodec;\n              options: ptr ptr AVDictionary): cint		274
+nim	avcodec_close	ffmpeg/libavcodec/avcodec.html#avcodec_close,ptr.AVCodecContext	proc avcodec_close(avctx: ptr AVCodecContext): cint		275
+nim	avsubtitle_free	ffmpeg/libavcodec/avcodec.html#avsubtitle_free,ptr.AVSubtitle	proc avsubtitle_free(sub: ptr AVSubtitle)		276
+nim	avcodec_default_get_buffer2	ffmpeg/libavcodec/avcodec.html#avcodec_default_get_buffer2,ptr.AVCodecContext,ptr.AVFrame,cint	proc avcodec_default_get_buffer2(s: ptr AVCodecContext; frame: ptr AVFrame;\n                            flags: cint): cint		277
+nim	avcodec_align_dimensions	ffmpeg/libavcodec/avcodec.html#avcodec_align_dimensions,ptr.AVCodecContext,ptr.cint,ptr.cint	proc avcodec_align_dimensions(s: ptr AVCodecContext; width: ptr cint;\n                         height: ptr cint)		278
+nim	avcodec_align_dimensions2	ffmpeg/libavcodec/avcodec.html#avcodec_align_dimensions2,ptr.AVCodecContext,ptr.cint,ptr.cint,ptr.cint	proc avcodec_align_dimensions2(s: ptr AVCodecContext; width: ptr cint;\n                          height: ptr cint; linesize_align: ptr cint)		279
+nim	avcodec_enum_to_chroma_pos	ffmpeg/libavcodec/avcodec.html#avcodec_enum_to_chroma_pos,ptr.cint,ptr.cint,AVChromaLocation	proc avcodec_enum_to_chroma_pos(xpos: ptr cint; ypos: ptr cint; pos: AVChromaLocation): cint		280
+nim	avcodec_chroma_pos_to_enum	ffmpeg/libavcodec/avcodec.html#avcodec_chroma_pos_to_enum,cint,cint	proc avcodec_chroma_pos_to_enum(xpos: cint; ypos: cint): AVChromaLocation		281
+nim	avcodec_decode_subtitle2	ffmpeg/libavcodec/avcodec.html#avcodec_decode_subtitle2,ptr.AVCodecContext,ptr.AVSubtitle,ptr.cint,ptr.AVPacket	proc avcodec_decode_subtitle2(avctx: ptr AVCodecContext; sub: ptr AVSubtitle;\n                         got_sub_ptr: ptr cint; avpkt: ptr AVPacket): cint		282
+nim	avcodec_send_packet	ffmpeg/libavcodec/avcodec.html#avcodec_send_packet,ptr.AVCodecContext,ptr.AVPacket	proc avcodec_send_packet(avctx: ptr AVCodecContext; avpkt: ptr AVPacket): cint		283
+nim	avcodec_receive_frame	ffmpeg/libavcodec/avcodec.html#avcodec_receive_frame,ptr.AVCodecContext,ptr.AVFrame	proc avcodec_receive_frame(avctx: ptr AVCodecContext; frame: ptr AVFrame): cint		284
+nim	avcodec_send_frame	ffmpeg/libavcodec/avcodec.html#avcodec_send_frame,ptr.AVCodecContext,ptr.AVFrame	proc avcodec_send_frame(avctx: ptr AVCodecContext; frame: ptr AVFrame): cint		285
+nim	avcodec_receive_packet	ffmpeg/libavcodec/avcodec.html#avcodec_receive_packet,ptr.AVCodecContext,ptr.AVPacket	proc avcodec_receive_packet(avctx: ptr AVCodecContext; avpkt: ptr AVPacket): cint		286
+nim	avcodec_get_hw_frames_parameters	ffmpeg/libavcodec/avcodec.html#avcodec_get_hw_frames_parameters,ptr.AVCodecContext,ptr.AVBufferRef,AVPixelFormat,ptr.ptr.AVBufferRef	proc avcodec_get_hw_frames_parameters(avctx: ptr AVCodecContext;\n                                 device_ref: ptr AVBufferRef;\n                                 hw_pix_fmt: AVPixelFormat;\n                                 out_frames_ref: ptr ptr AVBufferRef): cint		287
+nim	av_parser_iterate	ffmpeg/libavcodec/avcodec.html#av_parser_iterate,ptr.pointer	proc av_parser_iterate(opaque: ptr pointer): ptr AVCodecParser		288
+nim	av_parser_init	ffmpeg/libavcodec/avcodec.html#av_parser_init,cint	proc av_parser_init(codec_id: cint): ptr AVCodecParserContext		289
+nim	av_parser_parse2	ffmpeg/libavcodec/avcodec.html#av_parser_parse2,ptr.AVCodecParserContext,ptr.AVCodecContext,ptr.ptr.uint8,ptr.cint,ptr.uint8,cint,int64,int64,int64	proc av_parser_parse2(s: ptr AVCodecParserContext; avctx: ptr AVCodecContext;\n                 poutbuf: ptr ptr uint8; poutbuf_size: ptr cint; buf: ptr uint8;\n                 buf_size: cint; pts: int64; dts: int64; pos: int64): cint		290
+nim	av_parser_change	ffmpeg/libavcodec/avcodec.html#av_parser_change,ptr.AVCodecParserContext,ptr.AVCodecContext,ptr.ptr.uint8,ptr.cint,ptr.uint8,cint,cint	proc av_parser_change(s: ptr AVCodecParserContext; avctx: ptr AVCodecContext;\n                 poutbuf: ptr ptr uint8; poutbuf_size: ptr cint; buf: ptr uint8;\n                 buf_size: cint; keyframe: cint): cint		291
+nim	av_parser_close	ffmpeg/libavcodec/avcodec.html#av_parser_close,ptr.AVCodecParserContext	proc av_parser_close(s: ptr AVCodecParserContext)		292
+nim	avcodec_encode_audio2	ffmpeg/libavcodec/avcodec.html#avcodec_encode_audio2,ptr.AVCodecContext,ptr.AVPacket,ptr.AVFrame,ptr.cint	proc avcodec_encode_audio2(avctx: ptr AVCodecContext; avpkt: ptr AVPacket;\n                      frame: ptr AVFrame; got_packet_ptr: ptr cint): cint		293
+nim	avcodec_encode_video2	ffmpeg/libavcodec/avcodec.html#avcodec_encode_video2,ptr.AVCodecContext,ptr.AVPacket,ptr.AVFrame,ptr.cint	proc avcodec_encode_video2(avctx: ptr AVCodecContext; avpkt: ptr AVPacket;\n                      frame: ptr AVFrame; got_packet_ptr: ptr cint): cint		294
+nim	avcodec_encode_subtitle	ffmpeg/libavcodec/avcodec.html#avcodec_encode_subtitle,ptr.AVCodecContext,ptr.uint8,cint,ptr.AVSubtitle	proc avcodec_encode_subtitle(avctx: ptr AVCodecContext; buf: ptr uint8;\n                        buf_size: cint; sub: ptr AVSubtitle): cint		295
+nim	avcodec_pix_fmt_to_codec_tag	ffmpeg/libavcodec/avcodec.html#avcodec_pix_fmt_to_codec_tag,AVPixelFormat	proc avcodec_pix_fmt_to_codec_tag(pix_fmt: AVPixelFormat): uint		296
+nim	avcodec_find_best_pix_fmt_of_list	ffmpeg/libavcodec/avcodec.html#avcodec_find_best_pix_fmt_of_list,UncheckedArray[AVPixelFormat],AVPixelFormat,cint,ptr.cint	proc avcodec_find_best_pix_fmt_of_list(pix_fmt_list: UncheckedArray[AVPixelFormat];\n                                  src_pix_fmt: AVPixelFormat; has_alpha: cint;\n                                  loss_ptr: ptr cint): AVPixelFormat		297
+nim	avcodec_default_get_format	ffmpeg/libavcodec/avcodec.html#avcodec_default_get_format,ptr.AVCodecContext,UncheckedArray[AVPixelFormat]	proc avcodec_default_get_format(s: ptr AVCodecContext;\n                           fmt: UncheckedArray[AVPixelFormat]): AVPixelFormat		298
+nim	avcodec_string	ffmpeg/libavcodec/avcodec.html#avcodec_string,cstring,cint,ptr.AVCodecContext,cint	proc avcodec_string(buf: cstring; buf_size: cint; enc: ptr AVCodecContext;\n               encode: cint)		299
+nim	av_get_profile_name	ffmpeg/libavcodec/avcodec.html#av_get_profile_name,ptr.AVCodec,cint	proc av_get_profile_name(codec: ptr AVCodec; profile: cint): cstring		300
+nim	avcodec_profile_name	ffmpeg/libavcodec/avcodec.html#avcodec_profile_name,AVCodecID,cint	proc avcodec_profile_name(codec_id: AVCodecID; profile: cint): cstring		301
+nim	avcodec_default_execute	ffmpeg/libavcodec/avcodec.html#avcodec_default_execute,ptr.AVCodecContext,proc(ptr.AVCodecContext,pointer),pointer,ptr.cint,cint,cint	proc avcodec_default_execute(c: ptr AVCodecContext; func: proc (\n    c2: ptr AVCodecContext; arg2: pointer): cint; arg: pointer; ret: ptr cint;\n                        count: cint; size: cint): cint		302
+nim	avcodec_default_execute2	ffmpeg/libavcodec/avcodec.html#avcodec_default_execute2,ptr.AVCodecContext,proc(ptr.AVCodecContext,pointer,cint,cint),pointer,ptr.cint,ptr.cint	proc avcodec_default_execute2(c: ptr AVCodecContext; func: proc (\n    c2: ptr AVCodecContext; arg2: pointer; a3: cint; a4: cint): cint;\n                         arg: pointer; ret: ptr cint; count: ptr cint): cint		303
+nim	avcodec_fill_audio_frame	ffmpeg/libavcodec/avcodec.html#avcodec_fill_audio_frame,ptr.AVFrame,cint,AVSampleFormat,ptr.uint8,cint,cint	proc avcodec_fill_audio_frame(frame: ptr AVFrame; nb_channels: cint;\n                         sample_fmt: AVSampleFormat; buf: ptr uint8;\n                         buf_size: cint; align: cint): cint		304
+nim	avcodec_flush_buffers	ffmpeg/libavcodec/avcodec.html#avcodec_flush_buffers,ptr.AVCodecContext	proc avcodec_flush_buffers(avctx: ptr AVCodecContext)		305
+nim	av_get_bits_per_sample	ffmpeg/libavcodec/avcodec.html#av_get_bits_per_sample,AVCodecID	proc av_get_bits_per_sample(codec_id: AVCodecID): cint		306
+nim	av_get_pcm_codec	ffmpeg/libavcodec/avcodec.html#av_get_pcm_codec,AVSampleFormat,cint	proc av_get_pcm_codec(fmt: AVSampleFormat; be: cint): AVCodecID		307
+nim	av_get_exact_bits_per_sample	ffmpeg/libavcodec/avcodec.html#av_get_exact_bits_per_sample,AVCodecID	proc av_get_exact_bits_per_sample(codec_id: AVCodecID): cint		308
+nim	av_get_audio_frame_duration	ffmpeg/libavcodec/avcodec.html#av_get_audio_frame_duration,ptr.AVCodecContext,cint	proc av_get_audio_frame_duration(avvctx: ptr AVCodecContext; frame_bytes: cint): cint		309
+nim	av_get_audio_frame_duration2	ffmpeg/libavcodec/avcodec.html#av_get_audio_frame_duration2,ptr.AVCodecParameters,cint	proc av_get_audio_frame_duration2(par: ptr AVCodecParameters; frame_bytes: cint): cint		310
+nim	av_fast_padded_malloc	ffmpeg/libavcodec/avcodec.html#av_fast_padded_malloc,pointer,ptr.uint,uint	proc av_fast_padded_malloc(ptr: pointer; size: ptr uint; min_size: uint)		311
+nim	av_fast_padded_mallocz	ffmpeg/libavcodec/avcodec.html#av_fast_padded_mallocz,pointer,ptr.uint,uint	proc av_fast_padded_mallocz(ptr: pointer; size: ptr uint; min_size: uint)		312
+nim	avcodec_is_open	ffmpeg/libavcodec/avcodec.html#avcodec_is_open,ptr.AVCodecContext	proc avcodec_is_open(s: ptr AVCodecContext): cint		313
+nim	AV_CODEC_FLAG_TRUNCATED	ffmpeg/libavcodec/avcodec.html#AV_CODEC_FLAG_TRUNCATED	const AV_CODEC_FLAG_TRUNCATED		316

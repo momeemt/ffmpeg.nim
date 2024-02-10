@@ -1,3 +1,4 @@
-av_display_rotation_get	ffmpeg/libavutil/display.html#av_display_rotation_get,ptr.int32	display: av_display_rotation_get(matrix: ptr int32): cdouble	
-av_display_rotation_set	ffmpeg/libavutil/display.html#av_display_rotation_set,ptr.int32,cdouble	display: av_display_rotation_set(matrix: ptr int32; angle: cdouble)	
-av_display_matrix_flip	ffmpeg/libavutil/display.html#av_display_matrix_flip,ptr.int32,cint,cint	display: av_display_matrix_flip(matrix: ptr int32; hflip, vflip: cint)	
+nimTitle	display	ffmpeg/libavutil/display.html	module src/ffmpeg/libavutil/display		0
+nim	av_display_rotation_get	ffmpeg/libavutil/display.html#av_display_rotation_get,ptr.int32	proc av_display_rotation_get(matrix: ptr int32): cdouble		8
+nim	av_display_rotation_set	ffmpeg/libavutil/display.html#av_display_rotation_set,ptr.int32,cdouble	proc av_display_rotation_set(matrix: ptr int32; angle: cdouble)		9
+nim	av_display_matrix_flip	ffmpeg/libavutil/display.html#av_display_matrix_flip,ptr.int32,cint,cint	proc av_display_matrix_flip(matrix: ptr int32; hflip, vflip: cint)		10

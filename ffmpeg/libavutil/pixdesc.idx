@@ -1,42 +1,43 @@
-AV_PIX_FMT_FLAG_BE	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BE	pixdesc: AV_PIX_FMT_FLAG_BE	
-AV_PIX_FMT_FLAG_PAL	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_PAL	pixdesc: AV_PIX_FMT_FLAG_PAL	
-AV_PIX_FMT_FLAG_BITSTREAM	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BITSTREAM	pixdesc: AV_PIX_FMT_FLAG_BITSTREAM	
-AV_PIX_FMT_FLAG_HWACCEL	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_HWACCEL	pixdesc: AV_PIX_FMT_FLAG_HWACCEL	
-AV_PIX_FMT_FLAG_PLANAR	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_PLANAR	pixdesc: AV_PIX_FMT_FLAG_PLANAR	
-AV_PIX_FMT_FLAG_RGB	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_RGB	pixdesc: AV_PIX_FMT_FLAG_RGB	
-AV_PIX_FMT_FLAG_ALPHA	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_ALPHA	pixdesc: AV_PIX_FMT_FLAG_ALPHA	
-AV_PIX_FMT_FLAG_BAYER	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BAYER	pixdesc: AV_PIX_FMT_FLAG_BAYER	
-AV_PIX_FMT_FLAG_FLOAT	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_FLOAT	pixdesc: AV_PIX_FMT_FLAG_FLOAT	
-FF_LOSS_RESOLUTION	ffmpeg/libavutil/pixdesc.html#FF_LOSS_RESOLUTION	pixdesc: FF_LOSS_RESOLUTION	
-FF_LOSS_DEPTH	ffmpeg/libavutil/pixdesc.html#FF_LOSS_DEPTH	pixdesc: FF_LOSS_DEPTH	
-FF_LOSS_COLORSPACE	ffmpeg/libavutil/pixdesc.html#FF_LOSS_COLORSPACE	pixdesc: FF_LOSS_COLORSPACE	
-FF_LOSS_ALPHA	ffmpeg/libavutil/pixdesc.html#FF_LOSS_ALPHA	pixdesc: FF_LOSS_ALPHA	
-FF_LOSS_COLORQUANT	ffmpeg/libavutil/pixdesc.html#FF_LOSS_COLORQUANT	pixdesc: FF_LOSS_COLORQUANT	
-FF_LOSS_CHROMA	ffmpeg/libavutil/pixdesc.html#FF_LOSS_CHROMA	pixdesc: FF_LOSS_CHROMA	
-av_get_bits_per_pixel	ffmpeg/libavutil/pixdesc.html#av_get_bits_per_pixel,ptr.AVPixFmtDescriptor	pixdesc: av_get_bits_per_pixel(pixdesc: ptr AVPixFmtDescriptor): cint	
-av_get_padded_bits_per_pixel	ffmpeg/libavutil/pixdesc.html#av_get_padded_bits_per_pixel,ptr.AVPixFmtDescriptor	pixdesc: av_get_padded_bits_per_pixel(pixdesc: ptr AVPixFmtDescriptor): cint	
-av_pix_fmt_desc_get	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_get,AVPixelFormat	pixdesc: av_pix_fmt_desc_get(pix_fmt: AVPixelFormat): ptr AVPixFmtDescriptor	
-av_pix_fmt_desc_next	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_next,ptr.AVPixFmtDescriptor	pixdesc: av_pix_fmt_desc_next(prev: ptr AVPixFmtDescriptor): ptr AVPixFmtDescriptor	
-av_pix_fmt_desc_get_id	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_get_id,ptr.AVPixFmtDescriptor	pixdesc: av_pix_fmt_desc_get_id(desc: ptr AVPixFmtDescriptor): AVPixelFormat	
-av_pix_fmt_get_chroma_sub_sample	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_get_chroma_sub_sample,AVPixelFormat,ptr.cint,ptr.cint	pixdesc: av_pix_fmt_get_chroma_sub_sample(pix_fmt: AVPixelFormat;\n                                 h_shift, v_shift: ptr cint): cint	
-av_pix_fmt_count_planes	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_count_planes,AVPixelFormat	pixdesc: av_pix_fmt_count_planes(pix_fmt: AVPixelFormat): cint	
-av_color_range_name	ffmpeg/libavutil/pixdesc.html#av_color_range_name,AVColorRange	pixdesc: av_color_range_name(range: AVColorRange): cstring	
-av_color_range_from_name	ffmpeg/libavutil/pixdesc.html#av_color_range_from_name,cstring	pixdesc: av_color_range_from_name(name: cstring): cint	
-av_color_primaries_name	ffmpeg/libavutil/pixdesc.html#av_color_primaries_name,AVColorPrimaries	pixdesc: av_color_primaries_name(primaries: AVColorPrimaries): cstring	
-av_color_primaries_from_name	ffmpeg/libavutil/pixdesc.html#av_color_primaries_from_name,cstring	pixdesc: av_color_primaries_from_name(name: cstring): cint	
-av_color_transfer_name	ffmpeg/libavutil/pixdesc.html#av_color_transfer_name,AVColorTransferCharacteristic	pixdesc: av_color_transfer_name(transfer: AVColorTransferCharacteristic): cstring	
-av_color_transfer_from_name	ffmpeg/libavutil/pixdesc.html#av_color_transfer_from_name,cstring	pixdesc: av_color_transfer_from_name(name: cstring): cint	
-av_color_space_name	ffmpeg/libavutil/pixdesc.html#av_color_space_name,AVColorSpace	pixdesc: av_color_space_name(space: AVColorSpace): cstring	
-av_color_space_from_name	ffmpeg/libavutil/pixdesc.html#av_color_space_from_name,cstring	pixdesc: av_color_space_from_name(name: cstring): cint	
-av_chroma_location_name	ffmpeg/libavutil/pixdesc.html#av_chroma_location_name,AVChromaLocation	pixdesc: av_chroma_location_name(lovation: AVChromaLocation): cstring	
-av_chroma_location_from_name	ffmpeg/libavutil/pixdesc.html#av_chroma_location_from_name,cstring	pixdesc: av_chroma_location_from_name(name: cstring): cint	
-av_get_pix_fmt	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt,cstring	pixdesc: av_get_pix_fmt(name: cstring): AVPixelFormat	
-av_get_pix_fmt_name	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_name,AVPixelFormat	pixdesc: av_get_pix_fmt_name(pix_fmt: AVPixelFormat): cstring	
-av_get_pix_fmt_string	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_string,cstring,cint,AVPixelFormat	pixdesc: av_get_pix_fmt_string(buf: cstring; buf_size: cint; pix_fmt: AVPixelFormat): cstring	
-av_read_image_line2	ffmpeg/libavutil/pixdesc.html#av_read_image_line2,pointer,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint,cint,cint	pixdesc: av_read_image_line2(dst: pointer; data: ptr ptr uint8; linesize: ptr cint;\n                    desc: ptr AVPixFmtDescriptor;\n                    x, y, c, w, read_pal_component, dst_element_size: cint)	
-av_read_image_line	ffmpeg/libavutil/pixdesc.html#av_read_image_line,ptr.uint16,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint,cint	pixdesc: av_read_image_line(dst: ptr uint16; data: ptr ptr uint8; linesize: ptr cint;\n                   desc: ptr AVPixFmtDescriptor;\n                   x, y, c, w, read_pal_componnent: cint)	
-av_write_image_line2	ffmpeg/libavutil/pixdesc.html#av_write_image_line2,pointer,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint	pixdesc: av_write_image_line2(src: pointer; data: ptr ptr uint8; linesize: ptr cint;\n                     desc: ptr AVPixFmtDescriptor; x, y, c, w: cint)	
-av_write_image_line	ffmpeg/libavutil/pixdesc.html#av_write_image_line,ptr.uint16,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint	pixdesc: av_write_image_line(src: ptr uint16; data: ptr ptr uint8; linesize: ptr cint;\n                    desc: ptr AVPixFmtDescriptor; x, y, c, w: cint)	
-av_pix_fmt_swap_endianness	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_swap_endianness,AVPixelFormat	pixdesc: av_pix_fmt_swap_endianness(pix_fmt: AVPixelFormat): AVPixelFormat	
-av_get_pix_fmt_loss	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_loss,AVPixelFormat,AVPixelFormat,cint	pixdesc: av_get_pix_fmt_loss(dst_pix_fmt, src_pix_fmt: AVPixelFormat; has_alpha: cint): cint	
-av_find_best_pix_fmt_of_2	ffmpeg/libavutil/pixdesc.html#av_find_best_pix_fmt_of_2,AVPixelFormat,AVPixelFormat,AVPixelFormat,cint,ptr.cint	pixdesc: av_find_best_pix_fmt_of_2(dst_pix_fmt1, dst_pix_fmt2, srcc_pix_fmt: AVPixelFormat;\n                          has_alpha: cint; loss_ptr: ptr cint): AVPixelFormat	
+nimTitle	pixdesc	ffmpeg/libavutil/pixdesc.html	module src/ffmpeg/libavutil/pixdesc		0
+nim	AV_PIX_FMT_FLAG_BE	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BE	const AV_PIX_FMT_FLAG_BE		11
+nim	AV_PIX_FMT_FLAG_PAL	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_PAL	const AV_PIX_FMT_FLAG_PAL		12
+nim	AV_PIX_FMT_FLAG_BITSTREAM	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BITSTREAM	const AV_PIX_FMT_FLAG_BITSTREAM		13
+nim	AV_PIX_FMT_FLAG_HWACCEL	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_HWACCEL	const AV_PIX_FMT_FLAG_HWACCEL		14
+nim	AV_PIX_FMT_FLAG_PLANAR	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_PLANAR	const AV_PIX_FMT_FLAG_PLANAR		15
+nim	AV_PIX_FMT_FLAG_RGB	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_RGB	const AV_PIX_FMT_FLAG_RGB		16
+nim	AV_PIX_FMT_FLAG_ALPHA	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_ALPHA	const AV_PIX_FMT_FLAG_ALPHA		17
+nim	AV_PIX_FMT_FLAG_BAYER	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_BAYER	const AV_PIX_FMT_FLAG_BAYER		18
+nim	AV_PIX_FMT_FLAG_FLOAT	ffmpeg/libavutil/pixdesc.html#AV_PIX_FMT_FLAG_FLOAT	const AV_PIX_FMT_FLAG_FLOAT		19
+nim	FF_LOSS_RESOLUTION	ffmpeg/libavutil/pixdesc.html#FF_LOSS_RESOLUTION	const FF_LOSS_RESOLUTION		20
+nim	FF_LOSS_DEPTH	ffmpeg/libavutil/pixdesc.html#FF_LOSS_DEPTH	const FF_LOSS_DEPTH		21
+nim	FF_LOSS_COLORSPACE	ffmpeg/libavutil/pixdesc.html#FF_LOSS_COLORSPACE	const FF_LOSS_COLORSPACE		22
+nim	FF_LOSS_ALPHA	ffmpeg/libavutil/pixdesc.html#FF_LOSS_ALPHA	const FF_LOSS_ALPHA		23
+nim	FF_LOSS_COLORQUANT	ffmpeg/libavutil/pixdesc.html#FF_LOSS_COLORQUANT	const FF_LOSS_COLORQUANT		24
+nim	FF_LOSS_CHROMA	ffmpeg/libavutil/pixdesc.html#FF_LOSS_CHROMA	const FF_LOSS_CHROMA		25
+nim	av_get_bits_per_pixel	ffmpeg/libavutil/pixdesc.html#av_get_bits_per_pixel,ptr.AVPixFmtDescriptor	proc av_get_bits_per_pixel(pixdesc: ptr AVPixFmtDescriptor): cint		27
+nim	av_get_padded_bits_per_pixel	ffmpeg/libavutil/pixdesc.html#av_get_padded_bits_per_pixel,ptr.AVPixFmtDescriptor	proc av_get_padded_bits_per_pixel(pixdesc: ptr AVPixFmtDescriptor): cint		28
+nim	av_pix_fmt_desc_get	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_get,AVPixelFormat	proc av_pix_fmt_desc_get(pix_fmt: AVPixelFormat): ptr AVPixFmtDescriptor		29
+nim	av_pix_fmt_desc_next	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_next,ptr.AVPixFmtDescriptor	proc av_pix_fmt_desc_next(prev: ptr AVPixFmtDescriptor): ptr AVPixFmtDescriptor		30
+nim	av_pix_fmt_desc_get_id	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_desc_get_id,ptr.AVPixFmtDescriptor	proc av_pix_fmt_desc_get_id(desc: ptr AVPixFmtDescriptor): AVPixelFormat		31
+nim	av_pix_fmt_get_chroma_sub_sample	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_get_chroma_sub_sample,AVPixelFormat,ptr.cint,ptr.cint	proc av_pix_fmt_get_chroma_sub_sample(pix_fmt: AVPixelFormat;\n                                 h_shift, v_shift: ptr cint): cint		32
+nim	av_pix_fmt_count_planes	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_count_planes,AVPixelFormat	proc av_pix_fmt_count_planes(pix_fmt: AVPixelFormat): cint		33
+nim	av_color_range_name	ffmpeg/libavutil/pixdesc.html#av_color_range_name,AVColorRange	proc av_color_range_name(range: AVColorRange): cstring		34
+nim	av_color_range_from_name	ffmpeg/libavutil/pixdesc.html#av_color_range_from_name,cstring	proc av_color_range_from_name(name: cstring): cint		35
+nim	av_color_primaries_name	ffmpeg/libavutil/pixdesc.html#av_color_primaries_name,AVColorPrimaries	proc av_color_primaries_name(primaries: AVColorPrimaries): cstring		36
+nim	av_color_primaries_from_name	ffmpeg/libavutil/pixdesc.html#av_color_primaries_from_name,cstring	proc av_color_primaries_from_name(name: cstring): cint		37
+nim	av_color_transfer_name	ffmpeg/libavutil/pixdesc.html#av_color_transfer_name,AVColorTransferCharacteristic	proc av_color_transfer_name(transfer: AVColorTransferCharacteristic): cstring		38
+nim	av_color_transfer_from_name	ffmpeg/libavutil/pixdesc.html#av_color_transfer_from_name,cstring	proc av_color_transfer_from_name(name: cstring): cint		39
+nim	av_color_space_name	ffmpeg/libavutil/pixdesc.html#av_color_space_name,AVColorSpace	proc av_color_space_name(space: AVColorSpace): cstring		40
+nim	av_color_space_from_name	ffmpeg/libavutil/pixdesc.html#av_color_space_from_name,cstring	proc av_color_space_from_name(name: cstring): cint		41
+nim	av_chroma_location_name	ffmpeg/libavutil/pixdesc.html#av_chroma_location_name,AVChromaLocation	proc av_chroma_location_name(lovation: AVChromaLocation): cstring		42
+nim	av_chroma_location_from_name	ffmpeg/libavutil/pixdesc.html#av_chroma_location_from_name,cstring	proc av_chroma_location_from_name(name: cstring): cint		43
+nim	av_get_pix_fmt	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt,cstring	proc av_get_pix_fmt(name: cstring): AVPixelFormat		44
+nim	av_get_pix_fmt_name	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_name,AVPixelFormat	proc av_get_pix_fmt_name(pix_fmt: AVPixelFormat): cstring		45
+nim	av_get_pix_fmt_string	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_string,cstring,cint,AVPixelFormat	proc av_get_pix_fmt_string(buf: cstring; buf_size: cint; pix_fmt: AVPixelFormat): cstring		46
+nim	av_read_image_line2	ffmpeg/libavutil/pixdesc.html#av_read_image_line2,pointer,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint,cint,cint	proc av_read_image_line2(dst: pointer; data: ptr ptr uint8; linesize: ptr cint;\n                    desc: ptr AVPixFmtDescriptor;\n                    x, y, c, w, read_pal_component, dst_element_size: cint)		47
+nim	av_read_image_line	ffmpeg/libavutil/pixdesc.html#av_read_image_line,ptr.uint16,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint,cint	proc av_read_image_line(dst: ptr uint16; data: ptr ptr uint8; linesize: ptr cint;\n                   desc: ptr AVPixFmtDescriptor;\n                   x, y, c, w, read_pal_componnent: cint)		48
+nim	av_write_image_line2	ffmpeg/libavutil/pixdesc.html#av_write_image_line2,pointer,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint	proc av_write_image_line2(src: pointer; data: ptr ptr uint8; linesize: ptr cint;\n                     desc: ptr AVPixFmtDescriptor; x, y, c, w: cint)		49
+nim	av_write_image_line	ffmpeg/libavutil/pixdesc.html#av_write_image_line,ptr.uint16,ptr.ptr.uint8,ptr.cint,ptr.AVPixFmtDescriptor,cint,cint,cint,cint	proc av_write_image_line(src: ptr uint16; data: ptr ptr uint8; linesize: ptr cint;\n                    desc: ptr AVPixFmtDescriptor; x, y, c, w: cint)		50
+nim	av_pix_fmt_swap_endianness	ffmpeg/libavutil/pixdesc.html#av_pix_fmt_swap_endianness,AVPixelFormat	proc av_pix_fmt_swap_endianness(pix_fmt: AVPixelFormat): AVPixelFormat		51
+nim	av_get_pix_fmt_loss	ffmpeg/libavutil/pixdesc.html#av_get_pix_fmt_loss,AVPixelFormat,AVPixelFormat,cint	proc av_get_pix_fmt_loss(dst_pix_fmt, src_pix_fmt: AVPixelFormat; has_alpha: cint): cint		52
+nim	av_find_best_pix_fmt_of_2	ffmpeg/libavutil/pixdesc.html#av_find_best_pix_fmt_of_2,AVPixelFormat,AVPixelFormat,AVPixelFormat,cint,ptr.cint	proc av_find_best_pix_fmt_of_2(dst_pix_fmt1, dst_pix_fmt2, srcc_pix_fmt: AVPixelFormat;\n                          has_alpha: cint; loss_ptr: ptr cint): AVPixelFormat		53

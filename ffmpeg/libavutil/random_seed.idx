@@ -1,1 +1,2 @@
-av_get_random_seed	ffmpeg/libavutil/random_seed.html#av_get_random_seed	random_seed: av_get_random_seed(): uint32	
+nimTitle	random_seed	ffmpeg/libavutil/random_seed.html	module src/ffmpeg/libavutil/random_seed		0
+nim	av_get_random_seed	ffmpeg/libavutil/random_seed.html#av_get_random_seed	proc av_get_random_seed(): uint32		8

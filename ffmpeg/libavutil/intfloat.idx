@@ -1,4 +1,5 @@
-av_int2float	ffmpeg/libavutil/intfloat.html#av_int2float,uint32	intfloat: av_int2float(i: uint32): cfloat	
-av_float2int	ffmpeg/libavutil/intfloat.html#av_float2int,cfloat	intfloat: av_float2int(f: cfloat): uint32	
-av_int2double	ffmpeg/libavutil/intfloat.html#av_int2double,uint64	intfloat: av_int2double(i: uint64): cdouble	
-av_double2int	ffmpeg/libavutil/intfloat.html#av_double2int,cdouble	intfloat: av_double2int(f: cdouble): uint64	
+nimTitle	intfloat	ffmpeg/libavutil/intfloat.html	module src/ffmpeg/libavutil/intfloat		0
+nim	av_int2float	ffmpeg/libavutil/intfloat.html#av_int2float,uint32	proc av_int2float(i: uint32): cfloat		10
+nim	av_float2int	ffmpeg/libavutil/intfloat.html#av_float2int,cfloat	proc av_float2int(f: cfloat): uint32		15
+nim	av_int2double	ffmpeg/libavutil/intfloat.html#av_int2double,uint64	proc av_int2double(i: uint64): cdouble		20
+nim	av_double2int	ffmpeg/libavutil/intfloat.html#av_double2int,cdouble	proc av_double2int(f: cdouble): uint64		25

@@ -1,59 +1,60 @@
-SWS_FAST_BILINEAR	ffmpeg/libswscale/swscale.html#SWS_FAST_BILINEAR	swscale: SWS_FAST_BILINEAR	
-SWS_BILINEAR	ffmpeg/libswscale/swscale.html#SWS_BILINEAR	swscale: SWS_BILINEAR	
-SWS_BICUBIC	ffmpeg/libswscale/swscale.html#SWS_BICUBIC	swscale: SWS_BICUBIC	
-SWS_X	ffmpeg/libswscale/swscale.html#SWS_X	swscale: SWS_X	
-SWS_POINT	ffmpeg/libswscale/swscale.html#SWS_POINT	swscale: SWS_POINT	
-SWS_AREA	ffmpeg/libswscale/swscale.html#SWS_AREA	swscale: SWS_AREA	
-SWS_BICUBLIN	ffmpeg/libswscale/swscale.html#SWS_BICUBLIN	swscale: SWS_BICUBLIN	
-SWS_GAUSS	ffmpeg/libswscale/swscale.html#SWS_GAUSS	swscale: SWS_GAUSS	
-SWS_SINC	ffmpeg/libswscale/swscale.html#SWS_SINC	swscale: SWS_SINC	
-SWS_LANCZOS	ffmpeg/libswscale/swscale.html#SWS_LANCZOS	swscale: SWS_LANCZOS	
-SWS_SPLINE	ffmpeg/libswscale/swscale.html#SWS_SPLINE	swscale: SWS_SPLINE	
-SWS_PARAM_DEFAULT	ffmpeg/libswscale/swscale.html#SWS_PARAM_DEFAULT	swscale: SWS_PARAM_DEFAULT	
-SWS_PRINT_INFO	ffmpeg/libswscale/swscale.html#SWS_PRINT_INFO	swscale: SWS_PRINT_INFO	
-SWS_FULL_CHR_H_INT	ffmpeg/libswscale/swscale.html#SWS_FULL_CHR_H_INT	swscale: SWS_FULL_CHR_H_INT	
-SWS_FULL_CHR_H_INP	ffmpeg/libswscale/swscale.html#SWS_FULL_CHR_H_INP	swscale: SWS_FULL_CHR_H_INP	
-SWS_DIRECT_BGR	ffmpeg/libswscale/swscale.html#SWS_DIRECT_BGR	swscale: SWS_DIRECT_BGR	
-SWS_ACCURATE_RND	ffmpeg/libswscale/swscale.html#SWS_ACCURATE_RND	swscale: SWS_ACCURATE_RND	
-SWS_BITEXACT	ffmpeg/libswscale/swscale.html#SWS_BITEXACT	swscale: SWS_BITEXACT	
-SWS_ERROR_DIFFUSION	ffmpeg/libswscale/swscale.html#SWS_ERROR_DIFFUSION	swscale: SWS_ERROR_DIFFUSION	
-SWS_MAX_REDUCE_CUTOFF	ffmpeg/libswscale/swscale.html#SWS_MAX_REDUCE_CUTOFF	swscale: SWS_MAX_REDUCE_CUTOFF	
-SWS_CS_ITU709	ffmpeg/libswscale/swscale.html#SWS_CS_ITU709	swscale: SWS_CS_ITU709	
-SWS_CS_FCC	ffmpeg/libswscale/swscale.html#SWS_CS_FCC	swscale: SWS_CS_FCC	
-SWS_CS_ITU601	ffmpeg/libswscale/swscale.html#SWS_CS_ITU601	swscale: SWS_CS_ITU601	
-SWS_CS_ITU624	ffmpeg/libswscale/swscale.html#SWS_CS_ITU624	swscale: SWS_CS_ITU624	
-SWS_CS_SMPTE170M	ffmpeg/libswscale/swscale.html#SWS_CS_SMPTE170M	swscale: SWS_CS_SMPTE170M	
-SWS_CS_SMPTE240M	ffmpeg/libswscale/swscale.html#SWS_CS_SMPTE240M	swscale: SWS_CS_SMPTE240M	
-SWS_CS_DEFAULT	ffmpeg/libswscale/swscale.html#SWS_CS_DEFAULT	swscale: SWS_CS_DEFAULT	
-SWS_CS_BT2020	ffmpeg/libswscale/swscale.html#SWS_CS_BT2020	swscale: SWS_CS_BT2020	
-swscale_version	ffmpeg/libswscale/swscale.html#swscale_version	swscale: swscale_version(): cuint	
-swscale_configuration	ffmpeg/libswscale/swscale.html#swscale_configuration	swscale: swscale_configuration(): cstring	
-swscale_license	ffmpeg/libswscale/swscale.html#swscale_license	swscale: swscale_license(): cstring	
-sws_getCoefficients	ffmpeg/libswscale/swscale.html#sws_getCoefficients,cint	swscale: sws_getCoefficients(colorspace: cint): ptr cint	
-sws_isSupportedInput	ffmpeg/libswscale/swscale.html#sws_isSupportedInput,AVPixelFormat	swscale: sws_isSupportedInput(pix_fmt: AVPixelFormat): cint	
-sws_isSupportedOutput	ffmpeg/libswscale/swscale.html#sws_isSupportedOutput,AVPixelFormat	swscale: sws_isSupportedOutput(pix_fmt: AVPixelFormat): cint	
-sws_isSupportedEndiannessConversion	ffmpeg/libswscale/swscale.html#sws_isSupportedEndiannessConversion,AVPixelFormat	swscale: sws_isSupportedEndiannessConversion(pix_fmt: AVPixelFormat): cint	
-sws_alloc_context	ffmpeg/libswscale/swscale.html#sws_alloc_context	swscale: sws_alloc_context(): ptr SwsContext	
-sws_init_context	ffmpeg/libswscale/swscale.html#sws_init_context,ptr.SwsContext,ptr.SwsFilter,ptr.SwsFilter	swscale: sws_init_context(sws_context: ptr SwsContext;\n                 srcFilter, dstFilter: ptr SwsFilter): cint	
-sws_freeContext	ffmpeg/libswscale/swscale.html#sws_freeContext,ptr.SwsContext	swscale: sws_freeContext(swsContext: ptr SwsContext)	
-sws_getContext	ffmpeg/libswscale/swscale.html#sws_getContext,cint,cint,AVPixelFormat,cint,cint,AVPixelFormat,cint,ptr.SwsFilter,ptr.SwsFilter,ptr.cdouble	swscale: sws_getContext(srcW, srcH: cint; srcFormat: AVPixelFormat; dstW, dstH: cint;\n               dstFormat: AVPixelFormat; flags: cint;\n               srcFilter, dstFilter: ptr SwsFilter; param: ptr cdouble): ptr SwsContext	
-sws_scale	ffmpeg/libswscale/swscale.html#sws_scale,ptr.SwsContext,ptr.ptr.uint8,ptr.cint,cint,cint,ptr.ptr.uint8,ptr.cint	swscale: sws_scale(c: ptr SwsContext; srcSlice: ptr ptr uint8; srcStride: ptr cint;\n          srcSliceY, srcSliceH: cint; dst: ptr ptr uint8; dstStride: ptr cint): cint	
-sws_scale_frame	ffmpeg/libswscale/swscale.html#sws_scale_frame,ptr.SwsContext,ptr.AVFrame,ptr.AVFrame	swscale: sws_scale_frame(c: ptr SwsContext; dst, src: ptr AVFrame): cint	
-sws_frame_start	ffmpeg/libswscale/swscale.html#sws_frame_start,ptr.SwsContext,ptr.AVFrame,ptr.AVFrame	swscale: sws_frame_start(c: ptr SwsContext; dst, src: ptr AVFrame): cint	
-sws_frame_end	ffmpeg/libswscale/swscale.html#sws_frame_end,ptr.SwsContext	swscale: sws_frame_end(c: ptr SwsContext)	
-sws_send_slice	ffmpeg/libswscale/swscale.html#sws_send_slice,ptr.SwsContext,cuint,cuint	swscale: sws_send_slice(c: ptr SwsContext; slice_start, slice_height: cuint): cint	
-sws_receive_slice	ffmpeg/libswscale/swscale.html#sws_receive_slice,ptr.SwsContext,cuint,cuint	swscale: sws_receive_slice(c: ptr SwsContext; slice_start, slice_height: cuint): cint	
-sws_receive_slice_alignment	ffmpeg/libswscale/swscale.html#sws_receive_slice_alignment,ptr.SwsContext	swscale: sws_receive_slice_alignment(c: ptr SwsContext): cuint	
-sws_setColorspaceDetails	ffmpeg/libswscale/swscale.html#sws_setColorspaceDetails,ptr.SwsContext,ptr.cint,cint,ptr.cint,cint,cint,cint,cint	swscale: sws_setColorspaceDetails(c: ptr SwsContext; inv_table: ptr cint; srcRange: cint;\n                         table: ptr cint;\n                         dstRange, brightness, contrast, saturation: cint): cint	
-sws_getColorspaceDetails	ffmpeg/libswscale/swscale.html#sws_getColorspaceDetails,ptr.SwsContext,ptr.ptr.cint,ptr.cint,ptr.ptr.cint,ptr.cint,ptr.cint,ptr.cint,ptr.cint	swscale: sws_getColorspaceDetails(c: ptr SwsContext; inv_table: ptr ptr cint;\n                         srcRange: ptr cint; table: ptr ptr cint;\n                         dstRange, brightness, contrast, saturation: ptr cint): cint	
-sws_allocVec	ffmpeg/libswscale/swscale.html#sws_allocVec,cint	swscale: sws_allocVec(length: cint): ptr SwsVector	
-sws_getGaussianVec	ffmpeg/libswscale/swscale.html#sws_getGaussianVec,cdouble,cdouble	swscale: sws_getGaussianVec(variance, quality: cdouble): ptr SwsVector	
-sws_scaleVec	ffmpeg/libswscale/swscale.html#sws_scaleVec,ptr.SwsVector,cdouble	swscale: sws_scaleVec(a: ptr SwsVector; scalar: cdouble)	
-sws_normalizeVec	ffmpeg/libswscale/swscale.html#sws_normalizeVec,ptr.SwsVector,cdouble	swscale: sws_normalizeVec(a: ptr SwsVector; height: cdouble)	
-sws_freeVec	ffmpeg/libswscale/swscale.html#sws_freeVec,ptr.SwsVector	swscale: sws_freeVec(a: ptr SwsVector)	
-sws_getDefaultFilter	ffmpeg/libswscale/swscale.html#sws_getDefaultFilter,cfloat,cfloat,cfloat,cfloat,cfloat,cfloat,cint	swscale: sws_getDefaultFilter(lumaGBlur, chromaGBlur, lumaSharpen, chromaSharpen,\n                     chromaHShift, chromaVShift: cfloat; verbose: cint): ptr SwsFilter	
-sws_freeFilter	ffmpeg/libswscale/swscale.html#sws_freeFilter,ptr.SwsFilter	swscale: sws_freeFilter(filter: ptr SwsFilter)	
-sws_getCachedContext	ffmpeg/libswscale/swscale.html#sws_getCachedContext,ptr.SwsContext,cint,cint,AVPixelFormat,cint,cint,AVPixelFormat,cint,ptr.SwsFilter,ptr.SwsFilter,ptr.cdouble	swscale: sws_getCachedContext(context: ptr SwsContext; srcW, srcH: cint;\n                     srcFormat: AVPixelFormat; dstW, dstH: cint;\n                     dstFormmat: AVPixelFormat; flags: cint;\n                     srcFilter, dstFilter: ptr SwsFilter; param: ptr cdouble): ptr SwsContext	
-sws_convertPalette8ToPacked32	ffmpeg/libswscale/swscale.html#sws_convertPalette8ToPacked32,ptr.uint8,ptr.uint8,cint,ptr.uint8	swscale: sws_convertPalette8ToPacked32(src, dst: ptr uint8; num_pixels: cint;\n                              palette: ptr uint8)	
-sws_convertPalette8ToPacked24	ffmpeg/libswscale/swscale.html#sws_convertPalette8ToPacked24,ptr.uint8,ptr.uint8,cint,ptr.uint8	swscale: sws_convertPalette8ToPacked24(src, dst: ptr uint8; num_pixels: cint;\n                              palette: ptr uint8)	
-sws_get_class	ffmpeg/libswscale/swscale.html#sws_get_class	swscale: sws_get_class(): ptr AVClass	
+nimTitle	swscale	ffmpeg/libswscale/swscale.html	module src/ffmpeg/libswscale/swscale		0
+nim	SWS_FAST_BILINEAR	ffmpeg/libswscale/swscale.html#SWS_FAST_BILINEAR	const SWS_FAST_BILINEAR		11
+nim	SWS_BILINEAR	ffmpeg/libswscale/swscale.html#SWS_BILINEAR	const SWS_BILINEAR		12
+nim	SWS_BICUBIC	ffmpeg/libswscale/swscale.html#SWS_BICUBIC	const SWS_BICUBIC		13
+nim	SWS_X	ffmpeg/libswscale/swscale.html#SWS_X	const SWS_X		14
+nim	SWS_POINT	ffmpeg/libswscale/swscale.html#SWS_POINT	const SWS_POINT		15
+nim	SWS_AREA	ffmpeg/libswscale/swscale.html#SWS_AREA	const SWS_AREA		16
+nim	SWS_BICUBLIN	ffmpeg/libswscale/swscale.html#SWS_BICUBLIN	const SWS_BICUBLIN		17
+nim	SWS_GAUSS	ffmpeg/libswscale/swscale.html#SWS_GAUSS	const SWS_GAUSS		18
+nim	SWS_SINC	ffmpeg/libswscale/swscale.html#SWS_SINC	const SWS_SINC		19
+nim	SWS_LANCZOS	ffmpeg/libswscale/swscale.html#SWS_LANCZOS	const SWS_LANCZOS		20
+nim	SWS_SPLINE	ffmpeg/libswscale/swscale.html#SWS_SPLINE	const SWS_SPLINE		21
+nim	SWS_PARAM_DEFAULT	ffmpeg/libswscale/swscale.html#SWS_PARAM_DEFAULT	const SWS_PARAM_DEFAULT		22
+nim	SWS_PRINT_INFO	ffmpeg/libswscale/swscale.html#SWS_PRINT_INFO	const SWS_PRINT_INFO		23
+nim	SWS_FULL_CHR_H_INT	ffmpeg/libswscale/swscale.html#SWS_FULL_CHR_H_INT	const SWS_FULL_CHR_H_INT		24
+nim	SWS_FULL_CHR_H_INP	ffmpeg/libswscale/swscale.html#SWS_FULL_CHR_H_INP	const SWS_FULL_CHR_H_INP		25
+nim	SWS_DIRECT_BGR	ffmpeg/libswscale/swscale.html#SWS_DIRECT_BGR	const SWS_DIRECT_BGR		26
+nim	SWS_ACCURATE_RND	ffmpeg/libswscale/swscale.html#SWS_ACCURATE_RND	const SWS_ACCURATE_RND		27
+nim	SWS_BITEXACT	ffmpeg/libswscale/swscale.html#SWS_BITEXACT	const SWS_BITEXACT		28
+nim	SWS_ERROR_DIFFUSION	ffmpeg/libswscale/swscale.html#SWS_ERROR_DIFFUSION	const SWS_ERROR_DIFFUSION		29
+nim	SWS_MAX_REDUCE_CUTOFF	ffmpeg/libswscale/swscale.html#SWS_MAX_REDUCE_CUTOFF	const SWS_MAX_REDUCE_CUTOFF		30
+nim	SWS_CS_ITU709	ffmpeg/libswscale/swscale.html#SWS_CS_ITU709	const SWS_CS_ITU709		31
+nim	SWS_CS_FCC	ffmpeg/libswscale/swscale.html#SWS_CS_FCC	const SWS_CS_FCC		32
+nim	SWS_CS_ITU601	ffmpeg/libswscale/swscale.html#SWS_CS_ITU601	const SWS_CS_ITU601		33
+nim	SWS_CS_ITU624	ffmpeg/libswscale/swscale.html#SWS_CS_ITU624	const SWS_CS_ITU624		34
+nim	SWS_CS_SMPTE170M	ffmpeg/libswscale/swscale.html#SWS_CS_SMPTE170M	const SWS_CS_SMPTE170M		35
+nim	SWS_CS_SMPTE240M	ffmpeg/libswscale/swscale.html#SWS_CS_SMPTE240M	const SWS_CS_SMPTE240M		36
+nim	SWS_CS_DEFAULT	ffmpeg/libswscale/swscale.html#SWS_CS_DEFAULT	const SWS_CS_DEFAULT		37
+nim	SWS_CS_BT2020	ffmpeg/libswscale/swscale.html#SWS_CS_BT2020	const SWS_CS_BT2020		38
+nim	swscale_version	ffmpeg/libswscale/swscale.html#swscale_version	proc swscale_version(): cuint		40
+nim	swscale_configuration	ffmpeg/libswscale/swscale.html#swscale_configuration	proc swscale_configuration(): cstring		41
+nim	swscale_license	ffmpeg/libswscale/swscale.html#swscale_license	proc swscale_license(): cstring		42
+nim	sws_getCoefficients	ffmpeg/libswscale/swscale.html#sws_getCoefficients,cint	proc sws_getCoefficients(colorspace: cint): ptr cint		43
+nim	sws_isSupportedInput	ffmpeg/libswscale/swscale.html#sws_isSupportedInput,AVPixelFormat	proc sws_isSupportedInput(pix_fmt: AVPixelFormat): cint		44
+nim	sws_isSupportedOutput	ffmpeg/libswscale/swscale.html#sws_isSupportedOutput,AVPixelFormat	proc sws_isSupportedOutput(pix_fmt: AVPixelFormat): cint		45
+nim	sws_isSupportedEndiannessConversion	ffmpeg/libswscale/swscale.html#sws_isSupportedEndiannessConversion,AVPixelFormat	proc sws_isSupportedEndiannessConversion(pix_fmt: AVPixelFormat): cint		46
+nim	sws_alloc_context	ffmpeg/libswscale/swscale.html#sws_alloc_context	proc sws_alloc_context(): ptr SwsContext		47
+nim	sws_init_context	ffmpeg/libswscale/swscale.html#sws_init_context,ptr.SwsContext,ptr.SwsFilter,ptr.SwsFilter	proc sws_init_context(sws_context: ptr SwsContext;\n                 srcFilter, dstFilter: ptr SwsFilter): cint		48
+nim	sws_freeContext	ffmpeg/libswscale/swscale.html#sws_freeContext,ptr.SwsContext	proc sws_freeContext(swsContext: ptr SwsContext)		49
+nim	sws_getContext	ffmpeg/libswscale/swscale.html#sws_getContext,cint,cint,AVPixelFormat,cint,cint,AVPixelFormat,cint,ptr.SwsFilter,ptr.SwsFilter,ptr.cdouble	proc sws_getContext(srcW, srcH: cint; srcFormat: AVPixelFormat; dstW, dstH: cint;\n               dstFormat: AVPixelFormat; flags: cint;\n               srcFilter, dstFilter: ptr SwsFilter; param: ptr cdouble): ptr SwsContext		50
+nim	sws_scale	ffmpeg/libswscale/swscale.html#sws_scale,ptr.SwsContext,ptr.ptr.uint8,ptr.cint,cint,cint,ptr.ptr.uint8,ptr.cint	proc sws_scale(c: ptr SwsContext; srcSlice: ptr ptr uint8; srcStride: ptr cint;\n          srcSliceY, srcSliceH: cint; dst: ptr ptr uint8; dstStride: ptr cint): cint		51
+nim	sws_scale_frame	ffmpeg/libswscale/swscale.html#sws_scale_frame,ptr.SwsContext,ptr.AVFrame,ptr.AVFrame	proc sws_scale_frame(c: ptr SwsContext; dst, src: ptr AVFrame): cint		52
+nim	sws_frame_start	ffmpeg/libswscale/swscale.html#sws_frame_start,ptr.SwsContext,ptr.AVFrame,ptr.AVFrame	proc sws_frame_start(c: ptr SwsContext; dst, src: ptr AVFrame): cint		53
+nim	sws_frame_end	ffmpeg/libswscale/swscale.html#sws_frame_end,ptr.SwsContext	proc sws_frame_end(c: ptr SwsContext)		54
+nim	sws_send_slice	ffmpeg/libswscale/swscale.html#sws_send_slice,ptr.SwsContext,cuint,cuint	proc sws_send_slice(c: ptr SwsContext; slice_start, slice_height: cuint): cint		55
+nim	sws_receive_slice	ffmpeg/libswscale/swscale.html#sws_receive_slice,ptr.SwsContext,cuint,cuint	proc sws_receive_slice(c: ptr SwsContext; slice_start, slice_height: cuint): cint		56
+nim	sws_receive_slice_alignment	ffmpeg/libswscale/swscale.html#sws_receive_slice_alignment,ptr.SwsContext	proc sws_receive_slice_alignment(c: ptr SwsContext): cuint		57
+nim	sws_setColorspaceDetails	ffmpeg/libswscale/swscale.html#sws_setColorspaceDetails,ptr.SwsContext,ptr.cint,cint,ptr.cint,cint,cint,cint,cint	proc sws_setColorspaceDetails(c: ptr SwsContext; inv_table: ptr cint; srcRange: cint;\n                         table: ptr cint;\n                         dstRange, brightness, contrast, saturation: cint): cint		58
+nim	sws_getColorspaceDetails	ffmpeg/libswscale/swscale.html#sws_getColorspaceDetails,ptr.SwsContext,ptr.ptr.cint,ptr.cint,ptr.ptr.cint,ptr.cint,ptr.cint,ptr.cint,ptr.cint	proc sws_getColorspaceDetails(c: ptr SwsContext; inv_table: ptr ptr cint;\n                         srcRange: ptr cint; table: ptr ptr cint;\n                         dstRange, brightness, contrast, saturation: ptr cint): cint		59
+nim	sws_allocVec	ffmpeg/libswscale/swscale.html#sws_allocVec,cint	proc sws_allocVec(length: cint): ptr SwsVector		60
+nim	sws_getGaussianVec	ffmpeg/libswscale/swscale.html#sws_getGaussianVec,cdouble,cdouble	proc sws_getGaussianVec(variance, quality: cdouble): ptr SwsVector		61
+nim	sws_scaleVec	ffmpeg/libswscale/swscale.html#sws_scaleVec,ptr.SwsVector,cdouble	proc sws_scaleVec(a: ptr SwsVector; scalar: cdouble)		62
+nim	sws_normalizeVec	ffmpeg/libswscale/swscale.html#sws_normalizeVec,ptr.SwsVector,cdouble	proc sws_normalizeVec(a: ptr SwsVector; height: cdouble)		63
+nim	sws_freeVec	ffmpeg/libswscale/swscale.html#sws_freeVec,ptr.SwsVector	proc sws_freeVec(a: ptr SwsVector)		64
+nim	sws_getDefaultFilter	ffmpeg/libswscale/swscale.html#sws_getDefaultFilter,cfloat,cfloat,cfloat,cfloat,cfloat,cfloat,cint	proc sws_getDefaultFilter(lumaGBlur, chromaGBlur, lumaSharpen, chromaSharpen,\n                     chromaHShift, chromaVShift: cfloat; verbose: cint): ptr SwsFilter		65
+nim	sws_freeFilter	ffmpeg/libswscale/swscale.html#sws_freeFilter,ptr.SwsFilter	proc sws_freeFilter(filter: ptr SwsFilter)		66
+nim	sws_getCachedContext	ffmpeg/libswscale/swscale.html#sws_getCachedContext,ptr.SwsContext,cint,cint,AVPixelFormat,cint,cint,AVPixelFormat,cint,ptr.SwsFilter,ptr.SwsFilter,ptr.cdouble	proc sws_getCachedContext(context: ptr SwsContext; srcW, srcH: cint;\n                     srcFormat: AVPixelFormat; dstW, dstH: cint;\n                     dstFormmat: AVPixelFormat; flags: cint;\n                     srcFilter, dstFilter: ptr SwsFilter; param: ptr cdouble): ptr SwsContext		67
+nim	sws_convertPalette8ToPacked32	ffmpeg/libswscale/swscale.html#sws_convertPalette8ToPacked32,ptr.uint8,ptr.uint8,cint,ptr.uint8	proc sws_convertPalette8ToPacked32(src, dst: ptr uint8; num_pixels: cint;\n                              palette: ptr uint8)		68
+nim	sws_convertPalette8ToPacked24	ffmpeg/libswscale/swscale.html#sws_convertPalette8ToPacked24,ptr.uint8,ptr.uint8,cint,ptr.uint8	proc sws_convertPalette8ToPacked24(src, dst: ptr uint8; num_pixels: cint;\n                              palette: ptr uint8)		69
+nim	sws_get_class	ffmpeg/libswscale/swscale.html#sws_get_class	proc sws_get_class(): ptr AVClass		70

@@ -1,3 +1,4 @@
-avcodec_dct_alloc	ffmpeg/libavcodec/avdct.html#avcodec_dct_alloc	avdct: avcodec_dct_alloc(): ptr AVDCT	
-avcodec_dct_init	ffmpeg/libavcodec/avdct.html#avcodec_dct_init,ptr.AVDCT	avdct: avcodec_dct_init(a1: ptr AVDCT): cint	
-avcodec_dct_get_class	ffmpeg/libavcodec/avdct.html#avcodec_dct_get_class	avdct: avcodec_dct_get_class(): ptr AVClass	
+nimTitle	avdct	ffmpeg/libavcodec/avdct.html	module src/ffmpeg/libavcodec/avdct		0
+nim	avcodec_dct_alloc	ffmpeg/libavcodec/avdct.html#avcodec_dct_alloc	proc avcodec_dct_alloc(): ptr AVDCT		10
+nim	avcodec_dct_init	ffmpeg/libavcodec/avdct.html#avcodec_dct_init,ptr.AVDCT	proc avcodec_dct_init(a1: ptr AVDCT): cint		11
+nim	avcodec_dct_get_class	ffmpeg/libavcodec/avdct.html#avcodec_dct_get_class	proc avcodec_dct_get_class(): ptr AVClass		12

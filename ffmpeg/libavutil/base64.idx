@@ -1,4 +1,5 @@
-av_base64_decode	ffmpeg/libavutil/base64.html#av_base64_decode,ptr.uint8,cstring,cint	base64: av_base64_decode(out: ptr uint8; in: cstring; out_size: cint): cint	
-av_base64_encode	ffmpeg/libavutil/base64.html#av_base64_encode,cstring,cint,ptr.uint8,cint	base64: av_base64_encode(out: cstring; out_size: cint; in: ptr uint8; in_size: cint): cstring	
-AV_BASE64_DECODE_SIZE	ffmpeg/libavutil/base64.html#AV_BASE64_DECODE_SIZE.t,untyped	base64: AV_BASE64_DECODE_SIZE(x: untyped): untyped	
-AV_BASE64_SIZE	ffmpeg/libavutil/base64.html#AV_BASE64_SIZE.t,untyped	base64: AV_BASE64_SIZE(x: untyped): untyped	
+nimTitle	base64	ffmpeg/libavutil/base64.html	module src/ffmpeg/libavutil/base64		0
+nim	av_base64_decode	ffmpeg/libavutil/base64.html#av_base64_decode,ptr.uint8,cstring,cint	proc av_base64_decode(out: ptr uint8; in: cstring; out_size: cint): cint		8
+nim	av_base64_encode	ffmpeg/libavutil/base64.html#av_base64_encode,cstring,cint,ptr.uint8,cint	proc av_base64_encode(out: cstring; out_size: cint; in: ptr uint8; in_size: cint): cstring		9
+nim	AV_BASE64_DECODE_SIZE	ffmpeg/libavutil/base64.html#AV_BASE64_DECODE_SIZE.t,untyped	template AV_BASE64_DECODE_SIZE(x: untyped): untyped		11
+nim	AV_BASE64_SIZE	ffmpeg/libavutil/base64.html#AV_BASE64_SIZE.t,untyped	template AV_BASE64_SIZE(x: untyped): untyped		12

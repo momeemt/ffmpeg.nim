@@ -1,257 +1,258 @@
-AVCodecHWConfigInternal	ffmpeg/types.html#AVCodecHWConfigInternal	types: AVCodecHWConfigInternal	
-ID3D11VideoDecoder	ffmpeg/types.html#ID3D11VideoDecoder	types: ID3D11VideoDecoder	
-ID3D11VideoContext	ffmpeg/types.html#ID3D11VideoContext	types: ID3D11VideoContext	
-D3D11_VIDEO_DECODER_CONFIG	ffmpeg/types.html#D3D11_VIDEO_DECODER_CONFIG	types: D3D11_VIDEO_DECODER_CONFIG	
-ID3D11VideoDecoderOutputView	ffmpeg/types.html#ID3D11VideoDecoderOutputView	types: ID3D11VideoDecoderOutputView	
-HANDLE	ffmpeg/types.html#HANDLE	types: HANDLE	
-IDirectXVideoDecoder	ffmpeg/types.html#IDirectXVideoDecoder	types: IDirectXVideoDecoder	
-DXVA2_ConfigPictureDecode	ffmpeg/types.html#DXVA2_ConfigPictureDecode	types: DXVA2_ConfigPictureDecode	
-LPDIRECT3DSURFACE9	ffmpeg/types.html#LPDIRECT3DSURFACE9	types: LPDIRECT3DSURFACE9	
-AVMediaCodecBuffer	ffmpeg/types.html#AVMediaCodecBuffer	types: AVMediaCodecBuffer	
-mfxSession	ffmpeg/types.html#mfxSession	types: mfxSession	
-mfxExtBuffer	ffmpeg/types.html#mfxExtBuffer	types: mfxExtBuffer	
-RcOverride	ffmpeg/types.html#RcOverride	types: RcOverride	
-AVProducerReferenceTime	ffmpeg/types.html#AVProducerReferenceTime	types: AVProducerReferenceTime	
-AVCodecInternal	ffmpeg/types.html#AVCodecInternal	types: AVCodecInternal	
-AVCodecContext	ffmpeg/types.html#AVCodecContext	types: AVCodecContext	
-AVSubtitle	ffmpeg/types.html#AVSubtitle	types: AVSubtitle	
-MpegEncContext	ffmpeg/types.html#MpegEncContext	types: MpegEncContext	
-AVHWAccel	ffmpeg/types.html#AVHWAccel	types: AVHWAccel	
-AVSubtitleType	ffmpeg/types.html#AVSubtitleType	types: AVSubtitleType	
-AVSubtitleRect	ffmpeg/types.html#AVSubtitleRect	types: AVSubtitleRect	
-AVPictureStructure	ffmpeg/types.html#AVPictureStructure	types: AVPictureStructure	
-AVCodecParserContext	ffmpeg/types.html#AVCodecParserContext	types: AVCodecParserContext	
-AVCodecParser	ffmpeg/types.html#AVCodecParser	types: AVCodecParser	
-AVDCT	ffmpeg/types.html#AVDCT	types: AVDCT	
-FFTSample	ffmpeg/types.html#FFTSample	types: FFTSample	
-FFTComplex	ffmpeg/types.html#FFTComplex	types: FFTComplex	
-FFTContext	ffmpeg/types.html#FFTContext	types: FFTContext	
-RDFTransformType	ffmpeg/types.html#RDFTransformType	types: RDFTransformType	
-RDFTContext	ffmpeg/types.html#RDFTContext	types: RDFTContext	
-DCTContext	ffmpeg/types.html#DCTContext	types: DCTContext	
-DCTTransformType	ffmpeg/types.html#DCTTransformType	types: DCTTransformType	
-AVBSFContext	ffmpeg/types.html#AVBSFContext	types: AVBSFContext	
-AVBitStreamFilter	ffmpeg/types.html#AVBitStreamFilter	types: AVBitStreamFilter	
-AVBSFList	ffmpeg/types.html#AVBSFList	types: AVBSFList	
-AVCodecDescriptor	ffmpeg/types.html#AVCodecDescriptor	types: AVCodecDescriptor	
-AVCodecID	ffmpeg/types.html#AVCodecID	types: AVCodecID	
-AVFieldOrder	ffmpeg/types.html#AVFieldOrder	types: AVFieldOrder	
-AVCodecParameters	ffmpeg/types.html#AVCodecParameters	types: AVCodecParameters	
-AVProfile	ffmpeg/types.html#AVProfile	types: AVProfile	
-AVCodecDefault	ffmpeg/types.html#AVCodecDefault	types: AVCodecDefault	
-AVCodec	ffmpeg/types.html#AVCodec	types: AVCodec	
-AVCodecHWConfig	ffmpeg/types.html#AVCodecHWConfig	types: AVCodecHWConfig	
-DiracParseCodes	ffmpeg/types.html#DiracParseCodes	types: DiracParseCodes	
-DiracVersionInfo	ffmpeg/types.html#DiracVersionInfo	types: DiracVersionInfo	
-AVDiracSeqHeader	ffmpeg/types.html#AVDiracSeqHeader	types: AVDiracSeqHeader	
-AVDVProfile	ffmpeg/types.html#AVDVProfile	types: AVDVProfile	
-AVMediaCodecContext	ffmpeg/types.html#AVMediaCodecContext	types: AVMediaCodecContext	
-MediaCodecBuffer	ffmpeg/types.html#MediaCodecBuffer	types: MediaCodecBuffer	
-AVPacketSideDataType	ffmpeg/types.html#AVPacketSideDataType	types: AVPacketSideDataType	
-AVPacketSideData	ffmpeg/types.html#AVPacketSideData	types: AVPacketSideData	
-AVPacket	ffmpeg/types.html#AVPacket	types: AVPacket	
-AVSideDataParamChangeFlags	ffmpeg/types.html#AVSideDataParamChangeFlags	types: AVSideDataParamChangeFlags	
-AVVorbisParseContext	ffmpeg/types.html#AVVorbisParseContext	types: AVVorbisParseContext	
-AVDeviceRect	ffmpeg/types.html#AVDeviceRect	types: AVDeviceRect	
-AVAppToDevMessageType	ffmpeg/types.html#AVAppToDevMessageType	types: AVAppToDevMessageType	
-AVDevToAppMessageType	ffmpeg/types.html#AVDevToAppMessageType	types: AVDevToAppMessageType	
-AVDeviceCapabilitiesQuery	ffmpeg/types.html#AVDeviceCapabilitiesQuery	types: AVDeviceCapabilitiesQuery	
-AVDeviceInfo	ffmpeg/types.html#AVDeviceInfo	types: AVDeviceInfo	
-AVDeviceInfoList	ffmpeg/types.html#AVDeviceInfoList	types: AVDeviceInfoList	
-AVFilterInternal	ffmpeg/types.html#AVFilterInternal	types: AVFilterInternal	
-AVFilterPad	ffmpeg/types.html#AVFilterPad	types: AVFilterPad	
-AVFilterFormats	ffmpeg/types.html#AVFilterFormats	types: AVFilterFormats	
-AVFilterGraphInternal	ffmpeg/types.html#AVFilterGraphInternal	types: AVFilterGraphInternal	
-AVFilterChannelLayouts	ffmpeg/types.html#AVFilterChannelLayouts	types: AVFilterChannelLayouts	
-AVFilterCommand	ffmpeg/types.html#AVFilterCommand	types: AVFilterCommand	
-AVFilterContext	ffmpeg/types.html#AVFilterContext	types: AVFilterContext	
-AVFilterLink	ffmpeg/types.html#AVFilterLink	types: AVFilterLink	
-AVLINK_UNINIT	ffmpeg/types.html#AVLINK_UNINIT	AVFilterLinkInitState.AVLINK_UNINIT	
-AVLINK_STARTINIT	ffmpeg/types.html#AVLINK_STARTINIT	AVFilterLinkInitState.AVLINK_STARTINIT	
-AVLINK_INIT	ffmpeg/types.html#AVLINK_INIT	AVFilterLinkInitState.AVLINK_INIT	
-AVFilterLinkInitState	ffmpeg/types.html#AVFilterLinkInitState	types: AVFilterLinkInitState	
-AVFilterFormatsUnion	ffmpeg/types.html#AVFilterFormatsUnion	types: AVFilterFormatsUnion	
-AVFilter	ffmpeg/types.html#AVFilter	types: AVFilter	
-AVFilterFormatsConfig	ffmpeg/types.html#AVFilterFormatsConfig	types: AVFilterFormatsConfig	
-avfilter_action_func	ffmpeg/types.html#avfilter_action_func	types: avfilter_action_func	
-avfilter_execute_func	ffmpeg/types.html#avfilter_execute_func	types: avfilter_execute_func	
-AVFilterGraph	ffmpeg/types.html#AVFilterGraph	types: AVFilterGraph	
-AVFilterInOut	ffmpeg/types.html#AVFilterInOut	types: AVFilterInOut	
-AVBufferSrcParameters	ffmpeg/types.html#AVBufferSrcParameters	types: AVBufferSrcParameters	
-AVFormatContext	ffmpeg/types.html#AVFormatContext	types: AVFormatContext	
-AVCodecTag	ffmpeg/types.html#AVCodecTag	types: AVCodecTag	
-AVProbeData	ffmpeg/types.html#AVProbeData	types: AVProbeData	
-AVOutputFormat	ffmpeg/types.html#AVOutputFormat	types: AVOutputFormat	
-AVInputFormat	ffmpeg/types.html#AVInputFormat	types: AVInputFormat	
-AVStreamParseType	ffmpeg/types.html#AVStreamParseType	types: AVStreamParseType	
-AVIndexEntry	ffmpeg/types.html#AVIndexEntry	types: AVIndexEntry	
-AVStreamInternal	ffmpeg/types.html#AVStreamInternal	types: AVStreamInternal	
-AVStream	ffmpeg/types.html#AVStream	types: AVStream	
-AVProgram	ffmpeg/types.html#AVProgram	types: AVProgram	
-AVChapter	ffmpeg/types.html#AVChapter	types: AVChapter	
-av_format_control_message	ffmpeg/types.html#av_format_control_message	types: av_format_control_message	
-AVOpenCallback	ffmpeg/types.html#AVOpenCallback	types: AVOpenCallback	
-AVDurationEstimationMethod	ffmpeg/types.html#AVDurationEstimationMethod	types: AVDurationEstimationMethod	
-AVFormatInternal	ffmpeg/types.html#AVFormatInternal	types: AVFormatInternal	
-AVTimebaseSource	ffmpeg/types.html#AVTimebaseSource	types: AVTimebaseSource	
-AVIOInterruptCB	ffmpeg/types.html#AVIOInterruptCB	types: AVIOInterruptCB	
-AVIODirEntryType	ffmpeg/types.html#AVIODirEntryType	types: AVIODirEntryType	
-AVIODirEntry	ffmpeg/types.html#AVIODirEntry	types: AVIODirEntry	
-URLContext	ffmpeg/types.html#URLContext	types: URLContext	
-AVIODirContext	ffmpeg/types.html#AVIODirContext	types: AVIODirContext	
-AVIODataMarkerType	ffmpeg/types.html#AVIODataMarkerType	types: AVIODataMarkerType	
-AVIOContext	ffmpeg/types.html#AVIOContext	types: AVIOContext	
-AVAudioResampleContext	ffmpeg/types.html#AVAudioResampleContext	types: AVAudioResampleContext	
-AVMixCoeffType	ffmpeg/types.html#AVMixCoeffType	types: AVMixCoeffType	
-AVResampleFilterType	ffmpeg/types.html#AVResampleFilterType	types: AVResampleFilterType	
-AVResampleDitherMethod	ffmpeg/types.html#AVResampleDitherMethod	types: AVResampleDitherMethod	
-AVAESCTR	ffmpeg/types.html#AVAESCTR	types: AVAESCTR	
-AVAES	ffmpeg/types.html#AVAES	types: AVAES	
-AVAudioFifo	ffmpeg/types.html#AVAudioFifo	types: AVAudioFifo	
-AVEscapeMode	ffmpeg/types.html#AVEscapeMode	types: AVEscapeMode	
-AVMediaType	ffmpeg/types.html#AVMediaType	types: AVMediaType	
-AVPictureType	ffmpeg/types.html#AVPictureType	types: AVPictureType	
-AVBlowfish	ffmpeg/types.html#AVBlowfish	types: AVBlowfish	
-ff_pad_helper_AVBPrint	ffmpeg/types.html#ff_pad_helper_AVBPrint	types: ff_pad_helper_AVBPrint	
-AVBPrint	ffmpeg/types.html#AVBPrint	types: AVBPrint	
-tm	ffmpeg/types.html#tm	types: tm	
-va_list	ffmpeg/types.html#va_list	types: va_list	
-AVBuffer	ffmpeg/types.html#AVBuffer	types: AVBuffer	
-AVBufferRef	ffmpeg/types.html#AVBufferRef	types: AVBufferRef	
-AVBufferPool	ffmpeg/types.html#AVBufferPool	types: AVBufferPool	
-AVCAMELLIA	ffmpeg/types.html#AVCAMELLIA	types: AVCAMELLIA	
-AVCAST5	ffmpeg/types.html#AVCAST5	types: AVCAST5	
-AVMatrixEncoding	ffmpeg/types.html#AVMatrixEncoding	types: AVMatrixEncoding	
-AVCRC	ffmpeg/types.html#AVCRC	types: AVCRC	
-AVCRCId	ffmpeg/types.html#AVCRCId	types: AVCRCId	
-AVDES	ffmpeg/types.html#AVDES	types: AVDES	
-AVDOVIDecoderConfigurationRecord	ffmpeg/types.html#AVDOVIDecoderConfigurationRecord	types: AVDOVIDecoderConfigurationRecord	
-AVDownmixType	ffmpeg/types.html#AVDownmixType	types: AVDownmixType	
-AVDownmixInfo	ffmpeg/types.html#AVDownmixInfo	types: AVDownmixInfo	
-AVSubsampleEncryptionInfo	ffmpeg/types.html#AVSubsampleEncryptionInfo	types: AVSubsampleEncryptionInfo	
-AVEncryptionInfo	ffmpeg/types.html#AVEncryptionInfo	types: AVEncryptionInfo	
-AVEncryptionInitInfo	ffmpeg/types.html#AVEncryptionInitInfo	types: AVEncryptionInitInfo	
-AVExpr	ffmpeg/types.html#AVExpr	types: AVExpr	
-AVFifoBuffer	ffmpeg/types.html#AVFifoBuffer	types: AVFifoBuffer	
-AVFrameSideDataType	ffmpeg/types.html#AVFrameSideDataType	types: AVFrameSideDataType	
-AVActiveFormatDescription	ffmpeg/types.html#AVActiveFormatDescription	types: AVActiveFormatDescription	
-AVFrameSideData	ffmpeg/types.html#AVFrameSideData	types: AVFrameSideData	
-AVRegionOfInterest	ffmpeg/types.html#AVRegionOfInterest	types: AVRegionOfInterest	
-AVFrame	ffmpeg/types.html#AVFrame	types: AVFrame	
-AVHashContext	ffmpeg/types.html#AVHashContext	types: AVHashContext	
-AVHDRPlusOverlapProcessOption	ffmpeg/types.html#AVHDRPlusOverlapProcessOption	types: AVHDRPlusOverlapProcessOption	
-AVHDRPlusPercentile	ffmpeg/types.html#AVHDRPlusPercentile	types: AVHDRPlusPercentile	
-AVHDRPlusColorTransformParams	ffmpeg/types.html#AVHDRPlusColorTransformParams	types: AVHDRPlusColorTransformParams	
-AVDynamicHDRPlus	ffmpeg/types.html#AVDynamicHDRPlus	types: AVDynamicHDRPlus	
-AVHMACType	ffmpeg/types.html#AVHMACType	types: AVHMACType	
-AVHMAC	ffmpeg/types.html#AVHMAC	types: AVHMAC	
-CUcontext	ffmpeg/types.html#CUcontext	types: CUcontext	
-CUstream	ffmpeg/types.html#CUstream	types: CUstream	
-AVCUDADeviceContextInternal	ffmpeg/types.html#AVCUDADeviceContextInternal	types: AVCUDADeviceContextInternal	
-AVCUDADeviceContext	ffmpeg/types.html#AVCUDADeviceContext	types: AVCUDADeviceContext	
-AVDRMObjectDescriptor	ffmpeg/types.html#AVDRMObjectDescriptor	types: AVDRMObjectDescriptor	
-AVDRMPlaneDescriptor	ffmpeg/types.html#AVDRMPlaneDescriptor	types: AVDRMPlaneDescriptor	
-AVDRMLayerDescriptor	ffmpeg/types.html#AVDRMLayerDescriptor	types: AVDRMLayerDescriptor	
-AVDRMFrameDescriptor	ffmpeg/types.html#AVDRMFrameDescriptor	types: AVDRMFrameDescriptor	
-AVDRMDeviceContext	ffmpeg/types.html#AVDRMDeviceContext	types: AVDRMDeviceContext	
-AVMediaCodecDeviceContext	ffmpeg/types.html#AVMediaCodecDeviceContext	types: AVMediaCodecDeviceContext	
-cl_mem	ffmpeg/types.html#cl_mem	types: cl_mem	
-cl_device_id	ffmpeg/types.html#cl_device_id	types: cl_device_id	
-cl_context	ffmpeg/types.html#cl_context	types: cl_context	
-cl_command_queue	ffmpeg/types.html#cl_command_queue	types: cl_command_queue	
-AVOpenCLFrameDescriptor	ffmpeg/types.html#AVOpenCLFrameDescriptor	types: AVOpenCLFrameDescriptor	
-AVOpenCLDeviceContext	ffmpeg/types.html#AVOpenCLDeviceContext	types: AVOpenCLDeviceContext	
-AVOpenCLFramesContext	ffmpeg/types.html#AVOpenCLFramesContext	types: AVOpenCLFramesContext	
-VkAllocationCallbacks	ffmpeg/types.html#VkAllocationCallbacks	types: VkAllocationCallbacks	
-VkInstance	ffmpeg/types.html#VkInstance	types: VkInstance	
-VkPhysicalDevice	ffmpeg/types.html#VkPhysicalDevice	types: VkPhysicalDevice	
-VkDevice	ffmpeg/types.html#VkDevice	types: VkDevice	
-VkPhysicalDeviceFeatures2	ffmpeg/types.html#VkPhysicalDeviceFeatures2	types: VkPhysicalDeviceFeatures2	
-VkImageTiling	ffmpeg/types.html#VkImageTiling	types: VkImageTiling	
-VkImageUsageFlagBits	ffmpeg/types.html#VkImageUsageFlagBits	types: VkImageUsageFlagBits	
-VkImage	ffmpeg/types.html#VkImage	types: VkImage	
-VkDeviceMemory	ffmpeg/types.html#VkDeviceMemory	types: VkDeviceMemory	
-VkMemoryPropertyFlagBits	ffmpeg/types.html#VkMemoryPropertyFlagBits	types: VkMemoryPropertyFlagBits	
-VkAccessFlagBits	ffmpeg/types.html#VkAccessFlagBits	types: VkAccessFlagBits	
-VkImageLayout	ffmpeg/types.html#VkImageLayout	types: VkImageLayout	
-VkSemaphore	ffmpeg/types.html#VkSemaphore	types: VkSemaphore	
-VkFormat	ffmpeg/types.html#VkFormat	types: VkFormat	
-AVVkFrameInternal	ffmpeg/types.html#AVVkFrameInternal	types: AVVkFrameInternal	
-PFN_vkGetInstanceProcAddr	ffmpeg/types.html#PFN_vkGetInstanceProcAddr	types: PFN_vkGetInstanceProcAddr	
-AVVulkanDeviceContext	ffmpeg/types.html#AVVulkanDeviceContext	types: AVVulkanDeviceContext	
-AVVkFrameFlags	ffmpeg/types.html#AVVkFrameFlags	types: AVVkFrameFlags	
-AVVulkanFramesContext	ffmpeg/types.html#AVVulkanFramesContext	types: AVVulkanFramesContext	
-AVVkFrame	ffmpeg/types.html#AVVkFrame	types: AVVkFrame	
-AVHWDeviceType	ffmpeg/types.html#AVHWDeviceType	types: AVHWDeviceType	
-AVHWDeviceInternal	ffmpeg/types.html#AVHWDeviceInternal	types: AVHWDeviceInternal	
-AVHWDeviceContext	ffmpeg/types.html#AVHWDeviceContext	types: AVHWDeviceContext	
-AVHWFramesInternal	ffmpeg/types.html#AVHWFramesInternal	types: AVHWFramesInternal	
-AVHWFramesContext	ffmpeg/types.html#AVHWFramesContext	types: AVHWFramesContext	
-AVHWFrameTransferDirection	ffmpeg/types.html#AVHWFrameTransferDirection	types: AVHWFrameTransferDirection	
-AVHWFramesConstraints	ffmpeg/types.html#AVHWFramesConstraints	types: AVHWFramesConstraints	
-av_intfloat32	ffmpeg/types.html#av_intfloat32	types: av_intfloat32	
-av_intfloat64	ffmpeg/types.html#av_intfloat64	types: av_intfloat64	
-av_alias64	ffmpeg/types.html#av_alias64	types: av_alias64	
-av_alias32	ffmpeg/types.html#av_alias32	types: av_alias32	
-av_alias16	ffmpeg/types.html#av_alias16	types: av_alias16	
-AVLFG	ffmpeg/types.html#AVLFG	types: AVLFG	
-AVMasteringDisplayMetadata	ffmpeg/types.html#AVMasteringDisplayMetadata	types: AVMasteringDisplayMetadata	
-AVContentLightMetadata	ffmpeg/types.html#AVContentLightMetadata	types: AVContentLightMetadata	
-AVRounding	ffmpeg/types.html#AVRounding	types: AVRounding	
-AVMD5	ffmpeg/types.html#AVMD5	types: AVMD5	
-AVMotionVector	ffmpeg/types.html#AVMotionVector	types: AVMotionVector	
-AVMurMur3	ffmpeg/types.html#AVMurMur3	types: AVMurMur3	
-AVClassCategory	ffmpeg/types.html#AVClassCategory	types: AVClassCategory	
-AVClass	ffmpeg/types.html#AVClass	types: AVClass	
-AVOptionType	ffmpeg/types.html#AVOptionType	types: AVOptionType	
-AVOption	ffmpeg/types.html#AVOption	types: AVOption	
-AVOptionUnion	ffmpeg/types.html#AVOptionUnion	types: AVOptionUnion	
-AVOptionRange	ffmpeg/types.html#AVOptionRange	types: AVOptionRange	
-AVOptionRanges	ffmpeg/types.html#AVOptionRanges	types: AVOptionRanges	
-AVComponentDescriptor	ffmpeg/types.html#AVComponentDescriptor	types: AVComponentDescriptor	
-AVPixFmtDescriptor	ffmpeg/types.html#AVPixFmtDescriptor	types: AVPixFmtDescriptor	
-av_pixelutils_sad_fn	ffmpeg/types.html#av_pixelutils_sad_fn	types: av_pixelutils_sad_fn	
-AVPixelFormat	ffmpeg/types.html#AVPixelFormat	types: AVPixelFormat	
-AVColorPrimaries	ffmpeg/types.html#AVColorPrimaries	types: AVColorPrimaries	
-AVColorTransferCharacteristic	ffmpeg/types.html#AVColorTransferCharacteristic	types: AVColorTransferCharacteristic	
-AVColorSpace	ffmpeg/types.html#AVColorSpace	types: AVColorSpace	
-AVColorRange	ffmpeg/types.html#AVColorRange	types: AVColorRange	
-AVChromaLocation	ffmpeg/types.html#AVChromaLocation	types: AVChromaLocation	
-AVRational	ffmpeg/types.html#AVRational	types: AVRational	
-AVRC4	ffmpeg/types.html#AVRC4	types: AVRC4	
-AVReplayGain	ffmpeg/types.html#AVReplayGain	types: AVReplayGain	
-AVRIPEMD	ffmpeg/types.html#AVRIPEMD	types: AVRIPEMD	
-AVSampleFormat	ffmpeg/types.html#AVSampleFormat	types: AVSampleFormat	
-AVSHA	ffmpeg/types.html#AVSHA	types: AVSHA	
-AVSHA512	ffmpeg/types.html#AVSHA512	types: AVSHA512	
-AVSphericalProjection	ffmpeg/types.html#AVSphericalProjection	types: AVSphericalProjection	
-AVSphericalMapping	ffmpeg/types.html#AVSphericalMapping	types: AVSphericalMapping	
-AVStereo3DType	ffmpeg/types.html#AVStereo3DType	types: AVStereo3DType	
-AVStereo3DView	ffmpeg/types.html#AVStereo3DView	types: AVStereo3DView	
-AVStereo3D	ffmpeg/types.html#AVStereo3D	types: AVStereo3D	
-AVTEA	ffmpeg/types.html#AVTEA	types: AVTEA	
-AVThreadMessageQueue	ffmpeg/types.html#AVThreadMessageQueue	types: AVThreadMessageQueue	
-AVThreadMessageFlags	ffmpeg/types.html#AVThreadMessageFlags	types: AVThreadMessageFlags	
-AVTimecodeFlag	ffmpeg/types.html#AVTimecodeFlag	types: AVTimecodeFlag	
-AVTimecode	ffmpeg/types.html#AVTimecode	types: AVTimecode	
-AVTreeNode	ffmpeg/types.html#AVTreeNode	types: AVTreeNode	
-AVTWOFISH	ffmpeg/types.html#AVTWOFISH	types: AVTWOFISH	
-AVTXContext	ffmpeg/types.html#AVTXContext	types: AVTXContext	
-AVComplexFloat	ffmpeg/types.html#AVComplexFloat	types: AVComplexFloat	
-AVComplexDouble	ffmpeg/types.html#AVComplexDouble	types: AVComplexDouble	
-AVComplexInt32	ffmpeg/types.html#AVComplexInt32	types: AVComplexInt32	
-AVTXType	ffmpeg/types.html#AVTXType	types: AVTXType	
-AVTXFlags	ffmpeg/types.html#AVTXFlags	types: AVTXFlags	
-av_tx_fn	ffmpeg/types.html#av_tx_fn	types: av_tx_fn	
-AVVideoEncParamsType	ffmpeg/types.html#AVVideoEncParamsType	types: AVVideoEncParamsType	
-AVVideoEncParams	ffmpeg/types.html#AVVideoEncParams	types: AVVideoEncParams	
-AVVideoBlockParams	ffmpeg/types.html#AVVideoBlockParams	types: AVVideoBlockParams	
-pp_context	ffmpeg/types.html#pp_context	types: pp_context	
-pp_mode	ffmpeg/types.html#pp_mode	types: pp_mode	
-SwrDitherType	ffmpeg/types.html#SwrDitherType	types: SwrDitherType	
-SwrEngine	ffmpeg/types.html#SwrEngine	types: SwrEngine	
-SwrFilterType	ffmpeg/types.html#SwrFilterType	types: SwrFilterType	
-SwrContext	ffmpeg/types.html#SwrContext	types: SwrContext	
-SwsVector	ffmpeg/types.html#SwsVector	types: SwsVector	
-SwsFilter	ffmpeg/types.html#SwsFilter	types: SwsFilter	
-SwsContext	ffmpeg/types.html#SwsContext	types: SwsContext	
+nimTitle	types	ffmpeg/types.html	module src/ffmpeg/types		0
+nim	AVCodecHWConfigInternal	ffmpeg/types.html#AVCodecHWConfigInternal	object AVCodecHWConfigInternal		142
+nim	ID3D11VideoDecoder	ffmpeg/types.html#ID3D11VideoDecoder	object ID3D11VideoDecoder		143
+nim	ID3D11VideoContext	ffmpeg/types.html#ID3D11VideoContext	object ID3D11VideoContext		144
+nim	D3D11_VIDEO_DECODER_CONFIG	ffmpeg/types.html#D3D11_VIDEO_DECODER_CONFIG	object D3D11_VIDEO_DECODER_CONFIG		145
+nim	ID3D11VideoDecoderOutputView	ffmpeg/types.html#ID3D11VideoDecoderOutputView	object ID3D11VideoDecoderOutputView		146
+nim	HANDLE	ffmpeg/types.html#HANDLE	object HANDLE		147
+nim	IDirectXVideoDecoder	ffmpeg/types.html#IDirectXVideoDecoder	object IDirectXVideoDecoder		148
+nim	DXVA2_ConfigPictureDecode	ffmpeg/types.html#DXVA2_ConfigPictureDecode	object DXVA2_ConfigPictureDecode		149
+nim	LPDIRECT3DSURFACE9	ffmpeg/types.html#LPDIRECT3DSURFACE9	object LPDIRECT3DSURFACE9		150
+nim	AVMediaCodecBuffer	ffmpeg/types.html#AVMediaCodecBuffer	object AVMediaCodecBuffer		151
+nim	mfxSession	ffmpeg/types.html#mfxSession	object mfxSession		152
+nim	mfxExtBuffer	ffmpeg/types.html#mfxExtBuffer	object mfxExtBuffer		153
+nim	RcOverride	ffmpeg/types.html#RcOverride	object RcOverride		156
+nim	AVProducerReferenceTime	ffmpeg/types.html#AVProducerReferenceTime	object AVProducerReferenceTime		162
+nim	AVCodecInternal	ffmpeg/types.html#AVCodecInternal	object AVCodecInternal		166
+nim	AVCodecContext	ffmpeg/types.html#AVCodecContext	object AVCodecContext		168
+nim	AVSubtitle	ffmpeg/types.html#AVSubtitle	object AVSubtitle		341
+nim	MpegEncContext	ffmpeg/types.html#MpegEncContext	object MpegEncContext		349
+nim	AVHWAccel	ffmpeg/types.html#AVHWAccel	object AVHWAccel		351
+nim	AVSubtitleType	ffmpeg/types.html#AVSubtitleType	enum AVSubtitleType		370
+nim	AVSubtitleRect	ffmpeg/types.html#AVSubtitleRect	object AVSubtitleRect		376
+nim	AVPictureStructure	ffmpeg/types.html#AVPictureStructure	enum AVPictureStructure		391
+nim	AVCodecParserContext	ffmpeg/types.html#AVCodecParserContext	object AVCodecParserContext		397
+nim	AVCodecParser	ffmpeg/types.html#AVCodecParser	object AVCodecParser		436
+nim	AVDCT	ffmpeg/types.html#AVDCT	object AVDCT		445
+nim	FFTSample	ffmpeg/types.html#FFTSample	type FFTSample		456
+nim	FFTComplex	ffmpeg/types.html#FFTComplex	object FFTComplex		458
+nim	FFTContext	ffmpeg/types.html#FFTContext	object FFTContext		461
+nim	RDFTransformType	ffmpeg/types.html#RDFTransformType	enum RDFTransformType		463
+nim	RDFTContext	ffmpeg/types.html#RDFTContext	object RDFTContext		469
+nim	DCTContext	ffmpeg/types.html#DCTContext	object DCTContext		471
+nim	DCTTransformType	ffmpeg/types.html#DCTTransformType	enum DCTTransformType		473
+nim	AVBSFContext	ffmpeg/types.html#AVBSFContext	object AVBSFContext		479
+nim	AVBitStreamFilter	ffmpeg/types.html#AVBitStreamFilter	object AVBitStreamFilter		488
+nim	AVBSFList	ffmpeg/types.html#AVBSFList	object AVBSFList		498
+nim	AVCodecDescriptor	ffmpeg/types.html#AVCodecDescriptor	object AVCodecDescriptor		500
+nim	AVCodecID	ffmpeg/types.html#AVCodecID	enum AVCodecID		509
+nim	AVFieldOrder	ffmpeg/types.html#AVFieldOrder	enum AVFieldOrder		1009
+nim	AVCodecParameters	ffmpeg/types.html#AVCodecParameters	object AVCodecParameters		1017
+nim	AVProfile	ffmpeg/types.html#AVProfile	object AVProfile		1048
+nim	AVCodecDefault	ffmpeg/types.html#AVCodecDefault	object AVCodecDefault		1052
+nim	AVCodec	ffmpeg/types.html#AVCodec	object AVCodec		1054
+nim	AVCodecHWConfig	ffmpeg/types.html#AVCodecHWConfig	object AVCodecHWConfig		1087
+nim	DiracParseCodes	ffmpeg/types.html#DiracParseCodes	enum DiracParseCodes		1092
+nim	DiracVersionInfo	ffmpeg/types.html#DiracVersionInfo	object DiracVersionInfo		1110
+nim	AVDiracSeqHeader	ffmpeg/types.html#AVDiracSeqHeader	object AVDiracSeqHeader		1113
+nim	AVDVProfile	ffmpeg/types.html#AVDVProfile	object AVDVProfile		1139
+nim	AVMediaCodecContext	ffmpeg/types.html#AVMediaCodecContext	object AVMediaCodecContext		1158
+nim	MediaCodecBuffer	ffmpeg/types.html#MediaCodecBuffer	type MediaCodecBuffer		1161
+nim	AVPacketSideDataType	ffmpeg/types.html#AVPacketSideDataType	enum AVPacketSideDataType		1163
+nim	AVPacketSideData	ffmpeg/types.html#AVPacketSideData	object AVPacketSideData		1198
+nim	AVPacket	ffmpeg/types.html#AVPacket	object AVPacket		1203
+nim	AVSideDataParamChangeFlags	ffmpeg/types.html#AVSideDataParamChangeFlags	enum AVSideDataParamChangeFlags		1219
+nim	AVVorbisParseContext	ffmpeg/types.html#AVVorbisParseContext	object AVVorbisParseContext		1225
+nim	AVDeviceRect	ffmpeg/types.html#AVDeviceRect	object AVDeviceRect		1227
+nim	AVAppToDevMessageType	ffmpeg/types.html#AVAppToDevMessageType	enum AVAppToDevMessageType		1233
+nim	AVDevToAppMessageType	ffmpeg/types.html#AVDevToAppMessageType	enum AVDevToAppMessageType		1247
+nim	AVDeviceCapabilitiesQuery	ffmpeg/types.html#AVDeviceCapabilitiesQuery	object AVDeviceCapabilitiesQuery		1260
+nim	AVDeviceInfo	ffmpeg/types.html#AVDeviceInfo	object AVDeviceInfo		1275
+nim	AVDeviceInfoList	ffmpeg/types.html#AVDeviceInfoList	object AVDeviceInfoList		1281
+nim	AVFilterInternal	ffmpeg/types.html#AVFilterInternal	object AVFilterInternal		1286
+nim	AVFilterPad	ffmpeg/types.html#AVFilterPad	object AVFilterPad		1287
+nim	AVFilterFormats	ffmpeg/types.html#AVFilterFormats	object AVFilterFormats		1288
+nim	AVFilterGraphInternal	ffmpeg/types.html#AVFilterGraphInternal	object AVFilterGraphInternal		1289
+nim	AVFilterChannelLayouts	ffmpeg/types.html#AVFilterChannelLayouts	object AVFilterChannelLayouts		1290
+nim	AVFilterCommand	ffmpeg/types.html#AVFilterCommand	object AVFilterCommand		1291
+nim	AVFilterContext	ffmpeg/types.html#AVFilterContext	object AVFilterContext		1293
+nim	AVFilterLink	ffmpeg/types.html#AVFilterLink	object AVFilterLink		1317
+nim	AVLINK_UNINIT	ffmpeg/types.html#AVLINK_UNINIT	AVFilterLinkInitState.AVLINK_UNINIT		1358
+nim	AVLINK_STARTINIT	ffmpeg/types.html#AVLINK_STARTINIT	AVFilterLinkInitState.AVLINK_STARTINIT		1358
+nim	AVLINK_INIT	ffmpeg/types.html#AVLINK_INIT	AVFilterLinkInitState.AVLINK_INIT		1358
+nim	AVFilterLinkInitState	ffmpeg/types.html#AVFilterLinkInitState	enum AVFilterLinkInitState		1358
+nim	AVFilterFormatsUnion	ffmpeg/types.html#AVFilterFormatsUnion	object AVFilterFormatsUnion		1363
+nim	AVFilter	ffmpeg/types.html#AVFilter	object AVFilter		1370
+nim	AVFilterFormatsConfig	ffmpeg/types.html#AVFilterFormatsConfig	object AVFilterFormatsConfig		1390
+nim	avfilter_action_func	ffmpeg/types.html#avfilter_action_func	type avfilter_action_func		1395
+nim	avfilter_execute_func	ffmpeg/types.html#avfilter_execute_func	type avfilter_execute_func		1396
+nim	AVFilterGraph	ffmpeg/types.html#AVFilterGraph	object AVFilterGraph		1398
+nim	AVFilterInOut	ffmpeg/types.html#AVFilterInOut	object AVFilterInOut		1413
+nim	AVBufferSrcParameters	ffmpeg/types.html#AVBufferSrcParameters	object AVBufferSrcParameters		1419
+nim	AVFormatContext	ffmpeg/types.html#AVFormatContext	object AVFormatContext		1430
+nim	AVCodecTag	ffmpeg/types.html#AVCodecTag	object AVCodecTag		1505
+nim	AVProbeData	ffmpeg/types.html#AVProbeData	object AVProbeData		1507
+nim	AVOutputFormat	ffmpeg/types.html#AVOutputFormat	object AVOutputFormat		1513
+nim	AVInputFormat	ffmpeg/types.html#AVInputFormat	object AVInputFormat		1541
+nim	AVStreamParseType	ffmpeg/types.html#AVStreamParseType	enum AVStreamParseType		1563
+nim	AVIndexEntry	ffmpeg/types.html#AVIndexEntry	object AVIndexEntry		1571
+nim	AVStreamInternal	ffmpeg/types.html#AVStreamInternal	object AVStreamInternal		1578
+nim	AVStream	ffmpeg/types.html#AVStream	object AVStream		1580
+nim	AVProgram	ffmpeg/types.html#AVProgram	object AVProgram		1603
+nim	AVChapter	ffmpeg/types.html#AVChapter	object AVChapter		1619
+nim	av_format_control_message	ffmpeg/types.html#av_format_control_message	type av_format_control_message		1626
+nim	AVOpenCallback	ffmpeg/types.html#AVOpenCallback	type AVOpenCallback		1628
+nim	AVDurationEstimationMethod	ffmpeg/types.html#AVDurationEstimationMethod	enum AVDurationEstimationMethod		1630
+nim	AVFormatInternal	ffmpeg/types.html#AVFormatInternal	object AVFormatInternal		1635
+nim	AVTimebaseSource	ffmpeg/types.html#AVTimebaseSource	enum AVTimebaseSource		1637
+nim	AVIOInterruptCB	ffmpeg/types.html#AVIOInterruptCB	object AVIOInterruptCB		1643
+nim	AVIODirEntryType	ffmpeg/types.html#AVIODirEntryType	enum AVIODirEntryType		1647
+nim	AVIODirEntry	ffmpeg/types.html#AVIODirEntry	object AVIODirEntry		1660
+nim	URLContext	ffmpeg/types.html#URLContext	object URLContext		1672
+nim	AVIODirContext	ffmpeg/types.html#AVIODirContext	object AVIODirContext		1674
+nim	AVIODataMarkerType	ffmpeg/types.html#AVIODataMarkerType	enum AVIODataMarkerType		1677
+nim	AVIOContext	ffmpeg/types.html#AVIOContext	object AVIOContext		1685
+nim	AVAudioResampleContext	ffmpeg/types.html#AVAudioResampleContext	object AVAudioResampleContext		1717
+nim	AVMixCoeffType	ffmpeg/types.html#AVMixCoeffType	enum AVMixCoeffType		1719
+nim	AVResampleFilterType	ffmpeg/types.html#AVResampleFilterType	enum AVResampleFilterType		1725
+nim	AVResampleDitherMethod	ffmpeg/types.html#AVResampleDitherMethod	enum AVResampleDitherMethod		1730
+nim	AVAESCTR	ffmpeg/types.html#AVAESCTR	object AVAESCTR		1738
+nim	AVAES	ffmpeg/types.html#AVAES	object AVAES		1740
+nim	AVAudioFifo	ffmpeg/types.html#AVAudioFifo	object AVAudioFifo		1742
+nim	AVEscapeMode	ffmpeg/types.html#AVEscapeMode	enum AVEscapeMode		1744
+nim	AVMediaType	ffmpeg/types.html#AVMediaType	enum AVMediaType		1750
+nim	AVPictureType	ffmpeg/types.html#AVPictureType	enum AVPictureType		1759
+nim	AVBlowfish	ffmpeg/types.html#AVBlowfish	object AVBlowfish		1769
+nim	ff_pad_helper_AVBPrint	ffmpeg/types.html#ff_pad_helper_AVBPrint	object ff_pad_helper_AVBPrint		1773
+nim	AVBPrint	ffmpeg/types.html#AVBPrint	object AVBPrint		1780
+nim	tm	ffmpeg/types.html#tm	object tm		1788
+nim	va_list	ffmpeg/types.html#va_list	object va_list		1790
+nim	AVBuffer	ffmpeg/types.html#AVBuffer	object AVBuffer		1792
+nim	AVBufferRef	ffmpeg/types.html#AVBufferRef	object AVBufferRef		1793
+nim	AVBufferPool	ffmpeg/types.html#AVBufferPool	object AVBufferPool		1798
+nim	AVCAMELLIA	ffmpeg/types.html#AVCAMELLIA	object AVCAMELLIA		1800
+nim	AVCAST5	ffmpeg/types.html#AVCAST5	object AVCAST5		1802
+nim	AVMatrixEncoding	ffmpeg/types.html#AVMatrixEncoding	enum AVMatrixEncoding		1804
+nim	AVCRC	ffmpeg/types.html#AVCRC	type AVCRC		1814
+nim	AVCRCId	ffmpeg/types.html#AVCRCId	enum AVCRCId		1816
+nim	AVDES	ffmpeg/types.html#AVDES	object AVDES		1827
+nim	AVDOVIDecoderConfigurationRecord	ffmpeg/types.html#AVDOVIDecoderConfigurationRecord	object AVDOVIDecoderConfigurationRecord		1831
+nim	AVDownmixType	ffmpeg/types.html#AVDownmixType	enum AVDownmixType		1841
+nim	AVDownmixInfo	ffmpeg/types.html#AVDownmixInfo	object AVDownmixInfo		1848
+nim	AVSubsampleEncryptionInfo	ffmpeg/types.html#AVSubsampleEncryptionInfo	object AVSubsampleEncryptionInfo		1856
+nim	AVEncryptionInfo	ffmpeg/types.html#AVEncryptionInfo	object AVEncryptionInfo		1860
+nim	AVEncryptionInitInfo	ffmpeg/types.html#AVEncryptionInitInfo	object AVEncryptionInitInfo		1871
+nim	AVExpr	ffmpeg/types.html#AVExpr	object AVExpr		1881
+nim	AVFifoBuffer	ffmpeg/types.html#AVFifoBuffer	object AVFifoBuffer		1883
+nim	AVFrameSideDataType	ffmpeg/types.html#AVFrameSideDataType	enum AVFrameSideDataType		1891
+nim	AVActiveFormatDescription	ffmpeg/types.html#AVActiveFormatDescription	enum AVActiveFormatDescription		1919
+nim	AVFrameSideData	ffmpeg/types.html#AVFrameSideData	object AVFrameSideData		1928
+nim	AVRegionOfInterest	ffmpeg/types.html#AVRegionOfInterest	object AVRegionOfInterest		1935
+nim	AVFrame	ffmpeg/types.html#AVFrame	object AVFrame		1943
+nim	AVHashContext	ffmpeg/types.html#AVHashContext	object AVHashContext		1994
+nim	AVHDRPlusOverlapProcessOption	ffmpeg/types.html#AVHDRPlusOverlapProcessOption	enum AVHDRPlusOverlapProcessOption		1996
+nim	AVHDRPlusPercentile	ffmpeg/types.html#AVHDRPlusPercentile	object AVHDRPlusPercentile		2000
+nim	AVHDRPlusColorTransformParams	ffmpeg/types.html#AVHDRPlusColorTransformParams	object AVHDRPlusColorTransformParams		2004
+nim	AVDynamicHDRPlus	ffmpeg/types.html#AVDynamicHDRPlus	object AVDynamicHDRPlus		2029
+nim	AVHMACType	ffmpeg/types.html#AVHMACType	enum AVHMACType		2044
+nim	AVHMAC	ffmpeg/types.html#AVHMAC	object AVHMAC		2052
+nim	CUcontext	ffmpeg/types.html#CUcontext	object CUcontext		2054
+nim	CUstream	ffmpeg/types.html#CUstream	object CUstream		2055
+nim	AVCUDADeviceContextInternal	ffmpeg/types.html#AVCUDADeviceContextInternal	object AVCUDADeviceContextInternal		2056
+nim	AVCUDADeviceContext	ffmpeg/types.html#AVCUDADeviceContext	object AVCUDADeviceContext		2058
+nim	AVDRMObjectDescriptor	ffmpeg/types.html#AVDRMObjectDescriptor	object AVDRMObjectDescriptor		2063
+nim	AVDRMPlaneDescriptor	ffmpeg/types.html#AVDRMPlaneDescriptor	object AVDRMPlaneDescriptor		2068
+nim	AVDRMLayerDescriptor	ffmpeg/types.html#AVDRMLayerDescriptor	object AVDRMLayerDescriptor		2073
+nim	AVDRMFrameDescriptor	ffmpeg/types.html#AVDRMFrameDescriptor	object AVDRMFrameDescriptor		2078
+nim	AVDRMDeviceContext	ffmpeg/types.html#AVDRMDeviceContext	object AVDRMDeviceContext		2084
+nim	AVMediaCodecDeviceContext	ffmpeg/types.html#AVMediaCodecDeviceContext	object AVMediaCodecDeviceContext		2087
+nim	cl_mem	ffmpeg/types.html#cl_mem	object cl_mem		2090
+nim	cl_device_id	ffmpeg/types.html#cl_device_id	object cl_device_id		2091
+nim	cl_context	ffmpeg/types.html#cl_context	object cl_context		2092
+nim	cl_command_queue	ffmpeg/types.html#cl_command_queue	object cl_command_queue		2093
+nim	AVOpenCLFrameDescriptor	ffmpeg/types.html#AVOpenCLFrameDescriptor	object AVOpenCLFrameDescriptor		2095
+nim	AVOpenCLDeviceContext	ffmpeg/types.html#AVOpenCLDeviceContext	object AVOpenCLDeviceContext		2099
+nim	AVOpenCLFramesContext	ffmpeg/types.html#AVOpenCLFramesContext	object AVOpenCLFramesContext		2104
+nim	VkAllocationCallbacks	ffmpeg/types.html#VkAllocationCallbacks	object VkAllocationCallbacks		2107
+nim	VkInstance	ffmpeg/types.html#VkInstance	object VkInstance		2108
+nim	VkPhysicalDevice	ffmpeg/types.html#VkPhysicalDevice	object VkPhysicalDevice		2109
+nim	VkDevice	ffmpeg/types.html#VkDevice	object VkDevice		2110
+nim	VkPhysicalDeviceFeatures2	ffmpeg/types.html#VkPhysicalDeviceFeatures2	object VkPhysicalDeviceFeatures2		2111
+nim	VkImageTiling	ffmpeg/types.html#VkImageTiling	object VkImageTiling		2112
+nim	VkImageUsageFlagBits	ffmpeg/types.html#VkImageUsageFlagBits	object VkImageUsageFlagBits		2113
+nim	VkImage	ffmpeg/types.html#VkImage	object VkImage		2114
+nim	VkDeviceMemory	ffmpeg/types.html#VkDeviceMemory	object VkDeviceMemory		2115
+nim	VkMemoryPropertyFlagBits	ffmpeg/types.html#VkMemoryPropertyFlagBits	object VkMemoryPropertyFlagBits		2116
+nim	VkAccessFlagBits	ffmpeg/types.html#VkAccessFlagBits	object VkAccessFlagBits		2117
+nim	VkImageLayout	ffmpeg/types.html#VkImageLayout	object VkImageLayout		2118
+nim	VkSemaphore	ffmpeg/types.html#VkSemaphore	object VkSemaphore		2119
+nim	VkFormat	ffmpeg/types.html#VkFormat	object VkFormat		2120
+nim	AVVkFrameInternal	ffmpeg/types.html#AVVkFrameInternal	object AVVkFrameInternal		2122
+nim	PFN_vkGetInstanceProcAddr	ffmpeg/types.html#PFN_vkGetInstanceProcAddr	object PFN_vkGetInstanceProcAddr		2124
+nim	AVVulkanDeviceContext	ffmpeg/types.html#AVVulkanDeviceContext	object AVVulkanDeviceContext		2126
+nim	AVVkFrameFlags	ffmpeg/types.html#AVVkFrameFlags	enum AVVkFrameFlags		2148
+nim	AVVulkanFramesContext	ffmpeg/types.html#AVVulkanFramesContext	object AVVulkanFramesContext		2152
+nim	AVVkFrame	ffmpeg/types.html#AVVkFrame	object AVVkFrame		2159
+nim	AVHWDeviceType	ffmpeg/types.html#AVHWDeviceType	enum AVHWDeviceType		2172
+nim	AVHWDeviceInternal	ffmpeg/types.html#AVHWDeviceInternal	object AVHWDeviceInternal		2186
+nim	AVHWDeviceContext	ffmpeg/types.html#AVHWDeviceContext	object AVHWDeviceContext		2188
+nim	AVHWFramesInternal	ffmpeg/types.html#AVHWFramesInternal	object AVHWFramesInternal		2196
+nim	AVHWFramesContext	ffmpeg/types.html#AVHWFramesContext	object AVHWFramesContext		2198
+nim	AVHWFrameTransferDirection	ffmpeg/types.html#AVHWFrameTransferDirection	enum AVHWFrameTransferDirection		2213
+nim	AVHWFramesConstraints	ffmpeg/types.html#AVHWFramesConstraints	object AVHWFramesConstraints		2217
+nim	av_intfloat32	ffmpeg/types.html#av_intfloat32	object av_intfloat32		2225
+nim	av_intfloat64	ffmpeg/types.html#av_intfloat64	object av_intfloat64		2229
+nim	av_alias64	ffmpeg/types.html#av_alias64	object av_alias64		2233
+nim	av_alias32	ffmpeg/types.html#av_alias32	object av_alias32		2241
+nim	av_alias16	ffmpeg/types.html#av_alias16	object av_alias16		2247
+nim	AVLFG	ffmpeg/types.html#AVLFG	object AVLFG		2251
+nim	AVMasteringDisplayMetadata	ffmpeg/types.html#AVMasteringDisplayMetadata	object AVMasteringDisplayMetadata		2255
+nim	AVContentLightMetadata	ffmpeg/types.html#AVContentLightMetadata	object AVContentLightMetadata		2263
+nim	AVRounding	ffmpeg/types.html#AVRounding	enum AVRounding		2267
+nim	AVMD5	ffmpeg/types.html#AVMD5	object AVMD5		2275
+nim	AVMotionVector	ffmpeg/types.html#AVMotionVector	object AVMotionVector		2277
+nim	AVMurMur3	ffmpeg/types.html#AVMurMur3	object AVMurMur3		2286
+nim	AVClassCategory	ffmpeg/types.html#AVClassCategory	enum AVClassCategory		2288
+nim	AVClass	ffmpeg/types.html#AVClass	object AVClass		2308
+nim	AVOptionType	ffmpeg/types.html#AVOptionType	enum AVOptionType		2321
+nim	AVOption	ffmpeg/types.html#AVOption	object AVOption		2342
+nim	AVOptionUnion	ffmpeg/types.html#AVOptionUnion	object AVOptionUnion		2352
+nim	AVOptionRange	ffmpeg/types.html#AVOptionRange	object AVOptionRange		2358
+nim	AVOptionRanges	ffmpeg/types.html#AVOptionRanges	object AVOptionRanges		2364
+nim	AVComponentDescriptor	ffmpeg/types.html#AVComponentDescriptor	object AVComponentDescriptor		2369
+nim	AVPixFmtDescriptor	ffmpeg/types.html#AVPixFmtDescriptor	object AVPixFmtDescriptor		2376
+nim	av_pixelutils_sad_fn	ffmpeg/types.html#av_pixelutils_sad_fn	type av_pixelutils_sad_fn		2385
+nim	AVPixelFormat	ffmpeg/types.html#AVPixelFormat	enum AVPixelFormat		2387
+nim	AVColorPrimaries	ffmpeg/types.html#AVColorPrimaries	enum AVColorPrimaries		2598
+nim	AVColorTransferCharacteristic	ffmpeg/types.html#AVColorTransferCharacteristic	enum AVColorTransferCharacteristic		2617
+nim	AVColorSpace	ffmpeg/types.html#AVColorSpace	enum AVColorSpace		2641
+nim	AVColorRange	ffmpeg/types.html#AVColorRange	enum AVColorRange		2660
+nim	AVChromaLocation	ffmpeg/types.html#AVChromaLocation	enum AVChromaLocation		2666
+nim	AVRational	ffmpeg/types.html#AVRational	object AVRational		2676
+nim	AVRC4	ffmpeg/types.html#AVRC4	object AVRC4		2680
+nim	AVReplayGain	ffmpeg/types.html#AVReplayGain	object AVReplayGain		2684
+nim	AVRIPEMD	ffmpeg/types.html#AVRIPEMD	object AVRIPEMD		2690
+nim	AVSampleFormat	ffmpeg/types.html#AVSampleFormat	enum AVSampleFormat		2692
+nim	AVSHA	ffmpeg/types.html#AVSHA	object AVSHA		2708
+nim	AVSHA512	ffmpeg/types.html#AVSHA512	object AVSHA512		2710
+nim	AVSphericalProjection	ffmpeg/types.html#AVSphericalProjection	enum AVSphericalProjection		2712
+nim	AVSphericalMapping	ffmpeg/types.html#AVSphericalMapping	object AVSphericalMapping		2717
+nim	AVStereo3DType	ffmpeg/types.html#AVStereo3DType	enum AVStereo3DType		2728
+nim	AVStereo3DView	ffmpeg/types.html#AVStereo3DView	enum AVStereo3DView		2738
+nim	AVStereo3D	ffmpeg/types.html#AVStereo3D	object AVStereo3D		2743
+nim	AVTEA	ffmpeg/types.html#AVTEA	object AVTEA		2748
+nim	AVThreadMessageQueue	ffmpeg/types.html#AVThreadMessageQueue	object AVThreadMessageQueue		2750
+nim	AVThreadMessageFlags	ffmpeg/types.html#AVThreadMessageFlags	enum AVThreadMessageFlags		2752
+nim	AVTimecodeFlag	ffmpeg/types.html#AVTimecodeFlag	enum AVTimecodeFlag		2755
+nim	AVTimecode	ffmpeg/types.html#AVTimecode	object AVTimecode		2760
+nim	AVTreeNode	ffmpeg/types.html#AVTreeNode	object AVTreeNode		2766
+nim	AVTWOFISH	ffmpeg/types.html#AVTWOFISH	object AVTWOFISH		2768
+nim	AVTXContext	ffmpeg/types.html#AVTXContext	object AVTXContext		2770
+nim	AVComplexFloat	ffmpeg/types.html#AVComplexFloat	object AVComplexFloat		2772
+nim	AVComplexDouble	ffmpeg/types.html#AVComplexDouble	object AVComplexDouble		2775
+nim	AVComplexInt32	ffmpeg/types.html#AVComplexInt32	object AVComplexInt32		2778
+nim	AVTXType	ffmpeg/types.html#AVTXType	enum AVTXType		2781
+nim	AVTXFlags	ffmpeg/types.html#AVTXFlags	enum AVTXFlags		2789
+nim	av_tx_fn	ffmpeg/types.html#av_tx_fn	type av_tx_fn		2794
+nim	AVVideoEncParamsType	ffmpeg/types.html#AVVideoEncParamsType	enum AVVideoEncParamsType		2796
+nim	AVVideoEncParams	ffmpeg/types.html#AVVideoEncParams	object AVVideoEncParams		2802
+nim	AVVideoBlockParams	ffmpeg/types.html#AVVideoBlockParams	object AVVideoBlockParams		2810
+nim	pp_context	ffmpeg/types.html#pp_context	object pp_context		2815
+nim	pp_mode	ffmpeg/types.html#pp_mode	object pp_mode		2816
+nim	SwrDitherType	ffmpeg/types.html#SwrDitherType	enum SwrDitherType		2818
+nim	SwrEngine	ffmpeg/types.html#SwrEngine	enum SwrEngine		2833
+nim	SwrFilterType	ffmpeg/types.html#SwrFilterType	enum SwrFilterType		2838
+nim	SwrContext	ffmpeg/types.html#SwrContext	object SwrContext		2843
+nim	SwsVector	ffmpeg/types.html#SwsVector	object SwsVector		2845
+nim	SwsFilter	ffmpeg/types.html#SwsFilter	object SwsFilter		2849
+nim	SwsContext	ffmpeg/types.html#SwsContext	object SwsContext		2855

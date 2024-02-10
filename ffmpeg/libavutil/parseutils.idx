@@ -1,10 +1,11 @@
-av_parse_ratio	ffmpeg/libavutil/parseutils.html#av_parse_ratio,ptr.AVRational,cstring,cint,cint,pointer	parseutils: av_parse_ratio(q: ptr AVRational; str: cstring; max, log_offset: cint;\n               log_ctx: pointer): cint	
-av_parse_video_size	ffmpeg/libavutil/parseutils.html#av_parse_video_size,ptr.cint,ptr.cint,cstring	parseutils: av_parse_video_size(width_ptr, height_ptr: ptr cint; str: cstring): cint	
-av_parse_video_rate	ffmpeg/libavutil/parseutils.html#av_parse_video_rate,ptr.AVRational,cstring	parseutils: av_parse_video_rate(rate: ptr AVRational; str: cstring): cint	
-av_parse_color	ffmpeg/libavutil/parseutils.html#av_parse_color,ptr.uint8,cstring,cint,pointer	parseutils: av_parse_color(rgba_color: ptr uint8; color_string: cstring; slen: cint;\n               log_ctx: pointer): cint	
-av_get_known_color_name	ffmpeg/libavutil/parseutils.html#av_get_known_color_name,cint,ptr.ptr.uint8	parseutils: av_get_known_color_name(color_idx: cint; rgb: ptr ptr uint8): cstring	
-av_parse_time	ffmpeg/libavutil/parseutils.html#av_parse_time,ptr.int64,cstring,cint	parseutils: av_parse_time(timeval: ptr int64; timestr: cstring; duration: cint): cint	
-av_find_info_tag	ffmpeg/libavutil/parseutils.html#av_find_info_tag,cstring,cint,cstringArray,cstringArray	parseutils: av_find_info_tag(arg: cstring; arg_size: cint; tag1, info: cstringArray): cint	
-av_small_strptime	ffmpeg/libavutil/parseutils.html#av_small_strptime,cstring,cstring,ptr.tm	parseutils: av_small_strptime(p, fmt: cstring; dt: ptr tm)	
-av_timegm	ffmpeg/libavutil/parseutils.html#av_timegm,ptr.tm	parseutils: av_timegm(tm: ptr tm): Time	
-av_parse_ratio_quiet	ffmpeg/libavutil/parseutils.html#av_parse_ratio_quiet.t,untyped,untyped,untyped	parseutils: av_parse_ratio_quiet(rate, str, max: untyped): untyped	
+nimTitle	parseutils	ffmpeg/libavutil/parseutils.html	module src/ffmpeg/libavutil/parseutils		0
+nim	av_parse_ratio	ffmpeg/libavutil/parseutils.html#av_parse_ratio,ptr.AVRational,cstring,cint,cint,pointer	proc av_parse_ratio(q: ptr AVRational; str: cstring; max, log_offset: cint;\n               log_ctx: pointer): cint		11
+nim	av_parse_video_size	ffmpeg/libavutil/parseutils.html#av_parse_video_size,ptr.cint,ptr.cint,cstring	proc av_parse_video_size(width_ptr, height_ptr: ptr cint; str: cstring): cint		12
+nim	av_parse_video_rate	ffmpeg/libavutil/parseutils.html#av_parse_video_rate,ptr.AVRational,cstring	proc av_parse_video_rate(rate: ptr AVRational; str: cstring): cint		13
+nim	av_parse_color	ffmpeg/libavutil/parseutils.html#av_parse_color,ptr.uint8,cstring,cint,pointer	proc av_parse_color(rgba_color: ptr uint8; color_string: cstring; slen: cint;\n               log_ctx: pointer): cint		14
+nim	av_get_known_color_name	ffmpeg/libavutil/parseutils.html#av_get_known_color_name,cint,ptr.ptr.uint8	proc av_get_known_color_name(color_idx: cint; rgb: ptr ptr uint8): cstring		15
+nim	av_parse_time	ffmpeg/libavutil/parseutils.html#av_parse_time,ptr.int64,cstring,cint	proc av_parse_time(timeval: ptr int64; timestr: cstring; duration: cint): cint		16
+nim	av_find_info_tag	ffmpeg/libavutil/parseutils.html#av_find_info_tag,cstring,cint,cstringArray,cstringArray	proc av_find_info_tag(arg: cstring; arg_size: cint; tag1, info: cstringArray): cint		17
+nim	av_small_strptime	ffmpeg/libavutil/parseutils.html#av_small_strptime,cstring,cstring,ptr.tm	proc av_small_strptime(p, fmt: cstring; dt: ptr tm)		18
+nim	av_timegm	ffmpeg/libavutil/parseutils.html#av_timegm,ptr.tm	proc av_timegm(tm: ptr tm): Time		19
+nim	av_parse_ratio_quiet	ffmpeg/libavutil/parseutils.html#av_parse_ratio_quiet.t,untyped,untyped,untyped	template av_parse_ratio_quiet(rate, str, max: untyped): untyped		21

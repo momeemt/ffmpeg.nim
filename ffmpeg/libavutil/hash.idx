@@ -1,12 +1,13 @@
-AV_HASH_MAX_SIZE	ffmpeg/libavutil/hash.html#AV_HASH_MAX_SIZE	hash: AV_HASH_MAX_SIZE	
-av_hash_alloc	ffmpeg/libavutil/hash.html#av_hash_alloc,ptr.ptr.AVHashContext,cstring	hash: av_hash_alloc(ctx: ptr ptr AVHashContext; name: cstring): cint	
-av_hash_names	ffmpeg/libavutil/hash.html#av_hash_names,cint	hash: av_hash_names(i: cint): cstring	
-av_hash_get_name	ffmpeg/libavutil/hash.html#av_hash_get_name,ptr.AVHashContext	hash: av_hash_get_name(ctx: ptr AVHashContext): cstring	
-av_hash_get_size	ffmpeg/libavutil/hash.html#av_hash_get_size,ptr.AVHashContext	hash: av_hash_get_size(ctx: ptr AVHashContext): cint	
-av_hash_init	ffmpeg/libavutil/hash.html#av_hash_init,ptr.AVHashContext	hash: av_hash_init(ctx: ptr AVHashContext)	
-av_hash_final	ffmpeg/libavutil/hash.html#av_hash_final,ptr.AVHashContext,ptr.uint8	hash: av_hash_final(ctx: ptr AVHashContext; dst: ptr uint8)	
-av_hash_final_bin	ffmpeg/libavutil/hash.html#av_hash_final_bin,ptr.AVHashContext,ptr.uint8,cint	hash: av_hash_final_bin(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)	
-av_hash_final_hex	ffmpeg/libavutil/hash.html#av_hash_final_hex,ptr.AVHashContext,ptr.uint8,cint	hash: av_hash_final_hex(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)	
-av_hash_final_b64	ffmpeg/libavutil/hash.html#av_hash_final_b64,ptr.AVHashContext,ptr.uint8,cint	hash: av_hash_final_b64(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)	
-av_hash_freep	ffmpeg/libavutil/hash.html#av_hash_freep,ptr.ptr.AVHashContext	hash: av_hash_freep(ctx: ptr ptr AVHashContext)	
-av_hash_update	ffmpeg/libavutil/hash.html#av_hash_update,ptr.AVHashContext,ptr.uint8,csize_t	hash: av_hash_update(ctx: ptr AVHashContext; src: ptr uint8; len: csize_t)	
+nimTitle	hash	ffmpeg/libavutil/hash.html	module src/ffmpeg/libavutil/hash		0
+nim	AV_HASH_MAX_SIZE	ffmpeg/libavutil/hash.html#AV_HASH_MAX_SIZE	const AV_HASH_MAX_SIZE		11
+nim	av_hash_alloc	ffmpeg/libavutil/hash.html#av_hash_alloc,ptr.ptr.AVHashContext,cstring	proc av_hash_alloc(ctx: ptr ptr AVHashContext; name: cstring): cint		13
+nim	av_hash_names	ffmpeg/libavutil/hash.html#av_hash_names,cint	proc av_hash_names(i: cint): cstring		14
+nim	av_hash_get_name	ffmpeg/libavutil/hash.html#av_hash_get_name,ptr.AVHashContext	proc av_hash_get_name(ctx: ptr AVHashContext): cstring		15
+nim	av_hash_get_size	ffmpeg/libavutil/hash.html#av_hash_get_size,ptr.AVHashContext	proc av_hash_get_size(ctx: ptr AVHashContext): cint		16
+nim	av_hash_init	ffmpeg/libavutil/hash.html#av_hash_init,ptr.AVHashContext	proc av_hash_init(ctx: ptr AVHashContext)		17
+nim	av_hash_final	ffmpeg/libavutil/hash.html#av_hash_final,ptr.AVHashContext,ptr.uint8	proc av_hash_final(ctx: ptr AVHashContext; dst: ptr uint8)		18
+nim	av_hash_final_bin	ffmpeg/libavutil/hash.html#av_hash_final_bin,ptr.AVHashContext,ptr.uint8,cint	proc av_hash_final_bin(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)		19
+nim	av_hash_final_hex	ffmpeg/libavutil/hash.html#av_hash_final_hex,ptr.AVHashContext,ptr.uint8,cint	proc av_hash_final_hex(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)		20
+nim	av_hash_final_b64	ffmpeg/libavutil/hash.html#av_hash_final_b64,ptr.AVHashContext,ptr.uint8,cint	proc av_hash_final_b64(ctx: ptr AVHashContext; dst: ptr uint8; size: cint)		21
+nim	av_hash_freep	ffmpeg/libavutil/hash.html#av_hash_freep,ptr.ptr.AVHashContext	proc av_hash_freep(ctx: ptr ptr AVHashContext)		22
+nim	av_hash_update	ffmpeg/libavutil/hash.html#av_hash_update,ptr.AVHashContext,ptr.uint8,csize_t	proc av_hash_update(ctx: ptr AVHashContext; src: ptr uint8; len: csize_t)		23

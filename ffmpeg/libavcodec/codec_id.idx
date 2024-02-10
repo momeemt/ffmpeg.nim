@@ -1,9 +1,10 @@
-AV_CODEC_ID_IFF_BYTERUN1	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_IFF_BYTERUN1	codec_id: AV_CODEC_ID_IFF_BYTERUN1	
-AV_CODEC_ID_H265	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_H265	codec_id: AV_CODEC_ID_H265	
-AV_CODEC_ID_H266	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_H266	codec_id: AV_CODEC_ID_H266	
-avcodec_get_type	ffmpeg/libavcodec/codec_id.html#avcodec_get_type,AVCodecID	codec_id: avcodec_get_type(codec_id: AVCodecID): AVMediaType	
-avcodec_get_name	ffmpeg/libavcodec/codec_id.html#avcodec_get_name,AVCodecID	codec_id: avcodec_get_name(id: AVCodecID): cstring	
-av_get_bits_per_sample	ffmpeg/libavcodec/codec_id.html#av_get_bits_per_sample,AVCodecID	codec_id: av_get_bits_per_sample(codec_id: AVCodecID): cint	
-av_get_exact_bits_per_sample	ffmpeg/libavcodec/codec_id.html#av_get_exact_bits_per_sample,AVCodecID	codec_id: av_get_exact_bits_per_sample(codec_id: AVCodecID): cint	
-avcodec_profile_name	ffmpeg/libavcodec/codec_id.html#avcodec_profile_name,AVCodecID,cint	codec_id: avcodec_profile_name(codec_id: AVCodecID; profile: cint): ptr cchar	
-av_get_pcm_codec	ffmpeg/libavcodec/codec_id.html#av_get_pcm_codec,AVSampleFormat,cint	codec_id: av_get_pcm_codec(fmt: AVSampleFormat; be: cint): AVCodecID	
+nimTitle	codec_id	ffmpeg/libavcodec/codec_id.html	module src/ffmpeg/libavcodec/codec_id		0
+nim	AV_CODEC_ID_IFF_BYTERUN1	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_IFF_BYTERUN1	const AV_CODEC_ID_IFF_BYTERUN1		4
+nim	AV_CODEC_ID_H265	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_H265	const AV_CODEC_ID_H265		5
+nim	AV_CODEC_ID_H266	ffmpeg/libavcodec/codec_id.html#AV_CODEC_ID_H266	const AV_CODEC_ID_H266		6
+nim	avcodec_get_type	ffmpeg/libavcodec/codec_id.html#avcodec_get_type,AVCodecID	proc avcodec_get_type(codec_id: AVCodecID): AVMediaType		15
+nim	avcodec_get_name	ffmpeg/libavcodec/codec_id.html#avcodec_get_name,AVCodecID	proc avcodec_get_name(id: AVCodecID): cstring		16
+nim	av_get_bits_per_sample	ffmpeg/libavcodec/codec_id.html#av_get_bits_per_sample,AVCodecID	proc av_get_bits_per_sample(codec_id: AVCodecID): cint		17
+nim	av_get_exact_bits_per_sample	ffmpeg/libavcodec/codec_id.html#av_get_exact_bits_per_sample,AVCodecID	proc av_get_exact_bits_per_sample(codec_id: AVCodecID): cint		18
+nim	avcodec_profile_name	ffmpeg/libavcodec/codec_id.html#avcodec_profile_name,AVCodecID,cint	proc avcodec_profile_name(codec_id: AVCodecID; profile: cint): ptr cchar		19
+nim	av_get_pcm_codec	ffmpeg/libavcodec/codec_id.html#av_get_pcm_codec,AVSampleFormat,cint	proc av_get_pcm_codec(fmt: AVSampleFormat; be: cint): AVCodecID		20

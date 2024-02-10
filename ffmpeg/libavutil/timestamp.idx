@@ -1,3 +1,4 @@
-AV_TS_MAX_STRING_SIZE	ffmpeg/libavutil/timestamp.html#AV_TS_MAX_STRING_SIZE	timestamp: AV_TS_MAX_STRING_SIZE	
-av_ts2str	ffmpeg/libavutil/timestamp.html#av_ts2str.t,untyped	timestamp: av_ts2str(ts: untyped): untyped	
-av_ts2timestr	ffmpeg/libavutil/timestamp.html#av_ts2timestr.t,untyped,untyped	timestamp: av_ts2timestr(ts, tb: untyped): untyped	
+nimTitle	timestamp	ffmpeg/libavutil/timestamp.html	module src/ffmpeg/libavutil/timestamp		0
+nim	AV_TS_MAX_STRING_SIZE	ffmpeg/libavutil/timestamp.html#AV_TS_MAX_STRING_SIZE	const AV_TS_MAX_STRING_SIZE		6
+nim	av_ts2str	ffmpeg/libavutil/timestamp.html#av_ts2str.t,untyped	template av_ts2str(ts: untyped): untyped		16
+nim	av_ts2timestr	ffmpeg/libavutil/timestamp.html#av_ts2timestr.t,untyped,untyped	template av_ts2timestr(ts, tb: untyped): untyped		25

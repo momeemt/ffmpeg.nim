@@ -1,14 +1,15 @@
-AV_NE	ffmpeg/libavutil/macros.html#AV_NE.t,untyped,untyped	macros: AV_NE(be, le: untyped): untyped	
-FFDIFFSIGN	ffmpeg/libavutil/macros.html#FFDIFFSIGN.t,untyped,untyped	macros: FFDIFFSIGN(x, y: untyped): untyped	
-FFMAX	ffmpeg/libavutil/macros.html#FFMAX.t,untyped,untyped	macros: FFMAX(a, b: untyped): untyped	
-FFMAX3	ffmpeg/libavutil/macros.html#FFMAX3.t,untyped,untyped,untyped	macros: FFMAX3(a, b, c: untyped): untyped	
-FFMIN	ffmpeg/libavutil/macros.html#FFMIN.t,untyped,untyped	macros: FFMIN(a, b: untyped): untyped	
-FFMIN3	ffmpeg/libavutil/macros.html#FFMIN3.t,untyped,untyped,untyped	macros: FFMIN3(a, b, c: untyped): untyped	
-FF_ARRAY_ELEMS	ffmpeg/libavutil/macros.html#FF_ARRAY_ELEMS.t,untyped	macros: FF_ARRAY_ELEMS(a: untyped): untyped	
-MKTAG	ffmpeg/libavutil/macros.html#MKTAG.t,untyped,untyped,untyped,untyped	macros: MKTAG(a, b, c, d: untyped): untyped	
-MKBETAG	ffmpeg/libavutil/macros.html#MKBETAG.t,untyped,untyped,untyped,untyped	macros: MKBETAG(a, b, c, d: untyped): untyped	
-AV_TOSTRING	ffmpeg/libavutil/macros.html#AV_TOSTRING.t,untyped	macros: AV_TOSTRING(s: untyped): untyped	
-AV_STRINGIFY	ffmpeg/libavutil/macros.html#AV_STRINGIFY.t,untyped	macros: AV_STRINGIFY(s: untyped): untyped	
-AV_GLUE	ffmpeg/libavutil/macros.html#AV_GLUE.t,untyped,untyped	macros: AV_GLUE(a, b: untyped): untyped	
-AV_JOIN	ffmpeg/libavutil/macros.html#AV_JOIN.t,untyped,untyped	macros: AV_JOIN(a, b: untyped): untyped	
-FFALIGN	ffmpeg/libavutil/macros.html#FFALIGN.t,untyped,untyped	macros: FFALIGN(x, a: untyped): untyped	
+nimTitle	macros	ffmpeg/libavutil/macros.html	module src/ffmpeg/libavutil/macros		0
+nim	AV_NE	ffmpeg/libavutil/macros.html#AV_NE.t,untyped,untyped	template AV_NE(be, le: untyped): untyped		13
+nim	FFDIFFSIGN	ffmpeg/libavutil/macros.html#FFDIFFSIGN.t,untyped,untyped	template FFDIFFSIGN(x, y: untyped): untyped		15
+nim	FFMAX	ffmpeg/libavutil/macros.html#FFMAX.t,untyped,untyped	template FFMAX(a, b: untyped): untyped		18
+nim	FFMAX3	ffmpeg/libavutil/macros.html#FFMAX3.t,untyped,untyped,untyped	template FFMAX3(a, b, c: untyped): untyped		22
+nim	FFMIN	ffmpeg/libavutil/macros.html#FFMIN.t,untyped,untyped	template FFMIN(a, b: untyped): untyped		25
+nim	FFMIN3	ffmpeg/libavutil/macros.html#FFMIN3.t,untyped,untyped,untyped	template FFMIN3(a, b, c: untyped): untyped		29
+nim	FF_ARRAY_ELEMS	ffmpeg/libavutil/macros.html#FF_ARRAY_ELEMS.t,untyped	template FF_ARRAY_ELEMS(a: untyped): untyped		38
+nim	MKTAG	ffmpeg/libavutil/macros.html#MKTAG.t,untyped,untyped,untyped,untyped	template MKTAG(a, b, c, d: untyped): untyped		41
+nim	MKBETAG	ffmpeg/libavutil/macros.html#MKBETAG.t,untyped,untyped,untyped,untyped	template MKBETAG(a, b, c, d: untyped): untyped		44
+nim	AV_TOSTRING	ffmpeg/libavutil/macros.html#AV_TOSTRING.t,untyped	template AV_TOSTRING(s: untyped): untyped		47
+nim	AV_STRINGIFY	ffmpeg/libavutil/macros.html#AV_STRINGIFY.t,untyped	template AV_STRINGIFY(s: untyped): untyped		50
+nim	AV_GLUE	ffmpeg/libavutil/macros.html#AV_GLUE.t,untyped,untyped	template AV_GLUE(a, b: untyped): untyped		53
+nim	AV_JOIN	ffmpeg/libavutil/macros.html#AV_JOIN.t,untyped,untyped	template AV_JOIN(a, b: untyped): untyped		56
+nim	FFALIGN	ffmpeg/libavutil/macros.html#FFALIGN.t,untyped,untyped	template FFALIGN(x, a: untyped): untyped		59

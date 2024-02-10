@@ -1,15 +1,16 @@
-av_fft_init	ffmpeg/libavcodec/avfft.html#av_fft_init,cint,cint	avfft: av_fft_init(nbits, inverse: cint): ptr FFTContext	
-av_fft_permute	ffmpeg/libavcodec/avfft.html#av_fft_permute,ptr.FFTContext,ptr.FFTComplex	avfft: av_fft_permute(s: ptr FFTContext; z: ptr FFTComplex)	
-av_fft_calc	ffmpeg/libavcodec/avfft.html#av_fft_calc,ptr.FFTContext,ptr.FFTComplex	avfft: av_fft_calc(s: ptr FFTContext; z: ptr FFTComplex)	
-av_fft_end	ffmpeg/libavcodec/avfft.html#av_fft_end,ptr.FFTContext	avfft: av_fft_end(s: ptr FFTContext)	
-av_mdct_init	ffmpeg/libavcodec/avfft.html#av_mdct_init,cint,cint,cdouble	avfft: av_mdct_init(nbits, inverse: cint; scale: cdouble): ptr FFTContext	
-av_imdct_calc	ffmpeg/libavcodec/avfft.html#av_imdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_imdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)	
-av_imdct_half	ffmpeg/libavcodec/avfft.html#av_imdct_half,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_imdct_half(s: ptr FFTContext; output, input: ptr FFTSample)	
-av_mdct_calc	ffmpeg/libavcodec/avfft.html#av_mdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	avfft: av_mdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)	
-av_mdct_end	ffmpeg/libavcodec/avfft.html#av_mdct_end,ptr.FFTContext	avfft: av_mdct_end(s: ptr FFTContext)	
-av_rdft_init	ffmpeg/libavcodec/avfft.html#av_rdft_init,cint,RDFTransformType	avfft: av_rdft_init(nbits: cint; trans: RDFTransformType): ptr RDFTContext	
-av_rdft_calc	ffmpeg/libavcodec/avfft.html#av_rdft_calc,ptr.RDFTContext,ptr.FFTSample	avfft: av_rdft_calc(s: ptr RDFTContext; data: ptr FFTSample)	
-av_rdft_end	ffmpeg/libavcodec/avfft.html#av_rdft_end,ptr.RDFTContext	avfft: av_rdft_end(s: ptr RDFTContext)	
-av_dct_init	ffmpeg/libavcodec/avfft.html#av_dct_init,cint,DCTTransformType	avfft: av_dct_init(nbits: cint; type: DCTTransformType): ptr DCTContext	
-av_dct_calc	ffmpeg/libavcodec/avfft.html#av_dct_calc,ptr.DCTContext,ptr.FFTSample	avfft: av_dct_calc(s: ptr DCTContext; data: ptr FFTSample)	
-av_dct_end	ffmpeg/libavcodec/avfft.html#av_dct_end,ptr.DCTContext	avfft: av_dct_end(s: ptr DCTContext)	
+nimTitle	avfft	ffmpeg/libavcodec/avfft.html	module src/ffmpeg/libavcodec/avfft		0
+nim	av_fft_init	ffmpeg/libavcodec/avfft.html#av_fft_init,cint,cint	proc av_fft_init(nbits, inverse: cint): ptr FFTContext		10
+nim	av_fft_permute	ffmpeg/libavcodec/avfft.html#av_fft_permute,ptr.FFTContext,ptr.FFTComplex	proc av_fft_permute(s: ptr FFTContext; z: ptr FFTComplex)		11
+nim	av_fft_calc	ffmpeg/libavcodec/avfft.html#av_fft_calc,ptr.FFTContext,ptr.FFTComplex	proc av_fft_calc(s: ptr FFTContext; z: ptr FFTComplex)		12
+nim	av_fft_end	ffmpeg/libavcodec/avfft.html#av_fft_end,ptr.FFTContext	proc av_fft_end(s: ptr FFTContext)		13
+nim	av_mdct_init	ffmpeg/libavcodec/avfft.html#av_mdct_init,cint,cint,cdouble	proc av_mdct_init(nbits, inverse: cint; scale: cdouble): ptr FFTContext		14
+nim	av_imdct_calc	ffmpeg/libavcodec/avfft.html#av_imdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	proc av_imdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)		15
+nim	av_imdct_half	ffmpeg/libavcodec/avfft.html#av_imdct_half,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	proc av_imdct_half(s: ptr FFTContext; output, input: ptr FFTSample)		16
+nim	av_mdct_calc	ffmpeg/libavcodec/avfft.html#av_mdct_calc,ptr.FFTContext,ptr.FFTSample,ptr.FFTSample	proc av_mdct_calc(s: ptr FFTContext; output, input: ptr FFTSample)		17
+nim	av_mdct_end	ffmpeg/libavcodec/avfft.html#av_mdct_end,ptr.FFTContext	proc av_mdct_end(s: ptr FFTContext)		18
+nim	av_rdft_init	ffmpeg/libavcodec/avfft.html#av_rdft_init,cint,RDFTransformType	proc av_rdft_init(nbits: cint; trans: RDFTransformType): ptr RDFTContext		19
+nim	av_rdft_calc	ffmpeg/libavcodec/avfft.html#av_rdft_calc,ptr.RDFTContext,ptr.FFTSample	proc av_rdft_calc(s: ptr RDFTContext; data: ptr FFTSample)		20
+nim	av_rdft_end	ffmpeg/libavcodec/avfft.html#av_rdft_end,ptr.RDFTContext	proc av_rdft_end(s: ptr RDFTContext)		21
+nim	av_dct_init	ffmpeg/libavcodec/avfft.html#av_dct_init,cint,DCTTransformType	proc av_dct_init(nbits: cint; type: DCTTransformType): ptr DCTContext		22
+nim	av_dct_calc	ffmpeg/libavcodec/avfft.html#av_dct_calc,ptr.DCTContext,ptr.FFTSample	proc av_dct_calc(s: ptr DCTContext; data: ptr FFTSample)		23
+nim	av_dct_end	ffmpeg/libavcodec/avfft.html#av_dct_end,ptr.DCTContext	proc av_dct_end(s: ptr DCTContext)		24

@@ -1,20 +1,21 @@
-PP_QUALITY_MAX	ffmpeg/libpostproc/postprocess.html#PP_QUALITY_MAX	postprocess: PP_QUALITY_MAX	
-PP_CPU_CAPS_MMX	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_MMX	postprocess: PP_CPU_CAPS_MMX	
-PP_CPU_CAPS_MMX2	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_MMX2	postprocess: PP_CPU_CAPS_MMX2	
-PP_CPU_CAPS_3DNOW	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_3DNOW	postprocess: PP_CPU_CAPS_3DNOW	
-PP_CPU_CAPS_ALTIVEC	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_ALTIVEC	postprocess: PP_CPU_CAPS_ALTIVEC	
-PP_CPU_CAPS_AUTO	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_AUTO	postprocess: PP_CPU_CAPS_AUTO	
-PP_FORMAT	ffmpeg/libpostproc/postprocess.html#PP_FORMAT	postprocess: PP_FORMAT	
-PP_FORMAT_420	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_420	postprocess: PP_FORMAT_420	
-PP_FORMAT_422	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_422	postprocess: PP_FORMAT_422	
-PP_FORMAT_411	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_411	postprocess: PP_FORMAT_411	
-PP_FORMAT_444	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_444	postprocess: PP_FORMAT_444	
-PP_FORMAT_440	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_440	postprocess: PP_FORMAT_440	
-PP_PICT_TYPE_QP2	ffmpeg/libpostproc/postprocess.html#PP_PICT_TYPE_QP2	postprocess: PP_PICT_TYPE_QP2	
-pp_help	ffmpeg/libpostproc/postprocess.html#pp_help	postprocess: pp_help	
-postproc_version	ffmpeg/libpostproc/postprocess.html#postproc_version	postprocess: postproc_version(): cuint	
-postproc_configuration	ffmpeg/libpostproc/postprocess.html#postproc_configuration	postprocess: postproc_configuration(): cstring	
-postproc_license	ffmpeg/libpostproc/postprocess.html#postproc_license	postprocess: postproc_license(): cstring	
-pp_postprocess	ffmpeg/libpostproc/postprocess.html#pp_postprocess,ptr.ptr.uint8,ptr.cint,ptr.ptr.uint8,ptr.cint,cint,cint,ptr.int8,cint,ptr.pp_mode,ptr.pp_context,cint	postprocess: pp_postprocess(src: ptr ptr uint8; srcStride: ptr cint; dst: ptr ptr uint8;\n               dstStride: ptr cint; horizontalSize, verticalSize: cint;\n               QP_store: ptr int8; QP_stride: cint; mode: ptr pp_mode;\n               ppContext: ptr pp_context; pict_type: cint)	
-pp_get_mode_by_name_and_quality	ffmpeg/libpostproc/postprocess.html#pp_get_mode_by_name_and_quality,cint,cint,cint	postprocess: pp_get_mode_by_name_and_quality(width, height, flags: cint): ptr pp_context	
-pp_free_context	ffmpeg/libpostproc/postprocess.html#pp_free_context,ptr.pp_context	postprocess: pp_free_context(ppContext: ptr pp_context)	
+nimTitle	postprocess	ffmpeg/libpostproc/postprocess.html	module src/ffmpeg/libpostproc/postprocess		0
+nim	PP_QUALITY_MAX	ffmpeg/libpostproc/postprocess.html#PP_QUALITY_MAX	const PP_QUALITY_MAX		11
+nim	PP_CPU_CAPS_MMX	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_MMX	const PP_CPU_CAPS_MMX		12
+nim	PP_CPU_CAPS_MMX2	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_MMX2	const PP_CPU_CAPS_MMX2		13
+nim	PP_CPU_CAPS_3DNOW	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_3DNOW	const PP_CPU_CAPS_3DNOW		14
+nim	PP_CPU_CAPS_ALTIVEC	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_ALTIVEC	const PP_CPU_CAPS_ALTIVEC		15
+nim	PP_CPU_CAPS_AUTO	ffmpeg/libpostproc/postprocess.html#PP_CPU_CAPS_AUTO	const PP_CPU_CAPS_AUTO		16
+nim	PP_FORMAT	ffmpeg/libpostproc/postprocess.html#PP_FORMAT	const PP_FORMAT		17
+nim	PP_FORMAT_420	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_420	const PP_FORMAT_420		18
+nim	PP_FORMAT_422	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_422	const PP_FORMAT_422		19
+nim	PP_FORMAT_411	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_411	const PP_FORMAT_411		20
+nim	PP_FORMAT_444	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_444	const PP_FORMAT_444		21
+nim	PP_FORMAT_440	ffmpeg/libpostproc/postprocess.html#PP_FORMAT_440	const PP_FORMAT_440		22
+nim	PP_PICT_TYPE_QP2	ffmpeg/libpostproc/postprocess.html#PP_PICT_TYPE_QP2	const PP_PICT_TYPE_QP2		23
+nim	pp_help	ffmpeg/libpostproc/postprocess.html#pp_help	var pp_help		25
+nim	postproc_version	ffmpeg/libpostproc/postprocess.html#postproc_version	proc postproc_version(): cuint		27
+nim	postproc_configuration	ffmpeg/libpostproc/postprocess.html#postproc_configuration	proc postproc_configuration(): cstring		28
+nim	postproc_license	ffmpeg/libpostproc/postprocess.html#postproc_license	proc postproc_license(): cstring		29
+nim	pp_postprocess	ffmpeg/libpostproc/postprocess.html#pp_postprocess,ptr.ptr.uint8,ptr.cint,ptr.ptr.uint8,ptr.cint,cint,cint,ptr.int8,cint,ptr.pp_mode,ptr.pp_context,cint	proc pp_postprocess(src: ptr ptr uint8; srcStride: ptr cint; dst: ptr ptr uint8;\n               dstStride: ptr cint; horizontalSize, verticalSize: cint;\n               QP_store: ptr int8; QP_stride: cint; mode: ptr pp_mode;\n               ppContext: ptr pp_context; pict_type: cint)		30
+nim	pp_get_mode_by_name_and_quality	ffmpeg/libpostproc/postprocess.html#pp_get_mode_by_name_and_quality,cint,cint,cint	proc pp_get_mode_by_name_and_quality(width, height, flags: cint): ptr pp_context		31
+nim	pp_free_context	ffmpeg/libpostproc/postprocess.html#pp_free_context,ptr.pp_context	proc pp_free_context(ppContext: ptr pp_context)		32

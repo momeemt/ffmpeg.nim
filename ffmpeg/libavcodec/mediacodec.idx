@@ -1,5 +1,6 @@
-av_mediacodec_alloc_context	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_alloc_context	mediacodec: av_mediacodec_alloc_context(): AVMediaCodecContext	
-av_mediacodec_default_init	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_default_init,ptr.AVCodecContext,ptr.AVMediaCodecContext,pointer	mediacodec: av_mediacodec_default_init(avctx: ptr AVCodecContext;\n                           ctx: ptr AVMediaCodecContext; surface: pointer): cint	
-av_mediacodec_default_free	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_default_free,ptr.AVCodecContext	mediacodec: av_mediacodec_default_free(avctx: ptr AVCodecContext)	
-av_mediacodec_release_buffer	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_release_buffer,ptr.AVMediaCodecContext,cint	mediacodec: av_mediacodec_release_buffer(buffer: ptr AVMediaCodecContext; render: cint): cint	
-av_mediacodec_render_buffer_at_time	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_render_buffer_at_time,ptr.AVMediaCodecContext,int64	mediacodec: av_mediacodec_render_buffer_at_time(buffer: ptr AVMediaCodecContext; time: int64): cint	
+nimTitle	mediacodec	ffmpeg/libavcodec/mediacodec.html	module src/ffmpeg/libavcodec/mediacodec		0
+nim	av_mediacodec_alloc_context	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_alloc_context	proc av_mediacodec_alloc_context(): AVMediaCodecContext		10
+nim	av_mediacodec_default_init	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_default_init,ptr.AVCodecContext,ptr.AVMediaCodecContext,pointer	proc av_mediacodec_default_init(avctx: ptr AVCodecContext;\n                           ctx: ptr AVMediaCodecContext; surface: pointer): cint		11
+nim	av_mediacodec_default_free	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_default_free,ptr.AVCodecContext	proc av_mediacodec_default_free(avctx: ptr AVCodecContext)		12
+nim	av_mediacodec_release_buffer	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_release_buffer,ptr.AVMediaCodecContext,cint	proc av_mediacodec_release_buffer(buffer: ptr AVMediaCodecContext; render: cint): cint		13
+nim	av_mediacodec_render_buffer_at_time	ffmpeg/libavcodec/mediacodec.html#av_mediacodec_render_buffer_at_time,ptr.AVMediaCodecContext,int64	proc av_mediacodec_render_buffer_at_time(buffer: ptr AVMediaCodecContext; time: int64): cint		14

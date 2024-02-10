@@ -1,7 +1,8 @@
-AV_LZO_INPUT_DEPLETED	ffmpeg/libavutil/lzo.html#AV_LZO_INPUT_DEPLETED	lzo: AV_LZO_INPUT_DEPLETED	
-AV_LZO_OUTPUT_FULL	ffmpeg/libavutil/lzo.html#AV_LZO_OUTPUT_FULL	lzo: AV_LZO_OUTPUT_FULL	
-AV_LZO_INVALID_BACKPTR	ffmpeg/libavutil/lzo.html#AV_LZO_INVALID_BACKPTR	lzo: AV_LZO_INVALID_BACKPTR	
-AV_LZO_ERROR	ffmpeg/libavutil/lzo.html#AV_LZO_ERROR	lzo: AV_LZO_ERROR	
-AV_LZO_INPUT_PADDING	ffmpeg/libavutil/lzo.html#AV_LZO_INPUT_PADDING	lzo: AV_LZO_INPUT_PADDING	
-AV_LZO_OUTPUT_PADDING	ffmpeg/libavutil/lzo.html#AV_LZO_OUTPUT_PADDING	lzo: AV_LZO_OUTPUT_PADDING	
-av_lzo1x_decode	ffmpeg/libavutil/lzo.html#av_lzo1x_decode,pointer,ptr.cint,pointer,ptr.cint	lzo: av_lzo1x_decode(out: pointer; outlen: ptr cint; in: pointer; inlen: ptr cint): cint	
+nimTitle	lzo	ffmpeg/libavutil/lzo.html	module src/ffmpeg/libavutil/lzo		0
+nim	AV_LZO_INPUT_DEPLETED	ffmpeg/libavutil/lzo.html#AV_LZO_INPUT_DEPLETED	const AV_LZO_INPUT_DEPLETED		9
+nim	AV_LZO_OUTPUT_FULL	ffmpeg/libavutil/lzo.html#AV_LZO_OUTPUT_FULL	const AV_LZO_OUTPUT_FULL		10
+nim	AV_LZO_INVALID_BACKPTR	ffmpeg/libavutil/lzo.html#AV_LZO_INVALID_BACKPTR	const AV_LZO_INVALID_BACKPTR		11
+nim	AV_LZO_ERROR	ffmpeg/libavutil/lzo.html#AV_LZO_ERROR	const AV_LZO_ERROR		12
+nim	AV_LZO_INPUT_PADDING	ffmpeg/libavutil/lzo.html#AV_LZO_INPUT_PADDING	const AV_LZO_INPUT_PADDING		13
+nim	AV_LZO_OUTPUT_PADDING	ffmpeg/libavutil/lzo.html#AV_LZO_OUTPUT_PADDING	const AV_LZO_OUTPUT_PADDING		14
+nim	av_lzo1x_decode	ffmpeg/libavutil/lzo.html#av_lzo1x_decode,pointer,ptr.cint,pointer,ptr.cint	proc av_lzo1x_decode(out: pointer; outlen: ptr cint; in: pointer; inlen: ptr cint): cint		16

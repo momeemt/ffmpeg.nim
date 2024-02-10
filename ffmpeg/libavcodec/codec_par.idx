@@ -1,4 +1,5 @@
-avcodec_parameters_alloc	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_alloc	codec_par: avcodec_parameters_alloc(): ptr AVCodecParameters	
-avcodec_parameters_free	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_free,ptr.ptr.AVCodecParameters	codec_par: avcodec_parameters_free(par: ptr ptr AVCodecParameters)	
-avcodec_parameters_copy	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_copy,ptr.AVCodecParameters,ptr.AVCodecParameters	codec_par: avcodec_parameters_copy(dst, src: ptr AVCodecParameters): cint	
-av_get_audio_frame_duration2	ffmpeg/libavcodec/codec_par.html#av_get_audio_frame_duration2,ptr.AVCodecParameters,cint	codec_par: av_get_audio_frame_duration2(par: ptr AVCodecParameters; frame_bytes: cint): cint	
+nimTitle	codec_par	ffmpeg/libavcodec/codec_par.html	module src/ffmpeg/libavcodec/codec_par		0
+nim	avcodec_parameters_alloc	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_alloc	proc avcodec_parameters_alloc(): ptr AVCodecParameters		10
+nim	avcodec_parameters_free	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_free,ptr.ptr.AVCodecParameters	proc avcodec_parameters_free(par: ptr ptr AVCodecParameters)		11
+nim	avcodec_parameters_copy	ffmpeg/libavcodec/codec_par.html#avcodec_parameters_copy,ptr.AVCodecParameters,ptr.AVCodecParameters	proc avcodec_parameters_copy(dst, src: ptr AVCodecParameters): cint		12
+nim	av_get_audio_frame_duration2	ffmpeg/libavcodec/codec_par.html#av_get_audio_frame_duration2,ptr.AVCodecParameters,cint	proc av_get_audio_frame_duration2(par: ptr AVCodecParameters; frame_bytes: cint): cint		13

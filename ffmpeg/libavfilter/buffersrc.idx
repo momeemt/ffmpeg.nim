@@ -1,10 +1,11 @@
-AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT	buffersrc: AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT	
-AV_BUFFERSRC_FLAG_PUSH	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_PUSH	buffersrc: AV_BUFFERSRC_FLAG_PUSH	
-AV_BUFFERSRC_FLAG_KEEP_REF	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_KEEP_REF	buffersrc: AV_BUFFERSRC_FLAG_KEEP_REF	
-av_buffersrc_get_nb_failed_requests	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_get_nb_failed_requests,ptr.AVFilterContext	buffersrc: av_buffersrc_get_nb_failed_requests(buffer_src: ptr AVFilterContext): cuint	
-av_buffersrc_parameters_alloc	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_parameters_alloc	buffersrc: av_buffersrc_parameters_alloc(): ptr AVBufferSrcParameters	
-av_buffersrc_parameters_set	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_parameters_set,ptr.AVFilterContext,ptr.AVBufferSrcParameters	buffersrc: av_buffersrc_parameters_set(ctx: ptr AVFilterContext;\n                            param: ptr AVBufferSrcParameters): cint	
-av_buffersrc_write_frame	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_write_frame,ptr.AVFilterContext,ptr.AVFrame	buffersrc: av_buffersrc_write_frame(ctx: ptr AVFilterContext; frame: ptr AVFrame): cint	
-av_buffersrc_add_frame	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_add_frame,ptr.AVFilterContext,ptr.AVFrame	buffersrc: av_buffersrc_add_frame(ctx: ptr AVFilterContext; frame: ptr AVFrame): cint	
-av_buffersrc_add_frame_flags	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_add_frame_flags,ptr.AVFilterContext,ptr.AVFrame,cint	buffersrc: av_buffersrc_add_frame_flags(buffer_src: ptr AVFilterContext;\n                             frame: ptr AVFrame; flags: cint): cint	
-av_buffersrc_close	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_close,ptr.AVFilterContext,int64,cuint	buffersrc: av_buffersrc_close(ctx: ptr AVFilterContext; pts: int64; flags: cuint): cint	
+nimTitle	buffersrc	ffmpeg/libavfilter/buffersrc.html	module src/ffmpeg/libavfilter/buffersrc		0
+nim	AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT	const AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT		11
+nim	AV_BUFFERSRC_FLAG_PUSH	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_PUSH	const AV_BUFFERSRC_FLAG_PUSH		12
+nim	AV_BUFFERSRC_FLAG_KEEP_REF	ffmpeg/libavfilter/buffersrc.html#AV_BUFFERSRC_FLAG_KEEP_REF	const AV_BUFFERSRC_FLAG_KEEP_REF		13
+nim	av_buffersrc_get_nb_failed_requests	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_get_nb_failed_requests,ptr.AVFilterContext	proc av_buffersrc_get_nb_failed_requests(buffer_src: ptr AVFilterContext): cuint		15
+nim	av_buffersrc_parameters_alloc	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_parameters_alloc	proc av_buffersrc_parameters_alloc(): ptr AVBufferSrcParameters		16
+nim	av_buffersrc_parameters_set	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_parameters_set,ptr.AVFilterContext,ptr.AVBufferSrcParameters	proc av_buffersrc_parameters_set(ctx: ptr AVFilterContext;\n                            param: ptr AVBufferSrcParameters): cint		17
+nim	av_buffersrc_write_frame	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_write_frame,ptr.AVFilterContext,ptr.AVFrame	proc av_buffersrc_write_frame(ctx: ptr AVFilterContext; frame: ptr AVFrame): cint		18
+nim	av_buffersrc_add_frame	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_add_frame,ptr.AVFilterContext,ptr.AVFrame	proc av_buffersrc_add_frame(ctx: ptr AVFilterContext; frame: ptr AVFrame): cint		19
+nim	av_buffersrc_add_frame_flags	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_add_frame_flags,ptr.AVFilterContext,ptr.AVFrame,cint	proc av_buffersrc_add_frame_flags(buffer_src: ptr AVFilterContext;\n                             frame: ptr AVFrame; flags: cint): cint		20
+nim	av_buffersrc_close	ffmpeg/libavfilter/buffersrc.html#av_buffersrc_close,ptr.AVFilterContext,int64,cuint	proc av_buffersrc_close(ctx: ptr AVFilterContext; pts: int64; flags: cuint): cint		21

@@ -1,1 +1,2 @@
-av_downmix_info_update_side_data	ffmpeg/libavutil/downmin_info.html#av_downmix_info_update_side_data,ptr.AVFrame	downmin_info: av_downmix_info_update_side_data(frame: ptr AVFrame): ptr AVDownmixInfo	
+nimTitle	downmin_info	ffmpeg/libavutil/downmin_info.html	module src/ffmpeg/libavutil/downmin_info		0
+nim	av_downmix_info_update_side_data	ffmpeg/libavutil/downmin_info.html#av_downmix_info_update_side_data,ptr.AVFrame	proc av_downmix_info_update_side_data(frame: ptr AVFrame): ptr AVDownmixInfo		10

@@ -1,2 +1,3 @@
-av_tx_init	ffmpeg/libavutil/tx.html#av_tx_init,ptr.ptr.AVTXContext,ptr.av_tx_fn,AVTXType,cint,cint,pointer,uint64	tx: av_tx_init(ctx: ptr ptr AVTXContext; tx: ptr av_tx_fn; type: AVTXType;\n           inv, len: cint; scale: pointer; flags: uint64): cint	
-av_tx_uninit	ffmpeg/libavutil/tx.html#av_tx_uninit,ptr.ptr.AVTXContext	tx: av_tx_uninit(ctx: ptr ptr AVTXContext)	
+nimTitle	tx	ffmpeg/libavutil/tx.html	module src/ffmpeg/libavutil/tx		0
+nim	av_tx_init	ffmpeg/libavutil/tx.html#av_tx_init,ptr.ptr.AVTXContext,ptr.av_tx_fn,AVTXType,cint,cint,pointer,uint64	proc av_tx_init(ctx: ptr ptr AVTXContext; tx: ptr av_tx_fn; type: AVTXType;\n           inv, len: cint; scale: pointer; flags: uint64): cint		10
+nim	av_tx_uninit	ffmpeg/libavutil/tx.html#av_tx_uninit,ptr.ptr.AVTXContext	proc av_tx_uninit(ctx: ptr ptr AVTXContext)		11

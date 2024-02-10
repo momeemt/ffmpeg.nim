@@ -1,4 +1,5 @@
-XvMCMacroBlock	ffmpeg/libavcodec/xvmc.html#XvMCMacroBlock	xvmc: XvMCMacroBlock	
-XvMCSurface	ffmpeg/libavcodec/xvmc.html#XvMCSurface	xvmc: XvMCSurface	
-xvmc_pix_fmt	ffmpeg/libavcodec/xvmc.html#xvmc_pix_fmt	xvmc: xvmc_pix_fmt	
-AV_XVMC_ID	ffmpeg/libavcodec/xvmc.html#AV_XVMC_ID	xvmc: AV_XVMC_ID	
+nimTitle	xvmc	ffmpeg/libavcodec/xvmc.html	module src/ffmpeg/libavcodec/xvmc		0
+nim	XvMCMacroBlock	ffmpeg/libavcodec/xvmc.html#XvMCMacroBlock	object XvMCMacroBlock		5
+nim	XvMCSurface	ffmpeg/libavcodec/xvmc.html#XvMCSurface	object XvMCSurface		6
+nim	xvmc_pix_fmt	ffmpeg/libavcodec/xvmc.html#xvmc_pix_fmt	object xvmc_pix_fmt		8
+nim	AV_XVMC_ID	ffmpeg/libavcodec/xvmc.html#AV_XVMC_ID	const AV_XVMC_ID		33

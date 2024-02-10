@@ -1,4 +1,5 @@
-av_gettime	ffmpeg/libavutil/time.html#av_gettime	time: av_gettime(): int64	
-av_gettime_relative	ffmpeg/libavutil/time.html#av_gettime_relative	time: av_gettime_relative(): int64	
-av_gettime_relative_is_monotonic	ffmpeg/libavutil/time.html#av_gettime_relative_is_monotonic	time: av_gettime_relative_is_monotonic(): cint	
-av_usleep	ffmpeg/libavutil/time.html#av_usleep,cuint	time: av_usleep(usec: cuint): cint	
+nimTitle	time	ffmpeg/libavutil/time.html	module src/ffmpeg/libavutil/time		0
+nim	av_gettime	ffmpeg/libavutil/time.html#av_gettime	proc av_gettime(): int64		8
+nim	av_gettime_relative	ffmpeg/libavutil/time.html#av_gettime_relative	proc av_gettime_relative(): int64		9
+nim	av_gettime_relative_is_monotonic	ffmpeg/libavutil/time.html#av_gettime_relative_is_monotonic	proc av_gettime_relative_is_monotonic(): cint		10
+nim	av_usleep	ffmpeg/libavutil/time.html#av_usleep,cuint	proc av_usleep(usec: cuint): cint		11

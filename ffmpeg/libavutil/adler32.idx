@@ -1,2 +1,3 @@
-AVAdler	ffmpeg/libavutil/adler32.html#AVAdler	adler32: AVAdler	
-av_adler32_update	ffmpeg/libavutil/adler32.html#av_adler32_update,AVAdler,ptr.uint8,csize_t	adler32: av_adler32_update(adler: AVAdler; buf: ptr uint8; len: csize_t): AVAdler	
+nimTitle	adler32	ffmpeg/libavutil/adler32.html	module src/ffmpeg/libavutil/adler32		0
+nim	AVAdler	ffmpeg/libavutil/adler32.html#AVAdler	type AVAdler		8
+nim	av_adler32_update	ffmpeg/libavutil/adler32.html#av_adler32_update,AVAdler,ptr.uint8,csize_t	proc av_adler32_update(adler: AVAdler; buf: ptr uint8; len: csize_t): AVAdler		10

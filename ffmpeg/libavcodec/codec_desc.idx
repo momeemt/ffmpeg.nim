@@ -1,9 +1,10 @@
-AV_CODEC_PROP_INTRA_ONLY	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_INTRA_ONLY	codec_desc: AV_CODEC_PROP_INTRA_ONLY	
-AV_CODEC_PROP_LOSSY	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_LOSSY	codec_desc: AV_CODEC_PROP_LOSSY	
-AV_CODEC_PROP_LOSSLESS	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_LOSSLESS	codec_desc: AV_CODEC_PROP_LOSSLESS	
-AV_CODEC_PROP_REORDER	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_REORDER	codec_desc: AV_CODEC_PROP_REORDER	
-AV_CODEC_PROP_BITMAP_SUB	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_BITMAP_SUB	codec_desc: AV_CODEC_PROP_BITMAP_SUB	
-AV_CODEC_PROP_TEXT_SUB	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_TEXT_SUB	codec_desc: AV_CODEC_PROP_TEXT_SUB	
-avcodec_descriptor_get	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_get,AVCodecID	codec_desc: avcodec_descriptor_get(id: AVCodecID): ptr AVCodecDescriptor	
-avcodec_descriptor_next	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_next,ptr.AVCodecDescriptor	codec_desc: avcodec_descriptor_next(prev: ptr AVCodecDescriptor): ptr AVCodecDescriptor	
-avcodec_descriptor_get_by_name	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_get_by_name,cstring	codec_desc: avcodec_descriptor_get_by_name(name: cstring): ptr AVCodecDescriptor	
+nimTitle	codec_desc	ffmpeg/libavcodec/codec_desc.html	module src/ffmpeg/libavcodec/codec_desc		0
+nim	AV_CODEC_PROP_INTRA_ONLY	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_INTRA_ONLY	const AV_CODEC_PROP_INTRA_ONLY		11
+nim	AV_CODEC_PROP_LOSSY	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_LOSSY	const AV_CODEC_PROP_LOSSY		12
+nim	AV_CODEC_PROP_LOSSLESS	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_LOSSLESS	const AV_CODEC_PROP_LOSSLESS		13
+nim	AV_CODEC_PROP_REORDER	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_REORDER	const AV_CODEC_PROP_REORDER		14
+nim	AV_CODEC_PROP_BITMAP_SUB	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_BITMAP_SUB	const AV_CODEC_PROP_BITMAP_SUB		15
+nim	AV_CODEC_PROP_TEXT_SUB	ffmpeg/libavcodec/codec_desc.html#AV_CODEC_PROP_TEXT_SUB	const AV_CODEC_PROP_TEXT_SUB		16
+nim	avcodec_descriptor_get	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_get,AVCodecID	proc avcodec_descriptor_get(id: AVCodecID): ptr AVCodecDescriptor		18
+nim	avcodec_descriptor_next	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_next,ptr.AVCodecDescriptor	proc avcodec_descriptor_next(prev: ptr AVCodecDescriptor): ptr AVCodecDescriptor		19
+nim	avcodec_descriptor_get_by_name	ffmpeg/libavcodec/codec_desc.html#avcodec_descriptor_get_by_name,cstring	proc avcodec_descriptor_get_by_name(name: cstring): ptr AVCodecDescriptor		20

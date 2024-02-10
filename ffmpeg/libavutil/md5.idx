@@ -1,6 +1,7 @@
-av_md5_size	ffmpeg/libavutil/md5.html#av_md5_size	md5: av_md5_size	
-av_md5_alloc	ffmpeg/libavutil/md5.html#av_md5_alloc	md5: av_md5_alloc(): ptr AVMD5	
-av_md5_init	ffmpeg/libavutil/md5.html#av_md5_init,ptr.AVMD5	md5: av_md5_init(ctx: ptr AVMD5)	
-av_md5_final	ffmpeg/libavutil/md5.html#av_md5_final,ptr.AVMD5,ptr.uint8	md5: av_md5_final(ctx: ptr AVMD5; dst: ptr uint8)	
-av_md5_update	ffmpeg/libavutil/md5.html#av_md5_update,ptr.AVMD5,ptr.uint8,csize_t	md5: av_md5_update(ctx: ptr AVMD5; src: ptr uint8; len: csize_t)	
-av_md5_sum	ffmpeg/libavutil/md5.html#av_md5_sum,ptr.uint8,ptr.uint8,csize_t	md5: av_md5_sum(dst, src: ptr uint8; len: csize_t)	
+nimTitle	md5	ffmpeg/libavutil/md5.html	module src/ffmpeg/libavutil/md5		0
+nim	av_md5_size	ffmpeg/libavutil/md5.html#av_md5_size	var av_md5_size		10
+nim	av_md5_alloc	ffmpeg/libavutil/md5.html#av_md5_alloc	proc av_md5_alloc(): ptr AVMD5		12
+nim	av_md5_init	ffmpeg/libavutil/md5.html#av_md5_init,ptr.AVMD5	proc av_md5_init(ctx: ptr AVMD5)		13
+nim	av_md5_final	ffmpeg/libavutil/md5.html#av_md5_final,ptr.AVMD5,ptr.uint8	proc av_md5_final(ctx: ptr AVMD5; dst: ptr uint8)		14
+nim	av_md5_update	ffmpeg/libavutil/md5.html#av_md5_update,ptr.AVMD5,ptr.uint8,csize_t	proc av_md5_update(ctx: ptr AVMD5; src: ptr uint8; len: csize_t)		15
+nim	av_md5_sum	ffmpeg/libavutil/md5.html#av_md5_sum,ptr.uint8,ptr.uint8,csize_t	proc av_md5_sum(dst, src: ptr uint8; len: csize_t)		16

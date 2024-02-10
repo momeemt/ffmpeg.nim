@@ -1,2 +1,3 @@
-MAX_DWT_LEVELS	ffmpeg/libavcodec/dirac.html#MAX_DWT_LEVELS	dirac: MAX_DWT_LEVELS	
-av_dirac_parse_sequence_header	ffmpeg/libavcodec/dirac.html#av_dirac_parse_sequence_header,ptr.ptr.AVDiracSeqHeader,ptr.uint8,csize_t,pointer	dirac: av_dirac_parse_sequence_header(dsh: ptr ptr AVDiracSeqHeader; buf: ptr uint8;\n                               buf_size: csize_t; log_ctx: pointer): cint	
+nimTitle	dirac	ffmpeg/libavcodec/dirac.html	module src/ffmpeg/libavcodec/dirac		0
+nim	MAX_DWT_LEVELS	ffmpeg/libavcodec/dirac.html#MAX_DWT_LEVELS	const MAX_DWT_LEVELS		4
+nim	av_dirac_parse_sequence_header	ffmpeg/libavcodec/dirac.html#av_dirac_parse_sequence_header,ptr.ptr.AVDiracSeqHeader,ptr.uint8,csize_t,pointer	proc av_dirac_parse_sequence_header(dsh: ptr ptr AVDiracSeqHeader; buf: ptr uint8;\n                               buf_size: csize_t; log_ctx: pointer): cint		13

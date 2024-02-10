@@ -1,5 +1,6 @@
-av_cast5_size	ffmpeg/libavutil/cast5.html#av_cast5_size	cast5: av_cast5_size	
-av_cast5_alloc	ffmpeg/libavutil/cast5.html#av_cast5_alloc	cast5: av_cast5_alloc(): ptr AVCAST5	
-av_cast5_init	ffmpeg/libavutil/cast5.html#av_cast5_init,ptr.AVCAST5,ptr.uint8,cint	cast5: av_cast5_init(ctx: ptr AVCAST5; key: ptr uint8; key_bits: cint): cint	
-av_cast5_crypt	ffmpeg/libavutil/cast5.html#av_cast5_crypt,ptr.AVCAST5,ptr.uint8,ptr.uint8,cint,cint	cast5: av_cast5_crypt(ctx: ptr AVCAST5; dst, src: ptr uint8; count, decrypt: cint)	
-av_cast5_crypt2	ffmpeg/libavutil/cast5.html#av_cast5_crypt2,ptr.AVCAST5,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	cast5: av_cast5_crypt2(ctx: ptr AVCAST5; dst, src: ptr uint8; count: cint;\n                iv: ptr uint8; decrypt: cint)	
+nimTitle	cast5	ffmpeg/libavutil/cast5.html	module src/ffmpeg/libavutil/cast5		0
+nim	av_cast5_size	ffmpeg/libavutil/cast5.html#av_cast5_size	var av_cast5_size		10
+nim	av_cast5_alloc	ffmpeg/libavutil/cast5.html#av_cast5_alloc	proc av_cast5_alloc(): ptr AVCAST5		12
+nim	av_cast5_init	ffmpeg/libavutil/cast5.html#av_cast5_init,ptr.AVCAST5,ptr.uint8,cint	proc av_cast5_init(ctx: ptr AVCAST5; key: ptr uint8; key_bits: cint): cint		13
+nim	av_cast5_crypt	ffmpeg/libavutil/cast5.html#av_cast5_crypt,ptr.AVCAST5,ptr.uint8,ptr.uint8,cint,cint	proc av_cast5_crypt(ctx: ptr AVCAST5; dst, src: ptr uint8; count, decrypt: cint)		14
+nim	av_cast5_crypt2	ffmpeg/libavutil/cast5.html#av_cast5_crypt2,ptr.AVCAST5,ptr.uint8,ptr.uint8,cint,ptr.uint8,cint	proc av_cast5_crypt2(ctx: ptr AVCAST5; dst, src: ptr uint8; count: cint;\n                iv: ptr uint8; decrypt: cint)		15

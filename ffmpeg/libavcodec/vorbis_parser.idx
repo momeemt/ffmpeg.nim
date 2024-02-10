@@ -1,8 +1,9 @@
-VORBIS_FLAG_HEADER	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_HEADER	vorbis_parser: VORBIS_FLAG_HEADER	
-VORBIS_FLAG_COMMENT	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_COMMENT	vorbis_parser: VORBIS_FLAG_COMMENT	
-VORBIS_FLAG_SETUP	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_SETUP	vorbis_parser: VORBIS_FLAG_SETUP	
-av_vorbis_parse_init	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_init,ptr.uint8,cint	vorbis_parser: av_vorbis_parse_init(extradata: ptr uint8; extradata_size: cint): ptr AVVorbisParseContext	
-av_vorbis_parse_free	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_free,ptr.ptr.AVVorbisParseContext	vorbis_parser: av_vorbis_parse_free(s: ptr ptr AVVorbisParseContext)	
-av_vorbis_parse_frame_flags	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_frame_flags,ptr.AVVorbisParseContext,ptr.uint8,cint,ptr.cint	vorbis_parser: av_vorbis_parse_frame_flags(s: ptr AVVorbisParseContext; buf: ptr uint8;\n                            buf_size: cint; flags: ptr cint): cint	
-av_vorbis_parse_frame	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_frame,ptr.AVVorbisParseContext,ptr.uint8,cint	vorbis_parser: av_vorbis_parse_frame(s: ptr AVVorbisParseContext; buf: ptr uint8;\n                      buf_size: cint): cint	
-av_vorbis_parse_reset	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_reset,ptr.AVVorbisParseContext	vorbis_parser: av_vorbis_parse_reset(s: ptr AVVorbisParseContext)	
+nimTitle	vorbis_parser	ffmpeg/libavcodec/vorbis_parser.html	module src/ffmpeg/libavcodec/vorbis_parser		0
+nim	VORBIS_FLAG_HEADER	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_HEADER	const VORBIS_FLAG_HEADER		11
+nim	VORBIS_FLAG_COMMENT	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_COMMENT	const VORBIS_FLAG_COMMENT		12
+nim	VORBIS_FLAG_SETUP	ffmpeg/libavcodec/vorbis_parser.html#VORBIS_FLAG_SETUP	const VORBIS_FLAG_SETUP		13
+nim	av_vorbis_parse_init	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_init,ptr.uint8,cint	proc av_vorbis_parse_init(extradata: ptr uint8; extradata_size: cint): ptr AVVorbisParseContext		15
+nim	av_vorbis_parse_free	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_free,ptr.ptr.AVVorbisParseContext	proc av_vorbis_parse_free(s: ptr ptr AVVorbisParseContext)		16
+nim	av_vorbis_parse_frame_flags	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_frame_flags,ptr.AVVorbisParseContext,ptr.uint8,cint,ptr.cint	proc av_vorbis_parse_frame_flags(s: ptr AVVorbisParseContext; buf: ptr uint8;\n                            buf_size: cint; flags: ptr cint): cint		17
+nim	av_vorbis_parse_frame	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_frame,ptr.AVVorbisParseContext,ptr.uint8,cint	proc av_vorbis_parse_frame(s: ptr AVVorbisParseContext; buf: ptr uint8;\n                      buf_size: cint): cint		18
+nim	av_vorbis_parse_reset	ffmpeg/libavcodec/vorbis_parser.html#av_vorbis_parse_reset,ptr.AVVorbisParseContext	proc av_vorbis_parse_reset(s: ptr AVVorbisParseContext)		19

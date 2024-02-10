@@ -1,2 +1,3 @@
-AV_HAVE_BIGENDIAN	ffmpeg/libavutil/avconfig.html#AV_HAVE_BIGENDIAN	avconfig: AV_HAVE_BIGENDIAN	
-AV_HAVE_FAST_UNALIGNED	ffmpeg/libavutil/avconfig.html#AV_HAVE_FAST_UNALIGNED	avconfig: AV_HAVE_FAST_UNALIGNED	
+nimTitle	avconfig	ffmpeg/libavutil/avconfig.html	module src/ffmpeg/libavutil/avconfig		0
+nim	AV_HAVE_BIGENDIAN	ffmpeg/libavutil/avconfig.html#AV_HAVE_BIGENDIAN	const AV_HAVE_BIGENDIAN		9
+nim	AV_HAVE_FAST_UNALIGNED	ffmpeg/libavutil/avconfig.html#AV_HAVE_FAST_UNALIGNED	const AV_HAVE_FAST_UNALIGNED		10

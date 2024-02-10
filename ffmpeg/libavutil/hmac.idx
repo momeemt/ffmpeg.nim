@@ -1,6 +1,7 @@
-av_hmac_alloc	ffmpeg/libavutil/hmac.html#av_hmac_alloc,AVHMACType	hmac: av_hmac_alloc(type: AVHMACType): ptr AVHMAC	
-av_hmac_free	ffmpeg/libavutil/hmac.html#av_hmac_free,ptr.AVHMAC	hmac: av_hmac_free(ctx: ptr AVHMAC)	
-av_hmac_init	ffmpeg/libavutil/hmac.html#av_hmac_init,ptr.AVHMAC,ptr.uint8,cuint	hmac: av_hmac_init(ctx: ptr AVHMAC; key: ptr uint8; keylen: cuint)	
-av_hmac_update	ffmpeg/libavutil/hmac.html#av_hmac_update,ptr.AVHMAC,ptr.uint8,cuint	hmac: av_hmac_update(ctx: ptr AVHMAC; data: ptr uint8; len: cuint)	
-av_hmac_final	ffmpeg/libavutil/hmac.html#av_hmac_final,ptr.AVHMAC,ptr.uint8,cuint	hmac: av_hmac_final(ctx: ptr AVHMAC; out: ptr uint8; outlen: cuint): cint	
-av_hmac_calc	ffmpeg/libavutil/hmac.html#av_hmac_calc,ptr.AVHMAC,ptr.uint8,cuint,ptr.uint8,cuint,ptr.uint8,cuint	hmac: av_hmac_calc(ctx: ptr AVHMAC; data: ptr uint8; len: cuint; key: ptr uint8;\n             keylen: cuint; out: ptr uint8; outlen: cuint): cint	
+nimTitle	hmac	ffmpeg/libavutil/hmac.html	module src/ffmpeg/libavutil/hmac		0
+nim	av_hmac_alloc	ffmpeg/libavutil/hmac.html#av_hmac_alloc,AVHMACType	proc av_hmac_alloc(type: AVHMACType): ptr AVHMAC		10
+nim	av_hmac_free	ffmpeg/libavutil/hmac.html#av_hmac_free,ptr.AVHMAC	proc av_hmac_free(ctx: ptr AVHMAC)		11
+nim	av_hmac_init	ffmpeg/libavutil/hmac.html#av_hmac_init,ptr.AVHMAC,ptr.uint8,cuint	proc av_hmac_init(ctx: ptr AVHMAC; key: ptr uint8; keylen: cuint)		12
+nim	av_hmac_update	ffmpeg/libavutil/hmac.html#av_hmac_update,ptr.AVHMAC,ptr.uint8,cuint	proc av_hmac_update(ctx: ptr AVHMAC; data: ptr uint8; len: cuint)		13
+nim	av_hmac_final	ffmpeg/libavutil/hmac.html#av_hmac_final,ptr.AVHMAC,ptr.uint8,cuint	proc av_hmac_final(ctx: ptr AVHMAC; out: ptr uint8; outlen: cuint): cint		14
+nim	av_hmac_calc	ffmpeg/libavutil/hmac.html#av_hmac_calc,ptr.AVHMAC,ptr.uint8,cuint,ptr.uint8,cuint,ptr.uint8,cuint	proc av_hmac_calc(ctx: ptr AVHMAC; data: ptr uint8; len: cuint; key: ptr uint8;\n             keylen: cuint; out: ptr uint8; outlen: cuint): cint		15

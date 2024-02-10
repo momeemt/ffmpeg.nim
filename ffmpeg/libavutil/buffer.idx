@@ -1,18 +1,19 @@
-AV_BUFFER_FLAG_READONLY	ffmpeg/libavutil/buffer.html#AV_BUFFER_FLAG_READONLY	buffer: AV_BUFFER_FLAG_READONLY	
-av_buffer_alloc	ffmpeg/libavutil/buffer.html#av_buffer_alloc,csize_t	buffer: av_buffer_alloc(size: csize_t): ptr AVBufferRef	
-av_buffer_allocz	ffmpeg/libavutil/buffer.html#av_buffer_allocz,csize_t	buffer: av_buffer_allocz(size: csize_t): ptr AVBufferRef	
-av_buffer_create	ffmpeg/libavutil/buffer.html#av_buffer_create,ptr.uint8,csize_t,proc(pointer,ptr.uint8),pointer,cint	buffer: av_buffer_create(data: ptr uint8; size: csize_t;\n                 free: proc (opaque: pointer; data: ptr uint8); opaque: pointer;\n                 flags: cint): ptr AVBufferRef	
-av_buffer_default_free	ffmpeg/libavutil/buffer.html#av_buffer_default_free,pointer,ptr.uint8	buffer: av_buffer_default_free(opaque: pointer; data: ptr uint8)	
-av_buffer_ref	ffmpeg/libavutil/buffer.html#av_buffer_ref,ptr.AVBufferRef	buffer: av_buffer_ref(buf: ptr AVBufferRef): ptr AVBufferRef	
-av_buffer_unref	ffmpeg/libavutil/buffer.html#av_buffer_unref,ptr.ptr.AVBufferRef	buffer: av_buffer_unref(buf: ptr ptr AVBufferRef)	
-av_buffer_is_writable	ffmpeg/libavutil/buffer.html#av_buffer_is_writable,ptr.AVBufferRef	buffer: av_buffer_is_writable(buf: ptr AVBufferRef): cint	
-av_buffer_get_opaque	ffmpeg/libavutil/buffer.html#av_buffer_get_opaque,ptr.AVBufferRef	buffer: av_buffer_get_opaque(buf: ptr AVBufferRef)	
-av_buffer_get_ref_count	ffmpeg/libavutil/buffer.html#av_buffer_get_ref_count,ptr.AVBufferRef	buffer: av_buffer_get_ref_count(ubf: ptr AVBufferRef): cint	
-av_buffer_make_writable	ffmpeg/libavutil/buffer.html#av_buffer_make_writable,ptr.ptr.AVBufferRef	buffer: av_buffer_make_writable(buf: ptr ptr AVBufferRef): cint	
-av_buffer_realloc	ffmpeg/libavutil/buffer.html#av_buffer_realloc,ptr.ptr.AVBufferRef,csize_t	buffer: av_buffer_realloc(buf: ptr ptr AVBufferRef; size: csize_t): cint	
-av_buffer_replace	ffmpeg/libavutil/buffer.html#av_buffer_replace,ptr.ptr.AVBufferRef,ptr.AVBufferRef	buffer: av_buffer_replace(dst: ptr ptr AVBufferRef; src: ptr AVBufferRef): cint	
-av_buffer_pool_init	ffmpeg/libavutil/buffer.html#av_buffer_pool_init,csize_t,proc(csize_t)	buffer: av_buffer_pool_init(size: csize_t; alloc: proc (size: csize_t): ptr AVBufferRef): AVBufferPool	
-av_buffer_pool_init2	ffmpeg/libavutil/buffer.html#av_buffer_pool_init2,csize_t,pointer,proc(pointer,csize_t),proc(pointer)	buffer: av_buffer_pool_init2(size: csize_t; opaque: pointer; alloc: proc (\n    opaque: pointer; size: csize_t): ptr AVBufferRef;\n                     pool_free: proc (opaque: pointer)): ptr AVBufferPool	
-av_buffer_pool_uninit	ffmpeg/libavutil/buffer.html#av_buffer_pool_uninit,ptr.ptr.AVBufferPool	buffer: av_buffer_pool_uninit(pool: ptr ptr AVBufferPool)	
-av_buffer_pool_get	ffmpeg/libavutil/buffer.html#av_buffer_pool_get,ptr.AVBufferPool	buffer: av_buffer_pool_get(pool: ptr AVBufferPool): AVBufferRef	
-av_buffer_pool_buffer_get_opaque	ffmpeg/libavutil/buffer.html#av_buffer_pool_buffer_get_opaque,ptr.AVBufferRef	buffer: av_buffer_pool_buffer_get_opaque(ref: ptr AVBufferRef)	
+nimTitle	buffer	ffmpeg/libavutil/buffer.html	module src/ffmpeg/libavutil/buffer		0
+nim	AV_BUFFER_FLAG_READONLY	ffmpeg/libavutil/buffer.html#AV_BUFFER_FLAG_READONLY	const AV_BUFFER_FLAG_READONLY		11
+nim	av_buffer_alloc	ffmpeg/libavutil/buffer.html#av_buffer_alloc,csize_t	proc av_buffer_alloc(size: csize_t): ptr AVBufferRef		13
+nim	av_buffer_allocz	ffmpeg/libavutil/buffer.html#av_buffer_allocz,csize_t	proc av_buffer_allocz(size: csize_t): ptr AVBufferRef		14
+nim	av_buffer_create	ffmpeg/libavutil/buffer.html#av_buffer_create,ptr.uint8,csize_t,proc(pointer,ptr.uint8),pointer,cint	proc av_buffer_create(data: ptr uint8; size: csize_t;\n                 free: proc (opaque: pointer; data: ptr uint8); opaque: pointer;\n                 flags: cint): ptr AVBufferRef		15
+nim	av_buffer_default_free	ffmpeg/libavutil/buffer.html#av_buffer_default_free,pointer,ptr.uint8	proc av_buffer_default_free(opaque: pointer; data: ptr uint8)		16
+nim	av_buffer_ref	ffmpeg/libavutil/buffer.html#av_buffer_ref,ptr.AVBufferRef	proc av_buffer_ref(buf: ptr AVBufferRef): ptr AVBufferRef		17
+nim	av_buffer_unref	ffmpeg/libavutil/buffer.html#av_buffer_unref,ptr.ptr.AVBufferRef	proc av_buffer_unref(buf: ptr ptr AVBufferRef)		18
+nim	av_buffer_is_writable	ffmpeg/libavutil/buffer.html#av_buffer_is_writable,ptr.AVBufferRef	proc av_buffer_is_writable(buf: ptr AVBufferRef): cint		19
+nim	av_buffer_get_opaque	ffmpeg/libavutil/buffer.html#av_buffer_get_opaque,ptr.AVBufferRef	proc av_buffer_get_opaque(buf: ptr AVBufferRef)		20
+nim	av_buffer_get_ref_count	ffmpeg/libavutil/buffer.html#av_buffer_get_ref_count,ptr.AVBufferRef	proc av_buffer_get_ref_count(ubf: ptr AVBufferRef): cint		21
+nim	av_buffer_make_writable	ffmpeg/libavutil/buffer.html#av_buffer_make_writable,ptr.ptr.AVBufferRef	proc av_buffer_make_writable(buf: ptr ptr AVBufferRef): cint		22
+nim	av_buffer_realloc	ffmpeg/libavutil/buffer.html#av_buffer_realloc,ptr.ptr.AVBufferRef,csize_t	proc av_buffer_realloc(buf: ptr ptr AVBufferRef; size: csize_t): cint		23
+nim	av_buffer_replace	ffmpeg/libavutil/buffer.html#av_buffer_replace,ptr.ptr.AVBufferRef,ptr.AVBufferRef	proc av_buffer_replace(dst: ptr ptr AVBufferRef; src: ptr AVBufferRef): cint		24
+nim	av_buffer_pool_init	ffmpeg/libavutil/buffer.html#av_buffer_pool_init,csize_t,proc(csize_t)	proc av_buffer_pool_init(size: csize_t; alloc: proc (size: csize_t): ptr AVBufferRef): AVBufferPool		25
+nim	av_buffer_pool_init2	ffmpeg/libavutil/buffer.html#av_buffer_pool_init2,csize_t,pointer,proc(pointer,csize_t),proc(pointer)	proc av_buffer_pool_init2(size: csize_t; opaque: pointer; alloc: proc (\n    opaque: pointer; size: csize_t): ptr AVBufferRef;\n                     pool_free: proc (opaque: pointer)): ptr AVBufferPool		26
+nim	av_buffer_pool_uninit	ffmpeg/libavutil/buffer.html#av_buffer_pool_uninit,ptr.ptr.AVBufferPool	proc av_buffer_pool_uninit(pool: ptr ptr AVBufferPool)		27
+nim	av_buffer_pool_get	ffmpeg/libavutil/buffer.html#av_buffer_pool_get,ptr.AVBufferPool	proc av_buffer_pool_get(pool: ptr AVBufferPool): AVBufferRef		28
+nim	av_buffer_pool_buffer_get_opaque	ffmpeg/libavutil/buffer.html#av_buffer_pool_buffer_get_opaque,ptr.AVBufferRef	proc av_buffer_pool_buffer_get_opaque(ref: ptr AVBufferRef)		29

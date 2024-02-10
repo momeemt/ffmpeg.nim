@@ -1,5 +1,6 @@
-av_sha512_size	ffmpeg/libavutil/sha512.html#av_sha512_size	sha512: av_sha512_size	
-av_sha512_alloc	ffmpeg/libavutil/sha512.html#av_sha512_alloc	sha512: av_sha512_alloc(): ptr AVSHA512	
-av_sha512_init	ffmpeg/libavutil/sha512.html#av_sha512_init,ptr.AVSHA512,cint	sha512: av_sha512_init(context: ptr AVSHA512; bits: cint): cint	
-av_sha512_final	ffmpeg/libavutil/sha512.html#av_sha512_final,ptr.AVSHA512,ptr.uint8	sha512: av_sha512_final(context: ptr AVSHA512; digest: ptr uint8)	
-av_sha512_update	ffmpeg/libavutil/sha512.html#av_sha512_update,ptr.AVSHA512,ptr.uint8,csize_t	sha512: av_sha512_update(context: ptr AVSHA512; data: ptr uint8; len: csize_t)	
+nimTitle	sha512	ffmpeg/libavutil/sha512.html	module src/ffmpeg/libavutil/sha512		0
+nim	av_sha512_size	ffmpeg/libavutil/sha512.html#av_sha512_size	var av_sha512_size		10
+nim	av_sha512_alloc	ffmpeg/libavutil/sha512.html#av_sha512_alloc	proc av_sha512_alloc(): ptr AVSHA512		12
+nim	av_sha512_init	ffmpeg/libavutil/sha512.html#av_sha512_init,ptr.AVSHA512,cint	proc av_sha512_init(context: ptr AVSHA512; bits: cint): cint		13
+nim	av_sha512_final	ffmpeg/libavutil/sha512.html#av_sha512_final,ptr.AVSHA512,ptr.uint8	proc av_sha512_final(context: ptr AVSHA512; digest: ptr uint8)		14
+nim	av_sha512_update	ffmpeg/libavutil/sha512.html#av_sha512_update,ptr.AVSHA512,ptr.uint8,csize_t	proc av_sha512_update(context: ptr AVSHA512; data: ptr uint8; len: csize_t)		15

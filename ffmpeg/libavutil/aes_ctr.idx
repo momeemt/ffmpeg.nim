@@ -1,11 +1,12 @@
-AES_CTR_KEY_SIZE	ffmpeg/libavutil/aes_ctr.html#AES_CTR_KEY_SIZE	aes_ctr: AES_CTR_KEY_SIZE	
-AES_CTR_IV_SIZE	ffmpeg/libavutil/aes_ctr.html#AES_CTR_IV_SIZE	aes_ctr: AES_CTR_IV_SIZE	
-av_aes_ctr_alloc	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_alloc	aes_ctr: av_aes_ctr_alloc(): ptr AVAESCTR	
-av_aes_ctr_init	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_init,ptr.AVAESCTR,ptr.uint8	aes_ctr: av_aes_ctr_init(a: ptr AVAESCTR; key: ptr uint8): cint	
-av_aes_ctr_free	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_free,ptr.AVAESCTR	aes_ctr: av_aes_ctr_free(a: ptr AVAESCTR)	
-av_aes_ctr_crypt	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_crypt,ptr.AVAESCTR,ptr.uint8,ptr.uint8,cint	aes_ctr: av_aes_ctr_crypt(a: ptr AVAESCTR; dst, src: ptr uint8; size: cint)	
-av_aes_ctr_get_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_get_iv,ptr.AVAESCTR	aes_ctr: av_aes_ctr_get_iv(a: ptr AVAESCTR): ptr uint8	
-av_aes_ctr_set_random_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_random_iv,ptr.AVAESCTR	aes_ctr: av_aes_ctr_set_random_iv(a: ptr AVAESCTR)	
-av_aes_ctr_set_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_iv,ptr.AVAESCTR,ptr.uint8	aes_ctr: av_aes_ctr_set_iv(a: ptr AVAESCTR; iv: ptr uint8)	
-av_aes_ctr_set_full_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_full_iv,ptr.AVAESCTR,ptr.uint8	aes_ctr: av_aes_ctr_set_full_iv(a: ptr AVAESCTR; iv: ptr uint8)	
-av_aes_ctr_increment_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_increment_iv,ptr.AVAESCTR	aes_ctr: av_aes_ctr_increment_iv(a: ptr AVAESCTR)	
+nimTitle	aes_ctr	ffmpeg/libavutil/aes_ctr.html	module src/ffmpeg/libavutil/aes_ctr		0
+nim	AES_CTR_KEY_SIZE	ffmpeg/libavutil/aes_ctr.html#AES_CTR_KEY_SIZE	const AES_CTR_KEY_SIZE		11
+nim	AES_CTR_IV_SIZE	ffmpeg/libavutil/aes_ctr.html#AES_CTR_IV_SIZE	const AES_CTR_IV_SIZE		12
+nim	av_aes_ctr_alloc	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_alloc	proc av_aes_ctr_alloc(): ptr AVAESCTR		14
+nim	av_aes_ctr_init	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_init,ptr.AVAESCTR,ptr.uint8	proc av_aes_ctr_init(a: ptr AVAESCTR; key: ptr uint8): cint		15
+nim	av_aes_ctr_free	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_free,ptr.AVAESCTR	proc av_aes_ctr_free(a: ptr AVAESCTR)		16
+nim	av_aes_ctr_crypt	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_crypt,ptr.AVAESCTR,ptr.uint8,ptr.uint8,cint	proc av_aes_ctr_crypt(a: ptr AVAESCTR; dst, src: ptr uint8; size: cint)		17
+nim	av_aes_ctr_get_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_get_iv,ptr.AVAESCTR	proc av_aes_ctr_get_iv(a: ptr AVAESCTR): ptr uint8		18
+nim	av_aes_ctr_set_random_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_random_iv,ptr.AVAESCTR	proc av_aes_ctr_set_random_iv(a: ptr AVAESCTR)		19
+nim	av_aes_ctr_set_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_iv,ptr.AVAESCTR,ptr.uint8	proc av_aes_ctr_set_iv(a: ptr AVAESCTR; iv: ptr uint8)		20
+nim	av_aes_ctr_set_full_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_set_full_iv,ptr.AVAESCTR,ptr.uint8	proc av_aes_ctr_set_full_iv(a: ptr AVAESCTR; iv: ptr uint8)		21
+nim	av_aes_ctr_increment_iv	ffmpeg/libavutil/aes_ctr.html#av_aes_ctr_increment_iv,ptr.AVAESCTR	proc av_aes_ctr_increment_iv(a: ptr AVAESCTR)		22

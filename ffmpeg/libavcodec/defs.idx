@@ -1,8 +1,9 @@
-AVDiscard	ffmpeg/libavcodec/defs.html#AVDiscard	defs: AVDiscard	
-AVAudioServiceType	ffmpeg/libavcodec/defs.html#AVAudioServiceType	defs: AVAudioServiceType	
-AVPanScan	ffmpeg/libavcodec/defs.html#AVPanScan	defs: AVPanScan	
-AVCPBProperties	ffmpeg/libavcodec/defs.html#AVCPBProperties	defs: AVCPBProperties	
-AVProducerReferenceTime	ffmpeg/libavcodec/defs.html#AVProducerReferenceTime	defs: AVProducerReferenceTime	
-AV_INPUT_BUFFER_PADDING_SIZE	ffmpeg/libavcodec/defs.html#AV_INPUT_BUFFER_PADDING_SIZE	defs: AV_INPUT_BUFFER_PADDING_SIZE	
-av_cpb_properties_alloc	ffmpeg/libavcodec/defs.html#av_cpb_properties_alloc,ptr.csize_t	defs: av_cpb_properties_alloc(size: ptr csize_t): ptr AVCPBProperties	
-av_xiphlacing	ffmpeg/libavcodec/defs.html#av_xiphlacing,ptr.uint8,cuint	defs: av_xiphlacing(s: ptr uint8; v: cuint): cuint	
+nimTitle	defs	ffmpeg/libavcodec/defs.html	module src/ffmpeg/libavcodec/defs		0
+nim	AVDiscard	ffmpeg/libavcodec/defs.html#AVDiscard	enum AVDiscard		12
+nim	AVAudioServiceType	ffmpeg/libavcodec/defs.html#AVAudioServiceType	enum AVAudioServiceType		21
+nim	AVPanScan	ffmpeg/libavcodec/defs.html#AVPanScan	object AVPanScan		33
+nim	AVCPBProperties	ffmpeg/libavcodec/defs.html#AVCPBProperties	object AVCPBProperties		39
+nim	AVProducerReferenceTime	ffmpeg/libavcodec/defs.html#AVProducerReferenceTime	object AVProducerReferenceTime		46
+nim	AV_INPUT_BUFFER_PADDING_SIZE	ffmpeg/libavcodec/defs.html#AV_INPUT_BUFFER_PADDING_SIZE	const AV_INPUT_BUFFER_PADDING_SIZE		51
+nim	av_cpb_properties_alloc	ffmpeg/libavcodec/defs.html#av_cpb_properties_alloc,ptr.csize_t	proc av_cpb_properties_alloc(size: ptr csize_t): ptr AVCPBProperties		53
+nim	av_xiphlacing	ffmpeg/libavcodec/defs.html#av_xiphlacing,ptr.uint8,cuint	proc av_xiphlacing(s: ptr uint8; v: cuint): cuint		54

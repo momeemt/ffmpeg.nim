@@ -1,2 +1,3 @@
-av_vk_frame_alloc	ffmpeg/libavutil/hwcontext_vulkan.html#av_vk_frame_alloc	hwcontext_vulkan: av_vk_frame_alloc(): AVVkFrame	
-av_vkfmt_from_pixfmt	ffmpeg/libavutil/hwcontext_vulkan.html#av_vkfmt_from_pixfmt,AVPixelFormat	hwcontext_vulkan: av_vkfmt_from_pixfmt(p: AVPixelFormat): ptr VkFormat	
+nimTitle	hwcontext_vulkan	ffmpeg/libavutil/hwcontext_vulkan.html	module src/ffmpeg/libavutil/hwcontext_vulkan		0
+nim	av_vk_frame_alloc	ffmpeg/libavutil/hwcontext_vulkan.html#av_vk_frame_alloc	proc av_vk_frame_alloc(): AVVkFrame		14
+nim	av_vkfmt_from_pixfmt	ffmpeg/libavutil/hwcontext_vulkan.html#av_vkfmt_from_pixfmt,AVPixelFormat	proc av_vkfmt_from_pixfmt(p: AVPixelFormat): ptr VkFormat		15

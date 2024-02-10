@@ -1,15 +1,16 @@
-VdpPictureInfo	ffmpeg/libavcodec/vdpau.html#VdpPictureInfo	vdpau: VdpPictureInfo	
-VdpBitStreamBuffer	ffmpeg/libavcodec/vdpau.html#VdpBitStreamBuffer	vdpau: VdpBitStreamBuffer	
-VdpDevice	ffmpeg/libavcodec/vdpau.html#VdpDevice	vdpau: VdpDevice	
-VdpGetProcAddress	ffmpeg/libavcodec/vdpau.html#VdpGetProcAddress	vdpau: VdpGetProcAddress	
-VdpChromaType	ffmpeg/libavcodec/vdpau.html#VdpChromaType	vdpau: VdpChromaType	
-VdpDecoder	ffmpeg/libavcodec/vdpau.html#VdpDecoder	vdpau: VdpDecoder	
-VdpDecoderRender	ffmpeg/libavcodec/vdpau.html#VdpDecoderRender	vdpau: VdpDecoderRender	
-AVVDPAU_Render2	ffmpeg/libavcodec/vdpau.html#AVVDPAU_Render2	vdpau: AVVDPAU_Render2	
-AVVDPAUContext	ffmpeg/libavcodec/vdpau.html#AVVDPAUContext	vdpau: AVVDPAUContext	
-av_alloc_vdpaucontext	ffmpeg/libavcodec/vdpau.html#av_alloc_vdpaucontext	vdpau: av_alloc_vdpaucontext(): AVVDPAUContext	
-av_vdpau_hwaccel_get_render2	ffmpeg/libavcodec/vdpau.html#av_vdpau_hwaccel_get_render2,ptr.AVVDPAUContext	vdpau: av_vdpau_hwaccel_get_render2(a1: ptr AVVDPAUContext): AVVDPAU_Render2	
-av_vdpau_hwaccel_set_render2	ffmpeg/libavcodec/vdpau.html#av_vdpau_hwaccel_set_render2,ptr.AVVDPAUContext,AVVDPAU_Render2	vdpau: av_vdpau_hwaccel_set_render2(a1: ptr AVVDPAUContext; a2: AVVDPAU_Render2)	
-av_vdpau_bind_context	ffmpeg/libavcodec/vdpau.html#av_vdpau_bind_context,ptr.AVCodecContext,VdpDevice,ptr.VdpGetProcAddress,cuint	vdpau: av_vdpau_bind_context(avctx: ptr AVCodecContext; device: VdpDevice;\n                      get_proc_address: ptr VdpGetProcAddress; flags: cuint): cint	
-av_vdpau_get_surface_parameters	ffmpeg/libavcodec/vdpau.html#av_vdpau_get_surface_parameters,ptr.AVCodecContext,ptr.VdpChromaType,ptr.cuint,ptr.cuint	vdpau: av_vdpau_get_surface_parameters(avctx: ptr AVCodecContext;\n                                type: ptr VdpChromaType;\n                                width, height: ptr cuint): cint	
-av_vdpau_alloc_context	ffmpeg/libavcodec/vdpau.html#av_vdpau_alloc_context	vdpau: av_vdpau_alloc_context(): AVVDPAUContext	
+nimTitle	vdpau	ffmpeg/libavcodec/vdpau.html	module src/ffmpeg/libavcodec/vdpau		0
+nim	VdpPictureInfo	ffmpeg/libavcodec/vdpau.html#VdpPictureInfo	object VdpPictureInfo		7
+nim	VdpBitStreamBuffer	ffmpeg/libavcodec/vdpau.html#VdpBitStreamBuffer	object VdpBitStreamBuffer		8
+nim	VdpDevice	ffmpeg/libavcodec/vdpau.html#VdpDevice	object VdpDevice		9
+nim	VdpGetProcAddress	ffmpeg/libavcodec/vdpau.html#VdpGetProcAddress	object VdpGetProcAddress		10
+nim	VdpChromaType	ffmpeg/libavcodec/vdpau.html#VdpChromaType	object VdpChromaType		11
+nim	VdpDecoder	ffmpeg/libavcodec/vdpau.html#VdpDecoder	object VdpDecoder		12
+nim	VdpDecoderRender	ffmpeg/libavcodec/vdpau.html#VdpDecoderRender	object VdpDecoderRender		13
+nim	AVVDPAU_Render2	ffmpeg/libavcodec/vdpau.html#AVVDPAU_Render2	type AVVDPAU_Render2		15
+nim	AVVDPAUContext	ffmpeg/libavcodec/vdpau.html#AVVDPAUContext	object AVVDPAUContext		17
+nim	av_alloc_vdpaucontext	ffmpeg/libavcodec/vdpau.html#av_alloc_vdpaucontext	proc av_alloc_vdpaucontext(): AVVDPAUContext		29
+nim	av_vdpau_hwaccel_get_render2	ffmpeg/libavcodec/vdpau.html#av_vdpau_hwaccel_get_render2,ptr.AVVDPAUContext	proc av_vdpau_hwaccel_get_render2(a1: ptr AVVDPAUContext): AVVDPAU_Render2		30
+nim	av_vdpau_hwaccel_set_render2	ffmpeg/libavcodec/vdpau.html#av_vdpau_hwaccel_set_render2,ptr.AVVDPAUContext,AVVDPAU_Render2	proc av_vdpau_hwaccel_set_render2(a1: ptr AVVDPAUContext; a2: AVVDPAU_Render2)		31
+nim	av_vdpau_bind_context	ffmpeg/libavcodec/vdpau.html#av_vdpau_bind_context,ptr.AVCodecContext,VdpDevice,ptr.VdpGetProcAddress,cuint	proc av_vdpau_bind_context(avctx: ptr AVCodecContext; device: VdpDevice;\n                      get_proc_address: ptr VdpGetProcAddress; flags: cuint): cint		32
+nim	av_vdpau_get_surface_parameters	ffmpeg/libavcodec/vdpau.html#av_vdpau_get_surface_parameters,ptr.AVCodecContext,ptr.VdpChromaType,ptr.cuint,ptr.cuint	proc av_vdpau_get_surface_parameters(avctx: ptr AVCodecContext;\n                                type: ptr VdpChromaType;\n                                width, height: ptr cuint): cint		33
+nim	av_vdpau_alloc_context	ffmpeg/libavcodec/vdpau.html#av_vdpau_alloc_context	proc av_vdpau_alloc_context(): AVVDPAUContext		34

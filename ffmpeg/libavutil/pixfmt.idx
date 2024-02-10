@@ -1,2 +1,3 @@
-AVPALETTE_SIZE	ffmpeg/libavutil/pixfmt.html#AVPALETTE_SIZE	pixfmt: AVPALETTE_SIZE	
-AVPALETTE_COUNT	ffmpeg/libavutil/pixfmt.html#AVPALETTE_COUNT	pixfmt: AVPALETTE_COUNT	
+nimTitle	pixfmt	ffmpeg/libavutil/pixfmt.html	module src/ffmpeg/libavutil/pixfmt		0
+nim	AVPALETTE_SIZE	ffmpeg/libavutil/pixfmt.html#AVPALETTE_SIZE	const AVPALETTE_SIZE		9
+nim	AVPALETTE_COUNT	ffmpeg/libavutil/pixfmt.html#AVPALETTE_COUNT	const AVPALETTE_COUNT		10

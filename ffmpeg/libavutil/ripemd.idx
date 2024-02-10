@@ -1,5 +1,6 @@
-av_ripemd_size	ffmpeg/libavutil/ripemd.html#av_ripemd_size	ripemd: av_ripemd_size	
-av_ripemd_alloc	ffmpeg/libavutil/ripemd.html#av_ripemd_alloc	ripemd: av_ripemd_alloc(): ptr AVRIPEMD	
-av_ripemd_init	ffmpeg/libavutil/ripemd.html#av_ripemd_init,ptr.AVRIPEMD,cint	ripemd: av_ripemd_init(context: ptr AVRIPEMD; bits: cint): cint	
-av_ripemd_final	ffmpeg/libavutil/ripemd.html#av_ripemd_final,ptr.AVRIPEMD,ptr.uint8	ripemd: av_ripemd_final(context: ptr AVRIPEMD; digest: ptr uint8)	
-av_ripemd_update	ffmpeg/libavutil/ripemd.html#av_ripemd_update,ptr.AVRIPEMD,ptr.uint8,csize_t	ripemd: av_ripemd_update(context: ptr AVRIPEMD; data: ptr uint8; len: csize_t)	
+nimTitle	ripemd	ffmpeg/libavutil/ripemd.html	module src/ffmpeg/libavutil/ripemd		0
+nim	av_ripemd_size	ffmpeg/libavutil/ripemd.html#av_ripemd_size	var av_ripemd_size		10
+nim	av_ripemd_alloc	ffmpeg/libavutil/ripemd.html#av_ripemd_alloc	proc av_ripemd_alloc(): ptr AVRIPEMD		12
+nim	av_ripemd_init	ffmpeg/libavutil/ripemd.html#av_ripemd_init,ptr.AVRIPEMD,cint	proc av_ripemd_init(context: ptr AVRIPEMD; bits: cint): cint		13
+nim	av_ripemd_final	ffmpeg/libavutil/ripemd.html#av_ripemd_final,ptr.AVRIPEMD,ptr.uint8	proc av_ripemd_final(context: ptr AVRIPEMD; digest: ptr uint8)		14
+nim	av_ripemd_update	ffmpeg/libavutil/ripemd.html#av_ripemd_update,ptr.AVRIPEMD,ptr.uint8,csize_t	proc av_ripemd_update(context: ptr AVRIPEMD; data: ptr uint8; len: csize_t)		15
