@@ -31,7 +31,7 @@ import ffmpeg/libavutil/[
   hwcontext_drm, hwcontext_mediacodec, hwcontext_opencl,
   hwcontext_vulkan, hwcontext, imgutils, intfloat,
   intreadwrite, lfg, log, lzo, macros,
-  mastering_display_metadata, mathmatics, md5, mem,
+  mastering_display_metadata, mathematics, md5, mem,
   motion_vector, murmur3, opt, parseutils, pixdesc,
   pixelutils, pixfmt, random_seed, rational, rc4,
   replaygain, ripemd, samplefmt, sha, sha512,
@@ -73,7 +73,7 @@ export hdr_dynamic_metadata, hmac, hwcontext_cuda
 export hwcontext_drm, hwcontext_mediacodec, hwcontext_opencl
 export hwcontext_vulkan, hwcontext, imgutils, intfloat
 export intreadwrite, lfg, log, lzo, macros
-export mastering_display_metadata, mathmatics, md5, mem
+export mastering_display_metadata, mathematics, md5, mem
 export motion_vector, murmur3, opt, parseutils, pixdesc
 export pixelutils, pixfmt, random_seed, rational, rc4
 export replaygain, ripemd, samplefmt, sha, sha512

@@ -84,8 +84,8 @@ block:
   {.pragma: intreadwrite, importc, header: "<libavutil/intreadwrite.h>".}
   {.pragma: lfg, importc, header: "<libavutil/lfg.h>".}
   {.pragma: mastering_display_metadata, importc, header: "<libavutil/mastering_display_metadata.h>".}
-  {.pragma: mathmatics, importc, header: "<libavutil/mathmatics.h>".}
-  {.pragma: mathmaticsEnum, importc: "enum $1", header: "<libavutil/mathmatics.h>".}
+  {.pragma: mathematics, importc, header: "<libavutil/mathematics.h>".}
+  {.pragma: mathematicsEnum, importc: "enum $1", header: "<libavutil/mathematics.h>".}
   {.pragma: md5, importc, header: "<libavutil/md5.h>".}
   {.pragma: md5Struct, importc: "struct $1", header: "<libavutil/md5.h>".}
   {.pragma: motion_vector, importc, header: "<libavutil/motion_vector.h>".}
@@ -2264,7 +2264,7 @@ type
     MaxCLL*: cuint
     MaxFALL*: cuint
   
-  AVRounding* {.mathmaticsEnum.} = enum
+  AVRounding* {.mathematicsEnum.} = enum
     AV_ROUND_ZERO     = 0
     AV_ROUND_INF      = 1
     AV_ROUND_DOWN     = 2

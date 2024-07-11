@@ -17,7 +17,7 @@ proc av_get_bytes_per_sample* (sample_fmt: AVSampleFormat): cint
 proc av_sample_fmt_is_planar* (sample_fmt: AVSampleFormat): cint
 proc av_samples_get_buffer_size* (linesize: ptr cint, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
 proc av_samples_fill_arrays* (audio_data: ptr ptr uint8, linesize: ptr cint, buf: ptr uint8, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
-proc av_samples_alloc* (audio_data: ptr ptr uint8, linesize: ptr cint, buf: ptr uint8, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
-proc av_samples_alloc_array_and_samples* (audio_data: ptr ptr uint8, linesize: ptr cint, buf: ptr uint8, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
+proc av_samples_alloc* (audio_data: ptr ptr uint8, linesize: ptr cint, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
+proc av_samples_alloc_array_and_samples* (audio_data: ptr ptr uint8, linesize: ptr cint, nb_channels: cint, nb_samples: cint, sample_fmt: AVSampleFormat, align: cint): cint
 proc av_samples_copy* (dst: ptr ptr uint8, src: ptr ptr uint8, dst_offset: cint, src_offset: cint, nb_samples: cint, nb_channels: cint, sample_fmt: AVSampleFormat): cint
 proc av_samples_set_silence* (audio_data: ptr ptr uint8, offset: cint, nb_samples: cint, nb_channels: cint, sample_fmt: AVSampleFormat): cint
