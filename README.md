@@ -37,4 +37,4 @@ Please help us test the execution in various environments.
 | --- | ---- |
 | Windows | ❓ |
 | macOS | ❓ |
-| Linux | ⭕️ |
+| Linux | ❓ |

@@ -1,4 +1,4 @@
-from ../types import AVPacketSideDataType, AVPacket, AVRational, AVPacketList
+from ../types import AVPacketSideDataType, AVPacket, AVRational
 from ../libavutil/dict import AVDictionary
 from version import FF_API_INIT_PACKET
 
@@ -43,5 +43,5 @@ proc av_packet_rescale_ts* (pkt: ptr AVPacket, tb_src, tb_dst: AVRational)
 proc av_packet_merge_side_data* (pkt: ptr AVPacket): cint {.deprecated.}
 proc av_packet_split_side_data* (pkt: ptr AVPacket): cint {.deprecated.}
 
-proc av_dup_packet* (pkt: ptr AVPacket): cint
-proc av_init_packet* (pkt: ptr AVPacket) {.deprecated.}
+when FF_API_INIT_PACKET:
+  proc av_init_packet* (pkt: ptr AVPacket) {.deprecated.}
