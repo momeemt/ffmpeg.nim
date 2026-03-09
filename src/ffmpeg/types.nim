@@ -1,7 +1,6 @@
 import libavutil/dict
 from libavformat/version as avformatVersion import FF_API_AVIOCONTEXT_WRITTEN, FF_API_AVSTREAM_CLASS
 from libavcodec/defs import AVAudioServiceType, AVDiscard
-
 block:
   {.pragma: avcodec, importc, header: "<libavcodec/avcodec.h>".}
   {.pragma: avcodecEnum, importc: "enum $1", header: "<libavcodec/avcodec.h>".}

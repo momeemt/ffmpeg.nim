@@ -39,13 +39,15 @@ import ffmpeg/libavutil/[
   timecode, timestamp, tree, tx, video_enc_params,
   film_grain_params, detection_bbox
 ]
-import ffmpeg/libpostproc/postprocess
-import ffmpeg/libpostproc/version as postprocVersion
 import ffmpeg/libswresample/swresample
 import ffmpeg/libswresample/version as swresampleVersion
 import ffmpeg/libswscale/swscale
 import ffmpeg/libswscale/version as swscaleVersion
 import ffmpeg/types
+
+when defined(FFmpegPostProc):
+  import ffmpeg/libpostproc/postprocess
+  import ffmpeg/libpostproc/version as postprocVersion
 
 when defined(windows):
   import ffmpeg/libavcodec/[d3d11va, dxva2]
@@ -79,8 +81,11 @@ export pixelutils, pixfmt, random_seed, rational, rc4
 export replaygain, ripemd, samplefmt, sha, sha512
 export spherical, stereo3d, tea, threadmessage, time
 export timecode, timestamp, tree, tx, video_enc_params
-export postprocess, postprocVersion, swresample, swresampleVersion
+export swresample, swresampleVersion
 export swscale, swscaleVersion, film_grain_params, detection_bbox
+
+when defined(FFmpegPostProc):
+  export postprocess, postprocVersion
 
 when defined(windows):
   export d3d11va, dxva2, hwcontext_d3d11va, hwcontext_dxva2
